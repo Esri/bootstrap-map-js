@@ -1,8 +1,12 @@
 # Bootstrap Map JS
 
-Bootstrap Map JS is a simple framework for building responsive mapping applications with the [ArcGIS API for JavaScript](http://developers.arcgis.com) and [Bootstrap (ver 3.0)])(http://getbootstrap.com).  With just a few lines of JS and CSS you can build a rich web-mobile application that will run on any device.  A number examples and templates are provided to illustrate how to work with bootstrap grid system and web components.  All Bootstrap maps will be automatically centered and resized when the size or orientation of the screen changes on the device.
+Bootstrap Map JS is a simple framework for building responsive mapping applications with the [ArcGIS API for JavaScript](http://developers.arcgis.com) and [Bootstrap (ver 3.0)](http://getbootstrap.com).  With just a few lines of JS and CSS you can build a rich web-mobile application that will run on any device.  
 
-[View the documentation and examples here](http://esri.github.com/bootstrap-map-js/doc/index.html)
+All Bootstrap maps are automatically centered and resized when the size or orientation of the screen changes on the device.
+
+Examples and templates are also provided to illustrate how to work with the bootstrap grid system and web components.  
+
+[View the documentation and examples here.](http://esri.github.com/bootstrap-map-js/doc/index.html)
 
 ![App](https://raw.github.com/Esri/bootstrap-map-js/master/bootstrap-map-js.png)
 
@@ -24,7 +28,7 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
     <!-- Bootstrap -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-    <!-- Required css for mapping components -->
+    <!-- Bootstrap Map - required css for mapping components -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.com/Esri/bootstrap-map-js/css/bootstrapmap.css">   
     <style type="text/css">
@@ -43,12 +47,12 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
   </head>
   <body>
     
-    <!-- Reference for the map -->
+    <!-- Bootstrap Map - reference for the map -->
     <div class="container">
       <div id="mapDiv"></div>
     </div>
 
-    <!-- Load the responsive map -->
+    <!-- Bootstrap Map - load the responsive map -->
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
         require(["esri/map", "http://esri.github.com/Esri/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
@@ -68,20 +72,17 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
   </body>
 </html>
-
 ```
-[Visit the Getting Started Guide](http://esri.github.com/bootstrap-map-js/doc/getstarted.html)
 
-## Instructions
+## Documentation
 
-1. Fork the repo or download the .zip file. 
-2. [View the documentation](http://esri.github.com/bootstrap-map-js/doc/index.html).
+Visit the [Getting Started Guide](http://esri.github.com/bootstrap-map-js/doc/getstarted.html)
 
 ## Requirements
 
-* [Bootstrap ver 3.0.0](http://getbootstrap.com)
 * [ArcGIS API for JavaScript](http://developers.arcgis.com)
-* [Bootstrap Map JS CCS and JS](http://esri.github.com/bootstrap-map-js/)
+* [Bootstrap ver 3.0.0](http://getbootstrap.com)
+* [Bootstrap Map JS](http://esri.github.com/bootstrap-map-js/)
 
 ## Resources
 
