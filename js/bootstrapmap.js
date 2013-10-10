@@ -30,16 +30,17 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
         _mapDiv: null,
         _map: null,
         _delay: 100,
+        _w: 0,
         // BootstrapMap
         constructor: function(mapDivId,options) {
           this._mapDivId = mapDivId;
           this._mapDiv = dom.byId(mapDivId);
           this._options = options;
           this._handles = [];
-          // Update before map is created
-          this._setMapDiv(true);
         },
         createMap: function() {
+          // Update before map is created
+          this._setMapDiv(true);
           // Create map
           this._map = new Map(this._mapDivId,this._options);
           this._bindEvents();
@@ -50,11 +51,11 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
             console.log("BootstrapMap: Invalid map object. Please check map reference.");
             return;
           }
-         // Responsive resize
-         var resizeWin = function(evt){
+          // Responsive resize
+          var resizeWin = function(evt){
            this._setMapDiv();
-         }
-         this._handles.push(on(window, "resize", lang.hitch(this, resizeWin)));
+          }
+          this._handles.push(on(window, "resize", lang.hitch(this, resizeWin)));
           // Auto-center map
           var recenter = function(extent, width, height) { 
             this._map.__resizeCenter = this._map.extent.getCenter();
@@ -76,17 +77,25 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
            return;
           }
           var w = window.innerHeight;
-          var c = e.clientHeight;
-          var o = e.offsetTop;
-          // Body offset (navigation)
-          var wo = w - o;  
-          // Map height
-          var h = style.get(this._mapDivId, "height");  // current
-          // Get room to grow/shrink
-          var room = wo - c;
-          var m1 = room + h;
-          // Set map height
-          style.set(this._mapDivId, {"height": m1+"px","width":"100%"});
+          if (w != this._windowH) {
+            this._w = w;
+            var c = e.clientHeight;
+            var o = e.offsetTop;
+            // Body offset (navigation)
+            var wo = w - o;  
+            // Style params
+            var s = style.get(this._mapDivId);
+            var h = parseInt(s.height); 
+            var p = parseInt(s.paddingTop) + parseInt(s.paddingBottom);
+            var g = parseInt(s.marginTop) + parseInt(s.marginBottom);
+            var b = parseInt(s.borderTopWidth) + parseInt(s.borderBottomWidth);
+            h = h + p + g + b; 
+            // Get room to grow/shrink
+            var room = wo - c;
+            var m1 = room + h;
+            // Set height
+            style.set(this._mapDivId, {"height": m1+"px"});
+          }
         }       
     })
   }

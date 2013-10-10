@@ -23,9 +23,8 @@
 
     <style type="text/css">
       #mapDiv {
-        min-height: 100px; 
+        min-height: 300px; 
         max-height: 1000px; 
-        margin-bottom: 15px;
       }
       
       pre {
@@ -73,7 +72,6 @@
             <li><a href="simple.html">Simple</a></li>
             <li><a href="grid.html">Grid</a></li>
             <li><a href="four.html">Four Maps</a></li>
-            <!--li><a href="http://getbootstrap.com" target="_blank">Documentation</a></li-->
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -144,7 +142,7 @@
   &lt;/body>
 &lt;/html>
               </pre>
-              <div class="alert alert-info">NOTE: Replace missing paths with your references.</div>
+              <div class="alert alert-info">NOTE: Replace paths with your references.</div>
             </div>
 
             <div class="tab-pane" id="Step3">
@@ -213,7 +211,7 @@
   &lt;/body>
 &lt;/html>
                 </pre>
-                <div class="alert alert-info">NOTE: Replace <code>http://esri.github.com/Esri/bootstrap-map-js/</code> with your reference.</div>
+                <div class="alert alert-info">NOTE: Replace paths with your references.</div>
                 </div>
 
                 <div class="tab-pane fade in" id="map">
@@ -237,6 +235,7 @@
           function showMap(div) {
             if (map) {
               map.destroy();
+              BootstrapMap.destroy(map);
             }
             map = BootstrapMap.create(div,{
               basemap:"national-geographic",
