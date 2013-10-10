@@ -8,7 +8,7 @@ Examples and templates are also provided to illustrate how to work with the boot
 
 [View the documentation and examples here.](http://esri.github.com/bootstrap-map-js/doc/index.html)
 
-![App](https://raw.github.com/Esri/bootstrap-map-js/master/bootstrap-map-js.png)
+![App](https://raw.github.com/Esri/bootstrap-map-js/master/boostrapmapjs.png)
 
 ## What's included
 * \boostrap_v3\...
