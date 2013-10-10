@@ -28,9 +28,9 @@ All Bootstrap maps are automatically centered and resized when the size or orien
 
     <!-- Bootstrap Map - required css for mapping components -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
-    <link rel="stylesheet" type="text/css" href="http://esri.github.com/Esri/bootstrap-map-js/css/bootstrapmap.css">   
+    <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/css/bootstrapmap.css">   
     <style type="text/css">
-	    <!-- Set the responsive map heights here -->
+      <!-- Set the responsive map heights here -->
       #mapDiv {
         min-height: 100px; 
         max-height: 1000px; 
@@ -44,18 +44,18 @@ All Bootstrap maps are automatically centered and resized when the size or orien
     <![endif]-->
   </head>
   <body>
-    
+
     <!-- Bootstrap Map - reference for the map -->
-    <div class="container">
+    <div class="container" style="padding:15px;">
       <div id="mapDiv"></div>
     </div>
 
     <!-- Bootstrap Map - load the responsive map -->
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-        require(["esri/map", "http://esri.github.com/Esri/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
+        require(["esri/map", "http://esri.github.io/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
           function(Map, BootstrapMap) {
-            
+
           var map = BootstrapMap.create("mapDiv",{
             basemap:"national-geographic",
             center:[-122.45,37.77],
