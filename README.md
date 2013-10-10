@@ -6,7 +6,7 @@ All Bootstrap maps are automatically centered and resized when the size or orien
 
 [View the documentation and examples here.](http://esri.github.com/bootstrap-map-js/doc/index.html)
 
-![App](https://raw.github.com/Esri/bootstrap-map-js/master/boostrapmapjs.png)
+![App](https://raw.github.com/Esri/bootstrap-map-js/master/bootstrapmapjs.png)
 
 ## What's included
 * \boostrap_v3\...
