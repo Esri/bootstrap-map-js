@@ -214,8 +214,8 @@
     <!-- Bootstrap-map-js -->
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-      require(["esri/map", "../js/bootstrapmap.js", "dojo/domReady!"], 
-        function(Map, BootstrapMap) {
+      require(["esri/map", "../js/bootstrapmap.js", "dojo/on", "dojo/domReady!"], 
+        function(Map, BootstrapMap, on) {
           
           var map;
           function showMap(div,responsive) {
@@ -228,13 +228,17 @@
                 basemap:"national-geographic",
                 center:[-122.45,37.77],
                 zoom:12
-              });      
+              });
             } else {  
               map = new Map(div,{
                 basemap:"national-geographic",
                 center:[-122.45,37.77],
-                zoom:12
-              });       
+                zoom:12,
+                smartNavigation:false
+              });  
+              on(map, "load", function(){
+                map.disableScrollWheelZoom();
+              });     
             }
           }
 

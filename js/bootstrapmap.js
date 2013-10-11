@@ -42,9 +42,14 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
           // Update before map is created
           this._setMapDiv(true);
           // Create map
+          lang.mixin(this._options,{smartNavigation:false});
           this._map = new Map(this._mapDivId,this._options);
+          on(this._map,'load', lang.hitch(this, this._setTouchBehavior));
           this._bindEvents();
           return this._map;
+        },
+        _setTouchBehavior: function() {
+          this._map.disableScrollWheelZoom();
         },
         _bindEvents: function(){
           if (!this._map) {
