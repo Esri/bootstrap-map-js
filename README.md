@@ -2,8 +2,9 @@
 
 Bootstrap Map JS is a simple framework for building responsive mapping applications with the [ArcGIS API for JavaScript](http://developers.arcgis.com) and [Bootstrap (ver 3.0)](http://getbootstrap.com).  With just a few lines of JS and CSS you can build a rich web-mobile application that will work on any device.  
 
-* Auto resizing and recentering of map
-* Control min and max heights of map with css
+* Dynamic map resizing
+* Auto-recentering
+* Touch behavior for mobile devices
 * Examples of integrating with the bootstrap grid system and web components
 
 [View the documentation and examples here.](http://esri.github.com/bootstrap-map-js/doc/index.html)
@@ -57,7 +58,7 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
     <script>
         require(["esri/map", "http://esri.github.io/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
           function(Map, BootstrapMap) {
-
+          <!-- Create get a reference to the default ArcGIS Map class -->
           var map = BootstrapMap.create("mapDiv",{
             basemap:"national-geographic",
             center:[-122.45,37.77],
@@ -90,9 +91,9 @@ Visit the [Getting Started Guide](http://esri.github.com/bootstrap-map-js/doc/ge
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [Bootstrap](http://getbootstrap.com/)
 
-## Issues
+## Known Issues
 
-Find a bug or want to request a new feature?  Please let us know by submitting an issue.
+Only supports one BootstrapMap map per page.
 
 ## Contributing
 
