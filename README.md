@@ -58,7 +58,7 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
     <script>
         require(["esri/map", "http://esri.github.io/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
           function(Map, BootstrapMap) {
-          <!-- Create get a reference to the default ArcGIS Map class -->
+          <!-- Get a reference to the default ArcGIS Map class -->
           var map = BootstrapMap.create("mapDiv",{
             basemap:"national-geographic",
             center:[-122.45,37.77],
