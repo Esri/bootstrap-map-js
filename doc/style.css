@@ -9,6 +9,7 @@ body {
 
 .navbar-brand-image {
   height: 40px;
+  margin-left: -10px;
 }
 .starter-template {
   padding: 15px 15px;
