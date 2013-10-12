@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../bootstrap_v3/docs-assets/ico/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.ico">
 
     <title>Bootstrap Map JS - Get Started</title>
 
@@ -64,7 +64,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html">Bootstrap Map JS</a>
+          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="images/brand.png">Bootstrap Map JS</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -112,8 +112,8 @@
               <a href="http://github.com/Esri/bootstrap-map-js"><button type="button" class="btn btn-md btn-success">Download</button></a>
             </div>
             <div class="tab-pane" id="Step2">
-              <h3>Step 2: Create a Bootstrap page</h3>
-              <p>Add the basic html, CSS and JS for a simple Bootstrap page.</p>
+              <h3>Step 2: Create a page</h3>
+              <p>Add the basic html, css and js references for a simple Bootstrap page.</p>
               <br/>
 
               <pre class="prettyprint">
@@ -147,7 +147,7 @@
 
             <div class="tab-pane" id="Step3">
               <h3>Step 3: Add the map</h3>
-              <p>Add the ArcGIS and Bootstrap Map CSS and JS references to make your map responsive.  Cut and paste the code below to try it out. Try more advanced examples <a href="grid.html">here</a>.</p>
+              <p>Add the ArcGIS and Bootstrap Map css and js references to make your map responsive.  Cut and paste the code below or try more advanced examples <a href="grid.html">here</a>.</p>
 
               <ul id="myTab" class="nav nav-tabs">
                 <li class="active"><a href="#code" data-toggle="tab">Code</a></li>
@@ -170,7 +170,7 @@
 <b>
     &lt;!-- Bootstrap-map-js -->
     &lt;link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
-    &lt;link rel="stylesheet" type="text/css" href="http://esri.github.com/Esri/bootstrap-map-js/css/bootstrapmap.css">   
+    &lt;link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/css/bootstrapmap.css">   
     &lt;style type="text/css">
       #mapDiv {
         min-height: 100px; 
@@ -193,14 +193,14 @@
 
     &lt;script src="http://js.arcgis.com/3.7compact">&lt;/script>
     &lt;script>
-        require(["esri/map", "http://esri.github.com/Esri/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
+        require(["esri/map", "http://esri.github.io/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
           function(Map, BootstrapMap) {
-            
-          var map = BootstrapMap.create("mapDiv",{
-            basemap:"national-geographic",
-            center:[-122.45,37.77],
-            zoom:12
-          });
+            &lt;!-- Get a reference to the ArcGIS Map class -->
+            var map = BootstrapMap.create("mapDiv",{
+              basemap:"national-geographic",
+              center:[-122.45,37.77],
+              zoom:12
+            });
         });
     &lt;/script>
 </b>
