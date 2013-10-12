@@ -33,7 +33,7 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/css/bootstrapmap.css">   
     <style type="text/css">
-      <!-- Set the responsive map heights here -->
+      <!-- Set the responsive map size -->
       #mapDiv {
         min-height: 100px; 
         max-height: 1000px; 
@@ -56,15 +56,15 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
     <!-- Bootstrap Map - load the responsive map -->
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-        require(["esri/map", "http://esri.github.io/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
-          function(Map, BootstrapMap) {
-          <!-- Get a reference to the default ArcGIS Map class -->
+      require(["esri/map", "http://esri.github.io/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
+        function(Map, BootstrapMap) {
+          <!-- Get a reference to the ArcGIS Map class -->
           var map = BootstrapMap.create("mapDiv",{
             basemap:"national-geographic",
             center:[-122.45,37.77],
             zoom:12
           });
-        });
+      });
     </script>
 
     <!-- jQuery (for Bootstrap's JavaScript plugins) -->

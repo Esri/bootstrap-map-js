@@ -228,30 +228,30 @@
     <!-- Bootstrap-map-js -->
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-        var map;
         require(["esri/map", "../js/bootstrapmap.js", "dojo/domReady!"], 
           function(Map, BootstrapMap) {
+            
+            var map;
 
-          function showMap(div) {
-            if (map) {
-              map.destroy();
-              BootstrapMap.destroy(map);
-            }
-            map = BootstrapMap.create(div,{
-              basemap:"national-geographic",
-              center:[-122.45,37.77],
-              zoom:12
-            });
-          }
-
-          $(document).ready(function (e){
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-               if (e.target.text == "Map") {
-                  showMap("mapDiv"); 
-               }    
+            function showMap(div) {
+              if (map) {
+                map.destroy();
+                BootstrapMap.destroy(map);
+              }
+              map = BootstrapMap.create(div,{
+                basemap:"national-geographic",
+                center:[-122.45,37.77],
+                zoom:12
               });
-          });
+            }
 
+            $(document).ready(function (e){
+              $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+                 if (e.target.text == "Map") {
+                    showMap("mapDiv"); 
+                 }    
+                });
+            });
         });
     </script>
 
