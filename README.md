@@ -16,10 +16,10 @@ NOTE: Feel free to contribute new templates to this repo!
 
 ## What's included
 * \boostrap_v3\...
-* \css\bootstrapmap.css
-* \js\bootstrapmap.js 
+* \src\css\bootstrapmap.css
+* \src\js\bootstrapmap.js 
 * \doc\
-* \examples\... 
+* \templates\... 
 
 ## Example
 
@@ -34,7 +34,7 @@ NOTE: Feel free to contribute new templates to this repo!
 
     <!-- Bootstrap Map - required css for mapping components -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
-    <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/css/bootstrapmap.css">   
+    <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     <style type="text/css">
       <!-- Set the responsive map size -->
       #mapDiv {
@@ -59,7 +59,7 @@ NOTE: Feel free to contribute new templates to this repo!
     <!-- Bootstrap Map - load the responsive map -->
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-      require(["esri/map", "http://esri.github.io/bootstrap-map-js/js/bootstrapmap.js", "dojo/domReady!"], 
+      require(["esri/map", "http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
         function(Map, BootstrapMap) {
           <!-- Get a reference to the ArcGIS Map class -->
           var map = BootstrapMap.create("mapDiv",{
