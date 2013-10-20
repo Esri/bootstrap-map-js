@@ -18,13 +18,13 @@
 
     <!-- Bootstrap-map-js -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
-    <link rel="stylesheet" type="text/css" href="../css/bootstrapmap.css"> 
+    <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css"> 
 
     <style type="text/css">
 
       @media (max-width: 768px) {
         .map {
-          height: 100px;
+          height: 103px;
         }
       }
 
@@ -73,19 +73,20 @@
             <li><a href="getstarted.html">Get Started</a></li>
             <li><a href="simple.html">Simple</a></li>
             <li><a href="grid.html">Grid</a></li>
+            <li><a href="webmap.html">Web Map</a></li>
             <li class="active"><a href="four.html">Four Maps</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
-    <a href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+    <a href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:125px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
     <div class="container">
 
       <div class="page-header">
         <h2>Grid with four maps</h2>
-        <p class="lead">Fixed height maps with @media queries to handle sizing.</p>
+        <p class="lead">Set the map size with @media queries.</p>
       </div>
 
       <div class="row">
@@ -113,7 +114,7 @@
     <!-- Bootstrap-map-js -->
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-      require(["esri/map", "../js/bootstrapmap.js", "dojo/on", "dojo/ready", "dojo/DeferredList", "dojo/domReady!"], 
+      require(["esri/map", "../src/js/bootstrapmap.js", "dojo/on", "dojo/ready", "dojo/DeferredList", "dojo/domReady!"], 
         function(Map, BootstrapMap, on, ready, defList) {
           
           var maps = [];
@@ -123,8 +124,12 @@
             var map = new Map(id,{
                 basemap: basemap,
                 center:[-122.45,37.77],
-                zoom:11
+                zoom:11,
+                smartNavigation:false
             }); 
+            on(map, "load", function() {
+              map.disableScrollWheelZoom();
+            });
             on(map, "pan-end", resizeAll);
             on(map, "zoom-end", resizeAll);
             maps.push(map);          
@@ -160,15 +165,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-      ga('create', 'UA-44783634-1', 'esri.github.io');
-      ga('send', 'pageview');
-    </script>
 
   </body>
 </html>
