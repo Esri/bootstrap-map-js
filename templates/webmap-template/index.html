@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../bootstrap_v3/docs-assets/ico/favicon.png">
+
+    <title>Webmap Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../bootstrap_v3/dist/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="webmap-template.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
+   
+    <style type="text/css">
+    
+      #mapDiv {
+        min-height: 250px; 
+        max-height: 250px; 
+        margin-bottom: 20px;
+      }
+
+      #mapLegendDiv {
+        height: 250px;  
+        overflow: scroll;  
+        margin-bottom: 20px;     
+      }
+
+      #mapTitle {
+        margin-left: 15px;
+      }
+
+      body > .container {
+        padding-bottom: 20px;
+      }
+
+      table {
+        border-collapse: ;
+        border-spacing: ;
+      }
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bootstrap_v3/docs-assets/js/html5shiv.js"></script>
+      <script src="../bootstrap_v3/docs-assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Webmap Template</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="page-header">
+            <h2>Web Maps</h2>
+            <p class="lead">Load an ArcGIS web map into the Bootstrap framework.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <h4 id="mapTitle"></h4>
+        <br>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-4">
+          <div id="mapLegendDiv"></div>
+        </div>
+        <div class="col-sm-8">
+          <!-- Bootstrap-map-js -->
+          <div id="mapDiv"></div>
+        </div>
+      </div>
+
+    </div><!-- /.container -->
+
+    <script src="http://js.arcgis.com/3.7compact"></script>
+    <script>
+      require(["esri/map", 
+        "esri/dijit/Scalebar", 
+        "esri/dijit/Legend", 
+        "esri/arcgis/utils",  
+        "dojo/dom", 
+        "dojo/on", 
+        "dojo/query", 
+        "../../src/js/bootstrapmap.js",
+        "dojo/domReady!"], 
+      function(Map, Scalebar, Legend, esriUtils, dom, on, query, BootstrapMap) {  
+        var map;
+        var scalebar;
+        var legend;
+
+        // Load web map when page loads
+        loadWebmap();
+        
+        function loadWebmap(e) {
+          // Get new webmap and extract map and map parts
+          var mapDeferred = esriUtils.createMap("f58996878ac24702afef792e52a07e55", "mapDiv", {
+            mapOptions: {
+              slider: true,
+              nav:false,
+              smartNavigation:false
+            }
+          });
+
+          mapDeferred.then(function(response) {   
+            map = response.map;
+
+            // Bind to map 
+            BootstrapMap.bindTo(map);
+
+            // Add titles
+            dom.byId("mapTitle").innerHTML = response.itemInfo.item.title;
+            //dom.byId("mapSubTitle").innerHTML = response.itemInfo.item.snippet;
+            // Add scalebar and legend
+            var layers = esri.arcgis.utils.getLegendLayers(response);  
+            if(map.loaded){
+              initMapParts(layers);
+            }
+            else{
+              on(map,"load",function(){
+                initMapParts(layers);
+              });
+            }
+
+          },function(error){
+            alert("Sorry, couldn't load webmap!");
+            console.log("Error loading webmap: " & dojo.toJson(error));           
+          });
+        }
+        
+        function initMapParts(layers){
+         //add scalebar
+          scalebar = new Scalebar({
+            map:map,
+            scalebarUnit: 'english'
+          });
+          //add legend
+          if (legend) {
+            legend.map = map;
+            legend.refresh(layers);
+          }
+          else {
+            legend = new Legend({
+                map:map,
+                layerInfos:layers
+              },"mapLegendDiv");
+            legend.startup();
+          }
+        }
+      });
+    </script>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../bootstrap_v3/docs-assets/js/jquery.js"></script>
+    <script src="../bootstrap_v3/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

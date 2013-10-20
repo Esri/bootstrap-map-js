@@ -1,13 +1,21 @@
-define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/domReady!"], 
-	function(Map, declare, on, dom, lang, style, query) {
-    "use strict"	
+define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse","dojo/domReady!"], 
+    function(Map, declare, on, dom, lang, style, query) {
+    "use strict"        
     return {
      create: function(divId,options) {
         if (divId && options) {
           var smartResizer = new this._smartResizer(divId,options);
-          var map = smartResizer.createMap();
-          map._smartResizer = smartResizer;
-          return map;
+          var mapOut = smartResizer.createMap();
+          mapOut._smartResizer = smartResizer;
+          return mapOut;
+        }
+      },
+      bindTo: function(map) {
+        if (map) {
+          var smartResizer = new this._smartResizer(map.id,map._params);
+          var mapOut = smartResizer.bindToMap(map);
+          mapOut._smartResizer = smartResizer;
+          return mapOut;
         }
       },
       destroy: function(map) {
@@ -25,13 +33,13 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
           _disconnect(map._smartResizer);
         }
       },
-	 	 _smartResizer: declare(null, {
+      // SmartResizer
+      _smartResizer: declare(null, {
         _mapDivId: null,
         _mapDiv: null,
         _map: null,
         _delay: 100,
         _w: 0,
-        // BootstrapMap
         constructor: function(mapDivId,options) {
           this._mapDivId = mapDivId;
           this._mapDiv = dom.byId(mapDivId);
@@ -39,13 +47,18 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
           this._handles = [];
         },
         createMap: function() {
-          // Update before map is created
           this._setMapDiv(true);
-          // Create map
           lang.mixin(this._options,{smartNavigation:false});
           this._map = new Map(this._mapDivId,this._options);
-          on(this._map,'load', lang.hitch(this, this._setTouchBehavior));
           this._bindEvents();
+          return this._map;
+        },
+        bindToMap: function(map) {
+          this._setMapDiv(true);
+          this._map = map;
+          this._map.resize();
+          this._bindEvents();
+          this._setTouchBehavior();
           return this._map;
         },
         _setTouchBehavior: function() {
@@ -56,9 +69,14 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
             console.log("BootstrapMap: Invalid map object. Please check map reference.");
             return;
           }
+          // Touch behavior
+          var setTouch = function(e) {
+            this._setTouchBehavior();
+          }
+          this._handles.push(on(this._map,'load', lang.hitch(this, setTouch)));
           // Responsive resize
           var resizeWin = function(evt){
-           this._setMapDiv();
+            this._setMapDiv();
           }
           this._handles.push(on(window, "resize", lang.hitch(this, resizeWin)));
           // Auto-center map
@@ -70,36 +88,30 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
             setTimeout(lang.hitch(this, timer), this._delay);
           }
           this._handles.push(on(this._map, 'resize', lang.hitch(this, recenter)));
-       },
-       _setMapDiv: function() {
-         if (!this._mapDivId) {
-           return;
-         }
-          // Check for valid bootstrap v3 container
-          var e = query("body > .container")[0];
-          if (!e) {
-           console.log("BootstrapMap: You must have a .container in your document.");
-           return;
+        },
+        _calcSpace: function(e) {
+          var s = style.get(e);
+          var p = parseInt(s.paddingTop) + parseInt(s.paddingBottom);
+          var g = parseInt(s.marginTop) + parseInt(s.marginBottom);
+          var b = parseInt(s.borderTopWidth) + parseInt(s.borderBottomWidth);
+          var h = p + g + b; 
+          return h;
+        },
+        _setMapDiv: function() {
+          if (!this._mapDivId) {
+            return;
           }
           var w = window.innerHeight;
-          if (w != this._windowH) {
+          if (w != this._w) {
             this._w = w;
-            var c = e.clientHeight;
-            var o = e.offsetTop;
-            // Body offset (navigation)
-            var wo = w - o;  
-            // Style params
-            var s = style.get(this._mapDivId);
-            var h = parseInt(s.height); 
-            var p = parseInt(s.paddingTop) + parseInt(s.paddingBottom);
-            var g = parseInt(s.marginTop) + parseInt(s.marginBottom);
-            var b = parseInt(s.borderTopWidth) + parseInt(s.borderBottomWidth);
-            h = h + p + g + b; 
-            // Get room to grow/shrink
-            var room = wo - c;
-            var m1 = room + h;
-            // Set height
-            style.set(this._mapDivId, {"height": m1+"px"});
+            var b = document.body.clientHeight;
+            var mh = this._mapDiv.clientHeight;
+            var ms = this._calcSpace(this._mapDiv);
+            var mh1 = mh + ms;
+            var room = w - b;
+            var mh2 = room + mh1;
+            style.set(this._mapDivId, {"height": mh2+"px"});
+            //console.log("Window:"+ w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:"+ms + " OldMapHeight:"+mh1+ " NewMapHeight:"+mh2);
           }
         }       
     })
