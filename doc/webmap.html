@@ -71,7 +71,18 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li><a href="getstarted.html">Get Started</a></li>
-            <li><a href="simple.html">Simple</a></li>
+            <li class="dropdown" id="basemapList">
+              <a href="fullmap.html" class="dropdown-toggle">Map <b class="caret"></b></a>
+              <ul class="dropdown-menu" id="myDropdown">
+                <li><a href="fullmap.html">Streets</a></li>
+                <li><a href="#">Imagery</a></li>
+                <li><a href="#">National Geographic</a></li>
+                <li><a href="#">Topographic</a></li>
+                <li><a href="#">Gray</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Open Street Map</a></li>
+              </ul>
+            </li>
             <li><a href="grid.html">Grid</a></li>
             <li class="active"><a href="webmap.html">Web Map</a></li>
             <li><a href="four.html">Four Maps</a></li>
@@ -87,7 +98,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="page-header">
-            <h2>Web Maps</h2>
+            <h2>Fixed sized mapping components</h2>
             <p class="lead">Load an ArcGIS web map into the Bootstrap framework.</p>
           </div>
         </div>

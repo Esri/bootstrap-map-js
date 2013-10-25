@@ -11,14 +11,14 @@
     <title>Starter Template for Bootstrap</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="../bootstrap_v3/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="../../bootstrap_v3/dist/css/bootstrap.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="starter-template.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
-    <link rel="stylesheet" type="text/css" href="../../css/bootstrapmap.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
     <style type="text/css">
       #mapDiv {
         min-height: 100px; 
@@ -71,7 +71,7 @@
 
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-        require(["esri/map", "../../js/bootstrapmap.js", "dojo/domReady!"], 
+        require(["esri/map", "../../src/js/bootstrapmap.js", "dojo/domReady!"], 
           function(Map, BootstrapMap) {
             <!-- Get a reference to the ArcGIS Map class -->
             var map = BootstrapMap.create("mapDiv",{
