@@ -1,5 +1,5 @@
-define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse","dojo/domReady!"], 
-    function(Map, declare, on, dom, lang, style, query) {
+define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse","dojo/domReady!"], 
+    function(Map, Popup, declare, on, dom, lang, style, query) {
     "use strict"        
     return {
      create: function(divId,options) {
@@ -74,6 +74,25 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
             this._setTouchBehavior();
           }
           this._handles.push(on(this._map,'load', lang.hitch(this, setTouch)));
+
+          // InfoWindow reposition
+          var setInfoWin = function(e) {
+            this._map.infoWindow.anchor = "top";
+            this._map.infoWindow.set("highlight", false);
+
+            on(this._map.graphics, "click", lang.hitch(this, function(g){
+              if (this._map.infoWindow.isShowing){
+                this._repositionInfoWin(this._map.infoWindow.features[0]);
+              }
+            }));
+            on(this._map, "pan-end", lang.hitch(this, function(e){
+              if (this._map.infoWindow.isShowing){
+                this._map.infoWindow.reposition();
+              }
+            }));
+          }
+          this._handles.push(on(this._map,'load', lang.hitch(this, setInfoWin)));
+
           // Responsive resize
           var resizeWin = function(evt){
             this._setMapDiv();
@@ -83,8 +102,11 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
           var recenter = function(extent, width, height) { 
             this._map.__resizeCenter = this._map.extent.getCenter();
             var timer = function() {
+              if (this._map.infoWindow.isShowing){
+                this._repositionInfoWin(this._map.infoWindow.features[0]);
+              }
               this._map.centerAt(this._map.__resizeCenter);
-           }
+            }
             setTimeout(lang.hitch(this, timer), this._delay);
           }
           this._handles.push(on(this._map, 'resize', lang.hitch(this, recenter)));
@@ -107,13 +129,45 @@ define(["esri/map","dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang
             var b = document.body.clientHeight;
             var mh = this._mapDiv.clientHeight;
             var ms = this._calcSpace(this._mapDiv);
-            var mh1 = mh + ms;
+            var mh1 = mh - ms;
             var room = w - b;
             var mh2 = room + mh1;
             style.set(this._mapDivId, {"height": mh2+"px"});
             //console.log("Window:"+ w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:"+ms + " OldMapHeight:"+mh1+ " NewMapHeight:"+mh2);
           }
-        }       
+        },
+        _repositionInfoWin: function(graphic) {     
+          // Determine the upper right, and center, coordinates of the map
+          var maxPoint = new esri.geometry.Point(this._map.extent.xmax, this._map.extent.ymax, this._map.spatialReference);
+          var centerPoint = new esri.geometry.Point(this._map.extent.getCenter());
+          // Convert to screen coordinates
+          var maxPointScreen = this._map.toScreen(maxPoint);
+          var centerPointScreen = this._map.toScreen(centerPoint);
+          var graphicPointScreen = this._map.toScreen(graphic.geometry);  // Points only
+          // Buffer
+          var marginLR = 10;
+          var marginTop = 3;
+          var infoWin = this._map.infoWindow.domNode.childNodes[0];
+          var infoWidth = infoWin.clientWidth;
+          var infoHeight = infoWin.clientHeight + this._map.infoWindow.marginTop;
+          var lOff = graphicPointScreen.x - infoWidth/2;
+          var rOff = graphicPointScreen.x + infoWidth/2;
+          // X
+          if (lOff - marginLR < 0) {
+            centerPointScreen.x -= (Math.abs(lOff) + marginLR) < marginLR ? marginLR : Math.abs(lOff) + marginLR;
+          } else if (rOff > maxPointScreen.x - marginLR) {
+            centerPointScreen.x += (rOff - maxPointScreen.x) + marginLR;
+          }
+          // Y
+          var yOff = this._map.infoWindow.offsetY;
+          var tOff = graphicPointScreen.y - infoHeight - yOff;
+          if (tOff - marginTop < 0) {
+            centerPointScreen.y += tOff - marginTop;
+          }
+          //Pan the this._map to the new centerpoint           
+          centerPoint = this._map.toMap(centerPointScreen);
+          this._map.centerAt(centerPoint);
+        }
     })
   }
 });
