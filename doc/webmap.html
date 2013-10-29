@@ -23,13 +23,12 @@
     <style type="text/css">
 
       #mapDiv {
-        min-height: 250px; 
-        max-height: 250px; 
-        margin-bottom: 20px;
+        min-height: 350px; 
+        max-height: 350px; 
       }
 
       #mapLegendDiv {
-        height: 250px;  
+        height: 300px;  
         overflow: scroll; 
         margin-bottom: 20px;      
       }
@@ -38,13 +37,30 @@
         margin-left: 15px;
       }
 
+      #mapPanel {
+        padding: 0;
+      }
+
       body > .container {
         padding-bottom: 20px;
       }
 
       table {
-        border-collapse: ;
-        border-spacing: ;
+        border-collapse: none;
+        border-spacing: none;
+      }
+
+      [class*="col-"] {
+        margin-bottom: 2px;
+      }
+
+      @media (min-width: 767px) {
+        [class*="col-"] {
+          margin-bottom: 15px;
+        }
+        .col-sm-4 {
+          padding-right: 0px;
+        }
       }
 
     </style>
@@ -72,9 +88,9 @@
           <ul class="nav navbar-nav">
             <li><a href="getstarted.html">Get Started</a></li>
             <li class="dropdown" id="basemapList">
-              <a href="fullmap.html" class="dropdown-toggle">Map <b class="caret"></b></a>
+              <a href="maps.html" class="dropdown-toggle">Maps <b class="caret"></b></a>
               <ul class="dropdown-menu" id="myDropdown">
-                <li><a href="fullmap.html">Streets</a></li>
+                <li><a href="maps.html">Streets</a></li>
                 <li><a href="#">Imagery</a></li>
                 <li><a href="#">National Geographic</a></li>
                 <li><a href="#">Topographic</a></li>
@@ -85,7 +101,9 @@
             </li>
             <li><a href="grid.html">Grid</a></li>
             <li class="active"><a href="webmap.html">Web Map</a></li>
-            <li><a href="four.html">Four Maps</a></li>
+            <li><a href="media.html">@Media</a></li>
+            <li><a href="windows.html">Windows</a></li>             
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -98,24 +116,73 @@
       <div class="row">
         <div class="col-xs-12">
           <div class="page-header">
-            <h2>Fixed sized mapping components</h2>
-            <p class="lead">Load an ArcGIS web map into the Bootstrap framework.</p>
+            <h2>Web Maps</h2>
+            <p class="lead">Load ArcGIS web map components into Bootstrap.</p>
           </div>
         </div>
       </div>
 
+      <!-- Title -->
       <div class="row">
-        <h4 id="mapTitle"></h4>
-        <br>
+        <div class="col-sm-12">
+         <div class="panel-group" id="accordion0">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion0" href="#collapseOne0">
+                    Title
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne0" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <h4 id="mapTitle"></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
+      <!-- Legend -->
       <div class="row">
         <div class="col-sm-4">
-          <div id="mapLegendDiv"></div>
+          <div class="panel-group" id="accordion1">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                    Legend
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div id="mapLegendDiv"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+
+        <!-- Map -->    
         <div class="col-sm-8">
-          <!-- Bootstrap-map-js -->
-          <div id="mapDiv"></div>
+          <div class="panel-group" id="accordion2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                    Map
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne2" class="panel-collapse collapse in">
+                <div id="mapPanel" class="panel-body">
+                  <div id="mapDiv"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
