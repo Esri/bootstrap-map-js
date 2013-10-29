@@ -51,6 +51,7 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           lang.mixin(this._options,{smartNavigation:false});
           this._map = new Map(this._mapDivId,this._options);
           this._bindEvents();
+          this._mapDiv.__map = this._map;
           return this._map;
         },
         bindToMap: function(map) {
@@ -59,6 +60,7 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           this._map.resize();
           this._bindEvents();
           this._setTouchBehavior();
+          this._mapDiv.__map = this._map;
           return this._map;
         },
         _setTouchBehavior: function() {
@@ -75,20 +77,27 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           }
           this._handles.push(on(this._map,'load', lang.hitch(this, setTouch)));
 
-          // InfoWindow reposition
+          // InfoWindow restyle and reposition
           var setInfoWin = function(e) {
             this._map.infoWindow.anchor = "top";
             this._map.infoWindow.set("highlight", false);
 
+            var updateTitle = function(infoW) {
+              var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick='var m = dojo.byId(\"mapDiv\"); m.__map.infoWindow.hide();'>×</button>";
+              infoW.setTitle(infoW._title.innerText+close);
+            }
+
             on(this._map.graphics, "click", lang.hitch(this, function(g){
               if (this._map.infoWindow.isShowing){
+                updateTitle(this._map.infoWindow);
                 this._repositionInfoWin(this._map.infoWindow.features[0]);
               }
             }));
             on(this._map, "pan-end", lang.hitch(this, function(e){
-              if (this._map.infoWindow.isShowing){
-                //this._map.infoWindow.reposition();
-              }
+              // Causes issues on mobile
+              // if (this._map.infoWindow.isShowing){
+              //   this._map.infoWindow.reposition();
+              // }
             }));
           }
           this._handles.push(on(this._map,'load', lang.hitch(this, setInfoWin)));

@@ -50,33 +50,26 @@
   border: none;
 }
 
-.esriPopup .contentPane {
-  border-top: 1px solid #ebebeb;
-}
-
 .esriPopup .titlePane, {
   padding-top: 10px;
+}
+
+.esriPopup .contentPane {
+  border-top: 1px solid #ebebeb;
 }
 
 .esriPopup .actionsPane {
   margin-bottom: 15px;
 }
 
+.esriButton.close {
+  width: 21px;
+  line-height: inherit;
+}
+
+.esriPopup .titleButton.maximize, .esriPopup .titleButton.close,
 .esriPopup .titleButton.prev, .esriPopup .titleButton.next {
-  margin-top: 5px;
-  margin-right: 5px;
-  -webkit-filter: invert(100%);
-  display: block;
-}
-
-.esriPopup .titleButton.maximize {
   display: none;
-}
-
-.esriPopup .titleButton.close {
-  margin-top: 5px;
-  margin-right: 5px;
-  -webkit-filter: invert(100%);
 }
 
 /*** Restyle Geocoder widget ***/
