@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="images/favicon.ico">
@@ -144,7 +144,7 @@
                   <form id="geosearch-form" class="form-inline">
                     <!-- <div class="checkbox">
                       <label>
-                        <input type="checkbox" checked> Search Map Only
+                        <input id="chkExtent" type="checkbox" checked> Search Map Only
                       </label>
                     </div> -->
                     <button id="btnGeosearch" type="button" class="btn btn-success" data-dismiss="modal"> Go </button>
@@ -303,16 +303,11 @@
 
             // Show modal dialog, hide nav
             $(document).ready(function(){
-              // Close menu
-              // $('#mainNav .nav > a').on('click', function(){
-              //   $(".navbar-toggle").click();
-              // });
-
               function showModal() {
                 $("#geosearchModal").modal("show"); 
-                // Bootstrap work-around
-                $("body").css("margin-right","0px");
-                $(".navbar").css("margin-right","0px");
+                // // Bootstrap work-around
+                // $("body").css("margin-right","0px");
+                // $(".navbar").css("margin-right","0px");
               }
               // Geosearch nav menu is selected
               $("#geosearchNav").click(function(e){

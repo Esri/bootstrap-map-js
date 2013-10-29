@@ -101,7 +101,7 @@
   margin: 8px 4px 5px 1px;
 }
 
-/*** Bootstrap bug ***/
-.modal-open {
+/*** Fix Bootstrap modal bug ***/
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
   margin-right: 0;
 }
