@@ -142,11 +142,11 @@
                     <div id="geosearch"></div>
                   </div> 
                   <form id="geosearch-form" class="form-inline">
-                    <!-- <div class="checkbox">
+                    <div class="checkbox">
                       <label>
-                        <input id="chkExtent" type="checkbox" checked> Search Map Only
+                        <input id="chkExtent" type="checkbox" checked> Search in Map Only
                       </label>
-                    </div> -->
+                    </div>
                     <button id="btnGeosearch" type="button" class="btn btn-success" data-dismiss="modal"> Go </button>
                     <button id="btnDismiss" type="submit" class="btn btn-default" data-dismiss="modal">Dismiss</button>
                   </form>
@@ -222,6 +222,12 @@
             geocoder.on("select", geocodeSelect);
             geocoder.on("findResults", geocodeResults);
             geocoder.on("clear", clearFindGraphics);
+            on(geocoder.inputNode, "keydown", function(e){
+              if (e.keyCode == 13) {
+                setSearchExtent();
+                return false;
+              }
+            });
 
             // Geosearch functions
             on(dom.byId("btnGeosearch"),"click", geosearch);
@@ -229,12 +235,23 @@
             map.on("load", function(e){
               map.infoWindow.offsetY = 35;
             });
+
+            function setSearchExtent(){
+              if (dom.byId("chkExtent").checked == 1) {
+                geocoder.activeGeocoder.searchExtent = map.extent;                
+              } else {
+                geocoder.activeGeocoder.searchExtent = null;                
+              }
+            }
             
             function geosearch() {
+              setSearchExtent();
               var def = geocoder.find();
               def.then(function(res){
                 geocodeResults(res);
               });
+              // Close modal
+              $("#geosearchModal").modal("hide"); 
             }
 
             function geocodeSelect(item) {
@@ -256,10 +273,18 @@
                 }
                 zoomToPlaces(places);
               } else {
-                alert("Sorry, address or place not found.");
+                //alert("Sorry, address or place not found.");
               }
             }
             
+            function stripTitle(title) {
+              var i = title.indexOf(',');
+              if (i > 0) {
+                title = title.substring(0,i);
+              }
+              return title;
+            }
+
             function addPlaceGraphic(item,symbol)  {
               var place = {};
               var attributes,infoTemplate,pt,graphic;
@@ -267,7 +292,7 @@
               place.address = item.name;
               place.score = item.feature.attributes.Score;
               // Graphic components
-              attributes = { address:place.address, score:place.score, lat:pt.getLatitude().toFixed(2), lon:pt.getLongitude().toFixed(2) };   
+              attributes = { address:stripTitle(place.address), score:place.score, lat:pt.getLatitude().toFixed(2), lon:pt.getLongitude().toFixed(2) };   
               infoTemplate = new InfoTemplate("${address}","Latitude: ${lat}<br/>Longitude: ${lon}<br/>Score: ${score}");
               graphic = new Graphic(pt,symbol,attributes,infoTemplate);
               // Add to map
@@ -305,9 +330,6 @@
             $(document).ready(function(){
               function showModal() {
                 $("#geosearchModal").modal("show"); 
-                // // Bootstrap work-around
-                // $("body").css("margin-right","0px");
-                // $(".navbar").css("margin-right","0px");
               }
               // Geosearch nav menu is selected
               $("#geosearchNav").click(function(e){

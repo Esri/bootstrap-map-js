@@ -104,4 +104,5 @@
 /*** Fix Bootstrap modal bug ***/
 body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
   margin-right: 0;
+  margin-top: 0;
 }
