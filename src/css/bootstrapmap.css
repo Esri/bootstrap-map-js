@@ -7,6 +7,7 @@
   min-height: 100px;
   max-height: 1000px;
  	text-align: left;
+  overflow: hidden;
  	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;

@@ -23,13 +23,21 @@
       #mapDiv {
         min-height: 100px; 
         max-height: 1000px;
-        margin-bottom: 8px; 
       }
 
       #geosearchNav {
         margin-top: 0px;
         width: 110px;
       }
+
+      .navbar.tools {
+        margin-bottom: 0;
+        min-height: 30px;
+      }
+      .navbar-nav.tools {
+        margin: 0;
+      }
+
       .simpleGeocoder {
         margin-right: 5px;
       }
@@ -40,6 +48,18 @@
 
       .modal-dialog {
         padding-top: 60px;
+      }
+
+      .container.main {
+        padding-bottom: 20px;
+        overflow: hidden;
+      }
+
+      @media (max-width:768px) {
+        .container.main {
+          padding: 0;
+          margin: 0;
+        }        
       }
       
       /* Option 2: Geosearch in nav;
@@ -124,9 +144,11 @@
         </div><!-- /.modal-dialog -->
     </div>
 
-    <div class="container">
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:125px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
-      <div class="page-header">
+    <div class="container main">
+
+      <div class="page-header hidden-xs">
         <div class="row">
           <div class="col-xs-7"><h2>Windows</h2></div>
           <div class="col-xs-5">
@@ -143,7 +165,13 @@
         </div>
       </div>
 
-    </div>
+      <div class="navbar tools navbar-inverse visible-xs">
+        <div class="container">
+          <ul class="nav navbar-nav tools">
+            <li id="geosearchNav2"><a href="#"><span class="glyphicon glyphicon-search"></span> Geosearch</a></li>
+          </ul>
+        </div>
+      </div>
 
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
@@ -167,10 +195,10 @@
               zoom:12
             });
 
-            // var scalebar = new Scalebar({
-            //   map: map,
-            //   scalebarUnit: "dual"
-            // });
+            var scalebar = new Scalebar({
+              map: map,
+              scalebarUnit: "dual"
+            });
 
             // Create widget
             var geocoder = new Geocoder({
@@ -265,15 +293,22 @@
             // Show modal dialog, hide nav
             $(document).ready(function(){
               // Close menu
-              $('.nav a').on('click', function(){
-                $(".navbar-toggle").click();
-              });
-              // Geosearch nav menu is selected
-              $("#geosearchNav").click(function(e){
+              // $('.nav a').on('click', function(){
+              //   $(".navbar-toggle").click();
+              // });
+
+              function showModal() {
                 $("#geosearchModal").modal("show"); 
                 // Bootstrap work-around
                 $("body").css("margin-right","0px");
                 $(".navbar").css("margin-right","0px");
+              }
+              // Geosearch nav menu is selected
+              $("#geosearchNav").click(function(e){
+                showModal();
+              });
+              $("#geosearchNav2").click(function(e){
+                showModal();
               }); 
             });
         });

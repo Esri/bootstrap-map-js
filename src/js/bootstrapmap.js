@@ -87,7 +87,7 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
             }));
             on(this._map, "pan-end", lang.hitch(this, function(e){
               if (this._map.infoWindow.isShowing){
-                this._map.infoWindow.reposition();
+                //this._map.infoWindow.reposition();
               }
             }));
           }

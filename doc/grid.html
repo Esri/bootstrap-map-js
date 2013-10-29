@@ -25,17 +25,15 @@
       #mapDiv1, #mapDiv2, #mapDiv3 {
         min-height: 76px; 
         max-height: 1000px; 
-        padding: 1px;
       }
 
       #mapDiv4 {
         height: 300px; 
-        padding: 1px;
       }
 
       [class*="col-"] {
-        padding-top: 15px;
-        padding-bottom: 15px;
+       /* padding-top: 5px;
+        padding-bottom: 5px;*/
         background-color: #eee;
         border: 1px solid #E7E7E7;
         text-align: center;
@@ -50,8 +48,20 @@
         padding: 0;
       }
 
-      h3 {
+      .tab-content {
         margin-top: 10px;
+      }
+
+      .container.main {
+        margin-top: 5px;
+        padding-bottom: 20px;
+      }        
+
+      @media (max-width:768px) {
+        .container.main {
+          margin-top: 5px;
+          padding-bottom: 0;
+        }        
       }
 
     </style>
@@ -100,11 +110,11 @@
       </div>
     </div>
 
-    <a href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:125px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:125px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
-    <div class="container">
+    <div class="container main">
 
-      <div class="page-header">
+      <div class="page-header hidden-xs">
         <h2>Grid Layouts</h2>
         <p class="lead">Use different grid layouts with a responsive map.</p>
       </div>
@@ -119,14 +129,12 @@
             <li class=""><a href="#mapFixed" data-toggle="tab">Fixed</a></li>
           </ul> <!-- nav-tabs -->
 
-          <br>
-
           <div id="myTabContent" class="tab-content">
 
                <div class="tab-pane fade in active" id="mapLeft">
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-lg-12">
-                    <h3>Top 12</h3>
+                    <h5>Top 12</h5>
                   </div>
                 </div>
                 <div class="row">
@@ -135,50 +143,50 @@
                     <div id="mapDiv1"></div>
                   </div>
                   <div class="col-xs-12 col-sm-4 col-lg-3">                
-                    <h3>Right 3</h3>
+                    <h5>Right 3</h5>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
                 </div>        
               </div> <!-- /.tab-pane-->   
 
               <div class="tab-pane fade" id="mapCenter"> 
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-lg-12">
-                    <h3>Top 12</h3>
+                    <h5>Top 12</h5>
                   </div>
                 </div>
                 <div class="row row-map">
                   <div class="col-xs-12 col-sm-3 col-lg-3">
-                    <h3>Left 3</h3>
+                    <h5>Left 3</h5>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-lg-6 no-col-padding ">
                     <!-- Bootstrap-map-js -->
                     <div id="mapDiv2"></div>
                   </div>
                   <div class="col-xs-12 col-sm-3 col-lg-3">
-                    <h3>Right 3</h3>
+                    <h5>Right 3</h5>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
                 </div>        
               </div> <!-- /.tab pane -->
 
               <div class="tab-pane fade" id="mapRight"> 
                <div class="row">
                   <div class="col-xs-12 col-sm-12 col-lg-12">
-                    <h3>Top 12</h3>
+                    <h5>Top 12</h5>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12 col-sm-4 col-lg-3">
-                    <h3>Left 3</h3>
+                    <h5>Left 3</h5>
                   </div>
                   <div class="col-xs-12 col-sm-8 col-lg-9 no-col-padding">
                     <!-- Bootstrap-map-js -->
@@ -186,34 +194,34 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
                 </div>        
               </div> <!-- /.tab pane -->
 
               <div class="tab-pane fade" id="mapFixed"> 
                 <div class="row">
                   <div class="col-xs-12 col-sm-12 col-lg-12">
-                    <h3>Top 12</h3>
+                    <h5>Top 12</h5>
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-xs-12 col-sm-3 col-lg-3">
-                    <h3>Left 3</h3>
+                    <h5>Left 3</h5>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-lg-6 no-col-padding">
                     <!-- Bootstrap-map-js -->
                     <div id="mapDiv4"></div>
                   </div>
                   <div class="col-xs-12 col-sm-3 col-lg-3">
-                    <h3>Right 3</h3>
+                    <h5>Right 3</h5>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
-                  <div class="col-xs-4"><h3>Bottom 4</h3></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
                 </div>        
               </div> <!-- /.tab pane -->
                   
