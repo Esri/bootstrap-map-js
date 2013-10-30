@@ -7,9 +7,9 @@ Bootstrap Map JS is a simple framework for building responsive mapping applicati
 * Responsive map resizing
 * Auto-recentering
 * Responsive pop-ups
+* Styled ArcGIS widgets
 * Touch behavior for mobile devices
 * Media queries
-
 * Examples with the bootstrap grid system and web components
 * Starter templates
 
