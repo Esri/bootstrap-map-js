@@ -41,25 +41,28 @@
         padding: 0;
       }
 
-      .container.main {
-        margin-top: 10px;
-      }
-
       table {
         border-collapse: none;
         border-spacing: none;
       }
 
       [class*="col-"] {
-        margin-bottom: 2px;
-      }
+        margin-bottom: 15px;
+      }   
 
-      @media (min-width: 767px) {
+      .col-sm-4 {
+        padding-right: 0px;
+      }  
+
+      @media (max-width: 767px) {
         [class*="col-"] {
-          margin-bottom: 15px;
+          margin-bottom: 2px;
+        }
+        .container.main {
+          margin-top: 10px;
         }
         .col-sm-4 {
-          padding-right: 0px;
+          padding-right: 15px;
         }
       }
 

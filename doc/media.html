@@ -22,29 +22,60 @@
 
     <style type="text/css">
 
+      .container.main {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .row {
+        margin-bottom: 0;
+      }
+      
+      [class*="col-"] {
+          margin-bottom: 10px;
+      }
+    
+      /* Extra small devices (phones, up to 480px) */
       @media (max-width: 480px) {
         .map {
           height: 100px;
-          padding: 0 10px;
+        }
+        .container.main {
+          margin-top: 10px;
         }
       }
 
-      @media (min-width: 767px) {
+      @media (min-width: 481px) and (max-width: 767px) {
+        .map {
+          height: 150px;
+        }
+        .container.main {
+          margin-top: 10px;
+        }
+      }
+
+      /* Small devices (tablets, 768px and up) - Portrait to Landscape */
+      @media (min-width: 768px) {
         .map {
           height: 200px;
         }
+        .row {
+          margin-bottom: 20px;
+        }
       }
 
+      /* Medium devices (desktops, 992px and up) */
       @media (min-width: 992px) {
         .map {
           height: 300px;
         }
       }
 
-      [class*="col-"] {
-        margin-top: 10px;
-        padding-right: 5px;
-        padding-left: 5px;
+      /* Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+        .map {
+          height: 400px;
+        }
       }
 
     </style>  
@@ -94,7 +125,7 @@
       </div>
     </div>
 
-    <div class="container">
+    <div class="container main">
 
       <div class="page-header hidden-xs">
         <h2>Media Queries</h2>
