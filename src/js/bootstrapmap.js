@@ -1,8 +1,8 @@
 define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/domReady!"], 
-    function(Map, Popup, declare, on, dom, lang, style, query) {
+  function(Map, Popup, declare, on, dom, lang, style, query) {
     "use strict"        
     return {
-     create: function(divId,options) {
+      create: function(divId,options) {
         if (divId && options) {
           var smartResizer = new this._smartResizer(divId,options);
           var mapOut = smartResizer.createMap();
@@ -80,7 +80,6 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           // InfoWindow restyle and reposition
           var setInfoWin = function(e) {
             this._map.infoWindow.anchor = "top";
-            // this._map.infoWindow.set("highlight", false);
 
             var updateTitle = function(infoW) {
               var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick='var m = dojo.byId(\"mapDiv\"); m.__map.infoWindow.hide();'>×</button>";
@@ -181,7 +180,8 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
             centerPoint = this._map.toMap(centerPointScreen);
             this._map.centerAt(centerPoint);        
           }         
-        }
-    })
-  }
-});
+        } 
+      }) // _smartResizer
+    } // return
+  } // function
+); // define
