@@ -1,4 +1,4 @@
-define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse","dojo/domReady!"], 
+define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/domReady!"], 
     function(Map, Popup, declare, on, dom, lang, style, query) {
     "use strict"        
     return {
@@ -84,7 +84,7 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
 
             var updateTitle = function(infoW) {
               var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick='var m = dojo.byId(\"mapDiv\"); m.__map.infoWindow.hide();'>×</button>";
-              infoW.setTitle(infoW._title.innerText+close);
+              infoW.setTitle(infoW._title.textContent+close);
             }
 
             on(this._map.graphics, "click", lang.hitch(this, function(g){
