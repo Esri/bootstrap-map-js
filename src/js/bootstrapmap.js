@@ -80,7 +80,7 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           // InfoWindow restyle and reposition
           var setInfoWin = function(e) {
             this._map.infoWindow.anchor = "top";
-            this._map.infoWindow.set("highlight", false);
+            // this._map.infoWindow.set("highlight", false);
 
             var updateTitle = function(infoW) {
               var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick='var m = dojo.byId(\"mapDiv\"); m.__map.infoWindow.hide();'>×</button>";
@@ -159,23 +159,28 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           var infoWin = this._map.infoWindow.domNode.childNodes[0];
           var infoWidth = infoWin.clientWidth;
           var infoHeight = infoWin.clientHeight + this._map.infoWindow.marginTop;
+          // X
           var lOff = graphicPointScreen.x - infoWidth/2;
           var rOff = graphicPointScreen.x + infoWidth/2;
-          // X
-          if (lOff - marginLR < 0) {
+          var l = lOff - marginLR < 0;
+          var r = rOff > maxPointScreen.x - marginLR;
+          if (l) {
             centerPointScreen.x -= (Math.abs(lOff) + marginLR) < marginLR ? marginLR : Math.abs(lOff) + marginLR;
-          } else if (rOff > maxPointScreen.x - marginLR) {
+          } else if (r) {
             centerPointScreen.x += (rOff - maxPointScreen.x) + marginLR;
           }
           // Y
           var yOff = this._map.infoWindow.offsetY;
           var tOff = graphicPointScreen.y - infoHeight - yOff;
-          if (tOff - marginTop < 0) {
+          var t = tOff - marginTop < 0;
+          if (t) {
             centerPointScreen.y += tOff - marginTop;
           }
-          //Pan the this._map to the new centerpoint           
-          centerPoint = this._map.toMap(centerPointScreen);
-          this._map.centerAt(centerPoint);
+          //Pan the ap to the new centerpoint  
+          if (r || l || t) {
+            centerPoint = this._map.toMap(centerPointScreen);
+            this._map.centerAt(centerPoint);        
+          }         
         }
     })
   }

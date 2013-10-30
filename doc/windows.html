@@ -19,38 +19,44 @@
     <!-- Bootstrap-map-js -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css">   
+    
     <style type="text/css">
+
       #mapDiv {
         min-height: 100px; 
         max-height: 1000px;
-      }
-
-      #geosearchNav {
-        margin-top: 0px;
-        width: 110px;
-      }
-
-      .navbar.tools {
-        margin-bottom: 0;
-        min-height: 30px;
-        border: none;
-        /*background: none;*/
-      }
-      .navbar-nav.tools {
-        margin: 0;
-        text-align: center;
       }
 
       .simpleGeocoder {
         margin-right: 5px;
       }
 
-      h2 {
-        margin-top: 0;
+      .navbar.tools {
+        margin-bottom: 0;
+        min-height: 30px;
+        border: none;
+      }
+
+      .navbar-nav.tools {
+        margin: 0;
+        text-align: center;
       }
 
       .modal-dialog {
         padding-top: 60px;
+      }
+
+      .btn-fixed {
+        width: 80px;
+      }
+
+      .btn-fixed-lg {
+        margin-top: 20px;
+        width: 120px;
+      }
+
+      h2 {
+        margin-top: 0;
       }
 
       .container.main {
@@ -67,24 +73,7 @@
           padding-bottom: 40px;
         }  
       }
-      
-      /* Option 2: Geosearch in nav;
-      .simpleGeocoder .esriGeocoderContainer {
-        width: 180px;
-      }
-      .simpleGeocoder .esriGeocoder input {
-        width: 118px;
-      }
-      @media (max-width: 767px) {
-        .navbar-form .form-group {
-          float: left;
-        }
-        .simpleGeocoder {
-          margin-right: 7px;
-        }
-      }
-      */
-        
+              
     </style>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -95,6 +84,8 @@
   </head>
 
   <body>
+
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:125px; z-index:100" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -147,8 +138,8 @@
                         <input id="chkExtent" type="checkbox" checked> Search in Map Only
                       </label>
                     </div>
-                    <button id="btnGeosearch" type="button" class="btn btn-success" data-dismiss="modal"> Go </button>
-                    <button id="btnDismiss" type="submit" class="btn btn-default" data-dismiss="modal">Dismiss</button>
+                    <button id="btnGeosearch" type="button" class="btn btn-success btn-fixed" data-dismiss="modal"> Go </button>
+                    <button id="btnDismiss" type="submit" class="btn btn-default btn-fixed" data-dismiss="modal">Dismiss</button>
                   </form>
                 </div>
             </div><!-- /.modal-content -->
@@ -159,12 +150,13 @@
 
       <div class="page-header hidden-xs">
         <div class="row">
-          <div class="col-xs-7"><h2>Windows</h2></div>
-          <div class="col-xs-5">
-            <button id="geosearchNav" type="button" class="btn btn-primary pull-right">Geosearch</button>
+          <div class="col-xs-9"><h2>Windows</h2>
+            <p class="lead">Show modal and responsive pop-up windows.</p>
+          </div>
+          <div class="col-xs-3">
+            <button id="geosearchNav" type="button" class="btn btn-primary btn-lg btn-fixed-lg">Show Window</button>
           </div>
         </div>
-        <p class="lead">Show modal and responsive pop-up windows in the map.</p>
       </div>
 
       <div class="row">
@@ -184,7 +176,6 @@
 
     <script src="http://js.arcgis.com/3.7compact"></script>
     <script>
-        var map;  // TODO
         require(["esri/map", 
           "esri/dijit/Scalebar",       
           "esri/dijit/Geocoder", 
@@ -198,8 +189,9 @@
           "../src/js/bootstrapmap.js", 
           "dojo/domReady!"], 
           function(Map, Scalebar, Geocoder, InfoTemplate, Graphic, Multipoint, PictureMarkerSymbol, Popup, dom, on, BootstrapMap) {
+
             <!-- Get a reference to the ArcGIS Map class -->
-            map = BootstrapMap.create("mapDiv",{  // TODO
+            var map = BootstrapMap.create("mapDiv",{ 
               basemap:"streets",
               center:[-122.45,37.77],
               zoom:12
@@ -225,16 +217,19 @@
             on(geocoder.inputNode, "keydown", function(e){
               if (e.keyCode == 13) {
                 setSearchExtent();
-                return false;
               }
+            });
+
+            // Symbols
+            var sym = createPictureSymbol("images/blue-pin.png", 0, 12, 35);
+
+            map.on("load", function(e){
+              map.infoWindow.offsetY = 35;
+              map.infoWindow.set("highlight", false);
             });
 
             // Geosearch functions
             on(dom.byId("btnGeosearch"),"click", geosearch);
-
-            map.on("load", function(e){
-              map.infoWindow.offsetY = 35;
-            });
 
             function setSearchExtent(){
               if (dom.byId("chkExtent").checked == 1) {
@@ -273,7 +268,7 @@
                 }
                 zoomToPlaces(places);
               } else {
-                //alert("Sorry, address or place not found.");
+                //alert("Sorry, address or place not found.");  // TODO
               }
             }
             
@@ -302,7 +297,6 @@
             function zoomToPlaces(places) {
               var multiPoint = new Multipoint(map.spatialReference);
               for (var i = 0; i < places.length; i++) {
-                //multiPoint.addPoint(places[i].location);
                 multiPoint.addPoint(places[i].feature.geometry);
               }
               map.setExtent(multiPoint.getExtent().expand(2.0));
@@ -324,9 +318,7 @@
               });
             }
 
-            var sym = createPictureSymbol("images/blue-pin.png", 0, 12, 35);
-
-            // Show modal dialog, hide nav
+            // Show modal dialog
             $(document).ready(function(){
               function showModal() {
                 $("#geosearchModal").modal("show"); 
