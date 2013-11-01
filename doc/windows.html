@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <!-- Safari iOS - apps only -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Chrome for Android - NEW! -->
+    <meta name="mobile-web-app-capable" content="yes">
     <link rel="shortcut icon" href="images/favicon.ico">
 
     <title>Bootstrap Map JS - Geosearch</title>
@@ -136,7 +141,7 @@
                   <form id="geosearch-form" class="form-inline">
                     <div class="checkbox">
                       <label>
-                        <input id="chkExtent" type="checkbox" checked> Search in Map Only
+                        <input id="chkExtent" type="checkbox"> Search in Map Only
                       </label>
                     </div>
                     <button id="btnGeosearch" type="button" class="btn btn-success btn-fixed" data-dismiss="modal"> Go </button>
@@ -206,9 +211,10 @@
             // Create widget
             var geocoder = new Geocoder({
               value: 'starbucks',
-              maxLocations: 10,
+              maxLocations: 25,
               autoComplete: true,
               arcgisGeocoder: true,
+              autoNavigate: false,
               map: map
             },"geosearch");        
             geocoder.startup();
@@ -232,6 +238,7 @@
             // Geosearch functions
             on(dom.byId("btnGeosearch"),"click", geosearch);
 
+            // Optionally confine search to map extent
             function setSearchExtent(){
               if (dom.byId("chkExtent").checked == 1) {
                 geocoder.activeGeocoder.searchExtent = map.extent;                
@@ -251,6 +258,7 @@
             }
 
             function geocodeSelect(item) {
+              clearFindGraphics();
               var g = (item.graphic ? item.graphic : item.result.feature);
               g.setSymbol(sym);
               addPlaceGraphic(item.result,g.symbol);

@@ -82,16 +82,21 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
             this._map.infoWindow.anchor = "top";
 
             var updateTitle = function(infoW) {
-              var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick='var m = dojo.byId(\"mapDiv\"); m.__map.infoWindow.hide();'>×</button>";
+              var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\" onTouchStart=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\">×</button>";
               infoW.setTitle(infoW._title.textContent+close);
             }
 
-            on(this._map.graphics, "click", lang.hitch(this, function(g){
-              if (this._map.infoWindow.isShowing){
-                updateTitle(this._map.infoWindow);
-                this._repositionInfoWin(this._map.infoWindow.features[0]);
+            var updatePopup = function(obj) {
+              if (obj._map.infoWindow.isShowing){
+                updateTitle(obj._map.infoWindow);
+                obj._repositionInfoWin(obj._map.infoWindow.features[0]);
               }
+            }
+
+            on(this._map.graphics, "click", lang.hitch(this, function(g){
+              updatePopup(this);
             }));
+
             on(this._map, "pan-end", lang.hitch(this, function(e){
               // Causes issues on mobile
               // if (this._map.infoWindow.isShowing){
