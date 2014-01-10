@@ -137,8 +137,11 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
             return;
           }
           var w = window.innerHeight;
-          if (w != this._w) {
+          var wd = window.innerWidth;
+
+          if (w != this._w || wd != this._wd) {
             this._w = w;
+            this._wd = wd;
             var b = document.body.clientHeight;
             var mh = this._mapDiv.clientHeight;
             var ms = this._calcSpace(this._mapDiv);
