@@ -45,10 +45,12 @@
   color: #333333;
   background-color: #f7f7f7;
   border: none;
+  max-height: 70px;
 }
 
 .esriPopup .titlePane, {
   padding-top: 10px;
+  color: #f3f3f3;
 }
 
 .esriPopup .contentPane {
@@ -65,8 +67,11 @@
 }
 
 .esriPopup .titleButton.maximize, .esriPopup .titleButton.close,
-.esriPopup .titleButton.prev, .esriPopup .titleButton.next {
-  display: none;
+.esriPopup .titleButton.prev, .esriPopup .titleButton.next, .titleButton.restore {
+  /*display: none;*/
+  -webkit-filter: invert(80%);
+  margin-top: 8px;
+  margin-right: 5px;
 }
 
 /*** Restyle Geocoder widget ***/

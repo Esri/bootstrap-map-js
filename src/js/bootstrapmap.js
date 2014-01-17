@@ -81,30 +81,53 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           var setInfoWin = function(e) {
             this._map.infoWindow.anchor = "top";
 
-            var updateTitle = function(infoW) {
-              var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\" onTouchStart=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\">×</button>";
-              infoW.setTitle(infoW._title.textContent+close);
-            }
+            //var updateTitle = function(infoW) {
+              //var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\" onTouchStart=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\">×</button>";
+              //infoW.setTitle(infoW._title.textContent+close);
+            //}
 
             var updatePopup = function(obj) {
-              if (obj._map.infoWindow.isShowing){
-                updateTitle(obj._map.infoWindow);
-                obj._repositionInfoWin(obj._map.infoWindow.features[0]);
-              }
+              //if (obj._map.infoWindow.isShowing){
+                //updateTitle(obj._map.infoWindow);
+                var f = obj._map.infoWindow.getSelectedFeature();
+                //console.log(f);
+                if (f) {
+                  var pt;
+                  if (f.geometry.type == "point") {
+                    pt = f.geometry;
+                  } else {
+                    pt = f.geometry.getExtent().getCenter();
+                  }
+                  window.setTimeout(function() {
+                    obj._repositionInfoWin(pt);
+                  }, 250);
+                  
+                }
+              //}
             }
 
+            // GraphicLayers
             on(this._map.graphics, "click", lang.hitch(this, function(g){
               updatePopup(this);
             }));
 
-            on(this._map, "pan-end", lang.hitch(this, function(e){
+            // FeatureLayers
+            on(this._map.infoWindow, "selection-change", lang.hitch(this, function(g){
+             updatePopup(this);
+            }));
+            
+            //on(this._map, "pan-end", lang.hitch(this, function(e){
               // Causes issues on mobile
               // if (this._map.infoWindow.isShowing){
               //   this._map.infoWindow.reposition();
               // }
-            }));
+            //}));
           }
           this._handles.push(on(this._map,'load', lang.hitch(this, setInfoWin)));
+          
+          if (this._map.loaded) {
+            lang.hitch(this, setInfoWin).call();
+          }
 
           // Responsive resize
           var resizeWin = function(evt){
@@ -152,14 +175,14 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
             //console.log("Window:"+ w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:"+ms + " OldMapHeight:"+mh1+ " NewMapHeight:"+mh2);
           }
         },
-        _repositionInfoWin: function(graphic) {     
+        _repositionInfoWin: function(graphicCenterPt) {     
           // Determine the upper right, and center, coordinates of the map
           var maxPoint = new esri.geometry.Point(this._map.extent.xmax, this._map.extent.ymax, this._map.spatialReference);
           var centerPoint = new esri.geometry.Point(this._map.extent.getCenter());
           // Convert to screen coordinates
           var maxPointScreen = this._map.toScreen(maxPoint);
           var centerPointScreen = this._map.toScreen(centerPoint);
-          var graphicPointScreen = this._map.toScreen(graphic.geometry);  // Points only
+          var graphicPointScreen = this._map.toScreen(graphicCenterPt);  // Points only
           // Buffer
           var marginLR = 10;
           var marginTop = 3;
