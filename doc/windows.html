@@ -92,7 +92,7 @@
 
   <body>
 
-    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:125px; z-index:0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px; z-index:0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -229,10 +229,10 @@
             });
 
             // Symbols
-            var sym = createPictureSymbol("images/blue-pin.png", 0, 12, 35);
+            var sym = createPictureSymbol("images/purple-pin.png", 0, 12, 12, 24);
 
             map.on("load", function(e){
-              map.infoWindow.offsetY = 35;
+              map.infoWindow.offsetY = 25;
               map.infoWindow.set("highlight", false);
             });
 
@@ -317,14 +317,14 @@
               map.graphics.clear();
             }
 
-            function createPictureSymbol(url, xOffset, yOffset, size) {
+            function createPictureSymbol(url, xOffset, yOffset, xWidth, yHeight) {
               return new PictureMarkerSymbol(
               {
                   "angle": 0,
                   "xoffset": xOffset, "yoffset": yOffset, "type": "esriPMS",
                   "url": url,  
                   "contentType": "image/png",
-                  "width":size, "height": size
+                  "width":xWidth, "height": yHeight
               });
             }
 

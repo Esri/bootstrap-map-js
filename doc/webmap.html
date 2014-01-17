@@ -23,7 +23,7 @@
     <link href="style.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css">   
     
     <style type="text/css">
@@ -56,6 +56,8 @@
         margin-bottom: 15px;
       }   
 
+      h2 {margin-top: 0}
+
       .col-sm-4 {
         padding-right: 0px;
       }  
@@ -83,7 +85,7 @@
 
   <body>
     
-    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:125px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="container">
@@ -122,12 +124,18 @@
 
     <div class="container main">
 
-      <div class="row hidden-xs">
-        <div class="col-xs-12">
-          <div class="page-header">
-            <h2>Web Maps</h2>
-            <p class="lead">Load ArcGIS web map components into Bootstrap.</p>
-          </div>
+        <div class="page-header hidden-xs">
+          <div class="row">
+            <div class="col-xs-7" style="margin-bottom: 0px;">
+              <h2>Web Maps</h2>
+              <p class="lead">Load ArcGIS web maps into Bootstrap.</p>
+            </div>
+            <div class="col-xs-5">
+              <div class="form-group pull-right" style="margin-top: 35px;">
+                <input class="form-control form-inline" style="display: inline-block; width:210px; margin-right: 5px;" id="webmapId" type="text" value="f58996878ac24702afef792e52a07e55"></input>
+                <button class="btn btn-primary" id="btnWebmap">Load</button> 
+              </div>
+            </div>          
         </div>
       </div>
 
@@ -165,7 +173,7 @@
                   </a>
                 </h4>
               </div>
-              <div id="collapseOne1" class="panel-collapse collapse">
+              <div id="collapseOne1" class="panel-collapse collapse in">
                 <div class="panel-body">
                   <div id="mapLegendDiv"></div>
                 </div>
@@ -197,7 +205,7 @@
 
     </div><!-- /.container -->
 
-    <script src="http://js.arcgis.com/3.7compact"></script>
+    <script src="http://js.arcgis.com/3.8compact"></script>
     <script>
       require(["esri/map", 
         "esri/dijit/Scalebar", 
@@ -209,16 +217,26 @@
         "../src/js/bootstrapmap.js",
         "dojo/domReady!"], 
       function(Map, Scalebar, Legend, esriUtils, dom, on, query, BootstrapMap) {  
+        "use strict"
+        
         var map;
         var scalebar;
         var legend;
 
-        // Load web map when page loads
+        // Load web map automatically when the page loads
         loadWebmap();
+
+        on(dom.byId("btnWebmap"),"click", loadWebmap);
         
         function loadWebmap(e) {
+
           // Get new webmap and extract map and map parts
-          var mapDeferred = esriUtils.createMap("f58996878ac24702afef792e52a07e55", "mapDiv", {
+          resetMap();
+
+          // 8602ad7753a54608a5c359f5977fba13
+          // f58996878ac24702afef792e52a07e55
+          var webmap = dom.byId("webmapId").value.trim();
+          var mapDeferred = esriUtils.createMap(webmap, "mapDiv", {
             mapOptions: {
               slider: true,
               nav:false,
@@ -226,7 +244,7 @@
             }
           });
 
-          mapDeferred.then(function(response) {   
+          mapDeferred.then(function(response) {
             map = response.map;
 
             // Bind to map 
@@ -271,13 +289,29 @@
             legend.startup();
           }
         }
+
+        function resetMap() {
+          if (map) { 
+            //BootstrapMap.destroy(map);
+            map.removeAllLayers();
+            map.spatialReference = null;
+            map.destroy();
+          }
+          if (scalebar)
+           scalebar.destroy();
+          if (legend) {
+            dom.byId("mapLegendDiv").innerHTML = "";
+          }        
+        }
+
       });
     </script>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!--script src="http://code.jquery.com/jquery-1.10.1.min.js"></script-->
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
   </body>
