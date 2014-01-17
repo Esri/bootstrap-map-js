@@ -81,29 +81,19 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
           var setInfoWin = function(e) {
             this._map.infoWindow.anchor = "top";
 
-            //var updateTitle = function(infoW) {
-              //var close = "<button type='button' class='esriButton close' aria-hidden='true' onClick=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\" onTouchStart=\"var m = dojo.byId(\'mapDiv\'); m.__map.infoWindow.hide(); event.preventDefault();\">×</button>";
-              //infoW.setTitle(infoW._title.textContent+close);
-            //}
-
             var updatePopup = function(obj) {
-              //if (obj._map.infoWindow.isShowing){
-                //updateTitle(obj._map.infoWindow);
-                var f = obj._map.infoWindow.getSelectedFeature();
-                //console.log(f);
-                if (f) {
-                  var pt;
-                  if (f.geometry.type == "point") {
-                    pt = f.geometry;
-                  } else {
-                    pt = f.geometry.getExtent().getCenter();
-                  }
-                  window.setTimeout(function() {
-                    obj._repositionInfoWin(pt);
-                  }, 250);
-                  
+              var f = obj._map.infoWindow.getSelectedFeature();
+              if (f) {
+                var pt;
+                if (f.geometry.type == "point") {
+                  pt = f.geometry;
+                } else {
+                  pt = f.geometry.getExtent().getCenter();
                 }
-              //}
+                window.setTimeout(function() {
+                  obj._repositionInfoWin(pt);
+                }, 250); 
+              }
             }
 
             // GraphicLayers
@@ -146,6 +136,7 @@ define(["esri/map", "esri/dijit/Popup", "dojo/_base/declare", "dojo/on", "dojo/d
             setTimeout(lang.hitch(this, timer), this._delay);
           }
           this._handles.push(on(this._map, 'resize', lang.hitch(this, recenter)));
+
         },
         _calcSpace: function(e) {
           var s = style.get(e);
