@@ -132,7 +132,7 @@
             </div>
             <div class="col-xs-5">
               <div class="form-group pull-right" style="margin-top: 35px;">
-                <input class="form-control form-inline" style="display: inline-block; width:210px; margin-right: 5px;" id="webmapId" type="text" value="f58996878ac24702afef792e52a07e55"></input>
+                <input class="form-control form-inline" style="display: inline-block; width:210px; margin-right: 5px;" id="webmapId" type="text" value="441f68fc13ec4ec480287f9d46c3e319"></input>
                 <button class="btn btn-primary" id="btnWebmap">Load</button> 
               </div>
             </div>          
@@ -233,8 +233,10 @@
           // Get new webmap and extract map and map parts
           resetMap();
 
+          // Webmaps
           // 8602ad7753a54608a5c359f5977fba13
           // f58996878ac24702afef792e52a07e55
+          // 441f68fc13ec4ec480287f9d46c3e319
           var webmap = dom.byId("webmapId").value.trim();
           var mapDeferred = esriUtils.createMap(webmap, "mapDiv", {
             mapOptions: {
