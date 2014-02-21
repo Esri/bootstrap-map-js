@@ -219,7 +219,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           // Calc map size
           var w = window.innerHeight;
           var wd = window.innerWidth;
-          if (w != this._w || wd != this._wd) {
+          if (forceResize || w != this._w || wd != this._wd) {
             this._w = w;
             this._wd = wd;
             var b = document.body.clientHeight;
