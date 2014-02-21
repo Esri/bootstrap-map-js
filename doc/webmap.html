@@ -29,8 +29,8 @@
     <style type="text/css">
 
       #mapDiv {
-        min-height: 350px; 
-        max-height: 350px; 
+       /* min-height: 350px; 
+        max-height: 350px; */
       }
 
       #mapLegendDiv {
@@ -45,6 +45,10 @@
 
       #mapPanel {
         padding: 0;
+      }
+
+      .panel-group-map {
+        margin-bottom: 15px;
       }
 
       table {
@@ -132,7 +136,7 @@
             </div>
             <div class="col-xs-5">
               <div class="form-group pull-right" style="margin-top: 35px;">
-                <input class="form-control form-inline" style="display: inline-block; width:210px; margin-right: 5px;" id="webmapId" type="text" value="8b3d38c0819547faa83f7b7aca80bd76"></input>
+                <input class="form-control form-inline" style="display: inline-block; width:210px; margin-right: 5px;" id="webmapId" type="text" value="441f68fc13ec4ec480287f9d46c3e319"></input>
                 <button class="btn btn-primary" id="btnWebmap">Load</button> 
               </div>
             </div>          
@@ -184,7 +188,7 @@
 
         <!-- Map -->    
         <div class="col-sm-8">
-          <div class="panel-group" id="accordion2">
+          <div class="panel-group panel-group-map" id="accordion2">
             <div class="panel panel-default">
               <div class="panel-heading">
                 <h4 class="panel-title">
@@ -201,6 +205,8 @@
             </div>
           </div>
         </div>
+
+        <!-- <div id="mapDiv"></div> -->
       </div>
 
     </div><!-- /.container -->
@@ -238,20 +244,14 @@
           // f58996878ac24702afef792e52a07e55
           // 441f68fc13ec4ec480287f9d46c3e319
           var webmap = dom.byId("webmapId").value.trim();
-          var mapDeferred = esriUtils.createMap(webmap, "mapDiv", {
-            mapOptions: {
-              slider: true,
-              nav:false,
-              smartNavigation:false,
-              autoResize: false
-            }
+          var mapDeferred = BootstrapMap.createWebMap(webmap,"mapDiv", {
+            slider: true,
+            nav:false,
+            smartNavigation:false          
           });
 
           mapDeferred.then(function(response) {
             map = response.map;
-
-            // Bind to map 
-            BootstrapMap.bindTo(map);
 
             // Add titles
             dom.byId("mapTitle").innerHTML = response.itemInfo.item.title;
