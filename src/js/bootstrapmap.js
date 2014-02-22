@@ -14,7 +14,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         if (divId && options) {
           var smartResizer = new this._smartResizer(divId, options);
           var deferredOut = smartResizer.createWebMap(webMapId);
-          //mapOut._smartResizer = smartResizer;
           return deferredOut;
         }
       },
@@ -90,12 +89,10 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           this._mapDeferred.then(lang.hitch(this, getDeferred));
           return deferred;
         },
+        // Will be depreciated...  do not use!
         bindToMap: function(map) {
-          // this._setMapDiv(true);
-          this._visible = this._getMapDivVisibility();
-          this._controlVisibilityTimer(!this._visible);
+          this._setMapDiv(true);
           this._map = map;
-          //this._map.autoResize = false;
           this._setMapDiv(true);
           this._bindEvents();
           this._setTouchBehavior();
@@ -186,7 +183,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           }
         },
         _getMapDivVisibility: function() {
-          // console.log("Visibility: " + $("#" + this._mapDivId).is(":visible"));
           return $("#" + this._mapDivId).is(":visible");
         },
         _controlVisibilityTimer: function(runTimer) {
@@ -194,13 +190,13 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             // Start a visibility change timer.
             this._visibilityTimer = setInterval((function() {
               this._checkVisibility();
-              // console.log("_checkVisibility");
-            }).bind(this), 100);
-            // console.log("Started Timer: " + this._visibilityTimer);
+              //console.log("_checkVisibility");
+            }).bind(this), 200);
+            //console.log("Started Timer: " + this._visibilityTimer);
           } else {
             // Stop any timer we have checking for visibility change.
             if (this._visibilityTimer) {
-              // console.log("Stop Timer!!!! " + this._visibilityTimer);
+              //console.log("Stop Timer!!!! " + this._visibilityTimer);
               clearInterval(this._visibilityTimer);
               this._visibilityTimer = null;
             }
@@ -219,7 +215,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           // Calc map size
           var w = window.innerHeight;
           var wd = window.innerWidth;
-          if (forceResize || w != this._w || wd != this._wd) {
+          if (w != this._w || wd != this._wd) {
             this._w = w;
             this._wd = wd;
             var b = document.body.clientHeight;
@@ -232,10 +228,11 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
               "height": mh2 + "px",
               "width": "100%"
             });
-            // console.log("Window:" + w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:" + ms + " OldMapHeight:" + mh1 + " NewMapHeight:" + mh2);
+            //console.log("Window:" + w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:" + ms + " OldMapHeight:" + mh1 + " NewMapHeight:" + mh2);
           }
           // Force resize and reposition
           if (this._map && forceResize && this._visible) {
+            //console.log("Resize and Reposition map.")
             this._map.resize();
             this._map.reposition();
           }
