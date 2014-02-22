@@ -42,22 +42,28 @@
 
 .esriPopup .titlePane, .esriPopup .contentPane, .esriPopup .actionsPane  {
   padding: 8px 14px;
-  color: #333333;
-  background-color: #f7f7f7;
   border: none;
   max-height: 70px;
 }
 
+.esriPopup .contentPane, .esriPopup .actionsPane {
+  background-color: #f7f7f7;
+}
+
 .esriPopup .titlePane, {
   padding-top: 10px;
-  color: #f3f3f3;
+  color: #fff;
+  background-color: #605F5F;
 }
 
 .esriPopup .contentPane {
   border-top: 1px solid #ebebeb;
+  color: #333333;
+  margin-bottom: 15px;
 }
 
 .esriPopup .actionsPane {
+  display: none;
   margin-bottom: 15px;
 }
 
@@ -69,7 +75,7 @@
 .esriPopup .titleButton.maximize, .esriPopup .titleButton.close,
 .esriPopup .titleButton.prev, .esriPopup .titleButton.next, .titleButton.restore {
   /*display: none;*/
-  -webkit-filter: invert(80%);
+/*  -webkit-filter: invert(80%);*/
   margin-top: 8px;
   margin-right: 5px;
 }
