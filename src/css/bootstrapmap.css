@@ -44,23 +44,36 @@
   padding: 8px 14px;
   border: none;
   max-height: 70px;
-}
-
-.esriPopup .contentPane, .esriPopup .actionsPane {
   background-color: #f7f7f7;
 }
 
 .esriPopup .titlePane, {
   padding-top: 10px;
-  color: #fff;
-  background-color: #605F5F;
+  color: #333333;
+}
+
+.esriPopup .title {
+  color: #333333;
+}
+
+.esriPopup .titleButton {
+  background: url(../images/popup.png) no-repeat;
 }
 
 .esriPopup .contentPane {
   border-top: 1px solid #ebebeb;
   color: #333333;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
+
+.esriViewPopup .mainSection .attrTable td.attrName {
+  color: #333333;
+}
+
+.esriViewPopup .mainSection .attrTable td {
+  color: #888888;
+}
+
 
 .esriPopup .actionsPane {
   display: none;
