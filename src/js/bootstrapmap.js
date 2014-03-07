@@ -1,5 +1,5 @@
-define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/domReady!"],
-  function(Map, Popup, EsriUtils, declare, on, dom, lang, style, query) {
+define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/has", "dojo/domReady!"],
+  function(Map, Popup, EsriUtils, declare, on, dom, lang, style, query, has) {
     "use strict"
     return {
       create: function(divId, options) {
@@ -100,7 +100,9 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           return this._map;
         },
         _setTouchBehavior: function() {
-          this._map.disableScrollWheelZoom();
+          if(has("touch")) {
+            this._map.disableScrollWheelZoom();
+          }
         },
         _bindEvents: function() {
           if (!this._map) {
