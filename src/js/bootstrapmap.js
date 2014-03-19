@@ -227,7 +227,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
               "height": mh2 + "px",
               "width": "100%"
             });
-			this._w = w;
+            this._w = w;
             this._wd = wd;
             //console.log("Window:" + w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:" + ms + " OldMapHeight:" + mh1 + " NewMapHeight:" + mh2);
           }
