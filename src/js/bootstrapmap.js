@@ -220,7 +220,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             var mh = this._mapDiv.clientHeight;
             var ms = this._calcSpace(this._mapDiv);
             var mh1 = mh - ms;
-			var d = (this._w == 0) ? b : Math.Min(b, this._w);
+            var d = (this._w == 0) ? b : Math.Min(b, this._w);
             var room = w - d;
             var mh2 = room + mh1;
             style.set(this._mapDivId, {
