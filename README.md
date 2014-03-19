@@ -85,13 +85,13 @@ NOTE: Feel free to contribute new templates to this repo!
 
 ## Documentation
 
-Visit the [Getting Started Guide](http://esri.github.com/bootstrap-map-js/doc/getstarted.html)
+Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/getstarted.html)
 
 ## Requirements
 
 * [ArcGIS API for JavaScript](http://developers.arcgis.com)
 * [Bootstrap ver 3.0.0](http://getbootstrap.com)
-* [Bootstrap Map JS](http://esri.github.com/bootstrap-map-js/)
+* [Bootstrap Map JS](http://github.com/Esri/bootstrap-map-js/)
 
 ## Resources
 
