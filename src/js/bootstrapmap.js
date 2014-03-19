@@ -216,18 +216,19 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var w = window.innerHeight;
           var wd = window.innerWidth;
           if (w != this._w || wd != this._wd) {
-            this._w = w;
-            this._wd = wd;
             var b = document.body.clientHeight;
             var mh = this._mapDiv.clientHeight;
             var ms = this._calcSpace(this._mapDiv);
             var mh1 = mh - ms;
-            var room = w - b;
+            var d = (this._w == 0) ? b : Math.Min(b, this._w);
+            var room = w - d;
             var mh2 = room + mh1;
             style.set(this._mapDivId, {
               "height": mh2 + "px",
               "width": "100%"
             });
+            this._w = w;
+            this._wd = wd;
             //console.log("Window:" + w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:" + ms + " OldMapHeight:" + mh1 + " NewMapHeight:" + mh2);
           }
           // Force resize and reposition
