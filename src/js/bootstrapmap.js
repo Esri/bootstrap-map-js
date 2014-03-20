@@ -46,7 +46,8 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         _mapDiv: null,
         _map: null,
         _delay: 100,
-        _w: 0,
+        _windowH: 0,
+        _windowW: 0,
         _visible: true,
         _visibilityTimer: null,
         _mapDeferred: null,
@@ -170,8 +171,8 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var s = style.get(e);
           var p = parseInt(s.paddingTop) + parseInt(s.paddingBottom);
           var g = parseInt(s.marginTop) + parseInt(s.marginBottom);
-          var b = parseInt(s.borderTopWidth) + parseInt(s.borderBottomWidth);
-          var h = p + g + b;
+          var bodyH = parseInt(s.borderTopWidth) + parseInt(s.borderBottomWidth);
+          var h = p + g + bodyH;
           return h;
         },
         _checkVisibility: function() {
@@ -190,13 +191,10 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             // Start a visibility change timer.
             this._visibilityTimer = setInterval((function() {
               this._checkVisibility();
-              //console.log("_checkVisibility");
             }).bind(this), 200);
-            //console.log("Started Timer: " + this._visibilityTimer);
           } else {
             // Stop any timer we have checking for visibility change.
             if (this._visibilityTimer) {
-              //console.log("Stop Timer!!!! " + this._visibilityTimer);
               clearInterval(this._visibilityTimer);
               this._visibilityTimer = null;
             }
@@ -213,26 +211,25 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             this._controlVisibilityTimer(!visible);
           }
           // Calc map size
-          var w = window.innerHeight;
-          var wd = window.innerWidth;
-          if (w != this._w || wd != this._wd) {
-            this._w = w;
-            this._wd = wd;
-            var b = document.body.clientHeight;
-            var mh = this._mapDiv.clientHeight;
-            var ms = this._calcSpace(this._mapDiv);
-            var mh1 = mh - ms;
-            var room = w - b;
+          var windowH = window.innerHeight;
+          var windowW = window.innerWidth;
+          if (windowH != this._windowH || windowW != this._windowW) {
+            this._windowH = windowH;
+            this._windowW = windowW;
+            var bodyH = document.body.clientHeight;
+            var mapH = this._mapDiv.clientHeight;
+            var mapSpace = this._calcSpace(this._mapDiv);
+            var mh1 = mapH - mapSpace;
+            var room = windowH - bodyH;
             var mh2 = room + mh1;
             style.set(this._mapDivId, {
               "height": mh2 + "px",
               "width": "100%"
             });
-            //console.log("Window:" + w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:" + ms + " OldMapHeight:" + mh1 + " NewMapHeight:" + mh2);
+            //console.log("Window:" + windowH + " Body:" + bodyH + " Room: " + room + " MapInner:" + mapH + " MapSpace:" + mapSpace + " OldMapHeight:" + mh1 + " NewMapHeight:" + mh2);
           }
           // Force resize and reposition
           if (this._map && forceResize && this._visible) {
-            //console.log("Resize and Reposition map.")
             this._map.resize();
             this._map.reposition();
           }
