@@ -60,6 +60,10 @@
   background: url(../images/popup.png) no-repeat;
 }
 
+.esriPopup .titlePane .spinner {
+  display: none;
+}
+
 .esriPopup .contentPane {
   border-top: 1px solid #ebebeb;
   color: #333333;
