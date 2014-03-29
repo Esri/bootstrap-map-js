@@ -260,7 +260,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
               this._map.resize();
               this._map.reposition();
             }
-            console.log("Win:" + windowH + " Body:" + bodyH + " Room:" + room + " OldMap:" + mapH + " Map+Room:" + mh1 + " NewMap:" + mh2 + " ColH:" + colH + " inCol:" + inCol);
+            //console.log("Win:" + windowH + " Body:" + bodyH + " Room:" + room + " OldMap:" + mapH + " Map+Room:" + mh1 + " NewMap:" + mh2 + " ColH:" + colH + " inCol:" + inCol);
           }
         },
         _calcMapHeight: function(e) {
