@@ -1,5 +1,5 @@
-define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/domReady!"],
-  function(Map, Popup, EsriUtils, declare, on, dom, lang, style, query) {
+define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "dojo/domReady!"],
+  function(Map, Popup, EsriUtils, declare, on, dom, lang, style, query, nodecols) {
     "use strict"
     return {
       create: function(divId, options) {
@@ -44,15 +44,18 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
       _smartResizer: declare(null, {
         _mapDivId: null,
         _mapDiv: null,
+        _mapStyle: null,
         _map: null,
-        _delay: 100,
-        _w: 0,
+        _delay: 50,
+        _windowH: 0,
+        _windowW: 0,
         _visible: true,
         _visibilityTimer: null,
         _mapDeferred: null,
         constructor: function(mapDivId, options) {
           this._mapDivId = mapDivId;
           this._mapDiv = dom.byId(mapDivId);
+          this._mapStyle = style.get(this._mapDiv);
           this._options = lang.mixin(options, {});
           this._handles = [];
         },
@@ -89,7 +92,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           this._mapDeferred.then(lang.hitch(this, getDeferred));
           return deferred;
         },
-        // Will be depreciated...  do not use!
+        // This will be depreciated...  do not use!
         bindToMap: function(map) {
           this._setMapDiv(true);
           this._map = map;
@@ -100,7 +103,17 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           return this._map;
         },
         _setTouchBehavior: function() {
-          this._map.disableScrollWheelZoom();
+          // Add desireable touch behaviors here
+          if (this._options.hasOwnProperty("scrollWheelZoom")) {
+            if (this._options["scrollWheelZoom"]){
+              this._map.enableScrollWheelZoom();
+            } else {
+              this._map.disableScrollWheelZoom();
+            }
+          } else {
+            // Default
+            this._map.disableScrollWheelZoom();
+          }
         },
         _bindEvents: function() {
           if (!this._map) {
@@ -148,10 +161,25 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           if (this._map.loaded) {
             lang.hitch(this, setInfoWin).call();
           }
-          // Responsive resize
-          var resizeWin = function(evt) {
-            this._setMapDiv(true);
+          // Debounce window resize
+          var debounce = function (func, threshold, execAsap) {
+            var timeout;
+            return function debounced () {
+              var obj = this, args = arguments;
+              function delayed () {
+                  if (!execAsap)
+                      func.apply(obj, args);
+                  timeout = null; 
+              };
+              if (timeout)
+                  clearTimeout(timeout);
+              else if (execAsap)
+                  func.apply(obj, args);
+              timeout = setTimeout(delayed, threshold || 100); 
+            };
           }
+          // Responsive resize
+          var resizeWin = debounce(this._setMapDiv, 100, false);
           this._handles.push(on(window, "resize", lang.hitch(this, resizeWin)));
           // Auto-center map
           var recenter = function(extent, width, height) {
@@ -166,14 +194,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           }
           this._handles.push(on(this._map, 'resize', lang.hitch(this, recenter)));
         },
-        _calcSpace: function(e) {
-          var s = style.get(e);
-          var p = parseInt(s.paddingTop) + parseInt(s.paddingBottom);
-          var g = parseInt(s.marginTop) + parseInt(s.marginBottom);
-          var b = parseInt(s.borderTopWidth) + parseInt(s.borderBottomWidth);
-          var h = p + g + b;
-          return h;
-        },
         _checkVisibility: function() {
           var visible = this._getMapDivVisibility();
           if (this._visible !== visible) {
@@ -187,16 +207,13 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         },
         _controlVisibilityTimer: function(runTimer) {
           if (runTimer) {
-            // Start a visibility change timer.
+            // Start a visibility change timer
             this._visibilityTimer = setInterval((function() {
               this._checkVisibility();
-              //console.log("_checkVisibility");
             }).bind(this), 200);
-            //console.log("Started Timer: " + this._visibilityTimer);
           } else {
-            // Stop any timer we have checking for visibility change.
+            // Stop timer we have checking for visibility change
             if (this._visibilityTimer) {
-              //console.log("Stop Timer!!!! " + this._visibilityTimer);
               clearInterval(this._visibilityTimer);
               this._visibilityTimer = null;
             }
@@ -206,36 +223,69 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           if (!this._mapDivId) {
             return;
           }
-          // Get map visibility - TODO!
+          // Get map visibility
           var visible = this._getMapDivVisibility();
           if (this._visible !== visible) {
             this._visible = visible;
             this._controlVisibilityTimer(!visible);
           }
-          // Calc map size
-          var w = window.innerHeight;
-          var wd = window.innerWidth;
-          if (w != this._w || wd != this._wd) {
-            this._w = w;
-            this._wd = wd;
-            var b = document.body.clientHeight;
-            var mh = this._mapDiv.clientHeight;
-            var ms = this._calcSpace(this._mapDiv);
-            var mh1 = mh - ms;
-            var room = w - b;
-            var mh2 = room + mh1;
+          // Fill page with the map or match row height
+          var windowH = window.innerHeight;
+          var windowW = window.innerWidth;
+          if (windowH != this._windowH || windowW != this._windowW) {
+            this._windowH = windowH;
+            this._windowW = windowW;
+            var bodyH = document.body.clientHeight;
+            var room = windowH - bodyH;
+            var mapH = this._calcMapHeight();
+            var colH = this._calcColumnHeight(mapH);
+            var mh1 = mapH + room; 
+            var mh2 = 0;
+            var inCol = false;
+            // Resize to neighboring column or fill page
+            if (mapH < colH) {
+              mh2 = (room > 0) ? colH + room : colH;
+              inCol = true;
+            } else {
+              mh2 = (mh1 < colH) ? colH : mh1;
+              inCol = false;
+            }
+            // Expand map height
             style.set(this._mapDivId, {
               "height": mh2 + "px",
               "width": "100%"
-            });
-            //console.log("Window:" + w + " Body:" + b + " Room: " + room + " MapInner:" + mh + " MapSpace:" + ms + " OldMapHeight:" + mh1 + " NewMapHeight:" + mh2);
+            });          
+            // Force resize and reposition
+            if (this._map && forceResize && this._visible) {
+              this._map.resize();
+              this._map.reposition();
+            }
+            //console.log("Win:" + windowH + " Body:" + bodyH + " Room:" + room + " OldMap:" + mapH + " Map+Room:" + mh1 + " NewMap:" + mh2 + " ColH:" + colH + " inCol:" + inCol);
           }
-          // Force resize and reposition
-          if (this._map && forceResize && this._visible) {
-            //console.log("Resize and Reposition map.")
-            this._map.resize();
-            this._map.reposition();
+        },
+        _calcMapHeight: function(e) {
+          //var s = style.get(e);
+          var s = this._mapStyle;
+          var p = parseInt(s.paddingTop) + parseInt(s.paddingBottom);
+          var g = parseInt(s.marginTop) + parseInt(s.marginBottom);
+          var bodyH = parseInt(s.borderTopWidth) + parseInt(s.borderBottomWidth);
+          var h = p + g + bodyH + this._mapDiv.clientHeight;
+          return h;
+        },
+        _calcColumnHeight: function(mapH) {
+          var colH = 0;
+          var cols = query(this._mapDiv).closest(".row").children("[class*='col']");
+          if (cols.length) {
+            for (var i=0; i < cols.length; i++) {
+              var col = cols[i];
+              // Avoid the map in column calculations
+              var containsMap = query("#"+this._mapDivId, col).length > 0;
+              if ((col.clientHeight > colH) && !containsMap) {
+                colH = col.clientHeight;
+              }
+            }
           }
+          return colH;
         },
         _repositionInfoWin: function(graphicCenterPt) {
           // Determine the upper right, and center, coordinates of the map
