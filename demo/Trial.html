@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
+    <style type="text/css">
+      #mapDiv {
+        min-height: 100px; 
+        max-height: 1000px; 
+      }
+    </style>
+
+    <!-- HTML5 IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../assets/js/html5shiv.js"></script>
+      <script src="../assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <!-- Bootstrap Map - reference for the map -->
+    <div class="container" style="padding:15px;">
+      <div id="mapDiv"></div>
+    </div>
+
+    <!-- Bootstrap Map - load the responsive map -->
+    <script src="http://js.arcgis.com/3.7compact"></script>
+    <script>
+      require(["esri/map", "http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
+        function(Map, BootstrapMap) {
+          <!-- Get a reference to the ArcGIS Map class -->
+          var map = BootstrapMap.create("mapDiv",{
+            basemap:"national-geographic",
+            center:[-122.45,37.77],
+            zoom:10
+          });
+      });
+    </script>
+
+    <!-- jQuery (for Bootstrap's JavaScript plugins) -->
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- Include all  plugins or individual files as needed -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
