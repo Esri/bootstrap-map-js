@@ -6,6 +6,16 @@
     <!-- Bootstrap -->
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
+    <style type="text/css">
+      #mapDiv {
+        min-height: 100px; 
+        max-height: 1000px; 
+      }
+    </style>
+
     <!-- HTML5 IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../assets/js/html5shiv.js"></script>
@@ -14,7 +24,24 @@
   </head>
   <body>
 
-    <h1>Hello, world!</h1>
+    <!-- Bootstrap Map - reference for the map -->
+    <div class="container" style="padding:15px;">
+      <div id="mapDiv"></div>
+    </div>
+
+    <!-- Bootstrap Map - load the responsive map -->
+    <script src="http://js.arcgis.com/3.7compact"></script>
+    <script>
+      require(["esri/map", "http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
+        function(Map, BootstrapMap) {
+          <!-- Get a reference to the ArcGIS Map class -->
+          var map = BootstrapMap.create("mapDiv",{
+            basemap:"national-geographic",
+            center:[-122.45,37.77],
+            zoom:12
+          });
+      });
+    </script>
 
     <!-- jQuery (for Bootstrap's JavaScript plugins) -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
