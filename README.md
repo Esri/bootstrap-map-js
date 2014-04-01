@@ -46,7 +46,7 @@ NOTE: Feel free to contribute new templates to this repo!
   </div>
   <!-- Map on the left 66.6%, column on the right 33.3% for all screen sizes -->
   <div class="row">
-    <!-- Map will automatically match column height -->
+    <!-- Map will automatically resize to match tallest column in this row -->
     <div class="col-xs-8">
       <div id="mapDiv"></div>
     </div>
@@ -113,8 +113,8 @@ require(["http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/
     <!-- Bootstrap Map - load the responsive map -->
     <script src="http://js.arcgis.com/3.8compact"></script>
     <script>
-      require(["esri/map", "http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
-        function(Map, BootstrapMap) {
+      require(["http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
+        function(BootstrapMap) {
           <!-- Get a reference to the ArcGIS Map class -->
           var map = BootstrapMap.create("mapDiv",{
             basemap:"national-geographic",
