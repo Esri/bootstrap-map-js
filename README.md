@@ -1,6 +1,6 @@
 # Bootstrap Map JS
 
-Bootstrap Map JS is a simple framework for building responsive mapping applications with the [ArcGIS API for JavaScript](http://developers.arcgis.com) and [Bootstrap (ver 3.0)](http://getbootstrap.com).  With just a few lines of css and js you can build a rich web-mobile application that will work on any device.  
+Bootstrap Map JS is a simple framework for building responsive mapping applications with the [ArcGIS API for JavaScript](http://developers.arcgis.com) and [Bootstrap (ver 3.1)](http://getbootstrap.com).  With just a few lines of css and js you can build a rich web-mobile application that will work on any device.  
 
 [View documentation and examples](http://esri.github.com/bootstrap-map-js/demo/index.html)
 
@@ -20,25 +20,74 @@ NOTE: Feel free to contribute new templates to this repo!
 ![App](https://raw.github.com/Esri/bootstrap-map-js/master/bootstrapmapjs.png)
 
 ## What's included
-* \boostrap_v3\...
 * \src\css\bootstrapmap.css
 * \src\js\bootstrapmap.js 
+* \src\images\popup.png 
 * \demo\
 * \templates\... 
 
-## Example
+## Short Example
+
+```
+<!-- Set the min and max responsive map size -->
+#mapDiv {
+  min-height: 100px; 
+  max-height: 400px; 
+}
+
+...
+
+<div class="container">
+  <!-- Full row across the top for all screen sizes -->
+  <div class="row">
+    <div class="col-xs-12">
+      <h5>Top 12</h5>
+    </div>
+  </div>
+  <!-- Map on the left 66.6%, column on the right 33.3% for all screen sizes -->
+  <div class="row">
+    <!-- Map will automatically match column height -->
+    <div class="col-xs-8">
+      <div id="mapDiv"></div>
+    </div>
+    <!-- Column with your content -->
+    <div class="col-xs-4">                
+      <h5>Right 3</h5>
+      <p>Your conent</p>
+      <p>Your conent</p>
+      <p>Your conent</p>
+    </div>
+  </div>
+</div>
+
+...
+
+require(["http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
+  function(BootstrapMap) {
+    <!-- Get a reference to the ArcGIS Map class -->
+    var map = BootstrapMap.create("mapDiv",{
+      basemap:"national-geographic",
+      center:[-122.45,37.77],
+      zoom:12, 
+      scrollWheelZoom: false // Optional - prevents map from slipping when scrolling page
+    });
+});
+
+```
+
+## Full Example
 
 ```
 <!DOCTYPE html>
 <html>
   <head>
     <title>Bootstrap 101 Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- Bootstrap -->
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <!-- Bootstrap Map - required css for mapping components -->
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.7/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     <style type="text/css">
       <!-- Set the responsive map size -->
@@ -62,7 +111,7 @@ NOTE: Feel free to contribute new templates to this repo!
     </div>
 
     <!-- Bootstrap Map - load the responsive map -->
-    <script src="http://js.arcgis.com/3.7compact"></script>
+    <script src="http://js.arcgis.com/3.8compact"></script>
     <script>
       require(["esri/map", "http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
         function(Map, BootstrapMap) {
@@ -78,7 +127,7 @@ NOTE: Feel free to contribute new templates to this repo!
     <!-- jQuery (for Bootstrap's JavaScript plugins) -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Include all  plugins or individual files as needed -->
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
   </body>
 </html>
 ```
