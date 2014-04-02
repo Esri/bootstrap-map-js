@@ -75,7 +75,8 @@ NOTE: Feel free to contribute new templates to this repo!
           var map = BootstrapMap.create("mapDiv",{
             basemap:"national-geographic",
             center:[-122.45,37.77],
-            zoom:12
+            zoom:12,
+            scrollWheelZoom: false
           });
       });
     </script>
@@ -106,7 +107,8 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/ge
 
 ## Known Issues
 
-You can only have one automatic resizing map per page.
+* You can only have one responsive map per page. You can have as many maps as you want that are fixed in size however.
+* To enable scrollwheel zoom, set ```scrollWheelZoom: true``` in the constructor. A scrolling map will "slip" however on small devices if the page is larger than the viewport.
 
 ## Contributing
 
