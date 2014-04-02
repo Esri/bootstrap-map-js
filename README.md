@@ -40,11 +40,11 @@ NOTE: Feel free to contribute new templates to this repo!
     <!-- Step 1. Add CSS for the mapping components -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
-    <style type="text/css">
-      <!-- Set the responsive map size here -->
+    <style>
+      /* Set the responsive map size here */
       #mapDiv {
         min-height:100px; 
-        max-height:1000px; 
+        max-height:500px; 
       }
     </style>
 
@@ -55,7 +55,6 @@ NOTE: Feel free to contribute new templates to this repo!
     <div class="container" style="padding:15px;">
       <div class="row">
         <div class="col-xs-8">
-          <h5>Left 8</h5>
           <div id="mapDiv"></div>
         </div>
         <div class="col-xs-4">                
