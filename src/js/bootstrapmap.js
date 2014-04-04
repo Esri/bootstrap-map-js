@@ -17,14 +17,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           return deferredOut;
         }
       },
-      bindTo: function(map) {
-        if (map) {
-          var smartResizer = new this._smartResizer(map.id, map._params);
-          var mapOut = smartResizer.bindToMap(map);
-          mapOut._smartResizer = smartResizer;
-          return mapOut;
-        }
-      },
       destroy: function(map) {
         function _disconnect(resizer) {
           if (resizer._handles) {
@@ -91,16 +83,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           }
           this._mapDeferred.then(lang.hitch(this, getDeferred));
           return deferred;
-        },
-        // This will be depreciated...  do not use!
-        bindToMap: function(map) {
-          this._setMapDiv(true);
-          this._map = map;
-          this._setMapDiv(true);
-          this._bindEvents();
-          this._setTouchBehavior();
-          this._mapDiv.__map = this._map;
-          return this._map;
         },
         _setTouchBehavior: function() {
           // Add desireable touch behaviors here
