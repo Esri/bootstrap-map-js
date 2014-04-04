@@ -1,5 +1,5 @@
-define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "dojo/domReady!"],
-  function(Map, Popup, EsriUtils, declare, on, dom, lang, style, query, nodecols) {
+define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/touch", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "dojo/domReady!"],
+  function(Map, Popup, EsriUtils, declare, on, touch, dom, lang, style, query, nodecols) {
     "use strict"
     return {
       create: function(divId, options) {
@@ -39,8 +39,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         _mapStyle: null,
         _map: null,
         _delay: 50,
-        _windowH: 0,
-        _windowW: 0,
         _visible: true,
         _visibilityTimer: null,
         _mapDeferred: null,
@@ -58,7 +56,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             autoResize: false
           });
           this._map = new Map(this._mapDivId, this._options);
-          //this._setMapDiv(true);
           this._bindEvents();
           this._mapDiv.__map = this._map;
           return this._map;
@@ -115,7 +112,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           if (this._map.loaded) {
             lang.hitch(this, setTouch).call();
           } else {
-          this._handles.push(on(this._map, 'load', lang.hitch(this, setTouch)));
+            this._handles.push(on(this._map, 'load', lang.hitch(this, setTouch)));
           }
           // InfoWindow restyle and reposition
           var setInfoWin = function(e) {
@@ -181,6 +178,9 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           }
           this._handles.push(on(this._map, 'resize', lang.hitch(this, recenter)));
         },
+        _getMapDivVisibility: function() {
+          return this._mapDiv.clientHeight > 0 || this._mapDiv.clientWidth > 0;
+        },
         _checkVisibility: function() {
           var visible = this._getMapDivVisibility();
           if (this._visible !== visible) {
@@ -188,9 +188,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
               this._setMapDiv(true);
             }
           }
-        },
-        _getMapDivVisibility: function() {
-          return $("#" + this._mapDivId).is(":visible");
         },
         _controlVisibilityTimer: function(runTimer) {
           if (runTimer) {
@@ -217,11 +214,8 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             this._controlVisibilityTimer(!visible);
           }
           // Fill page with the map or match row height
-          var windowH = window.innerHeight;
-          var windowW = window.innerWidth;
-          if (windowH != this._windowH || windowW != this._windowW) {
-            this._windowH = windowH;
-            this._windowW = windowW;
+          if (this._visible) {
+            var windowH = window.innerHeight;
             var bodyH = document.body.clientHeight;
             var room = windowH - bodyH;
             var mapH = this._calcMapHeight();
