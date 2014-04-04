@@ -78,7 +78,6 @@
   color: #888888;
 }
 
-
 .esriPopup .actionsPane {
   display: none;
   margin-bottom: 15px;
@@ -92,7 +91,15 @@
 .esriPopup .titleButton.maximize, .esriPopup .titleButton.close,
 .esriPopup .titleButton.prev, .esriPopup .titleButton.next, .titleButton.restore {
   margin-top: 8px;
-  margin-right: 5px;
+  margin-right: 8px;
+}
+
+.esriPopup .titleButton.next {
+  right: 34px;
+}
+
+.esriPopup .titleButton.maximize {
+  display: none;
 }
 
 /*** Restyle Geocoder widget ***/

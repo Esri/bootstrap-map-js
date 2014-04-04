@@ -105,10 +105,20 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/ge
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [Bootstrap](http://getbootstrap.com/)
 
-## Known Issues
+## Developer Notes
 
-* You can only have one responsive map per page. You can have as many maps as you want that are fixed in size however.
-* To enable scrollwheel zoom, set ```scrollWheelZoom: true``` in the constructor. A scrolling map will "slip" however on small devices if the page is larger than the viewport.
+* Responsive Map: You can only have one responsive map per page. You can have as many maps as you want that are fixed in size however.
+* ScrollwheelZoom: To enable scrollwheel zoom, set ```scrollWheelZoom: true``` in the constructor. A scrolling map will "slip" however if the page is larger than the viewport, therefore, this is set to ```false``` by default.
+* IE8 Support: Add the following shims to support IE8.  For more information visit [getbootstrap.com](http://getbootstrap.com/getting-started/#support).
+    ```
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    ``` 
+* Learn more about the Bootstrap framework [here](http://getbootstrap.com).
 
 ## Contributing
 

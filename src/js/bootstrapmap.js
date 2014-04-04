@@ -1,5 +1,5 @@
-define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "dojo/domReady!"],
-  function(Map, Popup, EsriUtils, declare, on, dom, lang, style, query, nodecols) {
+define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/touch", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "dojo/domReady!"],
+  function(Map, Popup, EsriUtils, declare, on, touch, dom, lang, style, query, nodecols) {
     "use strict"
     return {
       create: function(divId, options) {
@@ -15,14 +15,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var smartResizer = new this._smartResizer(divId, options);
           var deferredOut = smartResizer.createWebMap(webMapId);
           return deferredOut;
-        }
-      },
-      bindTo: function(map) {
-        if (map) {
-          var smartResizer = new this._smartResizer(map.id, map._params);
-          var mapOut = smartResizer.bindToMap(map);
-          mapOut._smartResizer = smartResizer;
-          return mapOut;
         }
       },
       destroy: function(map) {
@@ -47,8 +39,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         _mapStyle: null,
         _map: null,
         _delay: 50,
-        _windowH: 0,
-        _windowW: 0,
         _visible: true,
         _visibilityTimer: null,
         _mapDeferred: null,
@@ -66,7 +56,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             autoResize: false
           });
           this._map = new Map(this._mapDivId, this._options);
-          //this._setMapDiv(true);
           this._bindEvents();
           this._mapDiv.__map = this._map;
           return this._map;
@@ -92,16 +81,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           this._mapDeferred.then(lang.hitch(this, getDeferred));
           return deferred;
         },
-        // This will be depreciated...  do not use!
-        bindToMap: function(map) {
-          this._setMapDiv(true);
-          this._map = map;
-          this._setMapDiv(true);
-          this._bindEvents();
-          this._setTouchBehavior();
-          this._mapDiv.__map = this._map;
-          return this._map;
-        },
         _setTouchBehavior: function() {
           // Add desireable touch behaviors here
           if (this._options.hasOwnProperty("scrollWheelZoom")) {
@@ -114,6 +93,12 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             // Default
             this._map.disableScrollWheelZoom();
           }
+          // Remove 300ms delay to close infoWindow on touch devices
+          on(query(".esriPopup .titleButton.close"), touch.press, lang.hitch(this, 
+            function(evt) {
+              this._map.infoWindow.hide();
+            })
+          ); 
         },
         _bindEvents: function() {
           if (!this._map) {
@@ -124,7 +109,11 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var setTouch = function(e) {
             this._setTouchBehavior();
           }
-          this._handles.push(on(this._map, 'load', lang.hitch(this, setTouch)));
+          if (this._map.loaded) {
+            lang.hitch(this, setTouch).call();
+          } else {
+            this._handles.push(on(this._map, 'load', lang.hitch(this, setTouch)));
+          }
           // InfoWindow restyle and reposition
           var setInfoWin = function(e) {
             this._map.infoWindow.anchor = "top";
@@ -150,16 +139,11 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             on(this._map.infoWindow, "selection-change", lang.hitch(this, function(g) {
               updatePopup(this);
             }));
-            //on(this._map, "pan-end", lang.hitch(this, function(e){
-            // Causes issues on mobile
-            // if (this._map.infoWindow.isShowing){
-            //   this._map.infoWindow.reposition();
-            // }
-            //}));
           }
-          this._handles.push(on(this._map, 'load', lang.hitch(this, setInfoWin)));
           if (this._map.loaded) {
             lang.hitch(this, setInfoWin).call();
+          } else {
+            this._handles.push(on(this._map, 'load', lang.hitch(this, setInfoWin)));
           }
           // Debounce window resize
           var debounce = function (func, threshold, execAsap) {
@@ -194,6 +178,9 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           }
           this._handles.push(on(this._map, 'resize', lang.hitch(this, recenter)));
         },
+        _getMapDivVisibility: function() {
+          return this._mapDiv.clientHeight > 0 || this._mapDiv.clientWidth > 0;
+        },
         _checkVisibility: function() {
           var visible = this._getMapDivVisibility();
           if (this._visible !== visible) {
@@ -201,9 +188,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
               this._setMapDiv(true);
             }
           }
-        },
-        _getMapDivVisibility: function() {
-          return $("#" + this._mapDivId).is(":visible");
         },
         _controlVisibilityTimer: function(runTimer) {
           if (runTimer) {
@@ -230,11 +214,8 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             this._controlVisibilityTimer(!visible);
           }
           // Fill page with the map or match row height
-          var windowH = window.innerHeight;
-          var windowW = window.innerWidth;
-          if (windowH != this._windowH || windowW != this._windowW) {
-            this._windowH = windowH;
-            this._windowW = windowW;
+          if (this._visible) {
+            var windowH = window.innerHeight;
             var bodyH = document.body.clientHeight;
             var room = windowH - bodyH;
             var mapH = this._calcMapHeight();
