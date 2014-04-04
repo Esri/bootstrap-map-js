@@ -96,6 +96,12 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             // Default
             this._map.disableScrollWheelZoom();
           }
+          // Remove 300ms delay to close infoWindow on touch devices
+          on(query(".esriPopup .titleButton.close"), touch.press, lang.hitch(this, 
+            function(evt) {
+              this._map.infoWindow.hide();
+            })
+          ); 
         },
         _bindEvents: function() {
           if (!this._map) {
@@ -106,7 +112,11 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var setTouch = function(e) {
             this._setTouchBehavior();
           }
+          if (this._map.loaded) {
+            lang.hitch(this, setTouch).call();
+          } else {
           this._handles.push(on(this._map, 'load', lang.hitch(this, setTouch)));
+          }
           // InfoWindow restyle and reposition
           var setInfoWin = function(e) {
             this._map.infoWindow.anchor = "top";
@@ -132,16 +142,11 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             on(this._map.infoWindow, "selection-change", lang.hitch(this, function(g) {
               updatePopup(this);
             }));
-            //on(this._map, "pan-end", lang.hitch(this, function(e){
-            // Causes issues on mobile
-            // if (this._map.infoWindow.isShowing){
-            //   this._map.infoWindow.reposition();
-            // }
-            //}));
           }
-          this._handles.push(on(this._map, 'load', lang.hitch(this, setInfoWin)));
           if (this._map.loaded) {
             lang.hitch(this, setInfoWin).call();
+          } else {
+            this._handles.push(on(this._map, 'load', lang.hitch(this, setInfoWin)));
           }
           // Debounce window resize
           var debounce = function (func, threshold, execAsap) {
