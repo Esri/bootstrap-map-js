@@ -1,6 +1,6 @@
-define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/touch", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "dojo/domReady!"],
-  function(Map, Popup, EsriUtils, declare, on, touch, dom, lang, style, query, nodecols) {
-    "use strict"
+define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/touch", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "esri/geometry/Point", "dojo/domReady!"],
+  function(Map, Popup, EsriUtils, declare, on, touch, dom, lang, style, query, nodecols, Point) {
+    "use strict";
     return {
       create: function(divId, options) {
         if (divId && options) {
@@ -63,7 +63,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         createWebMap: function(webMapId) {
           this._setMapDiv(false);
           if (!this._options.hasOwnProperty("mapOptions")) {
-            this._options["mapOptions"] = {};
+            this._options.mapOptions = {};
           }
           lang.mixin(this._options.mapOptions, {
             smartNavigation: false,
@@ -77,14 +77,14 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             this._bindEvents();
             this._mapDiv.__map = this._map;
             this._smartResizer = myselfAsAResizer;
-          }
+          };
           this._mapDeferred.then(lang.hitch(this, getDeferred));
           return deferred;
         },
         _setTouchBehavior: function() {
           // Add desireable touch behaviors here
           if (this._options.hasOwnProperty("scrollWheelZoom")) {
-            if (this._options["scrollWheelZoom"]){
+            if (this._options.scrollWheelZoom){
               this._map.enableScrollWheelZoom();
             } else {
               this._map.disableScrollWheelZoom();
@@ -108,7 +108,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           // Touch behavior
           var setTouch = function(e) {
             this._setTouchBehavior();
-          }
+          };
           if (this._map.loaded) {
             lang.hitch(this, setTouch).call();
           } else {
@@ -130,7 +130,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
                   obj._repositionInfoWin(pt);
                 }, 250);
               }
-            }
+            };
             // GraphicLayers
             on(this._map.graphics, "click", lang.hitch(this, function(g) {
               updatePopup(this);
@@ -139,7 +139,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             on(this._map.infoWindow, "selection-change", lang.hitch(this, function(g) {
               updatePopup(this);
             }));
-          }
+          };
           if (this._map.loaded) {
             lang.hitch(this, setInfoWin).call();
           } else {
@@ -154,14 +154,14 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
                   if (!execAsap)
                       func.apply(obj, args);
                   timeout = null; 
-              };
+              }
               if (timeout)
                   clearTimeout(timeout);
               else if (execAsap)
                   func.apply(obj, args);
               timeout = setTimeout(delayed, threshold || 100); 
             };
-          }
+          };
           // Responsive resize
           var resizeWin = debounce(this._setMapDiv, 100, false);
           this._handles.push(on(window, "resize", lang.hitch(this, resizeWin)));
@@ -173,9 +173,9 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
                 this._repositionInfoWin(this._map.infoWindow.features[0]);
               }
               this._map.centerAt(this._map.__resizeCenter);
-            }
+            };
             setTimeout(lang.hitch(this, timer), this._delay);
-          }
+          };
           this._handles.push(on(this._map, 'resize', lang.hitch(this, recenter)));
         },
         _getMapDivVisibility: function() {
@@ -270,8 +270,8 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         },
         _repositionInfoWin: function(graphicCenterPt) {
           // Determine the upper right, and center, coordinates of the map
-          var maxPoint = new esri.geometry.Point(this._map.extent.xmax, this._map.extent.ymax, this._map.spatialReference);
-          var centerPoint = new esri.geometry.Point(this._map.extent.getCenter());
+          var maxPoint = new Point(this._map.extent.xmax, this._map.extent.ymax, this._map.spatialReference);
+          var centerPoint = new Point(this._map.extent.getCenter());
           // Convert to screen coordinates
           var maxPointScreen = this._map.toScreen(maxPoint);
           var centerPointScreen = this._map.toScreen(centerPoint);
@@ -306,6 +306,6 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           }
         }
       }) // _smartResizer
-    } // return
+    }; // return
   } // function
 ); // define
