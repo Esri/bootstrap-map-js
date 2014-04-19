@@ -38,7 +38,7 @@ NOTE: Feel free to contribute new templates to this repo!
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
     <!-- Step 1. Add CSS for the mapping components -->
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     <style>
       /* Set the responsive map size here */
@@ -67,9 +67,20 @@ NOTE: Feel free to contribute new templates to this repo!
     </div>
 
     <!-- Step 3. Load the responsive map -->
-    <script src="http://js.arcgis.com/3.8compact"></script>
+    <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            //The location.pathname.replace() logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '../../../src/js'
+            }]
+        };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-      require(["http://esri.github.io/bootstrap-map-js/src/js/bootstrapmap.js", "dojo/domReady!"], 
+      require(["application/bootstrapmap", "dojo/domReady!"], 
         function(BootstrapMap) {
           <!-- Get a reference to the ArcGIS Map class -->
           var map = BootstrapMap.create("mapDiv",{

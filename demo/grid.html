@@ -23,7 +23,7 @@
     <link href="style.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css"> 
 
     <style type="text/css">
@@ -254,9 +254,20 @@
     </div> <!-- /container -->
 
     <!-- Bootstrap-map-js -->
-    <script src="http://js.arcgis.com/3.8compact"></script>
+    <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            //The location.pathname.replace() logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '../../src/js'
+            }]
+        };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-      require(["esri/map", "../src/js/bootstrapmap.js", "dojo/on", "dojo/domReady!"], 
+      require(["esri/map", "application/bootstrapmap", "dojo/on", "dojo/domReady!"], 
         function(Map, BootstrapMap, on) {
           
           var map;
