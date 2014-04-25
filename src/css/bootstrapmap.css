@@ -94,12 +94,27 @@
   margin-right: 8px;
 }
 
-.esriPopup .titleButton.next {
-  right: 34px;
-}
-
 .esriPopup .titleButton.maximize {
   display: none;
+}
+
+.esriPopup .titleButton.next, .esriPopup .titleButton.prev {
+  width: 15px;
+  height: 17px;
+}
+
+.esriPopup .titleButton.prev {
+  background-position: 0px -197px;
+  right: 55px;
+}
+
+.esriPopup .titleButton.next {
+  background-position: 0px -416px;
+  right: 28px;
+}
+
+.esriPopup .titleButton.close {
+  background-position: 0px -170px;
 }
 
 /*** Restyle Geocoder widget ***/
