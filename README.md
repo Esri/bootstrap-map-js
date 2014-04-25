@@ -68,13 +68,11 @@ NOTE: Feel free to contribute new templates to this repo!
 
     <!-- Step 3. Load the responsive map -->
     <script type="text/javascript">
-        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var package_path = "//esri.github.com/bootstrap-map-js/src/js";
         var dojoConfig = {
-            //The location.pathname.replace() logic below may look confusing but all its doing is
-            // enabling us to load the api from a CDN and load local modules from the correct location.
             packages: [{
                 name: "application",
-                location: package_path + '../../../src/js'
+                location: package_path
             }]
         };
     </script>
@@ -121,6 +119,7 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/ge
 * Responsive Map: You can only have one responsive map per page. You can have as many maps as you want that are fixed in size however.
 * ScrollwheelZoom: To enable scrollwheel zoom, set ```scrollWheelZoom: true``` in the constructor. A scrolling map will "slip" however if the page is larger than the viewport, therefore, this is set to ```false``` by default.
 * IE8 Support: Add the following shims to support IE8.  For more information visit [getbootstrap.com](http://getbootstrap.com/getting-started/#support).
+
     ```
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
