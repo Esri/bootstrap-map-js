@@ -1,0 +1,3 @@
+[submodule "demo/js/Dojo-Bootstrap"]
+	path = demo/js/Dojo-Bootstrap
+	url = https://github.com/xsokev/Dojo-Bootstrap.git
