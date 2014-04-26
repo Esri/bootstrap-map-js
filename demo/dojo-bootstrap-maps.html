@@ -14,7 +14,7 @@
     <link rel="apple-touch-icon" href="images/brand.png">
     <link rel="shortcut icon" href="images/favicon.ico">
 
-    <title>Bootstrap Map JS - Get Started</title>
+    <title>Bootstrap Map JS - Maps (Dojo-bootstrap)</title>
 
     <!-- Bootstrap core CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
@@ -23,7 +23,7 @@
     <link href="style.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.8/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css">   
 
     <style type="text/css">
@@ -89,10 +89,10 @@
             }]
         };
     </script>
-    <script src="http://js.arcgis.com/3.8compact"></script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", "esri/dijit/Scalebar", "dojo/query", "bootstrap/Collapse", "bootstrap/Dropdown", "../src/js/bootstrapmap.js", "dojo/domReady!"], 
-          function(Map, Scalebar, query, Collapse, Dropdown, BootstrapMap) {
+        require(["esri/map", "esri/dijit/Scalebar", "dojo/query", "../src/js/bootstrapmap.js", "bootstrap/Collapse", "bootstrap/Dropdown", "dojo/domReady!"], 
+          function(Map, Scalebar, query, BootstrapMap) {
             <!-- Get a reference to the ArcGIS Map class -->
             var map = BootstrapMap.create("mapDiv",{
               basemap:"national-geographic",
@@ -132,11 +132,5 @@
             });
         });
     </script>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>-->
   </body>
 </html>
