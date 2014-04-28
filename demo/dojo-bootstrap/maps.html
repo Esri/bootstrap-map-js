@@ -11,8 +11,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <!-- Chrome for Android - NEW! -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="apple-touch-icon" href="images/brand.png">
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="../images/brand.png">
+    <link rel="shortcut icon" href="../images/favicon.ico">
 
     <title>Bootstrap Map JS - Maps (Dojo-bootstrap)</title>
 
@@ -20,11 +20,11 @@
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="style.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
-    <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
 
     <style type="text/css">
 
@@ -53,7 +53,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="images/brand.png">Bootstrap Map JS</a>
+          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map JS</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -91,9 +91,9 @@
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", "esri/dijit/Scalebar", "dojo/query", "../src/js/bootstrapmap.js", "bootstrap/Collapse", "bootstrap/Dropdown", "dojo/domReady!"], 
+        require(["esri/map", "esri/dijit/Scalebar", "dojo/query", "../../src/js/bootstrapmap.js", "bootstrap/Collapse", "bootstrap/Dropdown", "dojo/domReady!"], 
           function(Map, Scalebar, query, BootstrapMap) {
-            <!-- Get a reference to the ArcGIS Map class -->
+            // Get a reference to the ArcGIS Map class
             var map = BootstrapMap.create("mapDiv",{
               basemap:"national-geographic",
               center:[-122.45,37.77],
