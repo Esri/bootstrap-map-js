@@ -81,14 +81,7 @@
 
     <!-- Bootstrap-map-js -->
     <div id="mapDiv"></div>
-    <script type="text/javascript">
-        var djConfig = {
-            async: true,
-            packages: [{name: 'bootstrap',
-                location: location.pathname.replace(/\/[^/]+$/, '') + "/js/Dojo-Bootstrap"
-            }]
-        };
-    </script>
+    <script type="text/javascript" src="js/config.js"></script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
         require(["esri/map", "esri/dijit/Scalebar", "dojo/query", "../../src/js/bootstrapmap.js", "bootstrap/Collapse", "bootstrap/Dropdown", "dojo/domReady!"], 
