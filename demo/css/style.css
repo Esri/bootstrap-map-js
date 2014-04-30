@@ -29,7 +29,7 @@ body {
 
 .jumbotron {
 	margin-top: 30px;
-	background: url('images/map-gray.png') no-repeat left center;
+	background: url('../images/map-gray.png') no-repeat left center;
 }
 
 /*h4 {
