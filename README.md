@@ -106,6 +106,7 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/ge
 
 * [ArcGIS API for JavaScript](http://developers.arcgis.com)
 * [Bootstrap ver 3.x](http://getbootstrap.com)
+* Either [jQuery](http://jquery.com/) or [Dojo-Bootstrap](https://github.com/xsokev/Dojo-Bootstrap)
 * [Bootstrap Map JS](http://esri.github.com/bootstrap-map-js/)
 
 ## Resources
@@ -113,6 +114,7 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/ge
 * [ArcGIS for JavaScript API](http://developers.arcgis.com/)
 * [ArcGIS Blog](http://blogs.esri.com/esri/arcgis/)
 * [Bootstrap](http://getbootstrap.com/)
+* [Dojo-Bootstrap](https://github.com/xsokev/Dojo-Bootstrap)
 
 ## Developer Notes
 
