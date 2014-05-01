@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Safari iOS - apps only -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Chrome for Android - NEW! -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="../images/brand.png">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <title>Bootstrap Map JS - Grid</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css"> 
+
+    <style type="text/css">
+
+      #mapDiv1, #mapDiv2, #mapDiv3 {
+        min-height: 50px; 
+      }
+
+      #mapDiv4 {
+        height: 300px; 
+      }
+
+      #myTabContent {
+        margin-right: 15px;
+        margin-left:  15px;
+      }
+
+      .row-map {
+        background: #eee;
+      }
+
+      [class*="col-"] {
+        background-color: #eee;
+        border: 1px solid #E7E7E7;
+        text-align: center;
+      }
+
+      .bg-none{
+        background: none;
+        border: none;
+      }
+
+      .no-col-padding {
+        padding: 0;
+      }
+
+      .tab-content {
+        margin-top: 10px;
+      }
+
+      .container.main {
+        padding-bottom: 20px;
+      }        
+
+      @media (max-width:767px) {
+        .container.main {
+          margin-top: 10px;
+          padding-bottom: 0;
+        }  
+        #myTabContent {
+          margin-left: 0;
+          margin-right: 0;
+        }      
+      }
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../docs-assets/js/html5shiv.js"></script>
+      <script src="../../docs-assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map JS</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="getstarted.html">Get Started</a></li>
+            <li class="dropdown" id="basemapList">
+              <a href="maps.html" class="dropdown-toggle">Maps <b class="caret"></b></a>
+              <ul class="dropdown-menu" id="myDropdown">
+                <li><a href="#">Streets</a></li>
+                <li><a href="#">Imagery</a></li>
+                <li><a href="#">National Geographic</a></li>
+                <li><a href="#">Topographic</a></li>
+                <li><a href="#">Gray</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Open Street Map</a></li>
+              </ul>
+            </li>
+            <li class="active"><a href="grid.html">Grid</a></li>
+            <li><a href="webmap.html">Web Map</a></li>
+            <li><a href="media.html">@Media</a></li>
+            <li><a href="windows.html">Windows</a></li>             
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container main">
+
+      <div class="page-header hidden-xs">
+        <h2>Grid Layouts</h2>
+        <p class="lead">Use different grid layouts with a responsive map.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 bg-none">
+
+          <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#mapLeft" data-toggle="tab">Left</a></li>
+            <li class=""><a href="#mapCenter" data-toggle="tab">Center</a></li>
+            <li class=""><a href="#mapRight" data-toggle="tab">Right</a></li>
+            <li class=""><a href="#mapFixed" data-toggle="tab">Fixed</a></li>
+          </ul> <!-- nav-tabs -->
+
+          <div id="myTabContent" class="tab-content">
+
+               <div class="tab-pane fade in active" id="mapLeft">
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h5>Top 12</h5>
+                  </div>
+                </div>
+                <div class="row row-map">
+                  <div class="col-xs-8 no-col-padding">
+                    <!-- Bootstrap-map-js -->
+                    <div id="mapDiv1"></div>
+                  </div>
+                  <div class="col-xs-4">                
+                    <h5>Right 4 (fixed)</h5>
+                    <p>content</p>
+                    <p>content</p>
+                    <p>content</p>
+                    <p>content</p>
+                    <p>content</p>
+                    <p>content</p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                </div>        
+              </div> <!-- /.tab-pane-->   
+
+              <div class="tab-pane fade" id="mapCenter"> 
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h5>Top 12</h5>
+                  </div>
+                </div>
+                <div class="row row-map">
+                  <div class="col-xs-12 col-sm-3">
+                    <h5>Left 3</h5>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 no-col-padding">
+                    <!-- Bootstrap-map-js -->
+                    <div id="mapDiv2"></div>
+                  </div>
+                  <div class="col-xs-12 col-sm-3">
+                    <h5>Right 3</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                </div>        
+              </div> <!-- /.tab pane -->
+
+              <div class="tab-pane fade" id="mapRight"> 
+               <div class="row">
+                  <div class="col-xs-12">
+                    <h5>Top 12</h5>
+                  </div>
+                </div>
+                <div class="row row-map">
+                  <div class="col-xs-12 col-sm-4">
+                    <h5>Left 4 (not fixed)</h5>
+                  </div>
+                  <div class="col-xs-12 col-sm-8 no-col-padding">
+                    <!-- Bootstrap-map-js -->
+                    <div id="mapDiv3"></div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                </div>        
+              </div> <!-- /.tab pane -->
+
+              <div class="tab-pane fade" id="mapFixed"> 
+                <div class="row">
+                  <div class="col-xs-12">
+                    <h5>Top 12</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-12 col-sm-3">
+                    <h5>Left 3</h5>
+                  </div>
+                  <div class="col-xs-12 col-sm-6 no-col-padding">
+                    <!-- Bootstrap-map-js -->
+                    <div id="mapDiv4"></div>
+                  </div>
+                  <div class="col-xs-12 col-sm-3">
+                    <h5>Right 3</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                  <div class="col-xs-4"><h5>Bottom 4</h5></div>
+                </div>        
+              </div> <!-- /.tab pane -->
+                  
+            </div>
+          </div>
+
+        </div> <!-- col for tabs -->
+      </div> <!-- row for tabs -->
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap-map-js -->
+    <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            //The location.pathname.replace() logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '../../../src/js'
+            }, {
+                name: "bootstrap",
+                location: "//rawgit.com/xsokev/Dojo-Bootstrap/master" 
+            }]
+        };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
+    <script>
+      require(["esri/map", "application/bootstrapmap", "dojo/on", "dojo/query", "bootstrap/Collapse", "bootstrap/Tab", "dojo/domReady!"], 
+        function(Map, BootstrapMap, on, query) {
+          
+          var map;
+          
+          function showMap(div,responsive, fillPage) {
+            if (map) {
+              map.destroy(); 
+              BootstrapMap.destroy(map);
+            }
+            if (responsive) {
+              map = BootstrapMap.create(div,{
+                basemap:"national-geographic",
+                center:[-122.45,37.77],
+                zoom:12,
+                scrollWheelZoom: false
+              });
+            } else {  
+              map = new Map(div,{
+                basemap:"national-geographic",
+                center:[-122.45,37.77],
+                zoom:12,
+                smartNavigation:false
+              });  
+              on(map, "load", function(){
+                map.disableScrollWheelZoom();
+              });     
+            }
+          }
+
+          showMap("mapDiv1", true);
+
+          query('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+             var t = e.target.text;
+              switch (t) {
+                case "Left":
+                  showMap("mapDiv1", true); 
+                  break;
+                case "Center":
+                  showMap("mapDiv2", true);
+                  break;
+                case "Right":
+                  showMap("mapDiv3", true);
+                  break;
+                case "Fixed":
+                  showMap("mapDiv4", false);
+                  break;
+              }
+          });
+      });
+    </script>
+  </body>
+</html>

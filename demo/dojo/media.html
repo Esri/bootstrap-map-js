@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Safari iOS - apps only -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Chrome for Android - NEW! -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="../images/brand.png">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <title>Bootstrap Map JS - Four Maps</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css"> 
+
+    <style type="text/css">
+
+      .container.main {
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+
+      .row {
+        margin-bottom: 0;
+      }
+      
+      [class*="col-"] {
+          margin-bottom: 10px;
+      }
+    
+      /* Extra small devices (phones, up to 480px) */
+      @media (max-width: 480px) {
+        .map {
+          height: 100px;
+        }
+        .container.main {
+          margin-top: 10px;
+        }
+      }
+
+      @media (min-width: 481px) and (max-width: 767px) {
+        .map {
+          height: 150px;
+        }
+        .container.main {
+          margin-top: 10px;
+        }
+      }
+
+      /* Small devices (tablets, 768px and up) - Portrait to Landscape */
+      @media (min-width: 768px) {
+        .map {
+          height: 200px;
+        }
+        .row {
+          margin-bottom: 20px;
+        }
+      }
+
+      /* Medium devices (desktops, 992px and up) */
+      @media (min-width: 992px) {
+        .map {
+          height: 300px;
+        }
+      }
+
+      /* Large devices (large desktops, 1200px and up) */
+      @media (min-width: 1200px) {
+        .map {
+          height: 400px;
+        }
+      }
+
+    </style>  
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../docs-assets/js/html5shiv.js"></script>
+      <script src="../../docs-assets/js/respond.min.js"></script>
+    <![endif]-->  
+  </head>
+
+  <body>
+
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map JS</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="getstarted.html">Get Started</a></li>   
+            <li class="dropdown" id="basemapList">
+              <a href="maps.html" class="dropdown-toggle">Maps <b class="caret"></b></a>
+              <ul class="dropdown-menu" id="myDropdown">
+                <li><a href="#">Streets</a></li>
+                <li><a href="#">Imagery</a></li>
+                <li><a href="#">National Geographic</a></li>
+                <li><a href="#">Topographic</a></li>
+                <li><a href="#">Gray</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Open Street Map</a></li>
+              </ul>
+            </li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="webmap.html">Web Map</a></li>
+            <li class="active"><a href="media.html">@Media</a></li>
+            <li><a href="windows.html">Windows</a></li>             
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container main">
+
+      <div class="page-header hidden-xs">
+        <h2>Media Queries</h2>
+        <p class="lead">Use @media queries to control the size of the map.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div id="mapDiv1"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div id="mapDiv2"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div id="mapDiv3"></div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-6">
+          <div id="mapDiv4"></div>
+        </div>
+      </div>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap-map-js -->
+      <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            //The location.pathname.replace() logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '../../../src/js'
+            }, {
+                name: "bootstrap",
+                location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
+            }]
+        };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
+    <script>
+      require(["esri/map", "application/bootstrapmap", "dojo/on", "dojo/ready", "dojo/DeferredList", "bootstrap/Collapse", "dojo/domReady!"], 
+        function(Map, BootstrapMap, on, ready, defList) {
+          
+          var maps = [];
+          var active = false;
+
+          function createMap(id,basemap,options) {
+            var map = new Map(id,{
+                basemap: basemap,
+                center:[-122.45,37.77],
+                zoom:11,
+                smartNavigation:false
+            }); 
+            on(map, "load", function() {
+              map.disableScrollWheelZoom();
+            });
+            on(map, "pan-end", resizeAll);
+            on(map, "zoom-end", resizeAll);
+            maps.push(map);          
+          }
+
+          function resizeAll(options) {
+            if (!active) {
+              active = true;
+              var def = [];
+              for (var i = 0; i< maps.length; i++) {
+                if (options.target.id !== maps[i].id && options.target.loaded && options.target.extent !== maps[i].extent) {
+                  def.push(maps[i].setExtent(options.target.extent));
+                }
+              }
+              var defs = new defList(def);
+              defs.then(function() {
+                active = false;
+              });
+            }
+          }
+
+          ready (function(){
+            createMap("mapDiv1", "streets", null);
+            createMap("mapDiv2", "national-geographic", null);
+            createMap("mapDiv3", "gray", null);
+            createMap("mapDiv4", "osm", null);
+          });
+      });
+    </script>
+  </body>
+</html>

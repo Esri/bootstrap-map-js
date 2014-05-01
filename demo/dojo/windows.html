@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Safari iOS - apps only -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Chrome for Android - NEW! -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="../images/brand.png">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <title>Bootstrap Map JS - Geosearch</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
+    
+    <style type="text/css">
+
+      #mapDiv {
+        min-height: 100px; 
+        max-height: 1000px;
+      }
+
+      .simpleGeocoder {
+        margin-right: 5px;
+      }
+
+      .navbar.tools {
+        margin-bottom: 0;
+        min-height: 30px;
+        border: none;
+      }
+
+      .navbar-nav.tools {
+        margin: 0;
+        text-align: center;
+      }
+
+      .modal-dialog {
+        padding-top: 60px;
+      }
+
+      .btn-fixed {
+        width: 80px;
+      }
+
+      .btn-fixed-lg {
+        margin-top: 20px;
+        width: 150px;
+        z-index: 100;
+      }
+
+      h2 {
+        margin-top: 0;
+      }
+
+      .container.main {
+        padding-bottom: 20px;
+        overflow: hidden;
+      }
+
+      @media (max-width:767px) {
+        .container.main {
+          padding: 0;
+          margin: 0;
+        }      
+        body {
+          padding-bottom: 40px;
+        }  
+      }
+              
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bootstrap_v3/docs-assets/js/html5shiv.js"></script>
+      <script src="../bootstrap_v3/docs-assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px; z-index:0" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map JS</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul id="mainNav" class="nav navbar-nav">
+            <li><a href="getstarted.html">Get Started</a></li>
+            <li class="dropdown" id="basemapList">
+              <a href="maps.html" class="dropdown-toggle">Maps <b class="caret"></b></a>
+              <ul class="dropdown-menu" id="myDropdown">
+                <li><a href="maps.html">Streets</a></li>
+                <li><a href="#">Imagery</a></li>
+                <li><a href="#">National Geographic</a></li>
+                <li><a href="#">Topographic</a></li>
+                <li><a href="#">Gray</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Open Street Map</a></li>
+              </ul>
+            </li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="webmap.html">Web Map</a></li>
+            <li><a href="media.html">@Media</a></li>
+            <li class="active"><a href="windows.html">Windows</a></li>             
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="modal fade" id="geosearchModal" style="display: none;" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                  <h4 class="modal-title">Geosearch</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="form-group">
+                    <div id="geosearch"></div>
+                  </div> 
+                  <form id="geosearch-form" class="form-inline">
+                    <div class="checkbox">
+                      <label>
+                        <input id="chkExtent" type="checkbox"> Search in Map Only
+                      </label>
+                    </div>
+                    <button id="btnGeosearch" type="button" class="btn btn-success btn-fixed" data-dismiss="modal"> Go </button>
+                    <button id="btnDismiss" type="submit" class="btn btn-default btn-fixed" data-dismiss="modal">Dismiss</button>
+                  </form>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
+
+    <div class="container main">
+
+      <div class="page-header hidden-xs">
+        <div class="row">
+          <div class="col-xs-9"><h2>Windows</h2>
+            <p class="lead">Show modal and responsive pop-up windows.</p>
+          </div>
+          <div class="col-xs-3">
+            <button id="geosearchNav" type="button" class="btn btn-primary btn-lg btn-fixed-lg">Show Window</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-12">
+          <!-- Bootstrap-map-js -->
+          <div id="mapDiv"></div>
+        </div>
+      </div>
+
+      <div class="navbar tools navbar-inverse navbar-fixed-bottom visible-xs">
+        <div class="container">
+          <ul class="nav navbar-nav tools">
+            <li id="geosearchNav2"><a href="#"><span class="glyphicon glyphicon-search"></span> Geosearch</a></li>
+          </ul>
+        </div>
+      </div>
+        <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            //The location.pathname.replace() logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '../../../src/js'
+            }, {
+                name: "bootstrap",
+                location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
+            }]
+        };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
+    <script>
+        require(["esri/map", 
+          "esri/dijit/Scalebar",       
+          "esri/dijit/Geocoder", 
+          "esri/InfoTemplate", 
+          "esri/graphic", 
+          "esri/geometry/Multipoint", 
+          "esri/symbols/PictureMarkerSymbol",
+          "esri/dijit/Popup",
+          "dojo/dom", 
+          "dojo/on", 
+          "dojo/query",
+          "application/bootstrapmap",
+          "bootstrap/Collapse", // needed for collapsible menu
+          "bootstrap/Modal",
+          "dojo/domReady!"], 
+          function(Map, Scalebar, Geocoder, InfoTemplate, Graphic, Multipoint, PictureMarkerSymbol, Popup, dom, on, query, BootstrapMap) {
+
+            // <!-- Get a reference to the ArcGIS Map class -->
+            var map = BootstrapMap.create("mapDiv",{ 
+              basemap:"streets",
+              center:[-122.45,37.77],
+              zoom:12
+            });
+
+            var scalebar = new Scalebar({
+              map: map,
+              scalebarUnit: "dual"
+            });
+
+            // Create widget
+            var geocoder = new Geocoder({
+              value: 'starbucks',
+              maxLocations: 25,
+              autoComplete: true,
+              arcgisGeocoder: true,
+              autoNavigate: false,
+              map: map
+            },"geosearch");        
+            geocoder.startup();
+            geocoder.on("select", geocodeSelect);
+            geocoder.on("findResults", geocodeResults);
+            geocoder.on("clear", clearFindGraphics);
+            on(geocoder.inputNode, "keydown", function(e){
+              if (e.keyCode == 13) {
+                setSearchExtent();
+              }
+            });
+
+            // Symbols
+            var sym = createPictureSymbol("../images/purple-pin.png", 0, 12, 13, 24);
+
+            map.on("load", function(e){
+              map.infoWindow.offsetY = 25;
+              map.infoWindow.set("highlight", false);
+            });
+
+            // Geosearch functions
+            on(dom.byId("btnGeosearch"),"click", geosearch);
+
+            // Optionally confine search to map extent
+            function setSearchExtent(){
+              if (dom.byId("chkExtent").checked == 1) {
+                geocoder.activeGeocoder.searchExtent = map.extent;                
+              } else {
+                geocoder.activeGeocoder.searchExtent = null;                
+              }
+            }
+            
+            function geosearch() {
+              setSearchExtent();
+              var def = geocoder.find();
+              def.then(function(res){
+                geocodeResults(res);
+              });
+              // Close modal
+              $("#geosearchModal").modal("hide"); 
+            }
+
+            function geocodeSelect(item) {
+              clearFindGraphics();
+              var g = (item.graphic ? item.graphic : item.result.feature);
+              g.setSymbol(sym);
+              addPlaceGraphic(item.result,g.symbol);
+              // Close modal
+              query("#geosearchModal").modal("hide"); 
+            }
+
+            function geocodeResults(places) {
+              places = places.results;
+              if (places.length > 0) {
+                clearFindGraphics();
+                var symbol = sym;
+                // Create and add graphics with pop-ups
+                for (var i = 0; i < places.length; i++) {
+                  addPlaceGraphic(places[i], symbol);
+                }
+                zoomToPlaces(places);
+              } else {
+                //alert("Sorry, address or place not found.");  // TODO
+              }
+            }
+            
+            function stripTitle(title) {
+              var i = title.indexOf(',');
+              if (i > 0) {
+                title = title.substring(0,i);
+              }
+              return title;
+            }
+
+            function addPlaceGraphic(item,symbol)  {
+              var place = {};
+              var attributes,infoTemplate,pt,graphic;
+              pt = item.feature.geometry;
+              place.address = item.name;
+              place.score = item.feature.attributes.Score;
+              // Graphic components
+              attributes = { address:stripTitle(place.address), score:place.score, lat:pt.getLatitude().toFixed(2), lon:pt.getLongitude().toFixed(2) };   
+              infoTemplate = new InfoTemplate("${address}","Latitude: ${lat}<br/>Longitude: ${lon}<br/>Score: ${score}");
+              graphic = new Graphic(pt,symbol,attributes,infoTemplate);
+              // Add to map
+              map.graphics.add(graphic);  
+            }
+                      
+            function zoomToPlaces(places) {
+              var multiPoint = new Multipoint(map.spatialReference);
+              for (var i = 0; i < places.length; i++) {
+                multiPoint.addPoint(places[i].feature.geometry);
+              }
+              map.setExtent(multiPoint.getExtent().expand(2.0));
+            }
+
+            function clearFindGraphics() {
+              map.infoWindow.hide();
+              map.graphics.clear();
+            }
+
+            function createPictureSymbol(url, xOffset, yOffset, xWidth, yHeight) {
+              return new PictureMarkerSymbol(
+              {
+                  "angle": 0,
+                  "xoffset": xOffset, "yoffset": yOffset, "type": "esriPMS",
+                  "url": url,  
+                  "contentType": "image/png",
+                  "width":xWidth, "height": yHeight
+              });
+            }
+
+            // Show modal dialog
+            function showModal() {
+              query("#geosearchModal").modal("show"); 
+            }
+            // Geosearch nav menu is selected
+            query("#geosearchNav").on('click', function(e){
+              showModal();
+            });
+            query("#geosearchNav2").on('click', function(e){
+              showModal();
+            }); 
+        });
+    </script>
+  </body>
+</html>
