@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Safari iOS - apps only -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Chrome for Android - NEW! -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="../images/brand.png">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <title>Bootstrap Map JS - Web Map</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
+    
+    <style type="text/css">
+
+      #mapDiv {
+       min-height: 90px; 
+       max-height: 350px;
+      }
+
+      #mapLegendDiv {
+        height: 300px;  
+        overflow: scroll; 
+        margin-bottom: 20px;      
+      }
+
+      #mapTitle {
+        margin-left: 15px;
+      }
+
+      #mapPanel {
+        padding: 0;
+      }
+
+      .panel-group {
+        margin-bottom: 0px;
+      }
+
+      .panel-group-map {
+        margin-bottom: 15px;
+      }
+
+      table {
+        border-collapse: none;
+        border-spacing: none;
+      }
+
+      [class*="col-"] {
+        margin-bottom: 15px;
+      }   
+
+      h2 {margin-top: 0}
+
+      .col-sm-4 {
+        padding-right: 0px;
+      }  
+
+      @media (max-width: 767px) {
+        [class*="col-"] {
+          margin-bottom: 2px;
+        }
+        .container.main {
+          margin-top: 10px;
+        }
+        .col-sm-4 {
+          padding-right: 15px;
+        }
+      }
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bootstrap_v3/docs-assets/js/html5shiv.js"></script>
+      <script src="../bootstrap_v3/docs-assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map JS</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="getstarted.html">Get Started</a></li>
+            <li class="dropdown" id="basemapList">
+              <a href="maps.html" class="dropdown-toggle">Maps <b class="caret"></b></a>
+              <ul class="dropdown-menu" id="myDropdown">
+                <li><a href="maps.html">Streets</a></li>
+                <li><a href="#">Imagery</a></li>
+                <li><a href="#">National Geographic</a></li>
+                <li><a href="#">Topographic</a></li>
+                <li><a href="#">Gray</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Open Street Map</a></li>
+              </ul>
+            </li>
+            <li><a href="grid.html">Grid</a></li>
+            <li class="active"><a href="webmap.html">Web Map</a></li>
+            <li><a href="media.html">@Media</a></li>
+            <li><a href="windows.html">Windows</a></li>             
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container main">
+
+        <div class="page-header hidden-xs">
+          <div class="row">
+            <div class="col-xs-7" style="margin-bottom: 0px;">
+              <h2>Web Maps</h2>
+              <p class="lead">Load ArcGIS web maps into Bootstrap.</p>
+            </div>
+            <div class="col-xs-5">
+              <div class="form-group pull-right" style="margin-top: 35px;">
+                <input class="form-control form-inline" style="display: inline-block; width:210px; margin-right: 5px;" id="webmapId" type="text" value="68f12b304ad8495eb77fb55243c0ccc2"></input>
+                <button class="btn btn-primary" id="btnWebmap">Load</button> 
+              </div>
+            </div>          
+        </div>
+      </div>
+
+      <!-- Title -->
+      <div class="row">
+        <div class="col-sm-12">
+         <div class="panel-group" id="accordion0">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion0" href="#collapseOne0">
+                    Title
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne0" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <h4 id="mapTitle"></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Legend -->
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="panel-group" id="accordion1">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                    Legend
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne1" class="panel-collapse collapse">
+                <div class="panel-body">
+                  <div id="mapLegendDiv"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map -->    
+        <div class="col-sm-8">
+          <div class="panel-group panel-group-map" id="accordion2">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne2">
+                    Map
+                  </a>
+                </h4>
+              </div>
+              <div id="collapseOne2" class="panel-collapse collapse in">
+                <div id="mapPanel" class="panel-body">
+                  <div id="mapDiv"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div id="mapDiv"></div> -->
+      </div>
+
+    </div><!-- /.container -->
+    <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            //The location.pathname.replace() logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '../../../src/js'
+            }, {
+                name: "bootstrap",
+                location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
+            }]
+        };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
+    <script>
+      require(["esri/map", 
+        "esri/dijit/Scalebar", 
+        "esri/dijit/Legend", 
+        "esri/arcgis/utils",  
+        "dojo/dom", 
+        "dojo/on", 
+        "dojo/query", 
+        "application/bootstrapmap",
+        "bootstrap/Collapse",
+        "dojo/domReady!"], 
+      function(Map, Scalebar, Legend, esriUtils, dom, on, query, BootstrapMap) {  
+        "use strict"
+        
+        var map;
+        var scalebar;
+        var legend;
+
+        // Load web map automatically when the page loads
+        loadWebmap();
+
+        on(dom.byId("btnWebmap"),"click", loadWebmap);
+        
+        function loadWebmap(e) {
+
+          // Get new webmap and extract map and map parts
+          resetMap();
+
+          // Webmaps
+          // 8602ad7753a54608a5c359f5977fba13
+          // f58996878ac24702afef792e52a07e55
+          // 441f68fc13ec4ec480287f9d46c3e319
+          var webmap = dom.byId("webmapId").value.trim();
+          var mapDeferred = BootstrapMap.createWebMap(webmap,"mapDiv", {
+            slider: true,
+            nav:false,
+            smartNavigation:false          
+          });
+
+          mapDeferred.then(function(response) {
+            map = response.map;
+
+            // Add titles
+            dom.byId("mapTitle").innerHTML = response.itemInfo.item.title;
+            //dom.byId("mapSubTitle").innerHTML = response.itemInfo.item.snippet;
+            // Add scalebar and legend
+            var layers = esri.arcgis.utils.getLegendLayers(response);  
+            if(map.loaded){
+              initMapParts(layers);
+            }
+            else{
+              on(map,"load",function(){
+                initMapParts(layers);
+              });
+            }
+
+          },function(error){
+            alert("Sorry, couldn't load webmap!");
+            console.log("Error loading webmap: " & dojo.toJson(error));           
+          });
+        }
+        
+        function initMapParts(layers){
+         //add scalebar
+          scalebar = new Scalebar({
+            map:map,
+            scalebarUnit: 'english'
+          });
+          //add legend
+          if (legend) {
+            legend.map = map;
+            legend.refresh(layers);
+          }
+          else {
+            legend = new Legend({
+                map:map,
+                layerInfos:layers
+              },"mapLegendDiv");
+            legend.startup();
+          }
+        }
+
+        function resetMap() {
+          if (map) { 
+            BootstrapMap.destroy(map);
+            map.removeAllLayers();
+            map.spatialReference = null;
+            map.destroy();
+          }
+          if (scalebar)
+           scalebar.destroy();
+          if (legend) {
+            dom.byId("mapLegendDiv").innerHTML = "";
+          }        
+        }
+
+      });
+    </script>
+  </body>
+</html>

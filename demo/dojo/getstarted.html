@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Safari iOS - apps only -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!-- Chrome for Android - NEW! -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="../images/brand.png">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+
+    <title>Bootstrap Map JS - Get Started</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-js -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
+
+    <style type="text/css">
+
+      #mapDiv {
+        min-height: 300px; 
+        max-height: 1000px; 
+      }
+      
+      pre {
+        overflow: auto;
+        word-wrap: normal;
+        white-space: pre;
+        font-family: Courier,"Courier New";
+        font-size: 13px;
+        background-color: #fee9cc;
+      }
+
+      pre.prettyprint {
+        border: 1px solid #cccccc !important;
+      }
+
+      .container.main {
+        margin-top: 10px;
+      }
+
+      .well {
+        padding-top: 0;
+      }
+
+    </style>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../docs-assets/js/html5shiv.js"></script>
+      <script src="../../docs-assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    
+    <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map JS</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="getstarted.html">Get Started</a></li><li class="dropdown" id="basemapList">
+              <a href="maps.html" class="dropdown-toggle">Maps <b class="caret"></b></a>
+              <ul class="dropdown-menu" id="myDropdown">
+                <li><a href="#">Streets</a></li>
+                <li><a href="#">Imagery</a></li>
+                <li><a href="#">National Geographic</a></li>
+                <li><a href="#">Topographic</a></li>
+                <li><a href="#">Gray</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Open Street Map</a></li>
+              </ul>
+            </li>
+            <li><a href="grid.html">Grid</a></li>
+            <li><a href="webmap.html">Web Map</a></li>
+            <li><a href="media.html">@Media</a></li>
+            <li><a href="windows.html">Windows</a></li>             
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container main">
+
+      <div class="page-header hidden-xs">
+        <h2>Get started</h2>
+        <p class="lead">Three easy steps!</p>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12">
+
+          <ul class="nav nav-pills">
+            <li class="active"><a href="#Step1" data-toggle="tab">Step 1</a></li>
+            <li><a href="#Step2" data-toggle="tab">Step 2</a></li>
+            <li><a href="#Step3" data-toggle="tab">Step 3</a></li>
+          </ul>
+        </br>
+
+          <div class="tab-content well">
+            <div class="tab-pane active" id="Step1">
+              <h3>Step 1: Get Bootstrap Map JS</h3>
+              <p>The following files will be installed:</p>
+              <ul>
+                <li>\src\js\bootstrapmap.js</li>
+                <li>\src\css\bootstrapmap.css</li>
+                <li>\src\images\popup.png</li>
+                <li>\demo\...</li>
+                <li>\templates\...</li>
+              </ul>
+            <br>
+              <a href="http://github.com/Esri/bootstrap-map-js"><button type="button" class="btn btn-md btn-success">Fork on GitHub</button></a>
+              <a href="http://github.com/Esri/bootstrap-map-js"><button type="button" class="btn btn-md btn-success">Download</button></a>
+            </div>
+            <div class="tab-pane" id="Step2">
+              <h3>Step 2: Create a page</h3>
+              <p>Add the basic html and css references for a simple Bootstrap page.</p>
+              <br/>
+
+              <pre class="prettyprint">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;title>Bootstrap 101 Template&lt;/title>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    &lt;!-- Bootstrap -->
+    &lt;link href="../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+    &lt;!-- HTML5 IE8 support of HTML5 elements and media queries -->
+    &lt;!--[if lt IE 9]>
+      &lt;script src="../assets/js/html5shiv.js">&lt;/script>
+      &lt;script src="../assets/js/respond.min.js">&lt;/script>
+    &lt;![endif]-->
+  &lt;/head>
+  &lt;body>
+
+    &lt;h1>Hello, world!&lt;/h1>
+
+  &lt;/body>
+&lt;/html>
+              </pre>
+              <div class="alert alert-info">NOTE: Replace paths with your references. References to the Bootstrap JavaScript and jQuery are <strong>not</strong> needed as we will add a reference to Dojo-Bootstrap in the next step.</div>
+            </div>
+
+            <div class="tab-pane" id="Step3">
+              <h3>Step 3: Add the map</h3>
+              <p>Add the ArcGIS and Bootstrap Map css and js references to make your map responsive.  Cut and paste the code below or try more advanced examples <a href="grid.html">here</a>.</p>
+
+              <ul id="myTab" class="nav nav-tabs">
+                <li class="active"><a href="#code" data-toggle="tab">Code</a></li>
+                <li class=""><a href="#map" data-toggle="tab">Map</a></li>
+              </ul> <!-- nav-tabs -->
+
+              </br>
+
+              <div id="myTabContent" class="tab-content">
+
+                <div class="tab-pane fade in active" id="code">
+                <pre class="prettyprint">
+&lt;!DOCTYPE html>
+&lt;html>
+  &lt;head>
+    &lt;title>Bootstrap 101 Template&lt;/title>
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    &lt;!-- Bootstrap -->
+    &lt;link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<b>
+    &lt;!-- Bootstrap-map-js -->
+    &lt;link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
+    &lt;link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
+    &lt;style type="text/css">
+      #mapDiv {
+        min-height: 100px; 
+        max-height: 1000px; 
+      }
+    &lt;/style>
+</b>
+    &lt;!-- HTML5 IE8 support of HTML5 elements and media queries -->
+    &lt;!--[if lt IE 9]>
+      &lt;script src="../assets/js/html5shiv.js">&lt;/script>
+      &lt;script src="../assets/js/respond.min.js">&lt;/script>
+    &lt;![endif]-->
+  &lt;/head>
+  &lt;body>
+<b>    
+    &lt;!-- Bootstrap-map-js -->
+    &lt;div class="container">
+      <strong>&lt;div id="mapDiv">&lt;/div></strong>
+    &lt;/div>
+    &lt;script>
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            packages: [{
+                name: "application",
+                location: package_path + '/js'
+            }, {
+                name: "bootstrap",
+                location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
+            }]
+        };
+    &lt;/script>
+    &lt;script src="http://js.arcgis.com/3.9compact">&lt;/script>
+    &lt;script>
+        require(["esri/map", "application/bootstrapmap", "dojo/domReady!"], 
+          function(Map, BootstrapMap) {
+            &lt;!-- Get a reference to the ArcGIS Map class -->
+            var map = BootstrapMap.create("mapDiv",{
+              basemap:"national-geographic",
+              center:[-122.45,37.77],
+              zoom:12
+            });
+        });
+    &lt;/script>
+</b>
+    &lt;!-- jQuery (for Bootstrap's JavaScript plugins) -->
+    &lt;script src="http://code.jquery.com/jquery-1.10.1.min.js">&lt;/script>
+    &lt;!-- Include all  plugins or individual files as needed -->
+    &lt;script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js">&lt;/script>
+  &lt;/body>
+&lt;/html>
+                </pre>
+                <div class="alert alert-info">NOTE: Replace paths with your references.</div>
+                </div>
+
+                <div class="tab-pane fade in" id="map">
+                  <div id="mapDiv" class="round"></div>
+                </div>
+
+              </div><!--/.tab-content-->
+            </div><!--/.tab-pane-->
+          </div><!--/.tab-content-->
+        </div><!--/.col-lg-12-->
+      </div><!--/.row-->
+    </div><!-- /.container -->
+    
+    <!-- Bootstrap-map-js -->
+    <script type="text/javascript">
+        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var dojoConfig = {
+            //The location.pathname.replace() logic below may look confusing but all its doing is
+            // enabling us to load the api from a CDN and load local modules from the correct location.
+            packages: [{
+                name: "application",
+                location: package_path + '../../../src/js'
+            }, {
+                name: "bootstrap",
+                location: "//rawgit.com/xsokev/Dojo-Bootstrap/master"
+            }]
+        };
+    </script>
+    <script src="http://js.arcgis.com/3.9compact"></script>
+    <script>
+        require(["esri/map", "application/bootstrapmap", "dojo/query", "bootstrap/Collapse", "bootstrap/Tab", "dojo/domReady!"], 
+          function(Map, BootstrapMap, query) {
+            
+            var map;
+
+            function showMap(div) {
+              if (map) {
+                map.destroy();
+                BootstrapMap.destroy(map);
+              }
+              map = BootstrapMap.create(div,{
+                basemap:"national-geographic",
+                center:[-122.45,37.77],
+                zoom:12
+              });
+            }
+
+            query('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+               if (e.target.text == "Map") {
+                  showMap("mapDiv"); 
+               }    
+            });
+        });
+    </script>
+  </body>
+</html>
+
