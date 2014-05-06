@@ -97,8 +97,8 @@
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/query", "bootstrap/Collapse", "bootstrap/Dropdown", "dojo/domReady!"], 
-          function(Map, Scalebar, BootstrapMap, query) {
+        require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/query", "dojo/touch", "bootstrap/Collapse", "bootstrap/Dropdown", "dojo/domReady!"], 
+          function(Map, Scalebar, BootstrapMap, query, touch) {
             // <!-- Get a reference to the ArcGIS Map class -->
             var map = BootstrapMap.create("mapDiv",{
               basemap:"national-geographic",
@@ -111,7 +111,8 @@
               scalebarUnit: "dual"
             });
 
-            query("#basemapList li").on("click", function(e) {
+            query("#basemapList li").on(touch.press, function(e) {
+              e.preventDefault();
               switch (e.target.text) {
                 case "Streets":
                   map.setBasemap("streets");
@@ -133,6 +134,7 @@
                   break;
               }
               if (query(".navbar-collapse.in").length > 0) {
+                e.stopPropagation();
                 query(".navbar-toggle")[0].click();
               }
           });
