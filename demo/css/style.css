@@ -3,22 +3,22 @@ body {
 }
 
 .navbar-brand {
-  padding-top: 5px;
+  padding-top: 10px;
   padding-bottom: 5px;
 }
 
 .navbar-brand-image {
-  height: 34px;
-  margin-left: -10px;
+  height: 32px;
+  margin-left: 0px;
   margin-right: 10px;
-  margin-top: 4px;
+  margin-top: 0px;
 }
 .starter-template {
   padding: 15px 15px;
   text-align: center;
 }
 .navbar-inverse .navbar-brand {
-	font-size: 18px;
+	font-size: 16px;
 	color: #fff;
 }
 
