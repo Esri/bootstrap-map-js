@@ -124,6 +124,14 @@
             <li><a href="media.html">@Media</a></li>
             <li class="active"><a href="windows.html">Windows</a></li>             
           </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Dojo <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="../jquery/windows.html">jQuery</a></li>
+              </ul>
+            </li>
+          </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -209,6 +217,7 @@
           "dojo/query",
           "application/bootstrapmap",
           "bootstrap/Collapse", // needed for collapsible menu
+          "bootstrap/Dropdown", // needed for nav dropdowns
           "bootstrap/Modal",
           "dojo/domReady!"], 
           function(Map, Scalebar, Geocoder, InfoTemplate, Graphic, Multipoint, PictureMarkerSymbol, Popup, dom, on, query, BootstrapMap) {
