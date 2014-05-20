@@ -43,7 +43,7 @@
 .esriPopup .titlePane, .esriPopup .contentPane, .esriPopup .actionsPane  {
   padding: 8px 14px;
   border: none;
-  max-height: 70px;
+  max-height: 200px;
   background-color: #f7f7f7;
 }
 
@@ -56,9 +56,18 @@
   color: #333333;
 }
 
-.esriPopup .titleButton {
+/*.esriPopup .titleButton {
+  background: url(../images/popup.png) no-repeat;
+}*/
+
+/*.esriPopup .titleButton, .esriPopup .pointer, .esriPopup .outerPointer {
+background: url(../images/popup.png) no-repeat;
+}*/
+
+.esriPopup .titleButton, .esriPopup .pointer, .esriPopup .outerPointer{
   background: url(../images/popup.png) no-repeat;
 }
+
 
 .esriPopup .titlePane .spinner {
   display: none;
@@ -94,6 +103,46 @@
   margin-right: 8px;
 }
 
+.esriPopup .outerPointer.left {
+  left: 6px;
+  width: 10px;
+}
+
+.esriPopup .outerPointer.right {
+  background-position: -19px 0;
+  width: 10px;
+}
+
+.esriPopup .pointer.bottomLeft {
+  background-position: 0 -25px;
+  height: 12px
+}
+
+.esriPopup .pointer.bottomRight {
+  background-position: 0 -25px;
+  height: 12px;
+}
+
+.esriPopup .pointer.top {
+  background-position: -58px -36px;
+  height: 12px
+}
+
+.esriPopup .pointer.bottom {
+  background-position: 0 -25px;
+  height: 12px
+}
+
+.esriPopup .pointer.topRight {
+  background-position: -58px -36px;
+  height: 12px;
+}
+
+.esriPopup .pointer.topLeft {
+  background-position: -58px -36px;
+  height: 12px;
+}
+
 .esriPopup .titleButton.maximize {
   display: none;
 }
@@ -104,18 +153,18 @@
 }
 
 .esriPopup .titleButton.prev {
-  background-position: 0px -197px;
+  /*background-position: 0px -197px;*/
   right: 55px;
 }
 
 .esriPopup .titleButton.next {
-  background-position: 0px -416px;
+  /*background-position: 0px -416px;*/
   right: 28px;
 }
 
-.esriPopup .titleButton.close {
+/*.esriPopup .titleButton.close {
   background-position: 0px -170px;
-}
+}*/
 
 /*** Restyle Geocoder widget ***/
 .simpleGeocoder .esriGeocoderContainer {
@@ -146,8 +195,71 @@
   margin: 8px 4px 5px 1px;
 }
 
+/*** Restyle the Basemap Gallery widget ***/
+.esriBasemapGallery * {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.esriBasemapGalleryNode {
+  width: 75px;
+}
+
+.esriBasemapGalleryThumbnail {
+  height: 61px;
+  width: 75px;
+}
+
+.esriBasemapGalleryLabelContainer {
+  display: none;  
+}
+
+.esriBasemapGallerySelectedNode .esriBasemapGalleryThumbnail {
+  border: 2px solid #3C7AFF;
+}
+
 /*** Fix Bootstrap modal bug ***/
 body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {
   margin-right: 0;
   margin-top: 0;
 }
+
+/*** Bootstrap extensions and overrides ***/
+.panel-fixed {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  margin-left: 60px;
+  width: 320px;
+  text-align: center;
+  z-index: 50;
+}
+
+.panel-fixed .panel-body {
+  max-height: 350px;
+  overflow: auto;
+}
+
+.panel-fixed .panel-body .checkbox input[type=checkbox], .panel-fixed .panel-body .btn-toolbar .btn-group, .panel-fixed .panel-body.btn-toolbar .input-group  {
+  float: none;
+}
+
+.panel-fixed .panel-body>.btn-toolbar+.btn-toolbar {
+  margin-top: 10px;
+}
+
+.panel-fixed .btn-absolute {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  border: none;
+  outline: none;
+}
+
+.panel-fixed .btn-absolute:hover,.panel-fixed .btn-absolute:focus,.panel-fixed .btn-absolute:active,.panel-fixed .btn-absolute .active {
+  box-shadow: none;
+  outline: none;
+  background-color: #428bca;
+}
+
