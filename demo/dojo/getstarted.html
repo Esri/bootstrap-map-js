@@ -21,7 +21,6 @@
 
     <!-- Custom styles for this template -->
     <link href="../css/style.css" rel="stylesheet">
-    <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
@@ -76,7 +75,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map - Dojo</a>
+          <a class="navbar-brand" href="../index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -96,6 +95,14 @@
             <li><a href="webmap.html">Web Map</a></li>
             <li><a href="media.html">@Media</a></li>
             <li><a href="windows.html">Windows</a></li>             
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Dojo <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="../jquery/getstarted.html">jQuery</a></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -267,7 +274,12 @@
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", "application/bootstrapmap", "dojo/query", "bootstrap/Collapse", "bootstrap/Tab", "dojo/domReady!"], 
+        require(["esri/map",
+          "application/bootstrapmap",
+          "dojo/query",
+          "bootstrap/Collapse",
+          "bootstrap/Dropdown",
+          "bootstrap/Tab","dojo/domReady!"], 
           function(Map, BootstrapMap, query) {
             
             var map;
@@ -291,6 +303,9 @@
             });
         });
     </script>
+
+    <!-- add syntax highlighting to code snippts -->
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
   </body>
 </html>
 

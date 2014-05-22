@@ -103,7 +103,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map - Dojo</a>
+          <a class="navbar-brand" href="../index.html"><img class="navbar-brand-image" src="../images/brand.png">Bootstrap Map</a>
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -124,6 +124,14 @@
             <li class="active"><a href="webmap.html">Web Map</a></li>
             <li><a href="media.html">@Media</a></li>
             <li><a href="windows.html">Windows</a></li>             
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="" class="dropdown-toggle" data-toggle="dropdown">Dojo <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="../jquery/webmap.html">jQuery</a></li>
+              </ul>
+            </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -238,6 +246,7 @@
         "dojo/query", 
         "application/bootstrapmap",
         "bootstrap/Collapse",
+        "bootstrap/Dropdown", // needed for nav dropdowns
         "dojo/domReady!"], 
       function(Map, Scalebar, Legend, esriUtils, dom, on, query, BootstrapMap) {  
         "use strict"
