@@ -236,7 +236,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             // Expand map height
             style.set(this._mapDivId, {
               "height": mh2 + "px",
-              "width": "100%"
+              "width": "auto"
             });
             // Force resize and reposition
             if (this._map && forceResize && this._visible) {
