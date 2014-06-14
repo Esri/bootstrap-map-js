@@ -37,7 +37,9 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
         _mapDiv: null,
         _mapStyle: null,
         _map: null,
-        _delay: 50,
+        _autoRecenterDelay: 50,
+        _popupRecenterDelayer: 150,
+        _popupBlocked: false,
         _visible: true,
         _visibilityTimer: null,
         _mapDeferred: null,
@@ -117,33 +119,35 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             this._map.infoWindow.anchor = "top";
             var updatePopup = function (obj) {
               var pt = obj._map.infoWindow._location;
-              if (pt) {
+              if (pt && !obj._popupBlocked) {
+                obj._popupBlocked = true;
+                // Delay the map re-center
                 window.setTimeout(function () {
                   obj._repositionMapForInfoWin(pt);
-                }, 250);
+                  obj._popupBlocked = false;
+                }, obj._popupRecenterDelayer);
               }
             };
 
-            // No feature or graphic clicked, just map
+            this.counter = 0;
+            // When map is clicked (no feature or graphic)
             this._map.on("click", lang.hitch(this, function (e) {
               if (this._map.infoWindow.isShowing) {
                 updatePopup(this);
               }
             }));
-            // GraphicLayers
-            // on(this._map.graphics, "click", lang.hitch(this, function (g) {
-            //   console.log(this.counter++ + " graphics click");
-            //   updatePopup(this);
-            // }));
-            // Show InfoWindow
+            // When graphics are clicked
+            on(this._map.graphics, "click", lang.hitch(this, function (g) {
+              updatePopup(this);
+            }));
+            // When infowindow appears
             on(this._map.infoWindow, "show", lang.hitch(this, function (g) {
               updatePopup(this);
             }));
-            // FeatureLayers selection changed
-            on(this._map.infoWindow, "selection-change", lang.hitch(this, function (g) {
-              updatePopup(this);
-            }));
-
+            // FeatureLayers selection changed - No longer needed at 3.9
+            // on(this._map.infoWindow, "selection-change", lang.hitch(this, function (g) {
+            //   updatePopup(this);
+            // }));
           };
 
           if (this._map.loaded) {
@@ -180,15 +184,9 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var recenter = function (extent, width, height) {
             this._map.__resizeCenter = this._map.extent.getCenter();
             var timer = function () {
-              // Reposition popup
-              if (this._map.infoWindow.isShowing) {
-                if (this._map.infoWindow._location) {
-                  this._repositionMapForInfoWin(this._map.infoWindow._location);
-                }
-              }
               this._map.centerAt(this._map.__resizeCenter);
             };
-            setTimeout(lang.hitch(this, timer), this._delay);
+            setTimeout(lang.hitch(this, timer), this._autoRecenterDelay);
           };
           this._handles.push(on(this._map, "resize", lang.hitch(this, recenter)));
         },
@@ -313,6 +311,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           if (t) {
             centerPointScreen.y += tOff - marginTop;
           }
+
           //Pan the ap to the new centerpoint  
           if (r || l || t) {
             centerPoint = this._map.toMap(centerPointScreen);
