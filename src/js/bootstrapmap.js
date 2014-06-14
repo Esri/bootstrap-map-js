@@ -1,5 +1,5 @@
-define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/touch", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "esri/geometry/Point", "dojo/domReady!"],
-  function (Map, Popup, EsriUtils, declare, on, touch, dom, lang, style, query, nodecols, Point) {
+define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare", "dojo/on", "dojo/_base/connect", "dojo/touch", "dojo/dom", "dojo/_base/lang", "dojo/dom-style", "dojo/query", "dojo/NodeList-traverse", "esri/geometry/Point", "dojo/domReady!"],
+  function (Map, Popup, EsriUtils, declare, on, conn, touch, dom, lang, style, query, nodecols, Point) {
     "use strict";
     return {
       create: function (divId, options) {
@@ -116,33 +116,42 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var setInfoWin = function (e) {
             this._map.infoWindow.anchor = "top";
             var updatePopup = function (obj) {
-              var f = obj._map.infoWindow.getSelectedFeature();
-              if (f) {
-                var pt;
-                if (f.geometry.type == "point") {
-                  pt = f.geometry;
-                } else {
-                  pt = f.geometry.getExtent().getCenter();
-                }
+              var pt = obj._map.infoWindow._location;
+              if (pt) {
                 window.setTimeout(function () {
-                  obj._repositionInfoWin(pt);
+                  obj._repositionMapForInfoWin(pt);
                 }, 250);
               }
             };
+
+            // No feature or graphic clicked, just map
+            this._map.on("click", lang.hitch(this, function (e) {
+              if (this._map.infoWindow.isShowing) {
+                updatePopup(this);
+              }
+            }));
             // GraphicLayers
-            on(this._map.graphics, "click", lang.hitch(this, function (g) {
+            // on(this._map.graphics, "click", lang.hitch(this, function (g) {
+            //   console.log(this.counter++ + " graphics click");
+            //   updatePopup(this);
+            // }));
+            // Show InfoWindow
+            on(this._map.infoWindow, "show", lang.hitch(this, function (g) {
               updatePopup(this);
             }));
-            // FeatureLayers
+            // FeatureLayers selection changed
             on(this._map.infoWindow, "selection-change", lang.hitch(this, function (g) {
               updatePopup(this);
             }));
+
           };
+
           if (this._map.loaded) {
             lang.hitch(this, setInfoWin).call();
           } else {
             this._handles.push(on(this._map, "load", lang.hitch(this, setInfoWin)));
           }
+
           // Debounce window resize
           var debounce = function (func, threshold, execAsap) {
             var timeout;
@@ -171,8 +180,11 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           var recenter = function (extent, width, height) {
             this._map.__resizeCenter = this._map.extent.getCenter();
             var timer = function () {
+              // Reposition popup
               if (this._map.infoWindow.isShowing) {
-                this._repositionInfoWin(this._map.infoWindow.features[0]);
+                if (this._map.infoWindow._location) {
+                  this._repositionMapForInfoWin(this._map.infoWindow._location);
+                }
               }
               this._map.centerAt(this._map.__resizeCenter);
             };
@@ -270,7 +282,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
           }
           return colH;
         },
-        _repositionInfoWin: function (graphicCenterPt) {
+        _repositionMapForInfoWin: function (graphicCenterPt) {
           // Determine the upper right, and center, coordinates of the map
           var maxPoint = new Point(this._map.extent.xmax, this._map.extent.ymax, this._map.spatialReference);
           var centerPoint = new Point(this._map.extent.getCenter());
