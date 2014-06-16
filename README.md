@@ -34,10 +34,10 @@ NOTE: Feel free to contribute new templates to this repo!
   <head>
     <title>Bootstrap Map Example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <!-- Bootstrap -->
+    
+    <!-- Step 1. Add CSS for Bootstrap, ArcGIS and Bootstrap-map-js -->
+    
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-
-    <!-- Step 1. Add CSS for the mapping components -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     <style>
@@ -51,14 +51,20 @@ NOTE: Feel free to contribute new templates to this repo!
   </head>
   <body>
 
-    <!-- Step 2. Add HTML to define the layout of the page and the map -->
+    <!-- Step 2. Add HTML to define the layout of the map and page -->
+    
     <div class="container" style="padding:15px;">
+      <div class="row">
+        <div class="col-xs-12">
+          <h5>Title</h5>
+        </div>
+      </div>
       <div class="row">
         <div class="col-xs-8">
           <div id="mapDiv"></div>
         </div>
         <div class="col-xs-4">                
-          <h5>Right 4</h5>
+          <h5>Legend</h5>
           <p>content</p>
           <p>content</p>
           <p>content</p>
@@ -67,6 +73,7 @@ NOTE: Feel free to contribute new templates to this repo!
     </div>
 
     <!-- Step 3. Load the responsive map -->
+    
     <script type="text/javascript">
         var package_path = "//esri.github.com/bootstrap-map-js/src/js";
         var dojoConfig = {
@@ -90,7 +97,7 @@ NOTE: Feel free to contribute new templates to this repo!
       });
     </script>
 
-    <!-- jQuery (for Bootstrap's JavaScript plugins). Can also use pure Dojo. See examples. -->
+    <!-- jQuery (for Bootstrap's JavaScript plugins). NOTE: You can also use pure Dojo. See examples. -->
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <!-- Include all  plugins or individual files as needed -->
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
