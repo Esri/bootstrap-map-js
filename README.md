@@ -66,7 +66,7 @@ NOTE: Feel free to contribute new templates to this repo!
       </div>
     </div>
 
-    <!-- Step 3. Load the responsive map -->
+    <!-- Step 3. Add JS to Load the responsive map -->
     <script type="text/javascript">
         var package_path = "//esri.github.com/bootstrap-map-js/src/js";
         var dojoConfig = {
@@ -100,7 +100,7 @@ NOTE: Feel free to contribute new templates to this repo!
 
 ## Documentation
 
-Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/getstarted.html)
+Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/index.html)
 
 ## Requirements
 
