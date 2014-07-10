@@ -196,7 +196,7 @@
     &lt;!-- Bootstrap -->
     &lt;link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <b>
-    &lt;!-- Bootstrap-map-js -->
+    &lt;!-- Step 1. Add CSS for the mapping components -->
     &lt;link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
     &lt;link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     &lt;style type="text/css">
@@ -214,11 +214,22 @@
   &lt;/head>
   &lt;body>
 <b>    
-    &lt;!-- Bootstrap-map-js -->
+
+    &lt;!-- Step 2. Add HTML to define the layout of the page and the map -->
     &lt;div class="container">
       <strong>&lt;div id="mapDiv">&lt;/div></strong>
     &lt;/div>
-
+    
+    &lt;!-- Step 3. Add JS to load the responsive map -->
+    &lt;script type="text/javascript">
+        var package_path = "//esri.github.com/bootstrap-map-js/src/js";
+        var dojoConfig = {
+            packages: [{
+                name: "application",
+                location: package_path
+            }]
+        };
+    &lt;/script>
     &lt;script src="http://js.arcgis.com/3.9compact">&lt;/script>
     &lt;script>
         require(["esri/map", "application/bootstrapmap", "dojo/domReady!"], 
