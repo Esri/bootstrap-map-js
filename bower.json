@@ -1,0 +1,10 @@
+{
+    "name": "bootstrap-map-js",
+    "version": "2.0.0",
+    "ignore": [
+        ".jshintrc",
+        "bootstrapmapjs.png",
+        "README.md",
+        "demo/*"
+    ]
+}
