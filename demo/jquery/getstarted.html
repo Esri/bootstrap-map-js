@@ -278,31 +278,30 @@
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", "application/bootstrapmap", "dojo/domReady!"], 
-          function(Map, BootstrapMap) {
-            
-            var map;
+    require(["application/bootstrapmap", "dojo/domReady!"],
+      function (BootstrapMap) {
+        var map;
 
-            function showMap(div) {
-              if (map) {
-                map.destroy();
-                BootstrapMap.destroy(map);
-              }
-              map = BootstrapMap.create(div,{
-                basemap:"national-geographic",
-                center:[-122.45,37.77],
-                zoom:12
-              });
+        function showMap(div) {
+          if (map) {
+            map.destroy();
+            BootstrapMap.destroy(map);
+          }
+          map = BootstrapMap.create(div,{
+            basemap:"national-geographic",
+            center:[-122.45,37.77],
+            zoom:12
+          });
+        }
+
+        $(document).ready(function () {
+          $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
+            if (e.target.text === "Map") {
+              showMap("mapDiv");
             }
-
-            $(document).ready(function (e){
-              $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-                 if (e.target.text == "Map") {
-                    showMap("mapDiv"); 
-                 }    
-                });
-            });
+          });
         });
+    });
     </script>
 
     <!-- Bootstrap core JavaScript

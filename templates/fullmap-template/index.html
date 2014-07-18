@@ -69,26 +69,28 @@
 
     <!-- Bootstrap-map-js -->
     <div id="mapDiv"></div>
-      <script type="text/javascript">
-        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-        var dojoConfig = {
-            //The location.pathname.replace() logic below may look confusing but all its doing is
-            // enabling us to load the api from a CDN and load local modules from the correct location.
-            packages: [{
-                name: "application",
-                location: package_path + '../../../src/js'
-            }]
-        };
+
+    <script type="text/javascript">
+      var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+      var dojoConfig = {
+          //T he location.pathname.replace() logic below may look confusing but all its doing is
+          // enabling us to load the api from a CDN and load local modules from the correct location.
+          packages: [{
+              name: "application",
+              location: package_path + '../../../src/js'
+          }]
+      };
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/domReady!"], 
+        require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/domReady!"],
           function(Map, Scalebar, BootstrapMap) {
-            <!-- Get a reference to the ArcGIS Map class -->
-            var map = BootstrapMap.create("mapDiv",{
-              basemap:"national-geographic",
-              center:[-122.45,37.77],
-              zoom:12
+            // Get a reference to the ArcGIS Map class
+            var map = BootstrapMap.create("mapDiv", {
+              basemap: "national-geographic",
+              center: [-122.45, 37.77],
+              zoom: 12,
+              scrollWheelZoom: false
             });
 
             var scalebar = new Scalebar({
@@ -96,8 +98,8 @@
               scalebarUnit: "dual"
             });
 
-           $(document).ready(function(){
-              $("#basemapList li").click(function(e) {
+           $(document).ready(function () {
+              $("#basemapList li").click(function (e) {
                 switch (e.target.text) {
                   case "Streets":
                     map.setBasemap("streets");
@@ -122,10 +124,6 @@
             });
         });
     </script>
-
- 
-
-
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
