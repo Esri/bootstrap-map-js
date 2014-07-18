@@ -69,26 +69,27 @@
 
     </div><!-- /.container -->
 
-      <script type="text/javascript">
-        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-        var dojoConfig = {
-            //The location.pathname.replace() logic below may look confusing but all its doing is
-            // enabling us to load the api from a CDN and load local modules from the correct location.
-            packages: [{
-                name: "application",
-                location: package_path + '../../../src/js'
-            }]
-        };
+    <script type="text/javascript">
+      var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+      var dojoConfig = {
+        // The location.pathname.replace() logic below may look confusing but all its doing is
+        // enabling us to load the api from a CDN and load local modules from the correct location.
+        packages: [ {
+          name: "application",
+          location: package_path + '../../../src/js'
+        } ]
+      };
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", "application/bootstrapmap", "dojo/domReady!"], 
-          function(Map, BootstrapMap) {
-            <!-- Get a reference to the ArcGIS Map class -->
-            var map = BootstrapMap.create("mapDiv",{
-              basemap:"national-geographic",
-              center:[-122.45,37.77],
-              zoom:12
+        require(["application/bootstrapmap", "dojo/domReady!"],
+          function (BootstrapMap) {
+            // Get a reference to the ArcGIS Map class
+            var map = BootstrapMap.create("mapDiv", {
+              basemap: "national-geographic",
+              center: [-122.45, 37.77],
+              zoom: 12,
+              scrollWheelZoom: false
             });
         });
     </script>

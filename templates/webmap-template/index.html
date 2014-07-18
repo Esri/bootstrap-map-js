@@ -106,71 +106,73 @@
 
     </div><!-- /.container -->
 
-      <script type="text/javascript">
-        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-        var dojoConfig = {
-            //The location.pathname.replace() logic below may look confusing but all its doing is
-            // enabling us to load the api from a CDN and load local modules from the correct location.
-            packages: [{
-                name: "application",
-                location: package_path + '../../../src/js'
-            }]
-        };
+    <script type="text/javascript">
+      var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+      var dojoConfig = {
+          //The location.pathname.replace() logic below may look confusing but all its doing is
+          // enabling us to load the api from a CDN and load local modules from the correct location.
+          packages: [{
+              name: "application",
+              location: package_path + '../../../src/js'
+          }]
+      };
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-      require(["esri/map", 
-        "esri/dijit/Scalebar", 
-        "esri/dijit/Legend", 
-        "esri/arcgis/utils",  
-        "dojo/dom", 
-        "dojo/on", 
-        "dojo/query", 
+      require(["esri/map",
+        "esri/dijit/Scalebar",
+        "esri/dijit/Legend",
+        "esri/arcgis/utils",
+        "dojo/dom",
+        "dojo/on",
+        "dojo/query",
+        "dojo/_base/json",
         "application/bootstrapmap",
-        "dojo/domReady!"], 
-      function(Map, Scalebar, Legend, esriUtils, dom, on, query, BootstrapMap) {  
-        var map;
-        var scalebar;
-        var legend;
+        "dojo/domReady!"],
+      function (Map, Scalebar, Legend, esriUtils, dom, on, query, dojo, BootstrapMap) {
+        "use strict";
 
-        // Load web map when page loads
-        loadWebmap();
-        
-        function loadWebmap(e) {
+        var map,
+          scalebar,
+          legend;
+
+        function loadWebmap() {
           // Get new webmap and extract map and map parts
-          var mapDeferred = BootstrapMap.createWebMap("68f12b304ad8495eb77fb55243c0ccc2","mapDiv", {
-            slider: true,
-            nav:false,
-            smartNavigation:false          
+          var mapDeferred = BootstrapMap.createWebMap("68f12b304ad8495eb77fb55243c0ccc2", "mapDiv",
+          {
+              slider: true,
+              nav: false,
+              smartNavigation: false,
+              scrollWheelZoom: false
           });
 
-          mapDeferred.then(function(response) {
-            map = response.map;
+          mapDeferred.then(function (response) {
+              map = response.map;
 
-            // Add titles
-            dom.byId("mapTitle").innerHTML = response.itemInfo.item.title;
-            //dom.byId("mapSubTitle").innerHTML = response.itemInfo.item.snippet;
-            // Add scalebar and legend
-            var layers = esri.arcgis.utils.getLegendLayers(response);  
-            if(map.loaded){
+          // Add titles
+          dom.byId("mapTitle").innerHTML = response.itemInfo.item.title;
+          //dom.byId("mapSubTitle").innerHTML = response.itemInfo.item.snippet;
+          // Add scalebar and legend
+          var layers = esriUtils.getLegendLayers(response);
+          if (map.loaded) {
+            initMapParts(layers);
+          }
+          else{
+            on(map, "load", function () {
               initMapParts(layers);
-            }
-            else{
-              on(map,"load",function(){
-                initMapParts(layers);
-              });
-            }
+            });
+          }
 
-          },function(error){
+          },function(error) {
             alert("Sorry, couldn't load webmap!");
-            console.log("Error loading webmap: " & dojo.toJson(error));           
+            console.log("Error loading webmap: " + dojo.toJson(error));
           });
         }
-        
-        function initMapParts(layers){
+
+        function initMapParts(layers) {
          //add scalebar
           scalebar = new Scalebar({
-            map:map,
+            map: map,
             scalebarUnit: 'english'
           });
           //add legend
@@ -186,6 +188,10 @@
             legend.startup();
           }
         }
+
+        // Load web map when page loads
+        loadWebmap();
+
       });
     </script>
 

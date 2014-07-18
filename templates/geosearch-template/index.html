@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" href="../../bootstrap_v3/docs-assets/ico/favicon.png">
+    <link rel="shortcut icon" href="../images/favicon.png">
 
     <title>Geosearch Template for Bootstrap</title>
 
@@ -124,24 +124,27 @@
     </script>
     <script src="http://js.arcgis.com/3.9compact"></script>
     <script>
-        require(["esri/map", 
-          "esri/dijit/Scalebar",       
-          "esri/dijit/Geocoder", 
-          "esri/InfoTemplate", 
-          "esri/graphic", 
-          "esri/geometry/Multipoint", 
+        require(["esri/map",
+          "esri/dijit/Scalebar",
+          "esri/dijit/Geocoder",
+          "esri/InfoTemplate",
+          "esri/graphic",
+          "esri/geometry/Multipoint",
           "esri/symbols/PictureMarkerSymbol",
           "esri/dijit/Popup",
-          "dojo/dom", 
-          "dojo/on", 
-          "application/bootstrapmap", 
-          "dojo/domReady!"], 
-          function(Map, Scalebar, Geocoder, InfoTemplate, Graphic, Multipoint, PictureMarkerSymbol, Popup, dom, on, BootstrapMap) {
-            <!-- Get a reference to the ArcGIS Map class -->
-            var map = BootstrapMap.create("mapDiv",{
-              basemap:"streets",
-              center:[-122.45,37.77],
-              zoom:12
+          "dojo/dom",
+          "dojo/on",
+          "application/bootstrapmap",
+          "dojo/domReady!"],
+          function (Map, Scalebar, Geocoder, InfoTemplate, Graphic, Multipoint, PictureMarkerSymbol, Popup, dom, on, BootstrapMap) {
+            "use strict";
+
+            // Get a reference to the ArcGIS Map class
+            var map = BootstrapMap.create("mapDiv", {
+              basemap: "streets",
+              center:[-122.45, 37.77],
+              zoom: 12,
+              scrollWheelZoom: false
             });
             var scalebar = new Scalebar({
               map: map,
@@ -155,7 +158,7 @@
               autoComplete: true,
               arcgisGeocoder: true,
               map: map
-            },"geosearch");        
+            },"geosearch");
             geocoder.startup();
             geocoder.on("select", geocodeSelect);
             geocoder.on("findResults", geocodeResults);
@@ -165,8 +168,9 @@
             on(dom.byId("btnGeosearch"),"click", geosearch);
             on(dom.byId("btnClear"),"click", clearFindGraphics);
 
-            map.on("load", function(e){
-              map.infoWindow.offsetY = 35;
+            map.on("load", function () {
+              map.infoWindow.offsetY = 25;
+              map.infoWindow.set("highlight", false);
             });
             
             function geosearch() {
@@ -225,18 +229,18 @@
               map.graphics.clear();
             }
 
-            function createPictureSymbol(url, xOffset, yOffset, size) {
+            function createPictureSymbol(url, xOffset, yOffset, xWidth, yHeight) {
               return new PictureMarkerSymbol(
               {
                   "angle": 0,
                   "xoffset": xOffset, "yoffset": yOffset, "type": "esriPMS",
                   "url": url,  
                   "contentType": "image/png",
-                  "width":size, "height": size
+                  "width":xWidth, "height": yHeight
               });
             }
 
-            var sym = createPictureSymbol("../images/blue-pin.png", 0, 12, 35);
+            var sym = createPictureSymbol("../images/blue-pin.png", 0, 12, 13, 24);
 
             // Show modal dialog, hide nav
             $(document).ready(function(){
