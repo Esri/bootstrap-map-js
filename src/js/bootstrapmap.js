@@ -92,7 +92,7 @@ define(["esri/map", "esri/dijit/Popup", "esri/arcgis/utils", "dojo/_base/declare
             }
           } else {
             // Default
-            this._map.disableScrollWheelZoom();
+            this._map.enableScrollWheelZoom();
           }
           // Remove 300ms delay to close infoWindow on touch devices
           on(query(".esriPopup .titleButton.close"), touch.press, lang.hitch(this,
