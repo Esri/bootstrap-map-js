@@ -7,7 +7,7 @@
     "bootstrapmapjs.png",
     "README.md",
     "bower.json",
-    "templates/*",
-    "demo/*"
+    "templates/**/*",
+    "demo/**/*"
   ]
 }
