@@ -1,12 +1,12 @@
 {
   "name": "bootstrap-map-js",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "homepage": "https://github.com/alaframboise/bootstrap-map-js",
   "authors": [
     "Allan Laframboise <alaframboise@esri.com>"
   ],
   "description": "A light-weight JS/CSS extension for building responsive web mapping apps with ArcGIS and Bootstrap 3",
-  "main": "js/bootstrapmap.js",
+  "main": "src/js/bootstrapmap.js",
   "moduleType": [
     "amd"
   ],
@@ -18,6 +18,10 @@
   ],
   "license": "Apache",
   "ignore": [
-    "**/.*"
+    "**/.*",
+    "bootstrapmapjs.png",
+    "README.md",
+    "templates",
+    "demo"
   ]
 }
