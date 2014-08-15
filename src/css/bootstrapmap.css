@@ -43,7 +43,7 @@
 .esriPopup .titlePane, .esriPopup .contentPane, .esriPopup .actionsPane  {
   padding: 8px 14px;
   border: none;
-  max-height: 200px;
+  max-height: 100px;
   background-color: #f7f7f7;
 }
 
@@ -261,5 +261,12 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
   box-shadow: none;
   outline: none;
   background-color: #428bca;
+}
+
+/*** Media Queries ***/
+ @media (max-width: 600px) {
+    .panel-fixed {
+        width: 250px;
+    }
 }
 
