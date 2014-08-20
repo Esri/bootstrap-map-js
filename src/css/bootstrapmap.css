@@ -173,7 +173,7 @@ background: url(../images/popup.png) no-repeat;
 }
 
 .esriPopup .titleButton.prev {
-  background-position: 0px -197px;
+  background-position: -40px -20px;
   right: 55px;
 }
 
@@ -183,7 +183,7 @@ background: url(../images/popup.png) no-repeat;
 }
 
 .esriPopup .titleButton.close {
-  background-position: -40px -20px;
+  background-position: -34px 0;
 }
 
 /*** Restyle Geocoder widget ***/
