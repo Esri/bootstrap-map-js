@@ -38,7 +38,7 @@ NOTE: Feel free to contribute new templates to this repo!
     <!-- Step 1. Add CSS for Bootstrap, ArcGIS and Bootstrap-map-js -->
     
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.9/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     <style>
       <!-- Set the responsive map size here -->
@@ -83,7 +83,7 @@ NOTE: Feel free to contribute new templates to this repo!
             }]
         };
     </script>
-    <script src="http://js.arcgis.com/3.9compact"></script>
+    <script src="http://js.arcgis.com/3.10compact"></script>
     <script>
       require(["application/bootstrapmap", "dojo/domReady!"], 
         function(BootstrapMap) {
