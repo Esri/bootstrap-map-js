@@ -23,7 +23,7 @@
     <link href="../css/style.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
-    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.9/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
     
     <style type="text/css">
@@ -199,7 +199,7 @@
             }]
         };
     </script>
-    <script src="//js.arcgis.com/3.9compact"></script>
+    <script src="//js.arcgis.com/3.10compact"></script>
     <script>
         require(["esri/map", 
           "esri/dijit/Scalebar",       
@@ -250,7 +250,6 @@
             var sym = createPictureSymbol("../images/purple-pin.png", 0, 12, 13, 24);
 
             map.on("load", function(e){
-              map.infoWindow.offsetY = 25;
               map.infoWindow.set("highlight", false);
             });
 
