@@ -92,10 +92,10 @@ background: url(../images/popup.png) no-repeat;
   margin-bottom: 15px;
 }
 
-.esriButton.close {
+/*.esriButton.close {
   width: 21px;
   line-height: inherit;
-}
+}*/
 
 .esriPopup .titleButton.maximize, .esriPopup .titleButton.close,
 .esriPopup .titleButton.prev, .esriPopup .titleButton.next, .titleButton.restore {
@@ -106,41 +106,61 @@ background: url(../images/popup.png) no-repeat;
 .esriPopup .outerPointer.left {
   left: 6px;
   width: 10px;
+  height: 15px;
 }
 
 .esriPopup .outerPointer.right {
   background-position: -19px 0;
   width: 10px;
+  height: 15px;
 }
 
 .esriPopup .pointer.bottomLeft {
   background-position: 0 -25px;
-  height: 12px
+  height: 10px;
+  bottom: -10px;
 }
 
 .esriPopup .pointer.bottomRight {
   background-position: 0 -25px;
-  height: 12px;
+  height: 10px;
+  bottom: -10px;
 }
 
 .esriPopup .pointer.top {
-  background-position: -58px -36px;
-  height: 12px
+  background: url(../images/popup.png) no-repeat;
+  background-position: -58px -40px;
+  height: 20px
 }
 
 .esriPopup .pointer.bottom {
   background-position: 0 -25px;
-  height: 12px
-}
-
-.esriPopup .pointer.topRight {
-  background-position: -58px -36px;
-  height: 12px;
+  height: 10px;
+  margin-left: -11px;
+  bottom: -10px;
 }
 
 .esriPopup .pointer.topLeft {
-  background-position: -58px -36px;
-  height: 12px;
+  background: url(../images/popup.png) no-repeat;
+  background-position: -58px -40px;
+  height: 10px;
+}
+
+.esriPopup .pointer.topRight {
+  background: url(../images/popup.png) no-repeat;
+  background-position: -58px -40px;
+  height: 10px;
+}
+
+.esriPopup .pointer, .esriPopup .outerPointer {
+  width: 25px;
+  height: 25px;
+  transform: rotate(0deg); 
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  box-shadow: none;
 }
 
 .esriPopup .titleButton.maximize {
@@ -162,9 +182,9 @@ background: url(../images/popup.png) no-repeat;
   right: 28px;
 }
 
-/*.esriPopup .titleButton.close {
-  background-position: 0px -170px;
-}*/
+.esriPopup .titleButton.close {
+  background-position: -34px 0;
+}
 
 /*** Restyle Geocoder widget ***/
 .simpleGeocoder .esriGeocoderContainer {
