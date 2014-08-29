@@ -260,6 +260,11 @@
 
         on(dom.byId("btnWebmap"),"click", loadWebmap);
         
+        //listen for when the title pane has finished expanding to reposition the map div
+        on(dom.byId("accordion0"), "transitionend, webkitTransitionEnd", function(){
+          map.reposition();
+        });
+
         function loadWebmap(e) {
 
           // Get new webmap and extract map and map parts

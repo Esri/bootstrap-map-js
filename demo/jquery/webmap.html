@@ -254,7 +254,12 @@
         loadWebmap();
 
         on(dom.byId("btnWebmap"),"click", loadWebmap);
-        
+
+        //listen for when the title pane has finished expanding to reposition the map div
+        $(".collapse").on('transitionend webkitTransitionEnd',function(e){
+          map.reposition();
+        });
+
         function loadWebmap(e) {
 
           // Get new webmap and extract map and map parts
