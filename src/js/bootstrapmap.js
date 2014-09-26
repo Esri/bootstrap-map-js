@@ -1,20 +1,18 @@
 define([
     "esri/map",
-    "esri/dijit/Popup",
     "esri/arcgis/utils",
+    "esri/geometry/Point",
     "dojo/_base/declare",
     "dojo/on",
-    "dojo/_base/connect",
     "dojo/touch",
     "dojo/dom",
     "dojo/_base/lang",
     "dojo/dom-style",
     "dojo/query",
     "dojo/NodeList-traverse",
-    "esri/geometry/Point",
+    "dojo/dom-class",
     "dojo/domReady!"],
-    function (Map, Popup, EsriUtils, declare, on, conn, touch, dom, lang, style, query,
-        nodecols, Point) {
+    function (Map, EsriUtils, Point, declare, on, touch, dom, lang, style, query, nodecols, domClass) {
         "use strict";
 
         return {
@@ -54,32 +52,40 @@ define([
             },
             // SmartResizer Class Functions
             _smartResizer: declare(null, {
-                _mapDivId: null,
-                _mapDiv: null,
-                _mapStyle: null,
-                _map: null,
-                _autoRecenterDelay: 50,
-                _popupRecenterDelayer: 150,
-                _popupPosition: "top",
-                _popupBlocked: false,
-                _visible: true,
-                _visibilityTimer: null,
-                _mapDeferred: null,
                 constructor: function (mapDivId, options) {
+                    this._map = null;
+                    this._autoRecenterDelay =  50;
+                    this._popupRecenterDelayer = 150;
+                    this._popupPosition = "top";
+                    this._popupBlocked = false;
+                    this._visible = true;
+                    this._visibilityTimer = null;
+                    this._mapDeferred = null;
+                    // Default bootstrap map options
+                    this._autoRecenter = options.autoRecenter || true;
+                    this._responsiveResize = options.responsiveResize || true;
+                    // Map properties
                     this._mapDivId = mapDivId;
                     this._mapDiv = dom.byId(mapDivId);
                     this._mapStyle = style.get(this._mapDiv);
+                    // Map options
                     this._options = lang.mixin(options, {});
+                    // Events
                     this._handles = [];
                 },
                 // Create a new map
                 createMap: function () {
                     this._setMapDiv(false);
-                    lang.mixin(this._options, {
-                        smartNavigation: false,
-                        autoResize: false
-                    });
+                    // Need to be false in responsive mode
+                    if (this._responsiveResize) {
+                        lang.mixin(this._options,
+                            {
+                                smartNavigation: false,
+                                autoResize: false
+                            });
+                    }
                     this._map = new Map(this._mapDivId, this._options);
+                    this._setPopup();
                     this._bindEvents();
                     this._mapDiv.__map = this._map;
                     return this._map;
@@ -95,10 +101,13 @@ define([
                     if (!this._options.hasOwnProperty("mapOptions")) {
                         this._options.mapOptions = {};
                     }
-                    lang.mixin(this._options.mapOptions, {
-                        smartNavigation: false,
-                        autoResize: false
-                    });
+                    // Need to be false in responsive mode
+                    if (this._responsiveResize) {
+                        lang.mixin(this._options.mapOptions, {
+                            smartNavigation: false,
+                            autoResize: false
+                        });
+                    }
                     // Create the webmap
                     deferred = EsriUtils.createMap(webMapId, this._mapDivId, this._options);
                     this._mapDeferred = deferred;
@@ -106,12 +115,16 @@ define([
                     // Callback to get map
                     getDeferred = function (response) {
                         this._map = response.map;
+                        this._setPopup();
                         this._bindEvents();
                         this._mapDiv.__map = this._map;
                         this._smartResizer = myselfAsAResizer;
                     };
                     this._mapDeferred.then(lang.hitch(this, getDeferred));
                     return deferred;
+                },
+                _setPopup: function () {
+                    domClass.add(this._map.infoWindow.domNode, "light");
                 },
                 // Avoid undesirable behaviors on touch devices
                 _setTouchBehavior: function () {
@@ -218,15 +231,17 @@ define([
                     resizeWin = debounce(this._setMapDiv, 100, false);
                     this._handles.push(on(window, "resize", lang.hitch(this, resizeWin)));
                     // Auto-center map
-                    recenter = function () {
-                        this._map.__resizeCenter = this._map.extent.getCenter();
-                        timer = function () {
-                            this._map.centerAt(this._map.__resizeCenter);
+                    if (this._autoRecenter) {
+                        recenter = function () {
+                            this._map.__resizeCenter = this._map.extent.getCenter();
+                            timer = function () {
+                                this._map.centerAt(this._map.__resizeCenter);
+                            };
+                            setTimeout(lang.hitch(this, timer), this._autoRecenterDelay);
                         };
-                        setTimeout(lang.hitch(this, timer), this._autoRecenterDelay);
-                    };
-                    // Listen for container resize
-                    this._handles.push(on(this._map, "resize", lang.hitch(this, recenter)));
+                        // Listen for container resize
+                        this._handles.push(on(this._map, "resize", lang.hitch(this, recenter)));
+                    }
                 },
                 // Check if the map is really visible
                 _getMapDivVisibility: function () {
@@ -258,7 +273,7 @@ define([
                 },
                 // Set new map height
                 _setMapDiv: function (forceResize) {
-                    if (!this._mapDivId) {
+                    if (!this._mapDivId || !this._responsiveResize) {
                         return;
                     }
                     var visible,

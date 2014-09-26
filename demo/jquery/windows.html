@@ -204,7 +204,7 @@
         require(["esri/map", 
           "esri/dijit/Scalebar",       
           "esri/dijit/Geocoder", 
-          "esri/InfoTemplate", 
+          "esri/dijit/PopupTemplate", 
           "esri/graphic", 
           "esri/geometry/Multipoint", 
           "esri/symbols/PictureMarkerSymbol",
@@ -213,7 +213,7 @@
           "dojo/on", 
           "application/bootstrapmap", 
           "dojo/domReady!"], 
-          function(Map, Scalebar, Geocoder, InfoTemplate, Graphic, Multipoint, PictureMarkerSymbol, Popup, dom, on, BootstrapMap) {
+          function(Map, Scalebar, Geocoder, PopupTemplate, Graphic, Multipoint, PictureMarkerSymbol, Popup, dom, on, BootstrapMap) {
 
             // Get a reference to the ArcGIS Map class
             var map = BootstrapMap.create("mapDiv",{ 
@@ -251,6 +251,7 @@
 
             map.on("load", function(e){
               map.infoWindow.set("highlight", false);
+              map.infoWindow.set("titleInBody", false);
             });
 
             // Geosearch functions
@@ -258,7 +259,7 @@
 
             // Optionally confine search to map extent
             function setSearchExtent(){
-              if (dom.byId("chkExtent").checked == 1) {
+              if (dom.byId("chkExtent").checked === 1) {
                 geocoder.activeGeocoder.searchExtent = map.extent;                
               } else {
                 geocoder.activeGeocoder.searchExtent = null;                
@@ -315,7 +316,7 @@
               place.score = item.feature.attributes.Score;
               // Graphic components
               attributes = { address:stripTitle(place.address), score:place.score, lat:pt.getLatitude().toFixed(2), lon:pt.getLongitude().toFixed(2) };   
-              infoTemplate = new InfoTemplate("${address}","Latitude: ${lat}<br/>Longitude: ${lon}<br/>Score: ${score}");
+              infoTemplate = new PopupTemplate({title:"{address}", description: "Latitude: {lat}<br/>Longitude: {lon}"});
               graphic = new Graphic(pt,symbol,attributes,infoTemplate);
               // Add to map
               map.graphics.add(graphic);  
