@@ -18,7 +18,7 @@
 .esriSimpleSlider {
   border: 1px solid #cccccc;
   top: 15px;
-  left: 15px;
+  right: 15px;
 }
 .esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
 .esriSimpleSliderVertical .esriSimpleSliderDecrementButton{
