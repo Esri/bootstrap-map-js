@@ -293,7 +293,8 @@ define([
                     }
                     // Fill page with the map or match row height
                     if (this._visible) {
-                        windowH = window.innerHeight;
+                        //windowH = window.innerHeight;
+                        windowH = document.documentElement.clientHeight;
                         bodyH = document.body.clientHeight;
                         room = windowH - bodyH;
                         mapH = this._calcMapHeight();
@@ -328,9 +329,9 @@ define([
                 _calcMapHeight: function () {
                     //var s = style.get(e);
                     var s = this._mapStyle,
-                        p = parseInt(s.paddingTop, 10) + parseInt(s.paddingBottom, 10),
-                        g = parseInt(s.marginTop, 10) + parseInt(s.marginBottom, 10),
-                        bodyH = parseInt(s.borderTopWidth, 10) + parseInt(s.borderBottomWidth, 10),
+                        p = parseInt(s.paddingTop, 10) + parseInt(s.paddingBottom, 10) || 0,
+                        g = parseInt(s.marginTop, 10) + parseInt(s.marginBottom, 10) || 0,
+                        bodyH = parseInt(s.borderTopWidth, 10) + parseInt(s.borderBottomWidth, 10) || 0,
                         h = p + g + bodyH + this._mapDiv.clientHeight;
                   return h;
                 },
