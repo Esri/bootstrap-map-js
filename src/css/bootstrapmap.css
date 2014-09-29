@@ -35,48 +35,74 @@
   font-size: 14px;
   font-weight: normal;
   line-height: 18px;
-  background-color: #f7f7f7;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333333;
 }
 
-.esriPopup .titlePane, .esriPopup .contentPane, .esriPopup .actionsPane  {
-  padding: 8px 14px;
-  border: none;
-  max-height: 100px;
+/* Easy color control */
+.esriPopupWrapper {
+  background-color: #fff;
+}
+
+.esriPopup .titlePane, .esriPopup .contentPane, .esriPopup .actionsPane, 
+.esriPopup .pointer, .esriPopup .outerPointer, .esriPopup .pointer.top, .esriPopup .pointer.topLeft, 
+.esriPopup .pointer.topRight, .esriPopup .pointer.bottomLeft, .esriPopup .pointer.bottomRight {
+  background-color: #fff;
+}
+
+.esriPopup.light .pointer.top, .esriPopup.light .pointer.topLeft, .esriPopup.light .pointer.topRight {
   background-color: #f7f7f7;
 }
 
-.esriPopup .titlePane, {
-  padding-top: 10px;
-  color: #333333;
+/* Title Pane font and buttons */
+.esriPopup .titlePane, .esriPopup.light .titlePane, .esriPopup.dark .titlePane {
+  height: 34px;
+  padding: 10px 0 0 10px;
+  background-color: #f7f7f7;
+  font-size: 14px;
 }
 
-.esriPopup .title {
-  color: #333333;
+.esriPopup.light .titleButton {
+  font-size: 16px;
 }
 
-/*.esriPopup .titleButton {
-  background: url(../images/popup.png) no-repeat;
-}*/
-
-/*.esriPopup .titleButton, .esriPopup .pointer, .esriPopup .outerPointer {
-background: url(../images/popup.png) no-repeat;
-}*/
-
-.esriPopup .titleButton, .esriPopup .pointer, .esriPopup .outerPointer{
-  background: url(../images/popup.png) no-repeat;
+.esriPopup.light .titleButton:hover {
+  color: #333;  
+}
+.esriPopup.light .titleButton.next, .esriPopup.dark .titleButton.next {
+  right: 40px;
 }
 
+.esriPopup.light .titleButton.next, .esriPopup.dark .titleButton.next, 
+.esriPopup.light .titleButton.prev, .esriPopup.dark .titleButton.prev {
+  color: #AAAAAA;
+}
 
+.esriPopup.light .titleButton.next:hover, .esriPopup.dark .titleButton.next:hover,
+.esriPopup.light .titleButton.prev:hover, .esriPopup.dark .titleButton.prev:hover  {
+  color: #666;
+}
+
+/* Content Pane */
+.esriPopup .contentPane, .esriPopup.light .contentPane, .esriPopup.dark .contentPane {
+  max-height: 300px;
+  padding: 10px 10px 0 10px;
+  border-top: 1px solid #ebebeb;
+}
+
+/* Hide all ofd these */
 .esriPopup .titlePane .spinner {
   display: none;
 }
+.esriPopup .titleButton.maximize, .esriPopup .titleButton.restore {
+  display: none;
+}
+.esriPopup .actionsPane .actionList {
+  display: none;
+}
 
-.esriPopup .contentPane {
-  border-top: 1px solid #ebebeb;
-  color: #333333;
-  margin-bottom: 5px;
+.esriViewPopup .break {
+  height: 2px; 
 }
 
 .esriViewPopup .mainSection .attrTable td.attrName {
@@ -85,105 +111,6 @@ background: url(../images/popup.png) no-repeat;
 
 .esriViewPopup .mainSection .attrTable td {
   color: #888888;
-}
-
-.esriPopup .actionsPane {
-  display: none;
-  margin-bottom: 15px;
-}
-
-/*.esriButton.close {
-  width: 21px;
-  line-height: inherit;
-}*/
-
-.esriPopup .titleButton.maximize, .esriPopup .titleButton.close,
-.esriPopup .titleButton.prev, .esriPopup .titleButton.next, .titleButton.restore {
-  margin-top: 8px;
-  margin-right: 8px;
-}
-
-.esriPopup .outerPointer.left {
-  left: 6px;
-  width: 10px;
-  height: 15px;
-}
-
-.esriPopup .outerPointer.right {
-  background-position: -19px 0;
-  width: 10px;
-  height: 15px;
-}
-
-.esriPopup .pointer.bottomLeft {
-  background-position: 0 -25px;
-  height: 10px;
-  bottom: -10px;
-}
-
-.esriPopup .pointer.bottomRight {
-  background-position: 0 -25px;
-  height: 10px;
-  bottom: -10px;
-}
-
-.esriPopup .pointer.top {
-  background: url(../images/popup.png) no-repeat;
-  background-position: -58px -40px;
-  height: 20px
-}
-
-.esriPopup .pointer.bottom {
-  background-position: 0 -25px;
-  height: 10px;
-  margin-left: -11px;
-  bottom: -10px;
-}
-
-.esriPopup .pointer.topLeft {
-  background: url(../images/popup.png) no-repeat;
-  background-position: -58px -40px;
-  height: 10px;
-}
-
-.esriPopup .pointer.topRight {
-  background: url(../images/popup.png) no-repeat;
-  background-position: -58px -40px;
-  height: 10px;
-}
-
-.esriPopup .pointer, .esriPopup .outerPointer {
-  width: 25px;
-  height: 25px;
-  transform: rotate(0deg); 
-  -moz-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  -o-transform: rotate(0deg);
-  -webkit-transform: rotate(0deg);
-  box-shadow: none;
-}
-
-.esriPopup .titleButton.maximize {
-  display: none;
-}
-
-.esriPopup .titleButton.next, .esriPopup .titleButton.prev {
-  width: 13px;
-  height: 17px;
-}
-
-.esriPopup .titleButton.prev {
-  background-position: -40px -20px;
-  right: 55px;
-}
-
-.esriPopup .titleButton.next {
-  background-position: -25px -20px;
-  right: 28px;
-}
-
-.esriPopup .titleButton.close {
-  background-position: -34px 0;
 }
 
 /*** Restyle Geocoder widget ***/
