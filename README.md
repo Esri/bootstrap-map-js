@@ -25,16 +25,19 @@ NOTE: Feel free to contribute new templates to this repo!
 
 This repository contains the following:
 
-	\dist
-		\js\bootstrapmap.min.js
- 		\css\bootstrapmap.min.css
- 		\images\popup.png
-	\src
-		\css\bootstrapmap.css
-		\js\bootstrapmap.js 
-		\images\popup.png 
-	\demo\
-	\templates\ 
+	boostrap-map-js/
+	├──dist/
+	│  ├──js/
+	│  │  └──bootstrapmap.min.js
+ 	│  └──css/
+ 	│     └──bootstrapmap.min.css
+	├──src/
+	│  ├──css/
+	│  │  └──bootstrapmap.css
+	│  └──js/
+	│     └──bootstrapmap.js 
+	├──demo/
+	└──templates/ 
 
 ## Example
 
@@ -155,9 +158,9 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/in
 Make sure you have the [Grunt CLI](http://gruntjs.com/getting-started) installed.
 
 1. [Fork and clone bootstrap-map-js](https://help.github.com/articles/fork-a-repo)
-2. `cd` to the `bootstrap-map-js` folder. 
+2. `cd` to the `bootstrap-map-js/` folder. 
 3. Install the dependencies with `npm install`.
-4. Run `grunt` from the command line. This will create a new build in the `/dist` directory.
+4. Run `grunt` from the command line. This will create a new minimized build in the `dist/` folder.
 
 ## Contributing
 

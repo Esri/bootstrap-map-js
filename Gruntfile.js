@@ -18,16 +18,6 @@ module.exports = function(grunt) {
                 }
             }
         },
-        copy: {
-            main: {
-                files: [{
-                    cwd:'src/images/',
-                    src: 'popup.png',
-                    dest: 'dist/images/',
-                    expand: true
-                }]
-            }
-        },
         uglify: {
             options: {
                 compress: {
@@ -57,9 +47,8 @@ module.exports = function(grunt) {
     // Load required modules
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    grunt.registerTask('default',['copy','uglify','cssmin']);
+    grunt.registerTask('default',['uglify','cssmin']);
 }
