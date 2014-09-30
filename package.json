@@ -1,0 +1,23 @@
+{
+    "name": "bootstrap-map-js",
+    "description": "A light-weight JS/CSS extension for building responsive web mapping apps with ArcGIS and Bootstrap 3.",
+    "author": "Allan Laframboise <alaframboise@esri.com> ",
+    "license": "Apache 2",
+    "contributors": [
+        "Tom Wayson (https://github.com/tomwayson)",
+        "Nick Furness (https://github.com/nixta)",
+        "Matt Driscoll (https://github.com/driskull)",
+        "John Gravois (https://github.com/jgravois)",
+        "disuse (https://github.com/disuse)",
+        "Andy Gup (https://github.com/andygup)"
+    ],
+    "readmeFilename": "README.md",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt": "~0.4.4",
+        "grunt-contrib-uglify": "^0.2.0",
+        "grunt-contrib-cssmin": "^v0.10.0",
+        "grunt-contrib-compress": "^v0.10.0",
+        "grunt-contrib-watch": "^0.6.1"
+    }
+}
