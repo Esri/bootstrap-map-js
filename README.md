@@ -22,11 +22,22 @@ NOTE: Feel free to contribute new templates to this repo!
 ![App](https://raw.github.com/Esri/bootstrap-map-js/master/bootstrapmapjs.png)
 
 ## What's included
-* \src\css\bootstrapmap.css
-* \src\js\bootstrapmap.js 
-* \src\images\popup.png 
-* \demo\
-* \templates\... 
+
+This repository contains the following:
+
+	boostrap-map-js/
+	├──dist/
+	│  ├──js/
+	│  │  └──bootstrapmap.min.js
+ 	│  └──css/
+ 	│     └──bootstrapmap.min.css
+	├──src/
+	│  ├──css/
+	│  │  └──bootstrapmap.css
+	│  └──js/
+	│     └──bootstrapmap.js 
+	├──demo/
+	└──templates/ 
 
 ## Example
 
@@ -38,12 +49,11 @@ NOTE: Feel free to contribute new templates to this repo!
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Step 1. Add CSS for Bootstrap, ArcGIS and Bootstrap-map-js -->
-    
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     <style>
-      <!-- Set the responsive map size here -->
+      /* Set the responsive map size here */
       #mapDiv {
         min-height:100px; 
         max-height:500px; 
@@ -54,7 +64,6 @@ NOTE: Feel free to contribute new templates to this repo!
   <body>
 
     <!-- Step 2. Add HTML to define the layout of the map and page -->
-    
     <div class="container" style="padding:15px;">
       <div class="row">
         <div class="col-xs-12">
@@ -75,7 +84,6 @@ NOTE: Feel free to contribute new templates to this repo!
     </div>
 
     <!-- Step 3. Add JS to Load the responsive map -->
-    
     <script type="text/javascript">
         var package_path = "//esri.github.com/bootstrap-map-js/src/js";
         var dojoConfig = {
@@ -100,9 +108,9 @@ NOTE: Feel free to contribute new templates to this repo!
     </script>
 
     <!-- jQuery (for Bootstrap's JavaScript plugins). NOTE: You can also use pure Dojo. See examples. -->
-    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all  plugins or individual files as needed -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   </body>
 </html>
 ```
@@ -127,7 +135,7 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/in
 
 ## Developer Notes
 
-* Bootstrap-map-js Styles Only: If you just want to use the styles and popup formatting, and you don't care about a responsive map, just reference bootstrapmap.css file to your projects. Take a look at these [examples](https://github.com/Esri/quickstart-map-js) to get see how to do this.
+* Bootstrapmap.css Only: If you just want to use the styles and popup formatting, and you don't care about a responsive map, just reference bootstrapmap.css in your projects. Take a look at these [examples](https://github.com/Esri/quickstart-map-js) to get see how to do this.
 * Responsive Map: You can only have one responsive map per page. You can have as many maps as you want that are fixed in size however.
 * ScrollwheelZoom: To enable scrollwheel zoom, set ```scrollWheelZoom: true``` in the constructor. A scrolling map will "slip" however if the page is larger than the viewport, therefore, this is set to ```false``` by default.
 * IE8 Support: Add the following shims to support IE8.  For more information visit [getbootstrap.com](http://getbootstrap.com/getting-started/#support).
@@ -141,6 +149,15 @@ Visit the [Getting Started Guide](http://esri.github.io/bootstrap-map-js/demo/in
     <![endif]-->
     ``` 
 * Learn more about the Bootstrap framework [here](http://getbootstrap.com).
+
+## Build Instructions
+
+Make sure you have the [Grunt CLI](http://gruntjs.com/getting-started) installed.
+
+1. [Fork and clone bootstrap-map-js](https://help.github.com/articles/fork-a-repo)
+2. `cd` to the `bootstrap-map-js/` folder. 
+3. Install the dependencies with `npm install`.
+4. Run `grunt` from the command line. This will create a new minimized build in the `dist/` folder.
 
 ## Contributing
 

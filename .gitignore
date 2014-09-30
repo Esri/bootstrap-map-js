@@ -1,3 +1,16 @@
+<<<<<<< HEAD
 */.idea/workspace.xml 
 */.idea/tasks.xml
 */.idea/.name
+=======
+# Mac
+.DS_Store
+Icon
+
+
+# Node
+node_modules
+
+# Grunt
+.grunt/
+>>>>>>> upstream/master
