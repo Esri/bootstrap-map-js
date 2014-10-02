@@ -54,6 +54,21 @@
   background-color: #f7f7f7;
 }
 
+/* Soften corners */
+.esriPopup.light, .esriPopup.dark, 
+.esriPopup.light .esriPopupWrapper, .esriPopup.dark .esriPopupWrapper {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.esriPopup.light .titlePane, .esriPopup.dark .titlePane {
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+.esriPopup.light .actionsPane, .esriPopup.dark .actionsPane {
+  border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
+}
+
 /* Title Pane font and buttons */
 .esriPopup .titlePane, .esriPopup.light .titlePane, .esriPopup.dark .titlePane {
   height: 34px;
