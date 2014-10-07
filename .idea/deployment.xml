@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData">
+    <serverData>
+      <paths name="KYTC Test">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/inetpub/wwwroot/bootstrap-map-js" local="$PROJECT_DIR$" web="/templates/index.html" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
+

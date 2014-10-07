@@ -116,6 +116,11 @@ require([
         var DGNBasemap  = new esri.layers.ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
 
         // Add layers
+        var syp0 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/0", {
+            mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
+            outFields: ["*"]
+            //infoTemplate: popupTemplate,
+        });
         var syp1 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
             mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
             //infoTemplate: popupTemplate,
@@ -130,10 +135,13 @@ require([
         var syp4 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
             mode: esri.layers.FeatureLayer.MODE_ONDEMAND
         });
+
+
         map.addLayer(DGNBasemap);
-        map.addLayer(syp1);
-        map.addLayer(syp2);
-        map.addLayer(syp3);
-        map.addLayer(syp4);
+        map.addLayer(syp0);
+//        map.addLayer(syp1);
+//        map.addLayer(syp2);
+//        map.addLayer(syp3);
+//        map.addLayer(syp4);
 
     });
