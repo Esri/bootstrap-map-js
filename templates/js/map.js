@@ -28,7 +28,7 @@ require([
         var map = BootstrapMap.create("mapDiv", {
             basemap: "topo",
             center: [-85.724, 37.593],
-            zoom: 7,
+            zoom: 8,
             scrollWheelZoom: true,
             logo: false,
             nav: false,
