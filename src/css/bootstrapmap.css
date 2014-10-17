@@ -20,6 +20,36 @@
   top: 15px;
   left: 15px;
 }
+
+.esriSimpleSliderBL {
+  top: auto;
+  right: auto;
+  bottom: 50px;
+  left: 15px;
+}
+
+.esriSimpleSliderBR {
+  top: auto;
+  right: 15px;
+  bottom: 50px;
+  left: auto;
+}
+
+.esriSimpleSliderTL {
+  bottom: auto;
+  right: auto;
+  top: 15px;
+  left: 15px;
+}
+
+.esriSimpleSliderTR {
+  bottom: auto;
+  right: 15px;
+  top: 15px;
+  left: auto;
+}
+
+
 .esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
 .esriSimpleSliderVertical .esriSimpleSliderDecrementButton{
   font-weight: 500;
