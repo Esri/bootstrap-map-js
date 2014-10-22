@@ -20,6 +20,36 @@
   top: 15px;
   right: 15px;
 }
+
+.esriSimpleSliderBL {
+  top: auto;
+  right: auto;
+  bottom: 50px;
+  left: 15px;
+}
+
+.esriSimpleSliderBR {
+  top: auto;
+  right: 15px;
+  bottom: 50px;
+  left: auto;
+}
+
+.esriSimpleSliderTL {
+  bottom: auto;
+  right: auto;
+  top: 15px;
+  left: 15px;
+}
+
+.esriSimpleSliderTR {
+  bottom: auto;
+  right: 15px;
+  top: 15px;
+  left: auto;
+}
+
+
 .esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
 .esriSimpleSliderVertical .esriSimpleSliderDecrementButton{
   font-weight: 500;
@@ -52,6 +82,21 @@
 
 .esriPopup.light .pointer.top, .esriPopup.light .pointer.topLeft, .esriPopup.light .pointer.topRight {
   background-color: #f7f7f7;
+}
+
+/* Soften corners */
+.esriPopup.light, .esriPopup.dark, 
+.esriPopup.light .esriPopupWrapper, .esriPopup.dark .esriPopupWrapper {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+.esriPopup.light .titlePane, .esriPopup.dark .titlePane {
+  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+}
+.esriPopup.light .actionsPane, .esriPopup.dark .actionsPane {
+  border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 0px 0px 5px 5px;
 }
 
 /* Title Pane font and buttons */
