@@ -165,6 +165,8 @@
 
 .simpleGeocoder .esriGeocoder {
   border: 1px solid #cccccc;
+  margin-top: 8px;
+  right: 8px;
 }
 
 .simpleGeocoder .esriGeocoderResults {
@@ -181,6 +183,7 @@
 
 .simpleGeocoder .esriGeocoderIcon {
   margin: 9px 0 6px 6px;
+  color: #006699;
 }
 
 .simpleGeocoder .esriGeocoderHasValue .esriGeocoderReset {
@@ -261,4 +264,6 @@ body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom
         width: 250px;
     }
 }
+
+
 
