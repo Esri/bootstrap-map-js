@@ -26,9 +26,9 @@ require([
              OverviewMap, Measurement, Popup) {
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create("mapDiv", {
-            basemap: "topo",
+            basemap: "gray",
             center: [-85.724, 37.593],
-            zoom: 8,
+            zoom: 7,
             scrollWheelZoom: true,
             logo: false,
             nav: false,
@@ -45,7 +45,7 @@ require([
             attachTo: "bottom-right",
             height: 150,
             width: 200,
-            visible: true,
+            visible: false,
             opacity: 0.4,
             expandFactor: 3.0
         });

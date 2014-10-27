@@ -1,9 +1,10 @@
-body > div > div.container > div.collapse.navbar-collapse, .dropdown-toggle, .navbar-inverse{
+body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse, .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus{
     /*color: #fff;*/
-    background: -webkit-linear-gradient(top, #006699 , #003366); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(top, #006699 , #003366);; /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(top, #006699 , #003366);; /* For Firefox 3.6 to 15 */
-    background: linear-gradient(top, #006699 , #003366);;
+    /*background: -webkit-linear-gradient(top, #006699 , #003366); *//* For Safari 5.1 to 6.0 *//*
+    background: -o-linear-gradient(top, #006699 , #003366);; *//* For Opera 11.1 to 12.0 *//*
+    background: -moz-linear-gradient(top, #006699 , #003366);; *//* For Firefox 3.6 to 15 *//*
+    background: linear-gradient(top, #006699 , #003366);;*/
+    background: #006699;
 }
 
 body {
@@ -61,7 +62,36 @@ body {
     color: #d3d3d3;
     margin-top: 20px;
     font-size: smaller;
+    padding-right: 20px;
+    padding-left: 15px;
 }
 .navbar-brand{
     font-size: 30px;
 }
+.bs-docs-footer {
+    background-color: #f1f1f1;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    /*margin-top: 100px;*/
+    color: #777;
+    text-align: center;
+    border-top: 1px solid #e5e5e5;
+}
+.bs-docs-footer-links li {
+    list-style-type: none;
+    display: inline;
+    padding-right: 40px;
+}
+
+.bs-docs-footer-links li a {
+    color: #003366;
+}
+
+.simpleGeocoder .esriGeocoder{
+    margin-bottom: 10px;
+    margin-left: 15px;
+}
+
+
+
+
