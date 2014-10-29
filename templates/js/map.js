@@ -113,7 +113,8 @@ require([
         });
 
         // Add DGN basemap
-        var DGNBasemap  = new esri.layers.ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
+        var KYTCBasemap  =
+            new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
 
         // Add layers
         var syp0 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/0", {
@@ -137,7 +138,7 @@ require([
         });
 
 
-        map.addLayer(DGNBasemap);
+        map.addLayer(KYTCBasemap);
         map.addLayer(syp0);
 //        map.addLayer(syp1);
 //        map.addLayer(syp2);
