@@ -93,8 +93,13 @@ body {
 }
 
 .col-md-4.portfolio-item.photo{
-    padding: 0 0 0 0;
+    padding:10px 0 0;
     margin:0 0 0 0;
+    align-content: center;
+}
+.img-responsive{
+    border: thin;
+    border-color:gray;
 }
 
 
