@@ -6,7 +6,7 @@
   height: 100%;
   min-height: 100px;
   max-height: 100%;
- 	text-align: left;
+  text-align: left;
   overflow: hidden;
 }
 
@@ -17,7 +17,7 @@
 /*** Restyle Esri Zoomin-out ***/
 .esriSimpleSlider {
   border: 1px solid #cccccc;
-  top: 15px;
+  top: 25%;
   right: 15px;
 }
 

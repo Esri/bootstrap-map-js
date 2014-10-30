@@ -9,220 +9,367 @@
     <meta name="description" content="">
     <meta name="AhjungKim" content="">
 
-    <title>KYTC Photo Log</title>
+    <title>KYTC PhotoLog2</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="../dist/css/3-col-portfolio.css" >
+    <link rel="stylesheet" type="text/css" href="../dist/css/3-col-portfolio.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/fullmap-template.css">
+
+    <!-- Bootstrap-map-css -->
+    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css">
     <link rel="stylesheet" type="text/css" href="../src/css/fullmap-template.css">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!--<a class="navbar-brand" href="#"></a>-->
-                <a class="navbar-brand" href="http://kentucky.gov" target="_blank"><strong>Ky.</strong><small>gov</small></a>
-
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="ky-text hidden-xs hidden-sm">An Official Website of the Commonwealth of Kentucky</li>
-
-                    <li>
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Services</a>
-                    </li>
-                    <li>
-                        <a href="#">Contact</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!-- Page Content -->
+<!-- Navigation -->
+<!--<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">-->
+<nav class="navbar navbar-inverse center-block" role="navigation">
     <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--<a class="navbar-brand" href="#"></a>-->
+            <a class="navbar-brand" href="http://kentucky.gov" target="_blank"><strong>Ky.</strong>
+                <small>gov</small>
+            </a>
 
-        <!-- Page Header -->
-        <div class="row">
-            <div class="col-lg-12">
-                <!--<h1 class="page-header">PhotoLog2
-                    <small>We probably don't need this</small>
-                </h1>-->
-            </div>
         </div>
-        <!-- /.row -->
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="ky-text hidden-xs hidden-sm hidden-md">An Official Website of the Commonwealth of Kentucky</li>
 
-        <!-- Projects Row -->
-        <div class="row text-center">
-            <div class="col-md-4 portfolio-item photo" >
-                <a href="#">
-                    <img class="img-responsive center-block" src="images/L.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Left</a>
-                </h3>
-            </div>
-            <div class="col-md-4 portfolio-item photo">
-                <a href="#">
-                    <img class="img-responsive center-block" src="images/M.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Middle</a>
-                </h3>
-            </div>
-            <div class="col-md-4 portfolio-item photo">
-                <a href="#">
-                    <img class="img-responsive center-block"  src="images/R.jpg" alt="">
-                </a>
-                <h3>
-                    <a href="#">Right</a>
-                </h3>
-            </div>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#">Services</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+            </ul>
         </div>
-        <!-- /.row -->
-
-
-
-
-        <!-- Projects Row -->
-        <div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Controller takes up the entire width</a>
-                </h3>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Map two columns</a>
-                </h3>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Attribute table one column</a>
-                </h3>
-            </div>
-        </div>
-
-        <!-- Projects Row -->
-        <!--<div class="row">
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-            <div class="col-md-4 portfolio-item">
-                <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-                </a>
-                <h3>
-                    <a href="#">Project Name</a>
-                </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-            </div>
-        </div>-->
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Pagination -->
-        <!--<div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>-->
-        <!-- /.row -->
-
-        <hr>
-
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; KYTC Footer goes here</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
+        <!-- /.navbar-collapse -->
     </div>
     <!-- /.container -->
+</nav>
 
-    <!-- jQuery Version 1.11.0 -->
-    <script src="../src/js/jquery-1.11.0.js"></script>
+<!-- Page Content -->
+<div class="container">
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="../dist/js/bootstrap.min.js"></script>
+    <!-- Page Header -->
+    <div class="row">
+        <div class="col-lg-12">
+            <!--<h1 class="page-header">PhotoLog2
+                <small>We probably don't need this</small>
+            </h1>-->
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Projects Row -->
+    <div class="row text-center">
+        <div class="col-md-4 portfolio-item photo">
+            <a href="#">
+                <img class="img-responsive center-block" src="images/L.jpg" alt="">
+            </a>
+            <caption>
+                <a href="#">Left</a>
+            </caption>
+        </div>
+        <div class="col-md-4 portfolio-item photo">
+            <a href="#">
+                <img class="img-responsive center-block" src="images/M.jpg" alt="">
+            </a>
+            <caption>
+                <a href="#">Middle</a>
+            </caption>
+        </div>
+        <div class="col-md-4 portfolio-item photo">
+            <a href="#">
+                <img class="img-responsive center-block" src="images/R.jpg" alt="">
+            </a>
+            <caption>
+                <a href="#">Right</a>
+            </caption>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+    <div class="row text-center bg-info">
+        <div class="col-lg-12 center-block">
+
+            <div class="btn-group dropdown">
+                <button type="button" class="btn btn-primary">Increment</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <!-- Dropdown menu links -->
+                    <li>Every Image: 26ft.</li>
+                    <li>Every Other: 52ft.</li>
+                    <li>Every Third: 78ft.</li>
+                    <li>Every Fourth: 104ft.</li>
+                    <li>Every Fifth: 130ft.</li>
+
+                </ul>
+
+            </div>
+
+            <a href="#"><span class="glyphicon glyphicon-step-backward"></span></a>
+            <a href="#"><span class="glyphicon glyphicon-fast-backward"></span></a>
+            <a href="#"><span class="glyphicon glyphicon-backward"></span></a>
+            <a href="#"><span class="glyphicon glyphicon-stop"></span></a>
+            <a href="#"><span class="glyphicon glyphicon-play"></span></a>
+            <!--<a href="#"><span class="glyphicon glyphicon-pause"></span></a>-->
+            <a href="#"><span class="glyphicon glyphicon-forward"></span></a>
+            <a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a>
+            <a href="#"><span class="glyphicon glyphicon-step-forward"></span></a>
+
+        </div>
+    </div>
+
+
+    <!-- Projects Row -->
+    <div class="row">
+        <!--
+                    <div class="col-md-4 portfolio-item">
+                        <a href="#">
+                            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                        </a>
+                        <h3>
+                            <a href="#">Controller takes up the entire width</a>
+                        </h3>
+                    </div>
+        -->
+        <div class="col-md-8">
+            <div id="mapDiv"></div>
+            <!--<div id="HomeButton"></div>
+            <div id="LocateButton"></div>-->
+            <caption>
+                <a href="#">Selected Route</a>
+            </caption>
+        </div>
+        <div class="col-md-4 attribute center-block">
+            <div class="btn-group dropdown">
+                <button type="button" class="btn btn-success">Selection Date</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <!-- Dropdown menu links -->
+                    <li>date</li>
+                    <li>date</li>
+                    <li>date</li>
+                </ul>
+
+            </div>
+            <div class="btn-group dropdown">
+                <button type="button" class="btn btn-info">Direction</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <!-- Dropdown menu links -->
+                    <li>E</li>
+                    <li>W</li>
+                </ul>
+
+            </div>
+            <div class="btn-group dropdown">
+                <button type="button" class="btn btn-danger">Lane</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                    <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-left" role="menu">
+                    <!-- Dropdown menu links -->
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                </ul>
+
+            </div>
+            <a href="#">
+                <table class="table table-striped">
+                    <!--<thead>-->
+                    <tr>
+                        <td>County</td>
+                        <td>something</td>
+                    </tr>
+                    <!--</thead>-->
+                    <tbody>
+                    <tr>
+                        <td>Route Type</td>
+                        <td>something</td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td>Route Number</td>
+                        <td>something</td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td>Collection Date</td>
+                        <td>something</td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td>Direction</td>
+                        <td>something</td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td>RT Unique</td>
+                        <td>something</td>
+                    </tr>
+                    </tbody>
+                    <tbody>
+                    <tr>
+                        <td>Mile Point</td>
+                        <td>something</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </a>
+            <hr/>
+            <div class="icons">
+                <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+                <a href="#"><span class="glyphicon glyphicon-print"></span></a>
+                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Projects Row -->
+    <!--<div class="row">
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Project Name</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Project Name</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+        <div class="col-md-4 portfolio-item">
+            <a href="#">
+                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            </a>
+            <h3>
+                <a href="#">Project Name</a>
+            </h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+        </div>
+    </div>-->
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Pagination -->
+    <!--<div class="row text-center">
+        <div class="col-lg-12">
+            <ul class="pagination">
+                <li>
+                    <a href="#">&laquo;</a>
+                </li>
+                <li class="active">
+                    <a href="#">1</a>
+                </li>
+                <li>
+                    <a href="#">2</a>
+                </li>
+                <li>
+                    <a href="#">3</a>
+                </li>
+                <li>
+                    <a href="#">4</a>
+                </li>
+                <li>
+                    <a href="#">5</a>
+                </li>
+                <li>
+                    <a href="#">&raquo;</a>
+                </li>
+            </ul>
+        </div>
+    </div>-->
+    <!-- /.row -->
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="row">
+            <div class="col-lg-12">
+                <p>Copyright &copy; KYTC Footer goes here</p>
+            </div>
+        </div>
+        <!-- /.row -->
+    </footer>
+
+</div>
+<!-- /.container -->
+
+<script type="text/javascript">
+    var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+    var dojoConfig = {
+        //The location.pathname.replace() logic below may look confusing but all its doing is
+        // enabling us to load the api from a CDN and load local modules from the correct location.
+        packages: [{
+            name: "application",
+            location: package_path + '../../src/js'
+        }]
+    };
+</script>
+<script src="http://js.arcgis.com/3.11"></script>
+<script src="js/map.js"></script>
+
+<!-- jQuery Version 1.11.0 -->
+<script src="../src/js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../dist/js/bootstrap.min.js"></script>
 
 </body>
 
