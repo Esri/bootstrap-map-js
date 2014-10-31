@@ -10,6 +10,11 @@ body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse, .nav
 body {
     padding-top: 0;
     font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica-,Arial,sans-serif;
+    background-color: #d3d3d3;
+}
+
+.container{
+    background-color: lightcyan;
 }
 
 .starter-template {
