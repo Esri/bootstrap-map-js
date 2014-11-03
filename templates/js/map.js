@@ -49,6 +49,7 @@ require([
             opacity: 0.4,
             expandFactor: 3.0
         });
+
         overviewMapDijit.startup();
 
 //        var measurement = new esri.dijit.Measurement({

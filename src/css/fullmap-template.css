@@ -10,11 +10,18 @@ body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse, .nav
 body {
     padding-top: 0;
     font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica-,Arial,sans-serif;
-    background-color: #d3d3d3;
+    background: url('http://www.visualizing.org/sites/all/themes/visualizing/images/stripe-bkg.png') repeat;
 }
 
-.container{
-    background-color: lightcyan;
+.navbar-inverse{
+    /*box-shadow: 5px 1px 1px #888888;*/
+}
+
+.container.inner-page{
+    background-color: white;
+    box-shadow: 5px 5px 1px #888888,
+                -1px 5px 1px #888888;
+    padding-top: 32px;
 }
 
 .starter-template {
@@ -22,10 +29,7 @@ body {
     text-align: center;
 }
 
-#mapDiv {
-    min-height: 100%;
-    max-height: 100%;
-}
+
 
 #search {
     display: block;
@@ -70,6 +74,10 @@ body {
     color: #ffffff;
 }
 
+.navbar-inverse{
+    margin-bottom: 0;
+}
+
 .nav > li.ky-text {
     color: #d3d3d3;
     margin-top: 20px;
@@ -107,6 +115,11 @@ body {
     margin-left: 15px;
 }
 
+#road-photo{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
 /*Thumbnail photo*/
 .col-md-4.portfolio-item.photo {
     padding: 10px 0 0;
@@ -118,36 +131,27 @@ body {
 .col-lg-12.center-block {
     font-size: 28px;
     padding: 4px;
+    border-style: outset;
 }
 
 /*Increment drop-down*/
 
-.col-md-8{
+/*.col-md-8{
     width:69%
 }
 .col-md-4.attribute{
     width:30%
-}
-.col-md-8, .col-md-4.attribute {
+}*/
+.col-md-8 {
     padding: 10px;
-    margin-top: 8px;
-    margin-right: 1px;
+    /*margin-right: 1px;*/
     border: thin solid #d3d3d3;
-
-    /*height: 464px;*/
-
-    /*margin-top: 8px;
-    margin-right: 2px;
-    margin-left: 0;
-    margin-bottom: 2px;*/
+    /*margin-bottom: 20px;*/
 }
-
-table.table-striped {
-    border: thin;
-    margin-top: 10px;
+#attribute-table{
+    padding: 25px 20px 10px;
 
 }
-
 .icons {
     font-size: 23px;
     margin: 5px 10px;
@@ -167,7 +171,7 @@ table.table-striped {
 }
 
 .col-md-8 > #mapDiv {
-    height: 411px;
+    height: auto;
 }
 
 .col-md-8 > #HomeButton {
@@ -194,6 +198,48 @@ table.table-striped {
     z-index: 50;
 }
 
+#controller.row.text-center{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#content-map{
+    padding-top: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+#content-extra.row{
+    padding-top:60px;
+}
+
+#mapDiv{
+    padding:0;
+    margin:0;
+    height:415px;
+ }
+#player-title-bar {
+    color: #ffffff;
+    background-color: #222 !important;
+    position: absolute;
+    max-width: 395px;
+    margin-right: 60px;
+    top: 14px;
+    left: 14px;
+    opacity: .8;
+    padding: 5px 9px 7px 7px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    overflow: hidden;
+}
+
+footer{
+    background-color: #555;
+    color: #999;
+    padding: 60px 25px;
+    /*margin-top: -100px;*/
+    margin-bottom: 0;
+}
 
 
 
