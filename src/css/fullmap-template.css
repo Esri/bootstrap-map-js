@@ -171,7 +171,7 @@ body {
 }
 
 .col-md-8 > #mapDiv {
-    height: auto;
+    height: 421px;
 }
 
 .col-md-8 > #HomeButton {

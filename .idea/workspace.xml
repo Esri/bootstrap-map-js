@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9e8614ca-6373-458f-83cd-5aae08d064f0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/fullmap-template.css" afterPath="$PROJECT_DIR$/src/css/fullmap-template.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/js/map.js" afterPath="$PROJECT_DIR$/templates/js/map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/photolog.html" afterPath="$PROJECT_DIR$/templates/photolog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -28,7 +27,7 @@
     <favorites_list name="bootstrap-map-js" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6053184">
+    <splitter split-orientation="horizontal" split-proportion="0.88396627">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
@@ -46,8 +45,8 @@
           <file leaf-file-name="photolog.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/photolog.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.705146" vertical-offset="2519" max-vertical-offset="11033">
-                  <caret line="178" column="26" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
+                <state vertical-scroll-proportion="0.84840053" vertical-offset="6139" max-vertical-offset="10591">
+                  <caret line="397" column="92" selection-start-line="397" selection-start-column="92" selection-end-line="397" selection-end-column="92" />
                   <folding />
                 </state>
               </provider>
@@ -60,8 +59,8 @@
           <file leaf-file-name="fullmap-template.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.56107384" vertical-offset="2149" max-vertical-offset="4284">
-                  <caret line="151" column="20" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="20" />
+                <state vertical-scroll-proportion="0.3557047" vertical-offset="2676" max-vertical-offset="4284">
+                  <caret line="173" column="17" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
                   <folding />
                 </state>
               </provider>
@@ -97,8 +96,8 @@
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/src/css/bootstrapmap.css" />
         <option value="$PROJECT_DIR$/templates/js/map.js" />
-        <option value="$PROJECT_DIR$/templates/photolog.html" />
         <option value="$PROJECT_DIR$/src/css/fullmap-template.css" />
+        <option value="$PROJECT_DIR$/templates/photolog.html" />
       </list>
     </option>
   </component>
@@ -784,18 +783,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/photolog.html">
+    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.705146" vertical-offset="2519" max-vertical-offset="11033">
-          <caret line="178" column="26" selection-start-line="178" selection-start-column="26" selection-end-line="178" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.3557047" vertical-offset="2676" max-vertical-offset="4284">
+          <caret line="173" column="17" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
+    <entry file="file://$PROJECT_DIR$/templates/photolog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56107384" vertical-offset="2149" max-vertical-offset="4284">
-          <caret line="151" column="20" selection-start-line="151" selection-start-column="20" selection-end-line="151" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.84840053" vertical-offset="6139" max-vertical-offset="10591">
+          <caret line="397" column="92" selection-start-line="397" selection-start-column="92" selection-end-line="397" selection-end-column="92" />
           <folding />
         </state>
       </provider>
