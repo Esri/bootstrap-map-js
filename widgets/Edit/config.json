@@ -1,0 +1,12 @@
+{
+  "editor": {
+    "enableUndoRedo": true,
+    "toolbarVisible": true,
+    "toolbarOptions": {
+      "mergeVisible": true,
+      "cutVisible": true,
+      "reshapeVisible": true
+    },
+    "layerInfos": []
+  }
+}

@@ -2,7 +2,585 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e8614ca-6373-458f-83cd-5aae08d064f0" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/css/images/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/css/images/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/css/images/add.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/css/images/add_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/css/images/add_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/css/images/add_map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/css/images/add_mark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/css/images/arrow_down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/css/images/arrow_left.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/css/images/arrow_right1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/css/images/arrow_right2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/css/images/arrow_up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/clear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/close.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/columns.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/css/images/current_basemap_indicator.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/images/default.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/css/images/delete_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/css/images/delete_map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/css/images/delete_mark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/down.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/css/images/drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/css/images/drop.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/images/earthquake.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/css/images/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/css/images/edit.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/css/images/edit_map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/css/images/edit_map.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/css/images/edit_mark.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/export.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/css/images/focusArrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/css/images/help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/HomeButton/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/images/icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/images/imagery.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/more.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/images/noLegend.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/page.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/refresh.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/css/images/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/select.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/images/streets.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/symbol.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_arches_national_park.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_default.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_eiffel_tower.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_forbidden_city.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_giza_pyramid.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_great_wall.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_sf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_sydney_opera.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/images/thumbnail_us.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/images/topo.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/up.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/images/v.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/images/v_right.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/images/zoom.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/BaseEditor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/BaseResultRenderer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/Edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/Edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/Edit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/Edit.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/EditorChooser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/editors/FeatureSetEditorChooser.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/editors/FeatureSetEditorChooser.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/editors/FeatureSetRendererEditor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/editors/FeatureSetResultEditor.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/editors/FeatureSetResultEditor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/FeaturelayerSourcePopup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/ImageNode.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/LayerListView.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/LayerListView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/LayerOrder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/NlsStrings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/Options.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/Options.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/ParamSetting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/ParamSetting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/Parameters.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/Parameters.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/PopupConfig.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/PopupConfig.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/PopupMenu.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/PopupMenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/Setting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/Setting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/SettingDetail.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/SettingDetail.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/SingleParameter.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/SingleParameter.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/SingleQuerySetting.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/SingleQuerySetting.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/Widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/HomeButton/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/Widget.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/common.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/common.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/config.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/config_Attribute Table.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/config_Search.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/config_Select a basemap.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/editorManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/HomeButton/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/manifest.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/resultRendererManager.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/editors/simpleEditors.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/resultrenderers/simpleResultRenderers.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/ar/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/cs/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/da/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/de/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/es/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/et/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/fi/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/fr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/he/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/it/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/ja/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/ko/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/lt/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/lv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/nb/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/nl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/pl/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/pt-BR/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/pt-PT/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/ro/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/ru/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/sv/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/th/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/tr/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/nls/zh-cn/strings.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/BasemapGallery/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Bookmark/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Edit/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/HomeButton/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/LayerList/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Legend/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Measurement/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Query/setting/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/AttributeTable/utils.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/widgets/Geoprocessing/utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/fullmap-template.css" afterPath="$PROJECT_DIR$/src/css/fullmap-template.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/js/map.js" afterPath="$PROJECT_DIR$/templates/js/map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/photolog.html" afterPath="$PROJECT_DIR$/templates/photolog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -27,27 +605,74 @@
     <favorites_list name="bootstrap-map-js" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.88396627">
+    <splitter split-orientation="horizontal" split-proportion="0.60551727">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/templates/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-14.384615" vertical-offset="663" max-vertical-offset="2397">
-                  <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.7562893" vertical-offset="1814" max-vertical-offset="3264">
+                  <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
                   <folding>
-                    <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="photolog.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="photolog.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/templates/photolog.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.84840053" vertical-offset="6139" max-vertical-offset="10591">
-                  <caret line="397" column="92" selection-start-line="397" selection-start-column="92" selection-end-line="397" selection-end-column="92" />
-                  <folding />
+                <state vertical-scroll-proportion="-3.648148" vertical-offset="4580" max-vertical-offset="11050">
+                  <caret line="281" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -59,18 +684,18 @@
           <file leaf-file-name="fullmap-template.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3557047" vertical-offset="2676" max-vertical-offset="4284">
-                  <caret line="173" column="17" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
+                <state vertical-scroll-proportion="0.40936556" vertical-offset="477" max-vertical-offset="7004">
+                  <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/js/map.js">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2584">
-                  <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="5474">
+                  <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -93,11 +718,12 @@
       <list>
         <option value="$PROJECT_DIR$/demo/dojo/getstarted.html" />
         <option value="$PROJECT_DIR$/demo/jquery/getstarted.html" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/src/css/bootstrapmap.css" />
-        <option value="$PROJECT_DIR$/templates/js/map.js" />
-        <option value="$PROJECT_DIR$/src/css/fullmap-template.css" />
         <option value="$PROJECT_DIR$/templates/photolog.html" />
+        <option value="$PROJECT_DIR$/templates/js/map.js" />
+        <option value="$PROJECT_DIR$/src/css/style.css" />
+        <option value="$PROJECT_DIR$/src/css/fullmap-template.css" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
       </list>
     </option>
   </component>
@@ -195,11 +821,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -214,60 +836,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -284,7 +852,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KAZC" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -297,36 +865,33 @@
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="browsers&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="find and replace&#9;null&#9;null&#10;browsers&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\src\css" />
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js" />
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\dist\js" />
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\src\js" />
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\dist\css" />
+    </key>
     <key name="OPEN_URL_DIALOG">
       <recent name="http://maps.kytc.ky.gov/photolog/?config=ActiveHighwayPlan" />
       <recent name="http://test1.maps.kytc.ky.gov/kazc" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\dist\js" />
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\src\js" />
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\dist\css" />
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js" />
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates\css" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\src\css" />
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js" />
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates\images" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\image" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -334,6 +899,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -393,11 +962,11 @@
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25227273" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16837315" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19702381" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989011" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -405,15 +974,15 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12652811" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11369193" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989011" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -439,32 +1008,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="http://maps.kytc.ky.gov/photolog/?config=ActiveHighwayPlan">
-      <provider selected="true" editor-type-id="httpFileEditor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="2584">
-          <caret line="39" column="32" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/bootstrapmap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="3252" selection-start-line="0" selection-start-column="3252" selection-end-line="0" selection-end-column="3252" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/js/bootstrapmap.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5933" max-vertical-offset="6902">
-          <caret line="360" column="58" selection-start-line="360" selection-start-column="58" selection-end-line="360" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/geosearch-template/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="4071" max-vertical-offset="4658">
@@ -484,7 +1027,52 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
           <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
           <folding>
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -511,7 +1099,52 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2567">
           <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
           <folding>
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -531,7 +1164,52 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2567">
           <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
           <folding>
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -551,7 +1229,52 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2567">
           <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
           <folding>
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -561,7 +1284,52 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="1530" max-vertical-offset="2567">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
           <folding>
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -723,13 +1491,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dist/js/bootstrapmap.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29346487" vertical-offset="0" max-vertical-offset="1802">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-31.72" vertical-offset="261" max-vertical-offset="1173">
@@ -765,37 +1526,124 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js/map.js">
+    <entry file="file://$PROJECT_DIR$/dist/js/bootstrapmap.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="2584">
-          <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.29377714" vertical-offset="35" max-vertical-offset="1802">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
+    <entry file="file://$PROJECT_DIR$/widgets/Edit/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="663" max-vertical-offset="2397">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
+    <entry file="file://$PROJECT_DIR$/config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3557047" vertical-offset="2676" max-vertical-offset="4284">
-          <caret line="173" column="17" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.577548" vertical-offset="0" max-vertical-offset="3179">
+          <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/js/map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21159421" vertical-offset="2234" max-vertical-offset="3026">
+          <caret line="142" column="27" selection-start-line="142" selection-start-column="27" selection-end-line="142" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1343">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/photolog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84840053" vertical-offset="6139" max-vertical-offset="10591">
-          <caret line="397" column="92" selection-start-line="397" selection-start-column="92" selection-end-line="397" selection-end-column="92" />
+        <state vertical-scroll-proportion="-3.648148" vertical-offset="4580" max-vertical-offset="11050">
+          <caret line="281" column="0" selection-start-line="281" selection-start-column="0" selection-end-line="286" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="5474">
+          <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40936556" vertical-offset="477" max-vertical-offset="7004">
+          <caret line="44" column="12" selection-start-line="44" selection-start-column="12" selection-end-line="44" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7562893" vertical-offset="1814" max-vertical-offset="3264">
+          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#2;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#1;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#2;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#3;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#4;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#5;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#6;n#tbody#0;n#table#1;n#div#0;n#div#4;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#td#0;n#tr#0;n#tbody#0;n#table#1;n#div#0;n#div#5;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#6;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#2;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#1;n#div#1;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

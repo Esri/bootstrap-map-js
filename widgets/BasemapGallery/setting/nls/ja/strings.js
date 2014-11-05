@@ -1,0 +1,21 @@
+﻿define({
+    showArcgisBasemaps: "須_Show ArcGIS Basemaps_鷗",
+    add: "須_Click to add a new basemap_鷗",
+    edit: "須_Properties_鷗",
+    title: "須_Title_鷗",
+    thumbnail: "須_Thumbnail_鷗",
+    thumbnailHint: "須_Click image to update_鷗",
+    url: "須_URL_鷗",
+    addlayer: "須_Add layer_鷗",
+    actions: "須_Actions_鷗",
+    warning: "須_Incorrect input_鷗",
+    save: "須_Back and Save_鷗",
+    back: "須_Back and Cancel_鷗",
+    addUrl: "須_Add URL_鷗",
+    autoCheck: "須_Auto Check_鷗",
+    checking: "須_Checking..._鷗",
+    ok: "須_OK_鷗",
+    cancel: "須_Cancel_鷗",
+    result: "須_Save successfully_鷗",
+    spError: "須_All basemaps added to the gallery need to have the same spatial reference._鷗"
+});

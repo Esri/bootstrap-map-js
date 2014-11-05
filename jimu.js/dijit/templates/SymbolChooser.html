@@ -1,0 +1,259 @@
+﻿<div style="width:320px;">
+	<div class="symbol-section point-symbol-section" data-dojo-attach-point="pointSection">
+		<table class="symbol-set-table" cellspacing="0">
+			<tbody>
+				<tr>
+					<td style="width:130px;height:0px;"></td>
+					<td style="width:130px;height:0px;"></td>
+					<td style="width:auto;height:0px;"></td>
+				</tr>
+				<tr>
+					<td>
+						<span>${nls.preview}:</span>
+					</td>
+					<td colspan="2">
+						<div data-dojo-attach-point="pointSymPreview" style="width:100%;"></div>
+					</td>
+				</tr>
+				<tr class="point-sym-class-select-tr">
+					<td colspan="3">
+						<select data-dojo-attach-point="pointSymClassSelect" data-dojo-type="dijit/form/Select"
+						 style="width:100%;height:30px;">
+							 <option value='0' selected="selected">${nls.basic}</option>
+							 <option value='1'>A-Z</option>
+							 <option value='2'>${nls.arrows}</option>
+							 <option value='3'>${nls.business}</option>
+							 <option value='4'>${nls.cartographic}</option>
+							 <option value='5'>${nls.nationalParkService}</option>
+							 <option value='6'>${nls.outdoorRecreation}</option>
+							 <option value='7'>${nls.peoplePlaces}</option>
+							 <option value='8'>${nls.safetyHealth}</option>
+							 <option value='9'>${nls.shapes}</option>
+							 <option value='10'>${nls.transportation}</option>
+						</select>
+					</td>
+				</tr>
+				<tr class="point-icon-tables-tr">
+					<td colspan="3">
+						<div class="icon-tables" data-dojo-attach-point="pointIconTables">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<span>${nls.symbolSize}:</span>
+					</td>
+					<td>
+						<input data-dojo-attach-point="pointSize" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;"
+                        data-dojo-props='value:18,smallDelta:1,largeDelta:10,constraints:{min:1,max:50},intermediateChanges:true'></input>
+					</td>
+					<td></td>
+				</tr>
+				<tr data-dojo-attach-point="pointColorTr">
+					<td>
+						<span>${nls.color}:</span>
+					</td>
+					<td>
+						<div data-dojo-attach-point="pointColor" data-dojo-type="jimu/dijit/ColorPicker" style="width:100%;height:30px;" data-dojo-props='color:[0,0,128,128]'></div>
+					</td>
+					<td></td>
+				</tr>
+				<tr data-dojo-attach-point="pointOpacityTr">
+					<td>
+						<span>${nls.alpha}:</span>
+					</td>
+					<td>
+						<input data-dojo-attach-point="pointAlpha" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;" 
+                        data-dojo-props='value:0.5,smallDelta:0.01,largeDelta:0.1,constraints:{min:0,max:1},intermediateChanges:true'></input>
+					</td>
+					<td></td>
+				</tr>
+				<tr data-dojo-attach-point="pointOutlineColorTr">
+					<td>
+						<span>${nls.outlineColor}:</span>
+					</td>
+					<td>
+						<div data-dojo-attach-point="pointOutlineColor" data-dojo-type="jimu/dijit/ColorPicker" style="width:100%;height:30px;" data-dojo-props='color:[0,0,128,255]'></div>
+					</td>
+					<td></td>
+				</tr>
+				<tr data-dojo-attach-point="pointOulineWidthTr">
+					<td>${nls.outlineWidth}:</td>
+					<td>
+						<input data-dojo-attach-point="pointOutlineWidth" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;" 
+                        data-dojo-props='value:1,smallDelta:1,constraints:{min:0,max:5},intermediateChanges:true'></input>
+					</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="symbol-section line-symbol-section" data-dojo-attach-point="lineSection">
+		<table class="symbol-set-table" cellspacing="0">
+			<tr>
+				<td style="width:130px;height:0px;"></td>
+				<td style="width:130px;height:0px;"></td>
+				<td style="width:auto;height:0px;"></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.preview}:</span>
+				</td>
+				<td colspan="2">
+					<div data-dojo-attach-point="lineSymPreview" style="width:100%;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="icon-tables" data-dojo-attach-point="lineIconTables"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.color}</span>
+				</td>
+				<td>
+					<div data-dojo-attach-point="lineColor" data-dojo-type="jimu/dijit/ColorPicker" style="width:100%;height:30px;" data-dojo-props='color:"#9bbb59"'></div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.style}</span>
+				</td>
+				<td>
+					<select data-dojo-attach-point="lineStylesSelect" data-dojo-type="dijit/form/Select" style="width:100%;height:30px;">
+						<option value="solid">Solid</option>
+						<option value="dash">Dash</option>
+						<option value="dot">Dot</option>
+						<option value="dashdot">Dash Dot</option>
+						<option value="longdashdotdot">Dash Dot Dot</option>
+					</select>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>${nls.alpha}</td>
+				<td>
+					<input data-dojo-attach-point="lineAlpha" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;" 
+                        data-dojo-props='value:1,smallDelta:0.01,largeDelta:0.1,constraints:{min:0,max:1},intermediateChanges:true'></input>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.width}</span>
+				</td>
+				<td>
+					<input data-dojo-attach-point="lineWidth" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;" 
+                        data-dojo-props='value:3,smallDelta:1,constraints:{min:1,max:50},intermediateChanges:true'></input>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	<div class="symbol-section fill-symbol-section" data-dojo-attach-point="fillSection">
+		<table class="symbol-set-table" cellspacing="0">
+			<tr>
+				<td style="width:130px;height:0px;"></td>
+				<td style="width:130px;height:0px;"></td>
+				<td style="width:auto;height:0px;"></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.preview}:</span>
+				</td>
+				<td colspan="2">
+					<div data-dojo-attach-point="fillSymPreview" style="width:100%;"></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+					<div class="icon-tables" data-dojo-attach-point="fillIconTables"></div>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.color}</span>
+				</td>
+				<td>
+					<div data-dojo-attach-point="fillColor" data-dojo-type="jimu/dijit/ColorPicker" style="width:100%;height:30px;" data-dojo-props='color:"#9bbb59"'></div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.alpha}</span>
+				</td>
+				<td>
+					<input data-dojo-attach-point="fillAlpha" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;" 
+                        data-dojo-props='value:0.5,smallDelta:0.01,largeDelta:0.1,constraints:{min:0,max:1},intermediateChanges:true'></input>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.outlineColor}</span>
+				</td>
+				<td>
+					<div data-dojo-attach-point="fillOutlineColor" data-dojo-type="jimu/dijit/ColorPicker" style="width:100%;height:30px;" data-dojo-props='color:"#738c3d"'></div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.outlineWidth}</span>
+				</td>
+				<td>
+					<input data-dojo-attach-point="fillOutlineWidth" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;" 
+                        data-dojo-props='value:2,smallDelta:1,constraints:{min:0,max:50},intermediateChanges:true'></input>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+	<div class="symbol-section text-symbol-section" data-dojo-attach-point="textSection">
+		<table class="symbol-set-table" cellspacing="0">
+			<tr>
+				<td style="width:130px;height:0px;"></td>
+				<td style="width:130px;height:0px;"></td>
+				<td style="width:auto;height:0px;"></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.preview}</span>
+				</td>
+				<td colspan="2">
+					<span data-dojo-attach-point="textPreview"></span>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.text}</span>
+				</td>
+				<td>
+					<input data-dojo-attach-point="inputText" type="text" style="width:100%;" />
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.fontColor}</span>
+				</td>
+				<td>
+					<div data-dojo-attach-point="textColor" data-dojo-type="jimu/dijit/ColorPicker" style="width:100%;height:30px;" data-dojo-props='color:"#000"'></div>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>
+					<span>${nls.fontSize}</span>
+				</td>
+				<td>
+					<input data-dojo-attach-point="textFontSize" data-dojo-type="dijit/form/NumberSpinner" style="width:100%;" data-dojo-props='value:20,smallDelta:1,constraints:{min:1,max:100},intermediateChanges:true'></input>
+				</td>
+				<td></td>
+			</tr>
+		</table>
+	</div>
+</div>

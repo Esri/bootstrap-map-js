@@ -1,0 +1,126 @@
+﻿<div>
+	<table class="setting-table" cellpadding="0" cellspacing="0" cellpadding="10px">
+		<tbody>
+			<tr>
+				<td class="fields-td" nowrap>
+					<div data-dojo-attach-point="fieldsSelect" data-dojo-type="dijit/form/FilteringSelect" data-dojo-attach-event="change:_onFieldsSelectChange"  data-dojo-props='searchAttr:"displayName",required:true,intermediateChanges:true' class="dijit-form-FilteringSelect" style="width:100%;height:25px;"></div>
+				</td>
+				<td class="operators-td" nowrap>
+					<select data-dojo-attach-point="operatorsSelect" data-dojo-type="dijit/form/Select" data-dojo-attach-event="change:_onOperatorsSelectChange" style="width:100%;height:25px;" class="dijit-form-Select">
+						<option value="none">${nls.none}</option>
+					</select>
+				</td>
+				<td class="value-td" nowrap>
+					<div data-dojo-attach-point="attributeValueContainer" class="value-container">
+						<div>
+							<div data-dojo-attach-point="allValueBoxContainer" style="width:100%;">
+								<div data-dojo-attach-point="stringTextBoxContainer" style="width:100%;">
+									<input data-dojo-attach-point="stringTextBox" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true,trim:true" style="width:100%;height:25px;" class="dijit-form-ValidationTextBox" />
+
+									<div data-dojo-attach-point="stringCodedValuesFS" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props='searchAttr:"name",required:true,intermediateChanges:true' class="dijit-form-FilteringSelect" style="display:none;width:100%;height:25px;"></div>
+								</div>
+
+								<div data-dojo-attach-point="numberTextBoxContainer" style="display:none;">
+									<input data-dojo-attach-point="numberTextBox" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props='"required":true,intermediateChanges:true,constraints: {pattern: "#####0.##########"}' class="dijit-form-NumberTextBox" style="width:100%;height:25px;" />
+
+									<table data-dojo-attach-point="numberRangeTable" style="display:none;width:100%;border-collapse:collapse;" cellpadding="0" cellspacing="0">
+										<tbody>
+											<tr>
+												<td style="width:40%;">
+													<input data-dojo-attach-point="numberTextBox1" data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-event="blur:_onRangeNumberBlur" data-dojo-props='"required":true,intermediateChanges:true,constraints: {pattern: "#####0.##########"}' class="dijit-form-NumberTextBox" style="width:100%;height:25px;" />
+												</td>
+												<td style="width:20%;text-align:center;">
+													<span>${nls.and}</span>
+												</td>
+												<td style="width:40%;">
+													<input data-dojo-attach-point="numberTextBox2" data-dojo-type="dijit/form/NumberTextBox" data-dojo-attach-event="blur:_onRangeNumberBlur" data-dojo-props='"required":true,intermediateChanges:true,constraints: {pattern: "#####0.##########"}' class="dijit-form-NumberTextBox" style="width:100%;height:25px;" />
+												</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<div data-dojo-attach-point="numberCodedValuesFS" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props='searchAttr:"name",required:true,intermediateChanges:true' class="dijit-form-FilteringSelect" style="display:none;width:100%;height:25px;"></div>
+								</div>
+
+								<div data-dojo-attach-point="dateTextBoxContainer" style="display:none;">
+									<input data-dojo-attach-point="dateTextBox" data-dojo-type="dijit/form/DateTextBox" data-dojo-props='value:new Date(),required:true,trim:true,constraints:{datePattern: "${nls.friendlyDatePattern}"},placeHolder:"${nls.friendlyDatePattern}"' class="dijit-form-DateTextBox" style="width:100%;height:25px;" />
+									<table data-dojo-attach-point="dateRangeTable" style="display:none;width:100%;border-collapse:collapse;" cellpadding="0" cellspacing="0">
+										<tbody>
+											<tr>
+												<td style="width:40%;">
+													<input data-dojo-attach-point="dateTextBox1" data-dojo-type="dijit/form/DateTextBox" data-dojo-attach-event="change:_onRangeDateBlur" data-dojo-props='value:new Date(),required:true,trim:true,constraints:{datePattern: "${nls.friendlyDatePattern}"},placeHolder:"${nls.friendlyDatePattern}"' class="dijit-form-DateTextBox" style="width:100%;height:25px;" />
+												</td>
+												<td style="width:20%;text-align:center;">
+													<span>${nls.and}</span>
+												</td>
+												<td>
+													<input data-dojo-attach-point="dateTextBox2" data-dojo-type="dijit/form/DateTextBox" data-dojo-attach-event="change:_onRangeDateBlur" data-dojo-props='value:new Date(),required:true,trim:true,constraints:{datePattern: "${nls.friendlyDatePattern}"},placeHolder:"${nls.friendlyDatePattern}"' class="dijit-form-DateTextBox" style="width:100%;height:25px;" />
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+
+							<div data-dojo-attach-point="fieldsSelect2" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props='searchAttr:"name"' class="dijit-form-FilteringSelect" style="display:none;width:100%;height:25px;">
+							</div>
+
+							<div data-dojo-attach-point="uniqueValuesSelect" data-dojo-type="dijit/form/FilteringSelect"  data-dojo-props='searchAttr:"name"' class="dijit-form-FilteringSelect" style="display:none;width:100%;height:25px;">
+							</div>
+						</div>
+
+						<div class="radio-table-container">
+							<table class="radio-table" cellpadding="0" cellspacing="0">
+								<tbody>
+									<tr>
+										<td>
+											<input type="radio" data-dojo-attach-point="valueRadio" checked="true" disabled  title="${nls.valueTooltip}" />
+											<label title="${nls.valueTooltip}">${nls.value}</label>
+										</td>
+										<td>
+											<input type="radio" data-dojo-attach-point="fieldRadio" disabled title="${nls.fieldTooltip}" />
+											<label title="${nls.fieldTooltip}">${nls.field}</label>
+										</td>
+										<td data-dojo-attach-point="uniqueTd">
+											<input type="radio" data-dojo-attach-point="uniqueRadio" disabled title="${nls.uniqueValueTooltip}" />
+											<label title="${nls.uniqueValueTooltip}">${nls.unique}</label>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>						
+					</div>					
+				</td>
+				<td class="delete-td" nowrap>
+					<div class="delete" data-dojo-attach-point="btnDelete" data-dojo-attach-event="click:_destroySelf"></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div data-dojo-attach-point="promptSection" class="prompt">
+		<div class="askvalues">
+			<input class="askvalues-checkbox" data-dojo-attach-point="cbxAskValues" type="checkbox" data-dojo-attach-event="onchange:_onCbxAskValuesClicked" />
+			<label>${nls.askForValues}</label>
+		</div>
+		<table data-dojo-attach-point="promptTable" cellpadding="0" cellspacing="0" class="prompt-table">
+			<tbody>
+				<tr>
+					<td class="first-td">
+						<span>${nls.prompt}</span>
+					</td>
+					<td class="second-td">
+						<div data-dojo-attach-point="promptTB" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true,trim:true" style="width:100%;height:25px;" class="dijit-form-ValidationTextBox" ></div>
+					</td>
+				</tr>
+				<tr>
+					<td class="first-td">
+						<span>${nls.hint}</span>
+					</td>
+					<td class="second-td">
+						<div data-dojo-attach-point="hintTB" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="required:true,trim:true" style="width:100%;height:25px;" class="dijit-form-ValidationTextBox" ></div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>

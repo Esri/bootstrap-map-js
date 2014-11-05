@@ -1,0 +1,40 @@
+<div style="width: 100%">
+<!--   <div data-dojo-attach-point="secondPage" > 
+<div class="right-section">
+    <div class="info-section">
+      <span class="input-bookmark-name-wrapper">
+        <input class="jimu-input input-bookmark-name" data-dojo-attach-point="bookmarkNameNode" type="text" placeholder="${nls.placeholderBookmarkName}">
+      </span>
+      <div data-dojo-attach-point="imageChooserBase"></div>
+      <img class="choose-img" data-dojo-attach-point="chooseImgNode" >
+      <div class="jimu-btn btn-ok" data-dojo-attach-point="okBtnNode" data-dojo-attach-event="onclick:_onOkBtnClicked">${nls.ok}</div>
+    </div>
+    <div class="jimu-state-error" data-dojo-attach-point="errorNode">&nbsp;</div>
+    <div class="extent-chooser" data-dojo-attach-point="extentChooserNode"></div>
+  </div>
+
+-->
+  
+  <table class="setting-table input-table" cellspacing="0">
+      <tbody>
+        <tr>
+          <td class="first">*${nls.title}</td>
+          <td class="second">
+            <input type="text" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-attach-point="name" 
+            required="true" placeHolder="World Street Map" data-dojo-props='style:{width:"100%"}'/>
+          </td>
+        </tr>
+        <tr>
+          <td class="first">${nls.thumbnail}</td>
+          <td class="second">
+            <div style="display:none"><input type="text" data-dojo-type="dijit/form/TextBox" 
+            data-dojo-attach-point="thumbnail" placeHolder="images/street.jpg"
+            data-dojo-props='style:{width:"100%"}'/></div>
+            <div data-dojo-attach-point="imageChooserBase"></div>
+            <img class="thumbnail-img" src="" data-dojo-attach-point="showImageChooser">&nbsp;&nbsp;&nbsp;&nbsp;(${nls.thumbnailHint})
+          </td>
+        </tr>                                                                  
+      </tbody>
+    </table> 
+    <div class="extent-chooser" data-dojo-attach-point="extentChooserNode"></div>
+</div>

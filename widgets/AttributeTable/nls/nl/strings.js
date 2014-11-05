@@ -1,0 +1,21 @@
+﻿define({
+    ok: "Ĳ_OK_ä",
+    cancel: "Ĳ_Cancel_ä",
+    exportMessage: "Ĳ_Export data to CSV file?_ä",
+    exportFiles: "Ĳ_Export to CSV_ä",
+    options: "Ĳ_Options_ä",
+    zoomto: "Ĳ_Zoom to_ä",
+    highlight: "Ĳ_Highlight Graphics_ä",
+    selectAll: "Ĳ_Select All Pages_ä",
+    selectPage: "Ĳ_Select Current Page_ä",
+    clearSelection: "Ĳ_Clear Selection_ä",
+    filterByExtent: "Ĳ_Filter by Map Extent_ä",
+    refresh: "Ĳ_Refresh_ä",
+    selected: "Ĳ_selected_ä",
+    transparent: "Ĳ_Transparent Mode_ä",
+    indicate: "Ĳ_Locate Selection_ä",
+    columns: "Ĳ_Show/Hide Columns_ä",
+    selectionSymbol: "Ĳ_Selection Symbol_ä",
+    closeMessage: "Ĳ_Hide table[Show it again in layer list]_ä",
+    dataNotAvailable: "Ĳ_Data not available!<br>Click [Refresh] button to have a try_ä"
+});

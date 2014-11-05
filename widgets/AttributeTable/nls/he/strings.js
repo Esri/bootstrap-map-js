@@ -1,0 +1,21 @@
+﻿define({
+    ok: "כן_OK_ש",
+    cancel: "כן_Cancel_ש",
+    exportMessage: "כן_Export data to CSV file?_ש",
+    exportFiles: "כן_Export to CSV_ש",
+    options: "כן_Options_ש",
+    zoomto: "כן_Zoom to_ש",
+    highlight: "כן_Highlight Graphics_ש",
+    selectAll: "כן_Select All Pages_ש",
+    selectPage: "כן_Select Current Page_ש",
+    clearSelection: "כן_Clear Selection_ש",
+    filterByExtent: "כן_Filter by Map Extent_ש",
+    refresh: "כן_Refresh_ש",
+    selected: "כן_selected_ש",
+    transparent: "כן_Transparent Mode_ש",
+    indicate: "כן_Locate Selection_ש",
+    columns: "כן_Show/Hide Columns_ש",
+    selectionSymbol: "כן_Selection Symbol_ש",
+    closeMessage: "כן_Hide table[Show it again in layer list]_ש",
+    dataNotAvailable: "כן_Data not available!<br>Click [Refresh] button to have a try_ש"
+});

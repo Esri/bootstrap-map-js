@@ -1,0 +1,21 @@
+﻿define({
+    showArcgisBasemaps: "Ж_Show ArcGIS Basemaps_Я",
+    add: "Ж_Click to add a new basemap_Я",
+    edit: "Ж_Properties_Я",
+    title: "Ж_Title_Я",
+    thumbnail: "Ж_Thumbnail_Я",
+    thumbnailHint: "Ж_Click image to update_Я",
+    url: "Ж_URL_Я",
+    addlayer: "Ж_Add layer_Я",
+    actions: "Ж_Actions_Я",
+    warning: "Ж_Incorrect input_Я",
+    save: "Ж_Back and Save_Я",
+    back: "Ж_Back and Cancel_Я",
+    addUrl: "Ж_Add URL_Я",
+    autoCheck: "Ж_Auto Check_Я",
+    checking: "Ж_Checking..._Я",
+    ok: "Ж_OK_Я",
+    cancel: "Ж_Cancel_Я",
+    result: "Ж_Save successfully_Я",
+    spError: "Ж_All basemaps added to the gallery need to have the same spatial reference._Я"
+});

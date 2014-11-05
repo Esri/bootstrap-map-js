@@ -1,0 +1,21 @@
+﻿define({
+    ok: "æ_OK_Â",
+    cancel: "æ_Cancel_Â",
+    exportMessage: "æ_Export data to CSV file?_Â",
+    exportFiles: "æ_Export to CSV_Â",
+    options: "æ_Options_Â",
+    zoomto: "æ_Zoom to_Â",
+    highlight: "æ_Highlight Graphics_Â",
+    selectAll: "æ_Select All Pages_Â",
+    selectPage: "æ_Select Current Page_Â",
+    clearSelection: "æ_Clear Selection_Â",
+    filterByExtent: "æ_Filter by Map Extent_Â",
+    refresh: "æ_Refresh_Â",
+    selected: "æ_selected_Â",
+    transparent: "æ_Transparent Mode_Â",
+    indicate: "æ_Locate Selection_Â",
+    columns: "æ_Show/Hide Columns_Â",
+    selectionSymbol: "æ_Selection Symbol_Â",
+    closeMessage: "æ_Hide table[Show it again in layer list]_Â",
+    dataNotAvailable: "æ_Data not available!<br>Click [Refresh] button to have a try_Â"
+});

@@ -1,0 +1,31 @@
+<div style="width:100%;height:100%;">
+  <div class="settings-section" data-dojo-attach-point="searchesSection">
+    <table class="setting-table input-table" cellspacing="0">
+      <tbody>
+        <tr>
+          <td class="first">${nls.arrangement}</td>
+          <td class="second">
+            <select style="margin-left: 10px;" data-dojo-attach-point="selectArrangement" data-dojo-type="dijit/form/Select">
+              <option value="0">LEFT</option>
+              <option value="1">RIGHT</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td class="first">${nls.autoUpdate}</td>
+          <td class="second">
+            <input style="margin-left: 10px;" data-dojo-attach-point="autoUpdate" 
+            data-dojo-type="dijit/form/CheckBox"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="first">${nls.respectCurrentMapScale}</td>
+          <td class="second">
+            <input style="margin-left: 10px;" data-dojo-attach-point="respectCurrentMapScale" 
+            data-dojo-type="dijit/form/CheckBox"/>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

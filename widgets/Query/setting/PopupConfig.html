@@ -1,0 +1,22 @@
+﻿<div>
+	<div style="margin-bottom:11px;">${nls.resultSettingTip}</div>
+	<div style="margin-bottom:5px;font-weight:bold;">${nls.resultItemTitle}:</div>	
+	<table style="width:100%;">
+		<tbody>
+			<tr>				
+				<td style="width:auto;">
+					<div data-dojo-attach-point="titleTextBox" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props='required:true,trim:true' style="width:430px;" />
+				</td>
+				<td style="padding-left:30px;">
+					<div data-dojo-attach-point="btnAddFields" class="add-with-icon enable" data-dojo-attach-event="onclick:_onAddClicked">
+						<span class="add-icon"></span>
+						<span class="add-label">${nls.addField}</span>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div style="margin-top:18px;font-weight:bold;">${nls.resultItemContent}:</div>
+	<div style="margin-top:11px;margin-bottom:11px;">${nls.fieldsSetTip}</div>
+	<div data-dojo-attach-point="fieldsContainer"></div>
+</div>

@@ -1,0 +1,13 @@
+<div style="width:100%;">
+  <div data-dojo-attach-point="firstPage">
+    <div data-dojo-attach-point="tableLayerInfos"></div>
+    <div data-dojo-attach-point="tableEditInfosError" style="display:none"></div>
+    <div style="margin: 10px;" data-dojo-attach-point="exportcsv" checked 
+          data-dojo-type="jimu/dijit/CheckBox" label="${nls.exportCSV}"></div>
+  </div>
+  <div style="display:none" data-dojo-attach-point="secondPage">
+  	<div class='jimu-btn' data-dojo-attach-event="click:switchPage"
+       style="height:30px;line-height:30px;min-width:0;padding:0 10px;float:left">${nls.back}</div>
+    <div data-dojo-type="jimu/dijit/SymbolChooser" data-dojo-attach-point="symbolChooser"></div>
+  </div>
+</div>

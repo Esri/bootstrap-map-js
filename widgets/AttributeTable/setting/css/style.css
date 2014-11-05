@@ -1,0 +1,11 @@
+.jimu-widget-attributetable-setting{
+  margin:0;
+  padding:0;
+  font-size:15px;
+}
+.jimu-widget-attributetable-setting .show{
+  width: 120px;
+}
+.jimu-widget-attributetable-setting .symbol{
+  width: 200px;
+}

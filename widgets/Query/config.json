@@ -1,0 +1,18 @@
+{
+  "layer": {
+    "url": "",
+    "expression": "",
+    "textsearchlabel": "",
+    "textsearchhint": "",
+    "titlefield": "",
+    "linkfield": "",
+    "fields": {
+      "all": false,
+      "field": []
+    }
+  },
+  "defaultValue": "",
+  "zoomscale": 10000,
+  "symbol": null,
+  "shareResult":false
+}

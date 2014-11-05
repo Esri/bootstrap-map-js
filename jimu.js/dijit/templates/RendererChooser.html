@@ -1,0 +1,266 @@
+﻿<div>
+	<table>
+		<tbody>
+			<tr>
+				<td style="vertical-align:top;border-right:1px solid #ccc;">
+					<div class="setting-section" style="display:inline-block;width:263px;">
+						<table class="renderer-setting-table" style="width:100%;margin-bottom:10px;">
+							<tbody>
+								<tr data-dojo-attach-point="rendererSelectTr">
+									<td nowrap>
+										<span>${nls.use}:</span>
+									</td>
+									<td style="width:180px;">
+										<select data-dojo-attach-point="rendererSelect" data-dojo-type="dijit/form/Select" style="width:100%;height:30px;">
+											<option value="simple">${nls.singleSymbol}</option>
+											<option value="unique" selected=true>${nls.uniqueSymbol}</option>
+											<option value="color">${nls.color}</option>
+											<option value="size">${nls.size}</option>
+										</select>
+									</td>
+								</tr>
+								<tr data-dojo-attach-point="fieldSelectTr" style="display:none;">
+									<td nowrap>
+										<span>${nls.toShow}:</span>
+									</td>
+									<td class="field-combobox-td" style="width:180px;">
+										<div data-dojo-attach-point="fieldComboBox" data-dojo-type="dijit/form/ComboBox" class="dijit-form-CombBox" style="width:100%;">
+										</div>
+									</td>
+								</tr>
+								<tr data-dojo-attach-point="colorBlockTr" style="display:none;">
+									<td>
+										<span>${nls.colors}:</span>
+									</td>
+									<td>
+										<div data-dojo-attach-point="uniqueColorSelect" data-dojo-type="dijit/form/Select" style="width:100%;height:30px;">
+											<span data-dojo-value='color1'>
+												<img  style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/c1.png" />
+											</span>
+											<span data-dojo-value='color2'>
+												<img  style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/c2.png" />	
+											</span>
+											<span data-dojo-value='color3'>
+												<img  style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/c3.png" />
+											</span>
+											<span data-dojo-value='color4'>
+												<img  style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/c4.png" />		
+											</span>
+											<span data-dojo-value='color5'>
+												<img  style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/c5.png" />		
+											</span>
+											<span data-dojo-value='color6'>
+												<img  style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/c6.png" />		
+											</span>
+										</div>
+									</td>
+								</tr>
+								<tr data-dojo-attach-point="domainTr" style="display:none;">
+									<td nowrap>
+										<span>Domain:</span>
+									</td>
+									<td style="width:180px;">
+										<input data-dojo-attach-point="minDomain" type="text" data-dojo-type="dijit/form/NumberTextBox" required="true" value="0"
+										 style="width:60px;" />
+										<span>  —  </span>
+										<input data-dojo-attach-point="maxDomain" type="text" data-dojo-type="dijit/form/NumberTextBox" required="true" value="0"
+										 style="width:60px;" />
+									</td>
+								</tr>
+								<tr data-dojo-attach-point="classCountTr" style="display:none;">
+									<td nowrap>
+										<span>${nls.classes}:</span>
+									</td>
+									<td style="width:180px;">
+										<input data-dojo-attach-point="classCount" data-dojo-type="dijit/form/NumberSpinner" style="display:inline-block;width:100px;"
+										data-dojo-props='value:5,smallDelta:1,constraints:{min:2,max:20},intermediateChanges:true' />
+									</td>
+								</tr>
+								<tr data-dojo-attach-point="colorBarTr" style="display:none;">
+									<td nowrap>
+										<span>${nls.colors}:</span>
+									</td>
+									<td style="width:180px;">
+										<div data-dojo-attach-point="classBreaksColorSelect" data-dojo-type="dijit/form/Select" style="width:100%;height:30px;">
+											<span data-dojo-value="color1">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb1.png" />
+											</span>
+											<span data-dojo-value="color2">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb2.png" />
+											</span>
+											<span data-dojo-value="color3">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb3.png" />
+											</span>
+											<span data-dojo-value="color4">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb4.png" />
+											</span>
+											<span data-dojo-value="color5">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb5.png" />
+											</span>
+											<span data-dojo-value="color6">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb6.png" />
+											</span>
+											<span data-dojo-value="color7">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb7.png" />
+											</span>
+											<span data-dojo-value="color8">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb8.png" />
+											</span>
+											<span data-dojo-value="color9">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb9.png" />
+											</span>
+											<span data-dojo-value="color10">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb10.png" />
+											</span>
+											<span data-dojo-value="color11">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb11.png" />
+											</span>
+											<span data-dojo-value="color12">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb12.png" />
+											</span>
+											<span data-dojo-value="color13">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb13.png" />
+											</span>
+											<span data-dojo-value="color14">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb14.png" />
+											</span>
+											<span data-dojo-value="color15">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb15.png" />
+											</span>
+											<span data-dojo-value="color16">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb16.png" />
+											</span>
+											<span data-dojo-value="color17">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb17.png" />
+											</span>
+											<span data-dojo-value="color18">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb18.png" />
+											</span>
+											<span data-dojo-value="color19">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb19.png" />
+											</span>
+											<span data-dojo-value="color20">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb20.png" />
+											</span>
+											<span data-dojo-value="color21">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb21.png" />
+											</span>
+											<span data-dojo-value="color22">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb22.png" />
+											</span>
+											<span data-dojo-value="color23">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb23.png" />
+											</span>
+											<span data-dojo-value="color24">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb24.png" />
+											</span>
+											<span data-dojo-value="color25">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb25.png" />
+											</span>
+											<span data-dojo-value="color26">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb26.png" />
+											</span>
+											<span data-dojo-value="color27">
+												<img style="width:150px;height:20px;vertical-align: middle;margin-top: 1px;margin-bottom:1px;" src="${_jimuUrl}/css/images/symbol/cb27.png" />
+											</span>
+										</div>
+									</td>
+								</tr>
+								<tr data-dojo-attach-point="symbolSizeDomainTr" style="display:none;">
+									<td nowrap>
+										<span>${nls.symbolSize}:</span>
+									</td>
+									<td>
+										<input data-dojo-attach-point="minSymbolSize" type="text" data-dojo-type="dijit/form/NumberTextBox" required="true" value="5" data-dojo-props="constraints:{min:1,max:50,places:0}" style="width:60px;" />
+										<span>  —  </span>
+										<input data-dojo-attach-point="maxSymbolSize" type="text" data-dojo-type="dijit/form/NumberTextBox" required="true" value="30" data-dojo-props="constraints:{min:1,max:50,places:0}"  style="width:60px;" />
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<div data-dojo-attach-point="uniqueSetting" style="display:none;">
+							<div data-dojo-attach-point="uniqueValueDiv" class="unique-value-div">
+								<table class="unique-symbol-table" style="width:100%;">
+									<tbody data-dojo-attach-point="uniqueSysTbody">
+									</tbody>
+								</table>
+							</div>							
+							<div>
+								<span>${nls.addValue}:</span>
+								<div>
+									<input data-dojo-attach-point="uniqueEditValue" type="text" />
+									<span data-dojo-attach-point="btnAddUniqueValue"  style='display:inline-block;width:14px;height:14px;cursor:pointer;background:no-repeat center center url(${_jimuUrl}/css/images/btn_add.png)'></span>
+								</div>
+							</div>
+						</div>
+						<div class="class-breaks-div" data-dojo-attach-point="classBreaksSetting" style="display:none;">
+							<table class="class-breaks-table" style="width:100%;">
+								<tbody data-dojo-attach-point="classBreaksTbody">
+								</tbody>
+							</table>
+						</div>
+						<div data-dojo-attach-point="btnDefaultSym" class="jimu-btn" style="display:none;margin-top:10px;margin-left:5px;">${nls.setDefaultSymbol}</div>
+					</div>
+				</td>
+				<td style="vertical-align:top;">
+					<div class="symbol-section" style="display:inline-block;">
+						<div data-dojo-attach-point="defaultSymSection">
+							<div>${nls.defaultSymbol}</div>
+							<div data-dojo-attach-point="defaultSymbolChooser" data-dojo-type="jimu/dijit/SymbolChooser"></div>
+						</div>
+						<div data-dojo-attach-point="selectedSymSection" style="display:none;">
+							<div>${nls.selectedSymbol}</div>
+							<div data-dojo-attach-point="uniqueSelectedSymInfoSet" style="display:none;">
+								<table style="width:100%;">
+									<tbody>
+										<tr>
+											<td>
+												<span>${nls.value}:</span>
+											</td>
+											<td>
+												<input data-dojo-attach-point="uniqueSelectedValue" type="text" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>${nls.label}:</span>
+											</td>
+											<td>
+												<input data-dojo-attach-point="uniqueSelectedLabel" type="text" />
+											</td>
+										</tr>										
+									</tbody>
+								</table>
+							</div>
+							<div data-dojo-attach-point="classBreaksSelectedInfoSet" style="display:none;">
+								<table style="width:100%;margin-top:10px;">
+									<tbody>
+										<tr>
+											<td>
+												<span>${nls.range}:</span>
+											</td>
+											<td>
+												<input data-dojo-attach-point="selectedFrom" type="text" data-dojo-type="dijit/form/NumberTextBox" required="true" value="0" style="width:60px;" />
+												<span>  —  </span>
+												<input data-dojo-attach-point="selectedTo" type="text" data-dojo-type="dijit/form/NumberTextBox" required="true" value="0"  style="width:60px;" />
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<span>${nls.label}:</span>
+											</td>
+											<td>
+												<input data-dojo-attach-point="classBreakSelectedLabel" type="text" />
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div data-dojo-attach-point="selectedSymbolChooser" data-dojo-type="jimu/dijit/SymbolChooser"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

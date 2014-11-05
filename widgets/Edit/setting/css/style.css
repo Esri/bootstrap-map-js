@@ -1,0 +1,35 @@
+.jimu-widget-edit-setting{
+  margin:0;
+  padding:0;
+  font-size:15px;
+}
+.jimu-widget-edit-setting .editable{
+  width: 100px;
+}
+.jimu-widget-edit-setting .update{
+  width: 200px;
+}
+.jimu-widget-edit-setting .setting-table > thead > tr > th,
+.jimu-widget-edit-setting .setting-table > tbody > tr > td{
+  height:40px;
+  line-height:40px;
+  vertical-align:middle;
+}
+
+.jimu-widget-edit-setting .input-table > tbody > tr > .first{
+  width:auto;
+  text-align: right;
+  padding-right:15px;
+}
+
+.jimu-widget-edit-setting .input-table > tbody > tr > .second{
+  width:500px;
+}
+
+.jimu-widget-edit-setting .dijitArrowButtonContainer{
+  width: 17px;
+}
+.jimu-widget-edit-setting .dijitSelect{
+  height: 30px;
+  width: 100%;
+}

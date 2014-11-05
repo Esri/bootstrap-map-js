@@ -53,33 +53,35 @@
                 <small>gov</small>
             </a>
 
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="ky-text hidden-xs hidden-sm hidden-md">An Official Website of the Commonwealth of Kentucky
-                </li>
+            <div class="container header">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li class="ky-text hidden-xs hidden-sm hidden-md">An Official Website of the Commonwealth of
+                            Kentucky
+                        </li>
 
-                <li>
-                    <a href="#">About</a>
-                </li>
-                <li>
-                    <a href="#">Services</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
-                </li>
-            </ul>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="#">Services</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
         </div>
-        <!-- /.navbar-collapse -->
     </div>
-    <!-- /.container -->
 </nav>
 
 
 
 <!-- Page Content -->
-<div class="container inner-page">
+<div id="inner-page" class="container">
     <!--Breadcrumb-->
     <ol class="breadcrumb">
         <li><a href="http://transportation.ky.gov/Pages/default.aspx">KYTC Homepage</a></li>
@@ -95,17 +97,18 @@
         <div class="col-md-4 portfolio-item photo">
             <a href="#">
                 <img class="img-responsive center-block" src="images/L.jpg" alt="">
+                <div id="photo-caption">LEFT</id></div>
             </a>
-            <caption>
-                <a href="#">Left</a>
-            </caption>
+            <!--<caption>-->
+                <!--<a href="#">Left</a>-->
+            <!--</caption>-->
         </div>
         <div class="col-md-4 portfolio-item photo">
             <a href="#">
                 <img class="img-responsive center-block" src="images/M.jpg" alt="">
             </a>
             <caption>
-                <a href="#">Middle</a>
+                <a href="#">Center</a>
             </caption>
         </div>
         <div class="col-md-4 portfolio-item photo">
@@ -176,7 +179,8 @@
                 <!--<a href="#">Selected Route</a>-->
             <!--</caption>-->
         </div>
-        <div id="attribute-table" class="col-md-4">
+
+        <div id="attribute-table" class="col-md-4 offset2" >
 
             <!--Direction: East, West-->
             <div class="btn-group btn-sm">
@@ -186,7 +190,7 @@
 
             <!--Collection date-->
             <div class="btn-group dropdown">
-                <button type="button" class="btn btn-success">Collection Date</button>
+                <button id="date-button" type="button" class="btn btn-success">Collection Date</button>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
@@ -215,7 +219,7 @@
 
             <!--Lane-->
             <div class="btn-group dropdown">
-                <button type="button" class="btn btn-danger">Lane</button>
+                <button id="lane-button" type="button" class="btn btn-success">Lane</button>
                 <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                     <span class="caret"></span>
                     <span class="sr-only">Toggle Dropdown</span>
@@ -234,43 +238,43 @@
                     <!--<thead>-->
                     <tr>
                         <td>County</td>
-                        <td>something</td>
+                        <td>Value</td>
                     </tr>
                     <!--</thead>-->
                     <tbody>
                     <tr>
                         <td>Route Type</td>
-                        <td>something</td>
+                        <td>Value</td>
                     </tr>
                     </tbody>
                     <tbody>
                     <tr>
                         <td>Route Number</td>
-                        <td>something</td>
+                        <td>Value</td>
                     </tr>
                     </tbody>
                     <tbody>
                     <tr>
                         <td>Collection Date</td>
-                        <td>something</td>
+                        <td>Value</td>
                     </tr>
                     </tbody>
                     <tbody>
                     <tr>
                         <td>Direction</td>
-                        <td>something</td>
+                        <td>Value</td>
                     </tr>
                     </tbody>
                     <tbody>
                     <tr>
                         <td>RT Unique</td>
-                        <td>something</td>
+                        <td>Value</td>
                     </tr>
                     </tbody>
                     <tbody>
                     <tr>
                         <td>Mile Point</td>
-                        <td>something</td>
+                        <td>Value</td>
                     </tr>
                 </table>
             </a>
@@ -284,39 +288,66 @@
         </div>
     </div>
 
-    <!-- Projects Row -->
-    <div id="content-extra" class="row">
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+    <!-- Extra Content -->
+    <div class="row-fluid">
+        <div id="metadata" class="col-md-4"><h4>Metadata for the Map</h4>
+            <hr/>
+            <span><p>Coordinate System:<br/>
+                Initial Extent:
+                XMin: 3799888.2297840705
+                YMin: 2797445.7263866686
+                XMax: 6090868.636506327
+                YMax: 4737335.0523503255
+                Spatial Reference: 102763  (3089)
+
+                Full Extent:
+                XMin: 3904023.7028169017
+                YMin: 3352139.9998731017
+                XMax: 5986733.163473498
+                YMax: 4298189.74202463
+                Spatial Reference: 102763  (3089)
+
+            </p></span>
         </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-        </div>
-        <div class="col-md-4 portfolio-item">
-            <a href="#">
-                <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-            </a>
-            <h3>
-                <a href="#">Project Name</a>
-            </h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
+
+        <div class="col-md-4"></div>
+        <div class="col-md-4">
+            <h4 class="page-header">More Interactive Apps
+                <small>By KYTC GIS</small>
+            </h4>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 portfolio-item">
+                <a href="#">
+                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                </a>
+            </div>
         </div>
     </div>
     <!-- /.row -->
-
-    <!--<hr>-->
 
     <!-- Pagination -->
     <!--<div class="row text-center">

@@ -1,0 +1,23 @@
+<div>
+  <div class="content" data-dojo-attach-point="portalContent" data-dojo-attach-event="keydown: _onContentKeyDown">
+    <p class = "specify-text-url">${nls.tip}</p> 
+
+    <div class="portalUrlDiv" id="portalUrlDiv">
+      <input class="portalUrlInput" data-dojo-attach-point="portalUrlInput" name="portalUrl" type="text"
+      data-dojo-type="jimu/dijit/URLInput" data-dojo-attach-event="Focus:_onPortalUrlFocus,Blur:_validatePortal,KeyDown: _onPortalUrlKeyDown,Change:_onPortalUrlChange"
+      data-dojo-props="rest:false,missingMessage:'Please input portalUrl.', invalidMessage: 'Invalid Portal URL'" />
+      <div class="Remind" data-dojo-attach-point="remind" > 
+        <table>
+          <tr>
+            <td>Example:</td><td>http://myportal.company.com/arcgis</td>
+          </tr>
+          <tr>
+            <td></td><td>http://orgname.maps.arcgis.com</td>
+          </tr>
+        </table>
+      </div>
+      <div class="errorRemind" data-dojo-attach-point="errorRemind"></div>
+    </div>
+    <div class="ContinueBtn" data-dojo-attach-point="savePortalUrlBtn" data-dojo-attach-event="click:_onContinue"> Continue </div>
+  </div>
+</div>

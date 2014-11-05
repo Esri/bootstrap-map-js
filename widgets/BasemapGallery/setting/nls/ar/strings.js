@@ -1,0 +1,21 @@
+﻿define({
+    showArcgisBasemaps: "بيت_Show ArcGIS Basemaps_لاحقة",
+    add: "بيت_Click to add a new basemap_لاحقة",
+    edit: "بيت_Properties_لاحقة",
+    title: "بيت_Title_لاحقة",
+    thumbnail: "بيت_Thumbnail_لاحقة",
+    thumbnailHint: "بيت_Click image to update_لاحقة",
+    url: "بيت_URL_لاحقة",
+    addlayer: "بيت_Add layer_لاحقة",
+    actions: "بيت_Actions_لاحقة",
+    warning: "بيت_Incorrect input_لاحقة",
+    save: "بيت_Back and Save_لاحقة",
+    back: "بيت_Back and Cancel_لاحقة",
+    addUrl: "بيت_Add URL_لاحقة",
+    autoCheck: "بيت_Auto Check_لاحقة",
+    checking: "بيت_Checking..._لاحقة",
+    ok: "بيت_OK_لاحقة",
+    cancel: "بيت_Cancel_لاحقة",
+    result: "بيت_Save successfully_لاحقة",
+    spError: "بيت_All basemaps added to the gallery need to have the same spatial reference._لاحقة"
+});

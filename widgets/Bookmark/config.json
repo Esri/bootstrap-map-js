@@ -1,0 +1,89 @@
+{
+	"bookmarks2D": [{
+		"name": "China",
+		"extent": {
+			"xmin": 7457807.540881645,
+			"ymin": 2017936.0525213866,
+			"xmax": 15324094.995763611,
+			"ymax": 6420708.8817463685,
+			"spatialReference": {
+				"wkid": 102100
+			}
+		},
+		"thumbnail": "images/thumbnail_great_wall.png"
+	}, {
+		"name": "Beijing",
+		"extent": {
+			"xmin": -27150828.956547454,
+			"ymin": 4834000.477831723,
+			"xmax": -27077449.409393787,
+			"ymax": 4875085.380534951,
+			"spatialReference": {
+				"wkid": 102100
+			}
+		},
+		"thumbnail": "images/thumbnail_forbidden_city.png"
+	}, {
+		"name": "Arches National Park",
+		"extent": {
+			"xmin": -12269895.952570029,
+			"ymin": 4638952.643481596,
+			"xmax": -12123136.858262688,
+			"ymax": 4721122.448888049,
+			"spatialReference": {
+				"wkid": 102100
+			}
+		},
+		"thumbnail": "images/thumbnail_arches_national_park.png"
+	}, {
+		"name": "Paris",
+		"extent": {
+			"xmin": 254218.13006577286,
+			"ymin": 6250235.153843932,
+			"xmax": 256511.24091413454,
+			"ymax": 6251519.0570533015,
+			"spatialReference": {
+				"wkid": 102100
+			}
+		},
+		"thumbnail": "images/thumbnail_eiffel_tower.png"
+	}, {
+		"name": "Sydney",
+		"extent": {
+			"xmin": 16828875.127701383,
+			"ymin": -4013216.291883955,
+			"xmax": 16836557.04904403,
+			"ymax": -4008916.70904292,
+			"spatialReference": {
+				"wkid": 102100
+			}
+		},
+		"thumbnail": "images/thumbnail_sydney_opera.png"
+	}, {
+		"name": "Egypt",
+		"extent": {
+			"xmin": 2880948.957769421,
+			"ymin": 2793013.2537907935,
+			"xmax": 3864234.889629663,
+			"ymax": 3343359.8574439143,
+			"spatialReference": {
+				"wkid": 102100
+			}
+		},
+		"thumbnail": "images/thumbnail_giza_pyramid.png"
+	}],
+	"bookmarks3D": [{
+		"name": "China",
+		"camera": [116.38, 39.9, 100000, 0, 1],
+		"thumbnail": "images/thumbnail_beijing.png"
+	}, {
+		"name": "SF",
+		"camera": [-122.3956840179302, 37.78329055435611, 235.5668830918148, 327.4062957304337, 66.71004825534648],
+		"thumbnail": "images/thumbnail_sf.png"
+	}, {
+		"name": "USA",
+		"camera": [-108.919, 34.2259, 4126880, 340.71, 5.91655],
+		"thumbnail": "images/thumbnail_us.png"
+	}],
+	"flyTime": 3000
+}

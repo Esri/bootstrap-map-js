@@ -1,0 +1,11 @@
+{
+  "name": "Bookmark",
+  "2D": true,
+  "3D": true,
+  "platform": "HTML",
+  "version": "0.0.1",
+  "author": "Esri R&D Center Beijing",
+  "description": "the bookmark widget which support 2D and 3D map",
+  "copyright": "",
+  "license": "http://www.apache.org/licenses/LICENSE-2.0"
+}

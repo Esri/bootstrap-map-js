@@ -1,0 +1,192 @@
+{
+  "taskUrl": "http://sampleserver1.arcgisonline.com/ArcGIS/rest/services/Network/ESRI_DriveTime_US/GPServer/CreateDriveTimePolygons",
+  "helpUrl": "http://sampleserver1.arcgisonline.com/arcgisoutput/Network_ESRI_DriveTime_US/CreateDriveTimePolygons.htm",
+  "isSynchronous": true,
+  "autoSubmit": false,
+  "updateDelay": 100,
+  "useResultMapServer": false,
+  "shareResults": true,
+  "inputParams": [
+    {
+      "name": "Input_Location",
+      "label": "Start location",
+      "dataType": "GPFeatureRecordSetLayer",
+      "defaultValue": {
+        "geometryType": "esriGeometryPoint",
+        "spatialReference": {
+          "wkid": 4326
+        },
+        "fields": [
+          {
+            "name": "FID",
+            "type": "esriFieldTypeOID",
+            "alias": "FID"
+          },
+          {
+            "name": "Shape",
+            "type": "esriFieldTypeGeometry",
+            "alias": "Shape"
+          },
+          {
+            "name": "Id",
+            "type": "esriFieldTypeInteger",
+            "alias": "Id"
+          }
+        ]
+      },
+      "required": true,
+      "featureSetMode": "draw",
+      "tooltip": "Draw the start location on the map",
+      "visible": true,
+      "symbol": {
+        "color": [
+          255,
+          215,
+          0,
+          255
+        ],
+        "size": 11.25,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            186,
+            85,
+            211,
+            255
+          ],
+          "width": 1.5,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      }
+    },
+    {
+      "name": "Drive_Times",
+      "label": "Drive times",
+      "dataType": "GPString",
+      "defaultValue": "5",
+      "required": true,
+      "featureSetMode": "",
+      "tooltip": "Please input drive time",
+      "visible": true
+    }
+  ],
+  "outputParams": [
+    {
+      "name": "Output_Drive_Time_Polygons",
+      "label": "Output Drive Time Polygons",
+      "dataType": "GPFeatureRecordSetLayer",
+      "defaultValue": {
+        "geometryType": "esriGeometryPolygon",
+        "spatialReference": {
+          "wkid": 4326
+        },
+        "fields": [
+          {
+            "name": "FID",
+            "type": "esriFieldTypeOID",
+            "alias": "FID",
+            "visible": false
+          },
+          {
+            "name": "Shape",
+            "type": "esriFieldTypeGeometry",
+            "alias": "Shape",
+            "visible": false
+          },
+          {
+            "name": "FacilityID",
+            "type": "esriFieldTypeInteger",
+            "alias": "FacilityID",
+            "visible": false
+          },
+          {
+            "name": "Name",
+            "type": "esriFieldTypeString",
+            "alias": "Name",
+            "visible": false
+          },
+          {
+            "name": "FromBreak",
+            "type": "esriFieldTypeDouble",
+            "alias": "FromBreak",
+            "visible": true
+          },
+          {
+            "name": "ToBreak",
+            "type": "esriFieldTypeDouble",
+            "alias": "ToBreak",
+            "visible": true
+          },
+          {
+            "name": "Shape_Length",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Length",
+            "visible": false
+          },
+          {
+            "name": "Shape_Area",
+            "type": "esriFieldTypeDouble",
+            "alias": "Shape_Area",
+            "visible": false
+          }
+        ]
+      },
+      "required": true,
+      "featureSetMode": "draw",
+      "tooltip": "",
+      "visible": false,
+      "renderer": {
+        "type": "uniqueValue",
+        "field1": "ToBreak",
+        "defaultSymbol": {
+          "color": [
+            155,
+            187,
+            89,
+            128
+          ],
+          "outline": {
+            "color": [
+              115,
+              140,
+              61,
+              255
+            ],
+            "width": 1.5,
+            "type": "esriSLS",
+            "style": "esriSLSSolid"
+          },
+          "type": "esriSFS",
+          "style": "esriSFSSolid"
+        },
+        "uniqueValueInfos": []
+      },
+      "popup": {
+        "title": "${Name}",
+        "fields": [
+          {
+            "name": "FromBreak",
+            "alias": "FromBreak",
+            "type": "esriFieldTypeDouble"
+          },
+          {
+            "name": "ToBreak",
+            "alias": "ToBreak",
+            "type": "esriFieldTypeDouble"
+          }
+        ],
+        "enablePopup": true
+      }
+    }
+  ],
+  "layerOrder": [
+    "Input_Location",
+    "Operational Layers",
+    "Output_Drive_Time_Polygons"
+  ]
+}

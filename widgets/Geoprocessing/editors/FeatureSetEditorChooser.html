@@ -1,0 +1,16 @@
+<div>
+	<div class="field">
+    <input name="mode" type="radio" data-dojo-attach-point="drawMode" data-dojo-props="" data-dojo-attach-event="onclick: _onDrawModeSelect" style="margin-left: 100px;"><label style="margin-left: 5px; width: auto;">${nls.drawOnMap}</label>
+  </div>
+  <div class="field">
+    <input name="mode" type="radio" data-dojo-attach-point="layersMode" style="margin-left: 100px;" data-dojo-attach-event="onclick: _onLayersModeSelect"><label style="margin-left: 5px; width: auto;">${nls.selectLayer}</label>
+  </div>
+  <div class="field" style="height: 30px;">
+    <input name="mode" type="radio" data-dojo-attach-point="urlMode" style="margin-left: 100px;" data-dojo-attach-event="onclick: _onUrlModeSelect"><label style="margin-left: 5px; width: auto">${nls.url}</label>
+    <input name="mode" data-dojo-type="jimu/dijit/URLInput" data-dojo-attach-point="featureSetUrl" data-dojo-props="placeholder: 'feature set URL'">
+  </div>
+  <div data-dojo-attach-point="symbolChooserSection">
+    <label>${nls.symbol}:</label>
+    <div data-dojo-attach-point="symbolChooserNode"></div>
+  </div>
+</div>

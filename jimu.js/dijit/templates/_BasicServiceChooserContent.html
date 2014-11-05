@@ -1,0 +1,40 @@
+﻿<div>
+	<div class="content-section">
+		<table class="layout">
+			<colgroup>
+				<col width="80px;" align="right"></col>
+				<col width="auto"></col>
+				<col width="100px;"></col>
+			</colgroup>
+			<tbody>
+				<tr>
+					<td class="first-td">
+						<span>Url:</span>
+					</td>
+					<td>
+						<div data-dojo-attach-point="urlInput" data-dojo-type="jimu/dijit/URLInput" style="width:100%;"></div>
+					</td>
+					<td>
+						<div class="jimu-btn jimu-state-disabled validate-btn" data-dojo-attach-point="btnValidate" data-dojo-attach-event="onclick:_onBtnValidateClick">${nls.validate}</div>
+					</td>
+				</tr>
+				<tr data-dojo-attach-point="exampleTr" class="example-tr">
+					<td class="first-td" style="padding-top:5px;">
+						<span>${nls.example}:</span>
+					</td>
+					<td data-dojo-attach-point="exampleTd" style="padding-top:5px;font-style:italic;color:#ccc;">
+					</td>
+					<td>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="service-browser-container" data-dojo-attach-point="serviceBrowserContainer">
+		</div>
+	</div>
+	<div class="operations">
+		<div class="jimu-btn cancel" data-dojo-attach-event="onclick:_onBtnCancelClick">${nls.cancel}</div>
+		<div class="jimu-btn jimu-state-disabled ok" data-dojo-attach-point="btnOk" data-dojo-attach-event="onclick:_onBtnOkClick">${nls.ok}</div>
+	</div>
+	<div data-dojo-attach-point="loading" data-dojo-type="jimu/dijit/LoadingIndicator" data-dojo-props='hidden:true'></div>
+</div>

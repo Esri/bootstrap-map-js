@@ -145,5 +145,31 @@ require([
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
 //        map.addLayer(syp4);
+        var timedelay = 1;
+        function delayCheck()
+        {
+            if(timedelay == 5)
+            {
+                $('#player-title-bar').fadeOut();
+                timedelay = 1;
+            }
+            timedelay = timedelay+1;
+        }
+
+        $(document).mousemove(function() {
+            $('#player-title-bar').fadeIn();
+            timedelay = 1;
+            clearInterval(_delay);
+            _delay = setInterval(delayCheck, 500);
+        });
+        // page loads starts delay timer
+        _delay = setInterval(delayCheck, 500)
+
+
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+
 
     });

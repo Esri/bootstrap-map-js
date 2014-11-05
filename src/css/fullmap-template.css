@@ -17,11 +17,12 @@ body {
     /*box-shadow: 5px 1px 1px #888888;*/
 }
 
-.container.inner-page{
+#inner-page{
     background-color: white;
-    box-shadow: 5px 5px 1px #888888,
+    box-shadow: 1px 5px 1px #888888,
                 -1px 5px 1px #888888;
     padding-top: 32px;
+    padding-bottom: 60px;
 }
 
 .starter-template {
@@ -39,16 +40,25 @@ body {
     width: 250px;
 }
 
+#camera-icon{
+    position: absolute;
+    top: 138px;
+    right: 6px;
+    font-size: 32px;
+    padding:0;
+    margin:0;
+}
+
 #HomeButton {
     position: absolute;
-    top: 140px;
+    top: 180px;
     right: 16px;
     z-index: 50;
 }
 
 #LocateButton {
     position: absolute;
-    top: 180px;
+    top: 220px;
     right: 16px;
     z-index: 50;
 }
@@ -129,7 +139,7 @@ body {
 
 /*Controller*/
 .col-lg-12.center-block {
-    font-size: 28px;
+    font-size: 1em;
     padding: 4px;
     border-style: outset;
 }
@@ -150,7 +160,6 @@ body {
 }
 #attribute-table{
     padding: 25px 20px 10px;
-
 }
 .icons {
     font-size: 23px;
@@ -170,6 +179,9 @@ body {
     padding: 2px;
 }
 
+#mapDiv{
+    padding-left:55px;
+}
 .col-md-8 > #mapDiv {
     height: 421px;
 }
@@ -232,6 +244,34 @@ body {
     -webkit-border-radius: 5px;
     overflow: hidden;
 }
+.photo-caption{
+    position: absolute;
+    top: 14px;
+    left: 14px;
+}
+
+#date-button, #lane-button{
+    /*background-color: #3FBF7F;*/
+    /*#EE5A28;*/
+    /*font-weight: bold;*/
+}
+
+#metadata{
+    color: #EE5A28;
+    padding-top:10px;
+    padding-bottom: 10px;
+    margin-top: 20px;
+    height: auto;
+    background-color: lightgray;
+}
+#metadata p{
+    color:black;
+}
+
+.panel-pane{
+clear: both;
+padding-bottom: 15px;
+}
 
 footer{
     background-color: #555;
@@ -242,5 +282,126 @@ footer{
 }
 
 
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
 
+/* Toggle Styles */
 
+#wrapper {
+    padding-left:55px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #000;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    text-indent: 20px;
+    line-height: 40px;
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    color: #999999;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 55px;
+    }
+
+    #wrapper.toggled {
+        padding-left:55px;
+    }
+
+    /*#sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }*/
+
+    /*#page-content-wrapper {
+        padding: 20px;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }*/
+}

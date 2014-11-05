@@ -1,0 +1,103 @@
+<div>
+  <div class="query-widget-content">
+    <div data-dojo-attach-point="queryList" class="query-step query-list">
+      <div data-dojo-attach-point="queriesNode" class="queries">
+        <div class="execute-tip">
+          ${nls.executeQueryTip}
+        </div>
+        <div class="queries-table-container">
+          <table data-dojo-attach-event="onclick:_onQueryListClicked" cellpadding="0" cellspacing="0" class="queries-table" onselectstart="return false;">
+            <colgroup>
+              <col width="14px;"></col>
+              <col width="auto"></col>
+              <col width="30px"></col>
+            </colgroup>
+            <tbody data-dojo-attach-point="queriesTbody">
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div data-dojo-attach-point="invalidConfigNode" class="invalid-config">
+        <div class="error">
+          ${nls.invalidConfig}
+        </div>
+      </div>
+    </div>
+
+    <div data-dojo-attach-point="queryParams" class="query-step query-params">
+      <div class="query-params-head">
+        <div class="params-title">${nls.queryParams}</div>
+        <div class="operations">
+          <div class="params-back" data-dojo-attach-point="btnParamsBack" data-dojo-attach-event="onclick:_onBtnParamsBackClicked">
+            <div class="back-icon"></div>
+            <div class="back-tip">${nls.queries}</div>
+          </div>
+          <div class="apply" data-dojo-attach-point="btnApply" data-dojo-attach-event="onclick:_onBtnApplyClicked">${nls.apply}</div>
+        </div>
+      </div>
+      <div class="params-container" data-dojo-attach-point="paramsContainer">
+        <div class="attributes-section" data-dojo-attach-point="parametersDiv">
+          <span style="display:block;margin-bottom:10px;">${nls.specifyParamsTip} :</span>
+        </div>
+        <div class="spatial-section" style="margin-top:20px; margin-bottom:20px;">
+          <div>
+            <input type="checkbox" checked="false" data-dojo-attach-point="cbxUseSpatial" data-dojo-attach-event="onclick: _onCbxUseSpatialClicked" />
+            <span>${nls.useSpatialFilter}</span>
+          </div>
+          <div data-dojo-attach-point="selectSpatialDiv" style="margin-left:7px; margin-top:7px;">
+            <table class="current-view" valign="top" cellpadding="0" cellspacing="0">
+              <tbody>
+                <tr>
+                  <td>
+                    <input type="radio" data-dojo-attach-point="cbxUseMapExtent" checked data-dojo-attach-event="onclick:_onCbxUseMapExtentClicked" />  
+                  </td>
+                  <td>
+                    <span class="map-extent-tip">${nls.useCurrentMapExtent}</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="draw-graphic" style="margin-top:5px;">
+              <div>
+                <input type="radio" data-dojo-attach-point="cbxDrawGraphic" data-dojo-attach-event="onclick:_onCbxDrawGraphicClicked" />
+                <span class="draw-graphic-tip">${nls.drawGraphicOnMap}</span>
+              </div>
+              <div data-dojo-attach-point="drawBoxDiv">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="operational">
+          <input type="checkbox" data-dojo-attach-point="cbxOperational" checked="false" />
+          <span>${nls.operationalLayerTip}</span>
+          <div data-dojo-attach-point="operationalTipDiv" style="width:auto;margin-top:5px;margin-left:15px;color:#ccc;">${nls.operationalTip}</div>
+        </div>
+      </div>
+    </div>
+
+    <div data-dojo-attach-point="queryResults" class="query-step query-results">
+      <div class="query-results-head">
+        <div class="results-title">${nls.queryResults}</div>
+        <div class="operations">
+          <div class="results-back" data-dojo-attach-point="btnResultsBack" data-dojo-attach-event="onclick:_onBtnResultsBackClicked"></div>
+        </div>      
+      </div>
+      <div class="results-number" data-dojo-attach-point="resultsNumberDiv">
+        <span>${nls.numberFound}: </span>
+        <span data-dojo-attach-point="numSpan"></span>
+      </div>
+      <div class="results-container" data-dojo-attach-point="resultsContainer" data-dojo-attach-event="onscroll:_onResultsScroll" onselectstart="return false;">
+        <table data-dojo-attach-point="resultsTable" valign="top" class="results-table" data-dojo-attach-event="onclick:_onResultsTableClicked" cellpadding="0" cellspacing="0" >
+          <tbody data-dojo-attach-point="resultsTbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-section">
+    <div data-dojo-attach-point="btnClearAll" data-dojo-attach-event="onclick:_onBtnClearAllClicked" class="jimu-btn btn-clear-all" >${nls.clearResults}</div>
+  </div>
+  
+  <div data-dojo-attach-point="shelter" data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-props='hidden:true'></div>
+</div>

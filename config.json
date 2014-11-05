@@ -1,0 +1,182 @@
+{
+  "theme": {
+    "name": "TabTheme",
+    "styles": [
+      "default",
+      "simpleblue"
+    ]
+  },
+  "portalUrl": "http://KYTC.maps.arcgis.com/",
+  "appId": "V5s6ZuYhgUE7DIkc",
+  "title": "KAZC Agenda",
+  "subtitle": "",
+  "logo": "images\\logo.png",
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [
+    {
+      "label": "KAZC Resources",
+      "url": "http://transportation.ky.gov/Aviation/Pages/KAZC-resources.aspx"
+    }
+  ],
+  "widgetOnScreen": {
+    "widgets": [
+      {
+        "uri": "themes/TabTheme/widgets/Header/Widget",
+        "positionRelativeTo": "browser",
+        "position": {
+          "left": 0,
+          "top": 0,
+          "right": 0,
+          "height": 44
+        },
+        "id": "themes/TabTheme/widgets/Header/Widget_1",
+        "name": "Header",
+        "isThemeWidget": true,
+        "label": "Header"
+      },
+      {
+        "uri": "themes/TabTheme/widgets/Footer/Widget",
+        "positionRelativeTo": "browser",
+        "position": {
+          "left": 0,
+          "right": 0,
+          "bottom": 0,
+          "height": 24
+        },
+        "id": "themes/TabTheme/widgets/Footer/Widget_2",
+        "name": "Footer",
+        "isThemeWidget": true,
+        "label": "Footer"
+      },
+      {
+        "uri": "themes/TabTheme/widgets/SidebarController/Widget",
+        "positionRelativeTo": "browser",
+        "position": {
+          "left": 0,
+          "top": 44,
+          "bottom": 24
+        },
+        "id": "themes/TabTheme/widgets/SidebarController/Widget_3",
+        "name": "SidebarController",
+        "isThemeWidget": true,
+        "label": "Sidebar Controller"
+      },
+      {
+        "uri": "widgets/HomeButton/Widget",
+        "position": {
+          "left": 7,
+          "top": 75
+        },
+        "id": "widgets/HomeButton/Widget_4",
+        "positionRelativeTo": "map",
+        "name": "HomeButton",
+        "label": "Home Button"
+      },
+      {
+        "label": "Select a basemap",
+        "uri": "widgets/BasemapGallery/Widget",
+        "position": {
+          "right": 60,
+          "top": 45,
+          "width": 430,
+          "height": 410
+        },
+        "id": "widgets/BasemapGallery/Widget_5",
+        "positionRelativeTo": "map",
+        "name": "BasemapGallery",
+        "config": "widgets/BasemapGallery/config_Select a basemap.json"
+      },
+      {
+        "uri": "widgets/AttributeTable/Widget",
+        "id": "widgets/AttributeTable/Widget_6",
+        "position": {
+          "left": 0,
+          "top": 0
+        },
+        "positionRelativeTo": "map",
+        "name": "AttributeTable",
+        "label": "Attribute Table"
+      }
+    ],
+    "panel": {
+      "uri": "jimu/BaseWidgetPanel",
+      "positionRelativeTo": "map"
+    }
+  },
+  "map": {
+    "3D": false,
+    "2D": true,
+    "position": {
+      "top": 44,
+      "right": 0,
+      "bottom": 24,
+      "left": 55
+    },
+    "itemId": "47df1cfbff7847a68ad0079d0e4bc5c5",
+    "mapOptions": {
+      "extent": {
+        "xmin": -10348581.12523526,
+        "ymin": 3987807.7397735366,
+        "xmax": -8783150.785955265,
+        "ymax": 5033466.28671447,
+        "spatialReference": {
+          "wkid": 102100
+        }
+      }
+    },
+    "id": "map",
+    "portalUrl": "http://KYTC.maps.arcgis.com"
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/TabTheme/panels/TabPanel/Panel",
+      "positionRelativeTo": "browser",
+      "position": {
+        "top": 44,
+        "left": 0,
+        "bottom": 22
+      }
+    },
+    "widgets": [
+      {
+        "label": "Legend",
+        "uri": "widgets/Legend/Widget",
+        "id": "widgets/Legend/Widget_8",
+        "name": "Legend",
+        "index": 2
+      },
+      {
+        "label": "LayerList",
+        "uri": "widgets/LayerList/Widget",
+        "id": "widgets/LayerList/Widget_11",
+        "name": "LayerList",
+        "index": 3
+      },
+      {
+        "name": "Measurement",
+        "label": "Measurement",
+        "isThemeWidget": false,
+        "uri": "widgets/Measurement/Widget",
+        "index": 4,
+        "id": "widgets/Measurement/Widget_12"
+      },
+      {
+        "name": "Query",
+        "label": "Search",
+        "isThemeWidget": false,
+        "uri": "widgets/Query/Widget",
+        "index": 6,
+        "id": "widgets/Query/Widget_13",
+        "config": "widgets/Query/config_Search.json"
+      }
+    ],
+    "groups": []
+  },
+  "httpProxy": {
+    "useProxy": false,
+    "alwaysUseProxy": false,
+    "url": "/proxy.js",
+    "rules": []
+  },
+  "widgetManifestsMerged": true
+}

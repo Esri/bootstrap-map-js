@@ -1,0 +1,43 @@
+<div style="width:100%;">
+  <div data-dojo-attach-point="secondPageDiv" style="display:none">
+    <button data-dojo-type="dijit/form/Button" type="button" data-dojo-attach-event="click:backToFirstPage">${nls.back}</button><label data-dojo-attach-point="layername"></label><br>
+    <div data-dojo-attach-point="tableFieldInfos"></div>
+  </div>
+  <div data-dojo-attach-point="firstPageDiv">
+    <table class="setting-table input-table" cellspacing="0">
+      <tbody>
+        <tr>
+          <td class="first">${nls.enableUndoRedo}</td>
+          <td class="second">
+            <input style="margin-left: 10px;" data-dojo-attach-point="enableUndoRedo" 
+            data-dojo-type="dijit/form/CheckBox"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="first">${nls.toolbarVisible}</td>
+          <td class="second">
+            <input style="margin-left: 10px;" data-dojo-attach-point="toolbarVisible" 
+            data-dojo-attach-event="click:onToolbarSelected"
+            data-dojo-type="dijit/form/CheckBox"/>
+          </td>
+        </tr>
+        <tr>
+          <td class="first">${nls.toolbarOptions}</td>
+          <td class="second">
+            <span style="margin-left: 10px;" >${nls.mergeVisible}</span>
+            <input style="margin-left: 5px;" data-dojo-attach-point="mergeVisible" 
+            data-dojo-type="dijit/form/CheckBox"/>
+            <span style="margin-left: 20px;" >${nls.cutVisible}</span>
+            <input style="margin-left: 5px;" data-dojo-attach-point="cutVisible" 
+            data-dojo-type="dijit/form/CheckBox"/>
+            <span style="margin-left: 20px;" >${nls.reshapeVisible}</span>
+            <input style="margin-left: 5px;" data-dojo-attach-point="reshapeVisible" 
+            data-dojo-type="dijit/form/CheckBox"/>
+          </td>
+        </tr>
+      </tbody>
+    </table><br>
+    <div data-dojo-attach-point="tableLayerInfos"></div>
+    <div data-dojo-attach-point="tableLayerInfosError" style="display:none"></div>
+  </div>
+</div>

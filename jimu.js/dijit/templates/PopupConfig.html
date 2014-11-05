@@ -1,0 +1,30 @@
+﻿<div style="width:560px;">
+	<table class="popup-config-layout" style="width:100%;">
+		<tbody>
+			<tr>
+				<td nowrap>
+					<span>${nls.title}</span>
+				</td>
+				<td>
+					<input data-dojo-attach-point="titleTextBox" data-dojo-type="dijit/form/TextBox" style="width:370px;" />
+				</td>
+				<td style="width:70px;">
+					<div data-dojo-attach-point="btnAdd" data-dojo-type="dijit/form/DropDownButton">
+						<span>${nls.add}</span>
+						<div data-dojo-type="dijit/TooltipDialog">
+							<div data-dojo-attach-point="menu" data-dojo-type="dijit/Menu"></div>
+						</div>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td nowrap>
+					<span>${nls.fields}</span>
+				</td>
+				<td colspan="2">
+					<div data-dojo-attach-point="fieldsTable" data-dojo-type="jimu/dijit/SimpleTable" data-dojo-props='fields:[{name:"visibility",title:"${nls.visibility}",type:"checkbox"},{name:"name",title:"${nls.name}",type:"text",editable:false},{name:"alias",title:"${nls.alias}",type:"text",editable:true},{name:"actions",title:"${nls.actions}",type:"actions",actions:["up","down"]}]'></div>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>

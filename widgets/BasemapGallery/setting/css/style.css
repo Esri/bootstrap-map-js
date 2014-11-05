@@ -1,0 +1,272 @@
+.jimu-widget-basemapgallery-setting{
+  margin:0;
+  padding:0;
+  font-size:15px;
+}
+
+.jimu-widget-basemapgallery-setting .settings-div{
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+/*
+.jimu-widget-basemapgallery-setting .setting-table > thead > tr > th,
+.jimu-widget-basemapgallery-setting .setting-table > tbody > tr > td{
+  height:40px;
+  line-height:40px;
+  vertical-align:middle;
+ 
+}
+
+.jimu-widget-basemapgallery-setting .input-table > tbody > tr > .first{
+  width:auto;
+  text-align: right;
+  padding-right:15px;
+}
+
+.jimu-widget-basemapgallery-setting .input-table > tbody > tr > .second{
+ 
+}
+
+.jimu-widget-basemapgallery-setting .actions{
+  width: 200px;
+}*/
+
+
+.jimu-widget-basemapgallery-setting .baseMapsDiv {
+  width: 100%;
+  height: auto;
+}
+
+/*.jimu-widget-basemapgallery-setting .maps-section{
+  position: absolute;
+  width: 100%;
+  min-width:1000px;
+  top: 0;
+  bottom: 0;  
+}*/
+
+.jimu-widget-basemapgallery-setting .maps-table-div{
+  width: 100%;
+  height: auto;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+/*.jimu-widget-basemapgallery-setting .maps-table{
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.jimu-widget-basemapgallery-setting .maps-table td{
+  vertical-align:top;
+}*/
+
+/*.jimu-widget-basemapgallery-setting .add_map_image {
+   content:url(images/add_map.png);
+}​*/
+
+.jimu-widget-basemapgallery-setting .map-add-div{
+  float: left;
+  position:relative;
+  width:176px;
+  height:118px;
+  line-height:18px;
+  padding:3px;
+  margin-left: 10px;
+  text-align:center;
+  color:#999999;
+  font-size:16px;
+  border:1px dotted gray;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+  border-radius:5px;
+  background-size:cover;
+}
+
+.jimu-widget-basemapgallery-setting .map-add-div :hover{
+  cursor: pointer;
+}
+
+.jimu-widget-basemapgallery-setting .map-add-div .add_map_image{
+  display: block;
+  position: absolute;
+  left: 80px;
+  top: 20px;
+  width:20px;
+  height:20px;
+  background-position:center center;
+  background-image:url(images/add_map.png);
+}
+
+.jimu-widget-basemapgallery-setting .map-add-div .add_map_text{
+  display: block;
+  position: absolute;
+  top: 50px;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div{
+  float: left;
+  position:relative;
+  width:176px;
+  margin-left: 10px;
+  margin-bottom: 30px;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-bg{
+  position:relative;
+  width:100%;
+  height:118px;
+  line-height:28px;
+  text-align:center;
+  color:#999999;
+  font-size:13px;  
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-bg .map-item-thumbnail{
+  width:100%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-position:center center;
+  border:1px solid gray;
+  -webkit-border-radius:5px;
+  -moz-border-radius:5px;
+  -o-border-radius:5px;
+  -ms-border-radius:5px;
+  border-radius:5px;
+  background-size:cover;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div :hover .map-item-detail-icon{
+   display: block;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-bg.selected .map-item-thumbnail{
+  border:3px solid #15a4fa;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  -ms-box-sizing:content-box;
+  -o-box-sizing:content-box;
+  box-sizing:content-box;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-bg .map-item-detail-icon{
+  display: none;
+  position:absolute;
+  right:7px;
+  bottom:7px;
+  width:20px;
+  height:20px;
+  background-color:rgba(0, 0, 0, 0.4);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(images/edit_map.png);
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -o-border-radius:3px;
+  -ms-border-radius:3px;
+  border-radius:3px;
+  cursor:pointer;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-bg:hover .map-item-detail-icon{
+  display: block;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-bg .map-item-delete-icon{
+  display: none;
+  position:absolute;
+  right:7px;
+  top:7px;
+  width:20px;
+  height:20px;
+  background-color:rgba(0, 0, 0, 0.4);
+  background-repeat:no-repeat;
+  background-position:center center;
+  background-image:url(images/delete_map.png);
+  -webkit-border-radius:3px;
+  -moz-border-radius:3px;
+  -o-border-radius:3px;
+  -ms-border-radius:3px;
+  border-radius:3px;
+  cursor:pointer;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-bg:hover .map-item-delete-icon{
+  display: block;
+}
+
+.jimu-widget-basemapgallery-setting .map-item-div .map-item-title{
+  display:inline-block;
+  width:100%;
+  text-align:center;
+  color:#333333;
+  font-size:15px;
+  margin-top: 0px;
+}
+
+.jimu-basemapgallery-Edit{
+  height: 100%;
+  overflow-y: auto;
+}
+
+.jimu-basemapgallery-Edit .setting-table {
+  margin: 5px 20px;
+  border-spacing: 10px;
+  border-collapse: separate;
+}
+
+.jimu-basemapgallery-Edit .setting-table .thumbnail-img{
+  width: 100px;
+/*  height: 67px;*/
+}
+
+.jimu-basemapgallery-Edit .setting-table .img-chooser{
+  width: 100px;
+  height: 100%;
+}
+
+.jimu-basemapgallery-Edit .input-table > tbody > tr > .first{
+  width:auto;
+  text-align: left;
+  padding-right:15px;
+}
+
+.jimu-basemapgallery-Edit .input-table > tbody > tr > .second{
+  width:660px;
+}
+
+.jimu-basemapgallery-Edit .add-layer-url-icon{
+  background-image: url(images/add_icon.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 20px;
+  float: right;
+  height: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.jimu-basemapgallery-Edit .add-layer-url-label{
+  font-size: 17px;
+  color: #518dca;
+  margin-right: 10px;
+  float: right;
+  display: inline-block;
+  height: 100%;
+  text-decoration: underline;
+}
+
+
+.jimu-basemapgallery-Edit .delete-layer-url-icon{
+  background-image: url(images/delete_icon.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  width: 20px;
+  float: right;
+  height: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}

@@ -1,0 +1,433 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Jimu Dijit Demo</title>
+		<link rel="stylesheet" href="/arcgis_js_api/38/js/dojo/dijit/themes/claro/claro.css">    
+    <link rel="stylesheet" href="/arcgis_js_api/38/js/esri/css/esri.css">
+		<link rel="stylesheet" type="text/css" href="../css/jimu.css">
+		<link rel="stylesheet" type="text/css" href="../css/dojo-override.css">
+		<style type="text/css">
+			html,body{
+				width: 100%;
+				height: 100%;
+			}
+			.item{
+				display: inline-block;
+				vertical-align: top;
+				margin: 10px;
+				position: relative;
+				background-color: rgba(255,0,0,0.1);
+				min-height: 100px;
+				min-width: 100px;
+			}
+			.item .title{
+				width: 100%;
+				height: 20px;
+				background-color: rgba(0,255,0,0.1);
+			}
+			.item .content{
+				width: 100%;
+				position: relative;
+			}
+		</style>
+		<script src="/arcgis_js_api/310/"></script>
+		<script type="text/javascript">
+			jimuConfig = {
+				layoutId: 'body'
+			};
+			require({
+			  packages : [{
+			    name : "jimu",
+			    location : "/arcgis/apps/webappbuilder/stemapp/jimu.js/"
+			  }]
+			},['dojo/parser', 'dojo/dom', 'dojo/on', 'dojo/domReady!', 'dijit/registry'], function (parser, dom, on, domReady, registry) {
+			  parser.parse().then(function(instances){
+			  	instances.forEach(function(instance){
+			  		if(instance.id === 'searchDijit'){
+			  			instance.onSearch = function(text){
+			  				alert(text);
+			  			};
+			  		}
+			  		if(instance.id === 'searchDijit2'){
+			  			instance.onSearch = function(text){
+			  				console.log(text);
+			  			};
+			  		}
+			  		if(instance.id === 'extentChooser'){
+			  			on(instance, 'extentChange', function(extent){
+			  				dom.byId('extent-info').innerHTML = JSON.stringify(extent.toJson());
+			  			});
+			  		}
+			  	});
+			  });
+
+			  require(['jimu/dijit/CheckBox'], function(CheckBox){
+			  	var ckb = new CheckBox({
+			  		label: 'label3',
+			  		onChange: function(state) {
+			  			alert(state);
+			  		}
+			  	}, 'checkbox3');
+			  });
+			  require(['jimu/dijit/TabContainer', 'jimu/utils'], function(TabContainer, utils){
+			  	var tab1 = new TabContainer({
+			  		tabs: [{
+			  			title: 'tc1',
+			  			content: dom.byId('tc1Node')
+			  		},{
+			  			title: 'tc2',
+			  			content: dom.byId('tc2Node')
+			  		}]
+			  	}, 'tab1');
+			  	tab1.startup();
+			  	utils.setVerticalCenter(tab1.domNode);
+
+			  	var tab2 = new TabContainer({
+			  		tabs: [{
+			  			title: 'tc1',
+			  			content: dom.byId('tc1Node2')
+			  		},{
+			  			title: 'tc2',
+			  			content: dom.byId('tc2Node2')
+			  		},{
+			  			title: 'tc3',
+			  			content: dom.byId('tc3Node2')
+			  		}],
+			  		selected: 'tc2'
+			  	}, 'tab2');
+			  	tab2.startup();
+			  	utils.setVerticalCenter(tab2.domNode);
+			  });
+
+			  require(['dojo/on', 'jimu/dijit/DropMenu'], function(on, DropMenu){
+			  	var m1 = new DropMenu({
+			  		items: ['aaa', 'bbb', '', 'ccc']
+			  	}, 'dropMenu1');
+			  	on(m1, 'onMenuClick', function(item){
+			  		alert(item);
+			  	});
+
+			  	var m2 = new DropMenu({
+			  		items: ['aaa', 'bbb', '', 'ccc']
+			  	}, 'dropMenu2');
+			  	var m3 = new DropMenu({
+			  		items: ['aaa', 'bbb', '', 'ccc']
+			  	}, 'dropMenu3')
+			  	var m4 = new DropMenu({
+			  		items: ['aaa', 'bbb', '', 'ccc']
+			  	}, 'dropMenu4')
+			  });
+
+			  require(['dojo/on', 'jimu/dijit/List'], function(on, List){
+			  	var list = new List({}, 'listSample');
+			  	list.startup();
+			  	list.add({id:"1", label:"aaa"});
+			  	list.add({id:"2", label:"bbb"});
+			  	list.add({id:"3", label:"ccc"});
+			  	list.add({id:"4", label:"ddd"});
+			  	on(list, 'click', function(index, item){
+			  		alert(index+", id="+item.id+", label="+item.label);
+			  	});
+			  });
+
+			  require(['dojo/on', 'jimu/dijit/Message'], function(on, Message){
+			  	on(dom.byId('showMessage'), 'click', function(){
+			  		new Message({
+			  			message: 'This is the message'
+			  		});
+			  	});
+
+			  	on(dom.byId('showMessage2'), 'click', function(){
+			  		new Message({
+			  			message: 'This is the message2',
+			  			buttons: [
+			  			{
+			  				label: 'OK',
+			  				onClick: function(){
+			  					alert('OK');
+			  				}
+			  			}, {
+			  				label: 'Cancel',
+			  				onClick: function(){
+			  					alert('Cancel');
+			  					return false;
+			  				}
+			  			}
+			  			]
+			  		});
+			  	});
+			  });
+
+			  require(['dojo/on', 'jimu/dijit/Popup'], function(on, Popup){
+			  	on(dom.byId('showPopup'), 'click', function(){
+			  		new Popup({
+			  			content: 'This is the message',
+			  			titleLabel: "the popup"
+			  		});
+			  	});
+			  });
+
+			  require(['esri/map','jimu/dijit/DrawBox'],function(Map,DrawBox){
+			  	var map = new Map(dojo.byId('drawBoxMapDiv'));
+			  	map.setBasemap('osm');
+			  	var drawBoxDiv = dojo.byId('drawBoxDiv');
+			  	var drawBox = new DrawBox({types:['point','polyline','polygon'],showClear:true});
+			  	drawBox.placeAt(drawBoxDiv);
+			  	drawBox.startup();
+			  	drawBox.setMap(map);
+			  });
+
+			  require(['dojo/on', 'dojo/_base/html', 'jimu/dijit/ImageChooser'],function(on, html, ImageChooser){
+			  	// above the ImageChooser on the 'click Element' by set css
+			  	var ic = new ImageChooser({displayImg: dom.byId('showImageChooser')});
+			  	html.setStyle(ic.domNode, {
+			  		width: 40 + 'px',
+			  		height: 40 + 'px'
+			  	});
+			  	ic.placeAt('imageChooserContainer');
+
+			  	on(ic, 'imageChange', function(fileData){
+		        console.log(fileData);
+		      });
+			  });
+			  require(["dijit/form/CurrencyTextBox", "dojo/currency", "dojo/i18n!dojo/cldr/nls/de/currency", "dojo/i18n!dojo/cldr/nls/de/number", "dojo/domReady!"
+				], function(CurrencyTextBox, currency){
+				    var example = currency.format(54775.53, {locale: 'de-de', currency: "EUR"});
+				    var props = {
+				        value: 54775.53,
+				        lang: 'de-de',
+				        currency: "EUR",
+				        invalidMessage: "Invalid amount.  Example: " + example
+				    };
+				    new CurrencyTextBox(props, "currencyTextBox");
+				});
+
+				require(['dojo/on', 'jimu/dijit/ServiceURLInput', 'dojo/domReady!'], function(on, ServiceURLInput){
+					var serviceURLInput = new ServiceURLInput({}, 'serviceURLInput');
+					on(serviceURLInput, 'Fetch', function(evt){
+						console.log(evt.data);
+						if (evt.data){
+							evt.deferred.resolve('success');
+						}else{
+							evt.deferred.reject('error')
+						}
+					});
+					on(serviceURLInput, 'FetchError', function(err){
+						alert('invalid ServiceURL');
+					});
+				});
+			});
+		</script>
+	</head>
+	<body class="claro" id="body">
+		<div class="item">
+			<div class="title">CheckBox</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/CheckBox" style="margin:10px"></div>
+
+				<div data-dojo-type="jimu/dijit/CheckBox" style="margin:10px" data-dojo-props="label: 'label1'"></div>
+
+				<div id="checkbox3" style="margin:10px"></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">RadioBtn</div>
+			<div class="content">
+				<div data-dojo-type="dijit/form/RadioButton" data-dojo-props="name: 'r1'"></div>
+				<div data-dojo-type="dijit/form/RadioButton" data-dojo-props="name: 'r1'"></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">TimeInput</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/TimeInput" ></div>
+				<div data-dojo-type="jimu/dijit/TimeInput" ></div>
+			</div>
+		</div>
+
+		<div class="item" style="width:300px;height:300px;background-color:white;border:1px solid;">
+			<div class="title">Tab</div>
+			<div class="content" style="height:280px;">
+				<div id="tab1">
+					<div id="tc1Node">tab content 1</div>
+					<div id="tc2Node">tab content 2</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="item" style="width:300px;height:300px;background-color:white;border:1px solid;">
+			<div class="title">Tab</div>
+			<div class="content" style="height:280px;">
+				<div id="tab2" >
+					<div id="tc1Node2">tab content 1-2</div>
+					<div id="tc2Node2">tab content 2-2</div>
+					<div id="tc3Node2">tab content 3-2</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">Select</div>
+			<div class="content">
+				<select id="stateSelect" data-dojo-type="dijit/form/Select"
+	        name="stateSelect">
+	        <option value="" selected="selected">Select a state</option>
+	        <option value="AL">Alabama</option>
+	        <option value="AK">AlaskaAlaskaAlaskaAlaskaAlaska</option>
+	        <option value="AZ">Arizona</option>
+	        <option value="AR">Arkansas</option>
+	        <option value="CA">California</option>
+	    </select>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">DropMenu</div>
+			<div class="content" style="width:200px;height:200px;background-color:white;border:1px solid;">
+				<div id="dropMenu1" style="margin:5px;"></div>
+				<div id="dropMenu2" style="float:right;margin:5px;"></div>
+				<div id="dropMenu3" style="position: absolute; top: 180px;margin:5px;"></div>
+				<div id="dropMenu4" style="position: absolute; top: 180px; right: 0px;margin:5px;"></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">List</div>
+			<div class="content" style="width:200px;height:200px;background-color:white;border:1px solid;">
+				<div id="listSample" style="width:200px;"></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">Message</div>
+			<div class="content">
+				<div class="jimu-btn" id="showMessage">ShowMessage</div>
+				<div class="jimu-btn" id="showMessage2">ShowMessage2</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">Popup</div>
+			<div class="content">
+				<div class="jimu-btn" id="showPopup">ShowPopup</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">Search</div>
+			<div class="content">
+				<div id="searchDijit" data-dojo-type="jimu/dijit/Search" data-dojo-props="placeholder: 'Search String'" style="width:300px"></div>
+				<div id="searchDijit2" data-dojo-type="jimu/dijit/Search" data-dojo-props="placeholder: 'Search String2', searchWhenInput: true" style="width:300px"></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">SymbolChooser</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/SymbolChooser" data-dojo-props='type:"marker"'></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">LayerFieldChooser</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/LayerFieldChooser" style="width:320px;" data-dojo-props='url:"http://maps1.arcgisonline.com/ArcGIS/rest/services/USGS_Earthquake_Faults/MapServer/1",maxHeight:"240px"'></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">ExtentChooser</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/ExtentChooser" style="width:300px; height: 300px" id="extentChooser" data-dojo-props='portalUrl:"http://www.arcgis.com",itemId: "c03a526d94704bfb839445e80de95495"'></div>
+				<div id="extent-info"></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">EditableDiv</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/EditableDiv" style="width:100px; height: 50px">Please double click</div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">ImageChooser</div>
+			<div class="content">
+				<div id="imageChooserContainer" style="position:absolute;width:40px;height:40px;"></div>
+				<img src="images/pic1.png" style="position:absolute;width:40px;height:40px;" id="showImageChooser">
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">RendererChooser</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/RendererChooser" data-dojo-props='type:"marker",fields:["field1","field2"]'></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">DrawBox</div>
+			<div class="content">
+				<div id="drawBoxMapDiv" style="width:332px;height:200px;"></div>
+				<div id="drawBoxDiv"></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">GpServiceBrowser</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/GpServiceBrowser" data-dojo-props='url:"http://sampleserver1.arcgisonline.com/ArcGIS/rest/services"'></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">FeaturelayerServiceBrowser</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/FeaturelayerServiceBrowser" data-dojo-props='url:"http://sampleserver1.arcgisonline.com/ArcGIS/rest/services",types:["point"]'></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">PopupConfig</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/PopupConfig" data-dojo-props='url:"http://sampleserver6.arcgisonline.com/arcgis/rest/services/SampleWorldCities/MapServer/0"'></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">dijit/form/textbox</div>
+			<div class="content">
+				<input id="currencyTextBox" type="text" value="54775.53" />
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">Filter</div>
+			<div class="content">
+				<div data-dojo-type="jimu/dijit/Filter" data-dojo-props='url:"http://discomap.eea.europa.eu/arcgis/rest/services/NoiseWatch/NoiseWatch_Overview_WM/MapServer/8"'></div>
+			</div>
+		</div>
+
+		<div class="item">
+			<div class="title">FeaturelayerChooser</div>
+			<div class="content">
+				<!--http://www.arcgis.com/sharing/rest/content/items/5b9a674043ca4ec783b7eb85037aefa8/-->
+				<!--http://www.arcgis.com/sharing/content/items/512d444b67a64786b3532c618d997e68-->
+				<div data-dojo-type="jimu/dijit/FeaturelayerChooser" data-dojo-props='webMapUrl:"http://www.arcgis.com/sharing/rest/content/items/5b9a674043ca4ec783b7eb85037aefa8/"' style="width:550px;"></div>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div class="title">ServiceURLInput</div>
+			<div class="content">
+				<input type="text" id="serviceURLInput" />
+			</div>
+		</div>
+	</body>
+
+</html>

@@ -1,0 +1,53 @@
+@import url("../common.css");
+
+.jimu-widget-bookmark .add-section{
+  position: relative; 
+  height: 30px; 
+  margin-top: 7px;
+  overflow: visible;
+}
+.jimu-widget-bookmark .input-bookmark-name{
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.jimu-widget-bookmark .btn-add{
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  bottom: 1px;
+  width: 30px;
+  z-index: 2;
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+  background-color: #d9dde0;
+  cursor: pointer;
+}
+.jimu-widget-bookmark .btn-add .jimu-center-img{
+  border-top: 1px solid rgba(255, 255, 255, 0.2); 
+  background-image: url(images/add.png);
+}
+.jimu-widget-bookmark .jimu-state-error{
+  margin-top: 4px;
+  visibility: hidden;
+}
+.jimu-widget-bookmark .play-section{
+  overflow: hidden;
+  margin-top: 20px;
+}
+.jimu-widget-bookmark .jimu-btn{
+  float: none;
+  margin: auto;
+  width: 150px;
+}
+
+.FoldableTheme.green .jimu-widget-bookmark .btn-add{
+  background-color: #80dbc5;
+}
+
+.FoldableTheme.cyan .jimu-widget-bookmark .btn-add{
+  background-color: #d5d5d4;
+}

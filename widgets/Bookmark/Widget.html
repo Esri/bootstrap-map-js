@@ -1,0 +1,20 @@
+<div>
+	<div class="jimu-r-row add-section">
+		<input class="jimu-input input-bookmark-name" data-dojo-attach-point="bookmarkName" type="text" placeholder="${nls.placeholderBookmarkName}">
+		<div class="btn-add" data-dojo-attach-point="btnAdd" data-dojo-attach-event="onclick:_onAddBtnClicked"><div class="jimu-center-img"></div></div>
+	</div>
+	<div class="jimu-state-error" data-dojo-attach-point="errorNode">&nbsp;</div>		
+	<div class="bookmark-list" data-dojo-attach-point="bookmarkListNode">
+		
+	</div>
+
+	<div class="jimu-r-row play-section">
+		<div class="col-1-2">
+			<div class="jimu-btn btn-play" data-dojo-attach-point="btnPlay" data-dojo-attach-event="onclick:_onPlayBtnClicked">${nls.labelPlay}</div>
+		</div>
+		<div class="col-1-2">
+			<div class="jimu-btn btn-delete" data-dojo-attach-point="btnDelete" data-dojo-attach-event="onclick:_onDeleteBtnClicked">${nls.labelDelete}</div>
+		</div>
+	</div>
+
+</div>

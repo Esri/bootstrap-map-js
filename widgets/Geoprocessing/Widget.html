@@ -1,0 +1,20 @@
+<div>
+  <div class="input-pane" data-dojo-attach-point="inputPaneNode">
+    <div class="section" data-dojo-attach-point="inputSectionNode"></div>
+    <div class="section jimu-r-row opts" data-dojo-attach-point="optsSectionNode">
+      <div class="col-1-2">
+        <a class="help" data-dojo-attach-point="helpLinkNode" target="_blank">${nls.help}</a>
+      </div>
+      <div class="col-1-2">
+        <div class="jimu-btn" data-dojo-attach-point="exeNode" data-dojo-attach-event="onclick: _onExecuteClick">${nls.execute}</div>
+      </div>
+    </div>
+  </div>
+  <div class="output-pane" data-dojo-attach-point="outputPaneNode">
+    <div class="section info" data-dojo-attach-point="infoNode">
+      <div data-dojo-attach-point="loadingNode" class="loading"></div>
+      <div data-dojo-attach-point="infoTextNode" class="text"></div>
+    </div>
+    <div class="section" data-dojo-attach-point="outputSectionNode"></div>
+  </div>
+</div>

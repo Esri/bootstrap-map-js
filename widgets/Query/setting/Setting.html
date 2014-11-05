@@ -1,0 +1,20 @@
+<div>
+	<div class="query-list">
+		<div class="query-list-head" style="overflow:hidden;">
+			<div style="float:left;">${nls.queries}</div>
+			<div style="float:right;">
+				<div class="add-with-icon enable" data-dojo-attach-event="onclick:_onAddNewClicked">
+					<span class="add-icon"></span>
+					<span class="add-label">${nls.addNew}</span>
+				</div>
+			</div>
+		</div>
+		<div class="query-list-content">
+			<div class="query-list-table" data-dojo-type="jimu/dijit/SimpleTable" data-dojo-attach-point="queryList" data-dojo-attach-event="row-delete:_onQueryItemRemoved,row-select:_onQueryItemSelected" data-dojo-props='selectable:true,fields:[{name:"name",title:"Name",width:"auto",type:"text",editable:false},{name:"actions",title:"",width:"30px",type:"actions",actions:["delete"]}]'>
+			</div>
+		</div>
+	</div>
+	<div class="single-query-container" data-dojo-attach-point="singleQueryContainer">
+	</div>
+	<div data-dojo-attach-point="shelter" data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-props='hidden:true'></div>
+</div>

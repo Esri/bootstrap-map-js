@@ -1,0 +1,21 @@
+﻿define({
+    ok: "بيت_OK_لاحقة",
+    cancel: "بيت_Cancel_لاحقة",
+    exportMessage: "بيت_Export data to CSV file?_لاحقة",
+    exportFiles: "بيت_Export to CSV_لاحقة",
+    options: "بيت_Options_لاحقة",
+    zoomto: "بيت_Zoom to_لاحقة",
+    highlight: "بيت_Highlight Graphics_لاحقة",
+    selectAll: "بيت_Select All Pages_لاحقة",
+    selectPage: "بيت_Select Current Page_لاحقة",
+    clearSelection: "بيت_Clear Selection_لاحقة",
+    filterByExtent: "بيت_Filter by Map Extent_لاحقة",
+    refresh: "بيت_Refresh_لاحقة",
+    selected: "بيت_selected_لاحقة",
+    transparent: "بيت_Transparent Mode_لاحقة",
+    indicate: "بيت_Locate Selection_لاحقة",
+    columns: "بيت_Show/Hide Columns_لاحقة",
+    selectionSymbol: "بيت_Selection Symbol_لاحقة",
+    closeMessage: "بيت_Hide table[Show it again in layer list]_لاحقة",
+    dataNotAvailable: "بيت_Data not available!<br>Click [Refresh] button to have a try_لاحقة"
+});

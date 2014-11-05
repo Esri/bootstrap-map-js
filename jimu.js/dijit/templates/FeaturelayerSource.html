@@ -1,0 +1,26 @@
+﻿<div>
+	<table class="radio-table" cellpadding="0" cellspacing="0">
+		<tbody>
+			<tr>
+				<td>
+					<input data-dojo-attach-point="mapRadio" type="radio" data-dojo-attach-event="onclick: _onRadioClicked" checked />
+					<label data-dojo-attach-point="mapLabel">Select from Current Map</label>
+				</td>
+				<td>
+					<input data-dojo-attach-point="portalRadio" type="radio" data-dojo-attach-event="onclick: _onRadioClicked" style="margin-left: 30px;" />
+					<label data-dojo-attach-point="portalLabel">Select from Portal</label>
+				</td>
+				<td>
+					<input data-dojo-attach-point="urlRadio" type="radio" data-dojo-attach-event="onclick: _onRadioClicked" style="margin-left:30px;" />
+					<label data-dojo-attach-point="urlLabel">Add Service URL</label>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+	<div class="source-content">
+		<div data-dojo-attach-point="operationTip" class="operation-tip"></div>
+		<div data-dojo-attach-point="flcContainer" class="dijit-container flc-container" style="display:none;"></div>
+		<div data-dojo-attach-point="hflcContainer" class="dijit-container hflc-container" style="display:none;"></div>
+		<div data-dojo-attach-point="flscContainer" class="dijit-container flsc-container" style="display:none;"></div>
+	</div>
+</div>

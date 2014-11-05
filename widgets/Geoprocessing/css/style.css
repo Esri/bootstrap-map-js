@@ -1,0 +1,62 @@
+@import url("../common.css");
+
+.jimu-widget-geoprocessing{
+  height: 100%;
+  margin: -14px;
+  font-size: 14px;
+}
+.jimu-widget-geoprocessing .jimu-viewstack{
+  padding: 14px;
+}
+.jimu-widget-geoprocessing .section{
+  overflow: hidden;
+}
+.jimu-widget-geoprocessing .opts [class*="col"]{
+  height: 45px;
+}
+.jimu-widget-geoprocessing .opts a.help{
+  line-height: 45px;
+}
+.jimu-widget-geoprocessing .section.opts{
+  margin-top: 20px;
+}
+.jimu-widget-geoprocessing .section .jimu-btn{
+  float: none;
+  margin: auto;
+  width: 150px;
+}
+.jimu-widget-geoprocessing .info{
+  display: none;
+  height: 80px;
+  position: relative;
+}
+.jimu-widget-geoprocessing .info .text{
+  text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+}
+.jimu-widget-geoprocessing .input-node, .jimu-widget-geoprocessing .output-node{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.jimu-widget-geoprocessing .input-node>.input-label, .jimu-widget-geoprocessing .output-node>.output-label{
+  overflow: hidden;
+  font-size: 14px;
+  color: #686868;
+}
+.jimu-widget-geoprocessing .input-node>.editor-container, .jimu-widget-geoprocessing .output-node>.renderer-container{
+  margin-top: 5px;
+  width: 100%;
+
+}
+
+.jimu-widget-geoprocessing .jimu-draw-box .drawings-clear{
+  position: absolute;
+  right: 5px;
+  top: 27px;
+}
+
+.TabTheme .jimu-widget-geoprocessing .jimu-tab>.control>.tab.jimu-state-selected{
+  border-top: 0;
+}

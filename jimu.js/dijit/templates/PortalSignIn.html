@@ -1,0 +1,22 @@
+<div class="jimu-portal-signin">
+  <label data-dojo-attach-point="errorNode" class="error-message">${nls.errorMessage}</label>
+  <div class="signin-content" data-dojo-attach-point="signinContentNode">
+    <div data-dojo-attach-point="appIdTipSection" class="appid-tip-section">
+      <div>${nls.appIdTip1}</div>
+      <div style="margin-top:20px;">${nls.appIdTip2}</div>
+    </div>
+    <div class="form">
+      <label>${nls.username}</label>
+      <input type="text" tabindex="1" data-dojo-attach-point="username" />
+      <label>${nls.password}</label>
+      <a data-dojo-attach-point="forgot" style="margin-left:10px;" target="_blank" href="#">${nls.forgot}</a>
+      <input type="password" tabindex="2" data-dojo-attach-point="password" />
+      <div data-dojo-attach-point="remember"></div>
+    </div>
+    <div class="operations">
+      <div class="btn signin-btn" data-dojo-attach-point="signin" tabindex="3" data-dojo-attach-event="onClick:onSigninClick" >${nls.con}</div>
+      <div class="btn btn-back" data-dojo-attach-point="btnBack" data-dojo-attach-event="onclick:onBackClick">${nls.back}</div>
+    </div>
+    <div data-dojo-attach-point="shelter" data-dojo-type="jimu/dijit/LoadingShelter" data-dojo-props="hidden:true"></div>
+  </div>
+</div>

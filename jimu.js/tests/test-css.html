@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title>Jimu Base CSS Demo</title>	
+		<link rel="stylesheet" type="text/css" href="../css/jimu.css">
+		<style type="text/css">
+			.item{
+				display: inline-block;
+				vertical-align: top;
+				margin: 10px;
+				position: relative;
+				background-color: rgba(255,0,0,0.1);
+			}
+			.item .title{
+				width: 100%;
+				height: 20px;
+				background-color: rgba(0,255,0,0.1);
+			}
+			.item .content{
+				width: 100%;
+				position: relative;
+			}
+		</style>
+	</head>
+	<body class="claro">
+		<div class="item">
+			<div class="title">.jimu-input</div>
+			<div class="content">
+				<input class="jimu-input">
+			</div>
+		</div>
+
+		<div class="item" style="width: 100px; height: 100px;">
+			<div class="title">.jimu-center-img</div>
+			<div class="content" style="height: 50px; background-color: rgba(0,0,255,0.1)">
+				<div class="jimu-center-img" style="background-image: url(images/pic1.png);"></div>
+			</div>			
+		</div>
+
+		<div class="item">
+			<div class="title">.jimu-btn</div>
+			<div class="content">
+				<div class="jimu-btn">Button</div>
+			</div>			
+		</div>
+
+		<div class="item">
+			<div class="title">.jimu-btn-disabled</div>
+			<div class="content">
+				<div class="jimu-btn jimu-state-disabled">Button</div>
+			</div>			
+		</div>
+
+		<div class="item">
+			<div class="title">.jimu-icon-btn</div>
+			<div class="content">
+				<div class="jimu-icon-btn" style="background-image: url(images/pic1.png);"></div>
+			</div>			
+		</div>
+
+		<div class="item">
+			<div class="title">.jimu-navbar</div>
+			<div class="content">
+				<div class="jimu-navbar">
+					<div class="jimu-icon-btn" style="background-image: url(images/pic1.png);"></div>
+					<div class="jimu-icon-btn" style="background-image: url(images/pic2.png);"></div>
+					<div class="jimu-icon-btn jimu-state-selected" style="background-image: url(images/pic3.png);"></div>
+				</div>
+			</div>			
+		</div>
+
+		<div class="item">
+			<div class="title">.jimu-oe-row</div>
+			<div class="content">
+				<div class="jimu-oe-row" style="width:200px;">
+					<div>row1</div>
+					<div>row2</div>
+					<div>row3</div>
+				</div>				
+			</div>			
+		</div>
+
+		<div class="item">
+			<div class="title">.jimu-table</div>
+			<div class="content" style="width:300px;height:300px;">
+				<table class="jimu-table" style="height:100%">
+					<thead>
+						<tr>
+							<td>Col1</td>
+							<td>Col2</td>
+						</tr>
+					</thead>
+					<tr>
+						<td>1111</td>
+						<td>2222</td>
+					</tr>
+					<tr>
+						<td>aaaa</td>
+						<td>bbbb</td>
+					</tr>
+					<tr class="jimu-state-selected">
+						<td>3333</td>
+						<td>4444</td>
+					</tr>
+					<tr>
+						<td>5555</td>
+						<td>6666</td>
+					</tr>
+					<tr class="auto-height">
+						<td></td>
+						<td></td>
+					</tr>
+				</table>			
+			</div>			
+		</div>
+
+	</body>
+
+</html>

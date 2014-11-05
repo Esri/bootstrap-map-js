@@ -1,0 +1,16 @@
+{
+	"name": "jimu",
+	"version": "0.6.1",
+	"main": "main",
+	"dependencies": {
+		"dojo": "",
+		"dijit": "",
+		"dojox": "",
+		"util": "",
+		"esri": "",
+		"esri3d": ""
+	},
+	"description": "a configurable app core",
+	"bugs": "",
+	"dojoBuild": "package.js"
+}

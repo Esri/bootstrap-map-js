@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+    "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <title>robot DnD Test</title>
+
+  <style>
+    @import "https://catboat.chn.esri.com/arcgis/home/arcgis_js_api/39/js/dojo/util/doh/robot/robot.css";
+  </style>
+
+  <!-- required: dojo.js -->
+  <script type="text/javascript" src="https://catboat.chn.esri.com/arcgis/home/arcgis_js_api/39/js/dojo/dojo/dojo.js"
+    data-dojo-config="isDebug: true"></script>
+  <script type="text/javascript">
+    require(["doh", "dojo/dom", "dojo/robotx", "dojo/domReady!"], 
+    function(doh, dom, robot){
+      robot.initRobot('/arcgis/apps/webappbuilder/?appid=stemapp');
+
+        doh.register('mytests.testwidgets.Overview', {
+          name: 'OverviewSetting',
+          timeout: 60000,
+          setUp: function(){
+            console.log(robot.doc);
+          },
+
+          runTest: function(){
+            var def = new doh.Deferred();
+            console.log(Date.now());
+            robot.sequence(function(){
+            // click widgets pane
+            robot.window.require(["dojo/query", 'dijit/registry'], 
+              function(query, registry){
+              console.log(Date.now());
+              var widgetsTab = query(".tab-item-icon.widgets")[0];
+                console.log(widgetsTab);
+                console.log(Date.now());
+                robot.mouseMoveAt(widgetsTab, 500, 100);
+                robot.mouseClick({left:true, middle:false, right:false}, 100);
+
+                // click overview Icon
+                robot.sequence(function(){
+                  var overviewIcon = query(".box")[6];
+                  console.log(overviewIcon);
+                  console.log(Date.now());
+                  robot.mouseMove(100, 100, 100, 100);
+                  robot.mouseMoveAt(overviewIcon, 500, 200);
+
+                  // click edit button
+                  robot.sequence(function(){
+                    var edit = query('.edit-btn')[0];
+                    console.log(edit);
+                    robot.mouseMoveAt(edit, 200, 100);
+                    robot.mouseClick({left: true}, 100);
+
+                    // setting configuration
+                    robot.sequence(function(){
+                      console.log('Setting Configuration');
+                      var widgetSettingNode = query("div.jimu-widget-overviewmap-setting")[0];
+                      console.log("widgetSettingNode:   ", widgetSettingNode);
+                      var wSetting = registry.byNode(widgetSettingNode);
+                      console.log(wSetting);
+                      wSetting.visibleCheckbox.set('value', true);
+
+                      wSetting.minWidth.set('value', 100);
+                      wSetting.minHeight.set('value', 100);
+                      wSetting.maxWidth.set('value', 400);
+                      wSetting.maxHeight.set('value', 400);
+
+                      var okBtn = query("div.jimu-btn:nth-child(3)")[0];
+                      robot.mouseMoveAt(okBtn, 200, 200);
+                      robot.mouseClick({left: true}, 100);
+
+                      // drag overview mask
+                      builderQuery = query;
+                      robot.sequence(function(){
+                        // debugger;
+                        robot.window.frames['previewFrame'].require(["dojo/query"], function(query){
+                          var mask = query("div.ovwHighlight")[0];
+                          robot.mouseMoveAt(mask, 200, 200);
+                          robot.mousePress({left: true}, 100);
+                          robot.mouseMoveAt(mask, 200, 200, 10, 10);
+                          robot.mouseRelease({left: true}, 100);
+
+                          var overviewBtn = query(".esriOverviewMap .ovwController")[0];
+                          robot.mouseMoveAt(overviewBtn, 100);
+                          robot.mouseClick({left: true}, 100);
+
+                          // click homebutton
+                          robot.sequence(function(){
+
+                            var homeBtn = query('div.home')[0];
+                            robot.mouseMoveAt(homeBtn, 100);
+                            robot.mouseClick({left: true}, 200);
+
+                            robot.sequence(def.getTestCallback(function(){
+                              console.log('test');
+                              var tab = builderQuery(".widget-config.view")[0];
+                              var tabDisplay = tab.style.display;
+                              doh.is('block', tabDisplay, "asdfafafdfsdf");
+                            }), 10000);
+                          }, 100); // click homebutton
+                        });
+                      }, 2000); // drag overview mask
+                    }, 2000); // setting configuration
+                  }, 200); // click edit button
+                }, 3000); // move to overview Icon  */
+            }); // click widgets pane
+           }, 25000);   
+            
+            return def;
+          }
+        });
+      doh.run();
+    });
+  </script>
+</head>
+</html>

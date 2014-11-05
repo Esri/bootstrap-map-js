@@ -1,0 +1,80 @@
+.claro .dijitArrowButtonContainer{
+  width: 30px;
+}
+/* Select */
+.claro .dijitSelect{
+  background-color: #f0f0f0;
+  height: 30px;
+}
+.claro .dijitSelect .dijitArrowButton {
+  background-color: #d9dde0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.claro .dijitSelect .dijitInputField{
+  padding: 1px 10px;
+}
+.claro .dijitSelect input{
+  float: none;
+  margin: auto;
+}
+.claro .dijitMenu .dijitMenuItemSelected td{
+  background-color: #d9dde0;
+}
+
+/* dijit/form/NumberSpinner */
+.dijitReset.dijitLeft.dijitButtonNode.dijitArrowButton.dijitDownArrowButton{
+  width:100%;
+}
+
+.dijitReset.dijitLeft.dijitButtonNode.dijitArrowButton.dijitUpArrowButton{
+  width:100%;
+}
+
+.dijitReset.dijitLeft.dijitButtonNode.dijitArrowButton.dijitDownArrowButton .dijitArrowButtonInner{
+  width:100%;
+}
+
+.dijitReset.dijitLeft.dijitButtonNode.dijitArrowButton.dijitUpArrowButton .dijitArrowButtonInner{
+  width:100%;
+}
+
+/* dijit/form/*TextBox */
+.claro .dijitTextBox{
+  height: 30px;
+  border-color: #d9dde0;
+}
+.claro .dijitTextBox .dijitInputField{
+  padding: 1px 10px;
+}
+.claro .dijitTextBox .dijitInputInner{
+  padding: 0px !important;
+  height: 26px;
+  line-height: 26px !important;
+}
+.claro .dijitTextBox .dijitPlaceHolder{
+  height: 16px;
+  margin: 5px 0;
+}
+.claro .dijitTextBoxFocused{
+  border-color: #51b1fe !important;
+  box-shadow: 0px 0px 5px #51b1fe;
+}
+.claro .dijitTextBoxHover{
+  border-color: #759dc0;
+}
+.claro .dijitValidationTextBox .dijitValidationContainer,
+.claro .dijitSpinner .dijitSpinnerButtonContainer,
+.claro .dijitSpinner .dijitInputContainer
+{
+  height: 100%;
+}
+.claro .dijitTextBoxError{
+  border-color: #d46464 !important;
+  box-shadow: 0px 0px 5px #d46464;
+}
+
+p{
+  margin-top:0;
+  margin-bottom:0;
+}

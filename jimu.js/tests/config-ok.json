@@ -1,0 +1,135 @@
+{ 
+    "locale": "zh_CN",
+	"UIController": [
+		{
+        	"id": "headerWidget",
+        	"class":"esriwidgets/Header/HeaderWidget",
+        	"left": 0,
+        	"top": 0,
+        	"height": 60,
+        	"right": 0,
+        	"border": "square",
+            "config": {
+            	"title" : "ArcGIS 3D app for JavaScript",
+			    "subtitle": "A configurable web 3D application",
+			    "logo": "images/logo.png"
+            }            
+        },
+        {
+        	"id": "containerHeader",
+        	"class":"esriwidgets/ContainerHeader/ContainerHeaderWidget",
+        	"left": 0,
+        	"top": 60,
+        	"width": 80,
+        	"bottom": 0,
+        	"border": "square",
+            "config": {
+            	"container" : "container1"
+            }            
+        },
+        {
+        	"id": "mapSwitcher",
+        	"class":"esriwidgets/MapSwitcher/MapSwitcherWidget",
+        	"right": 20,
+        	"top": 100,
+        	"width": 280,
+        	"height": 35,
+        	"border": "round" 
+        }
+	],    
+    "map": {
+    	"manager": "Map2DManager",
+    	"config":{
+    		"camera":{"xmin":-11651476,"ymin":3369424,"xmax":372985,"ymax":8251609},
+    		"mapOptions":{
+    			"slider": false
+    		},
+            "basemaps": [{
+                "label": "base map1",
+                "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer",
+                "type": "tiled",
+                "visible":true,
+                "alpha":"1",
+                "icon":"assets/images/icons/i_highway.png"       
+            }],
+            "operationallayers": [            
+                {
+                    "label": "Hurricanes",
+                    "url": "http://servicesbeta.esri.com/ArcGIS/rest/services/Hurricanes/Hurricanes/MapServer/0",
+                    "type": "feature",
+                    "visible":true,
+                    "alpha":"1",
+                    "icon":"assets/images/icons/i_highway.png"
+                }
+                
+            ]
+    	}      
+    },
+    "widgetContainers":[
+        {
+            "id": "container1",
+            "left": 100,
+        	"top": 100,
+            "class": "jimuwidgetcontainers/FloatLayoutContainer/FloatLayoutContainer",
+            "config": {
+            	"visible": false
+            },
+            "widgets": [
+                {
+                	"id": "Bookmarks",
+                    "title":"Bookmarks",
+                    "icon":"images/icons/i_bookmark.png",
+                    "config": "js/widgets/esri/Bookmark2DWrapper/Bookmark2DWrapperWidget.json",
+                    "class":"esriwidgets/Bookmark2DWrapper/Bookmark2DWrapperWidget",
+                    "width": 500,
+                    "height": 445
+                },
+                {
+                	"id": "demo",
+                    "title":"demo",
+                    "icon":"images/icons/i_census.png",
+                    "class":"xyzwidgets/Demo/DemoWidget",
+                    "config": "js/widgets/xyz/Demo/DemoWidget.json",
+                    "width": 500,
+                    "height": 445
+                },
+                {
+                	"id": "search",
+                    "title":"Hurrican Search",
+                    "icon":"images/icons/i_census.png",
+                    "class":"esriwidgets/AdvancedSearch/AdvancedSearchWidget",
+                    "config": "js/widgets/esri/AdvancedSearch/AdvancedSearchWidget.json",
+                    "width": 500,
+                    "height": 445
+                }
+            ]
+        },
+        {
+            "id": "container2",
+            "left": 80,
+            "bottom": 0,
+            "right":0,
+        	"height": 40,
+        	"border": "square", 
+            "class": "jimuwidgetcontainers/PanelContainer/PanelContainer",
+            "widgets": [
+                {
+                	"id": "gaugeWidget1",
+                    "title":"gaugeWidget1",
+                    "config": "js/widgets/esri/Gauge2DWrapper/Gauge2DWrapperWidget.json",
+                    "class": "esriwidgets/Gauge2DWrapper/Gauge2DWrapperWidget"
+                },
+				{
+                	"id": "PeopleRace",
+                    "title":"RACE",
+                    "class":"esriwidgets/PeopleRace/PeopleRaceWidget"
+                },
+				{
+                	"id": "PeopleAge",
+                    "title":"AGE",
+                    "class":"esriwidgets/PeopleAge/PeopleAgeWidget"
+                }
+            ]
+        }
+    ]
+}

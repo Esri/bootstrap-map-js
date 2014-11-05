@@ -1,0 +1,21 @@
+.jimu-widget-edit .esriAttributeInspector .atiField{
+  width: 220px;
+}
+.jimu-widget-edit .buttonSave{
+  margin-left: 50px;
+  margin-top: 0px;
+}
+.jimu-widget-edit .esriAttributeInspector .atiLayerName{
+  font-size: 16px;
+}
+.jimu-widget-edit .dojoxGridRowTable{
+  width: 350px;
+}
+
+.jimu-widget-edit .templatePicker .grid .groupLabel{
+  font-size: 12px;
+}
+
+.jimu-widget-edit .dojoxGridScrollbox{
+  overflow-x: hidden;
+}

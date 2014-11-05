@@ -1,0 +1,22 @@
+<div>
+	<div class="items-section all-items-section" data-dojo-attach-point="allItemsSection">
+		<div class="items-table-div" data-dojo-attach-point="allItemsTableDiv" data-dojo-attach-event="onscroll:_onAllItemsSectionScroll">
+			<table class="items-table" cellpadding="10" data-dojo-attach-point="allItemsTable" data-dojo-attach-event="onclick:_onItemsTableClicked">
+				<tbody data-dojo-attach-point="allItemTbody"></tbody>
+			</table>
+		</div>
+		<div data-dojo-type="jimu/dijit/LoadingIndicator" data-dojo-attach-point="allItemsShelter" data-dojo-props='hidden:true'></div>
+	</div>
+	<div class="items-section filtered-items-section" data-dojo-attach-point="filteredItemsSection">
+		<div class="items-table-div" data-dojo-attach-point="filteredItemsTableDiv" data-dojo-attach-event="onscroll:_onFilteredItemsSectionScroll">
+			<table class="items-table" cellpadding="10" data-dojo-attach-point="filteredItemsTable" data-dojo-attach-event="onclick:_onItemsTableClicked">
+				<tbody data-dojo-attach-point="filteredItemsTbody"></tbody>
+			</table>
+		</div>
+		<div class="search-none-tip-section" data-dojo-attach-point="searchNoneTipSection" style="display:none;">
+			<span class="search-none-icon"></span>
+			<span class="search-none-tip">${nls.searchNone}</span>
+		</div>
+		<div data-dojo-type="jimu/dijit/LoadingIndicator" data-dojo-attach-point="filteredItemShelter" data-dojo-props='hidden:true'></div>
+	</div>
+</div>

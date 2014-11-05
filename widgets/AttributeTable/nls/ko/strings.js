@@ -1,0 +1,21 @@
+﻿define({
+    ok: "한_OK_빠",
+    cancel: "한_Cancel_빠",
+    exportMessage: "한_Export data to CSV file?_빠",
+    exportFiles: "한_Export to CSV_빠",
+    options: "한_Options_빠",
+    zoomto: "한_Zoom to_빠",
+    highlight: "한_Highlight Graphics_빠",
+    selectAll: "한_Select All Pages_빠",
+    selectPage: "한_Select Current Page_빠",
+    clearSelection: "한_Clear Selection_빠",
+    filterByExtent: "한_Filter by Map Extent_빠",
+    refresh: "한_Refresh_빠",
+    selected: "한_selected_빠",
+    transparent: "한_Transparent Mode_빠",
+    indicate: "한_Locate Selection_빠",
+    columns: "한_Show/Hide Columns_빠",
+    selectionSymbol: "한_Selection Symbol_빠",
+    closeMessage: "한_Hide table[Show it again in layer list]_빠",
+    dataNotAvailable: "한_Data not available!<br>Click [Refresh] button to have a try_빠"
+});

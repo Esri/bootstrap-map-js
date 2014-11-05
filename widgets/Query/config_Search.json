@@ -1,0 +1,178 @@
+{
+  "queries": [
+    {
+      "name": "Proposed Structure",
+      "url": "http://test1.maps.kytc.ky.gov/arcgis/rest/services/Mobile/KAZC/FeatureServer/0",
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "ASN",
+              "label": "ASN",
+              "shortType": "string",
+              "type": "esriFieldTypeString"
+            },
+            "operator": "stringOperatorContains",
+            "valueObj": {
+              "isValid": true,
+              "value": "AS-"
+            },
+            "interactiveObj": {
+              "prompt": "ASN contains",
+              "hint": "AS-CountyCode-AirportID-StateNo."
+            },
+            "expr": "ASN LIKE '%AS-%'"
+          }
+        ],
+        "expr": "ASN LIKE '%AS-%'"
+      },
+      "popup": {
+        "title": "Proposed ${ASN}",
+        "fields": [
+          {
+            "name": "Type",
+            "alias": "Type",
+            "type": "esriFieldTypeString",
+            "specialType": "none",
+            "showInInfoWindow": true
+          },
+          {
+            "name": "AGENDA",
+            "alias": "Agenda Doc.",
+            "type": "esriFieldTypeString",
+            "specialType": "link",
+            "showInInfoWindow": true
+          },
+          {
+            "name": "FAA_DETERMINATION",
+            "alias": "FAA Determination",
+            "type": "esriFieldTypeString",
+            "specialType": "link",
+            "showInInfoWindow": true
+          },
+          {
+            "name": "ASN",
+            "alias": "AS Number",
+            "type": "esriFieldTypeString",
+            "specialType": "none",
+            "showInInfoWindow": false
+          }
+        ]
+      },
+      "resultsSymbol": {
+        "color": [
+          255,
+          0,
+          0,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            255,
+            0,
+            0,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "objectIdField": "OBJECTID"
+    },
+    {
+      "name": "Existing Structure",
+      "url": "http://test1.maps.kytc.ky.gov/arcgis/rest/services/Mobile/KAZC/FeatureServer/1",
+      "filter": {
+        "logicalOperator": "AND",
+        "parts": [
+          {
+            "fieldObj": {
+              "name": "ASN",
+              "label": "ASN",
+              "shortType": "string",
+              "type": "esriFieldTypeString"
+            },
+            "operator": "stringOperatorContains",
+            "valueObj": {
+              "isValid": true,
+              "value": "AS-"
+            },
+            "interactiveObj": {
+              "prompt": "ASN contains",
+              "hint": "AS-CountyCode-AirportID-StateNo."
+            },
+            "expr": "ASN LIKE '%AS-%'"
+          }
+        ],
+        "expr": "ASN LIKE '%AS-%'"
+      },
+      "popup": {
+        "title": "Existing ${ASN}",
+        "fields": [
+          {
+            "name": "Type",
+            "alias": "Type",
+            "type": "esriFieldTypeString",
+            "specialType": "none",
+            "showInInfoWindow": true
+          },
+          {
+            "name": "ASN",
+            "alias": "AS Number",
+            "type": "esriFieldTypeString",
+            "specialType": "none",
+            "showInInfoWindow": false
+          },
+          {
+            "name": "AGENDA",
+            "alias": "Agenda Doc.",
+            "type": "esriFieldTypeString",
+            "specialType": "link",
+            "showInInfoWindow": true
+          },
+          {
+            "name": "FAA_DETERMINATION",
+            "alias": "FAA Determination",
+            "type": "esriFieldTypeString",
+            "specialType": "link",
+            "showInInfoWindow": true
+          }
+        ]
+      },
+      "resultsSymbol": {
+        "color": [
+          255,
+          0,
+          0,
+          128
+        ],
+        "size": 18,
+        "angle": 0,
+        "xoffset": 0,
+        "yoffset": 0,
+        "type": "esriSMS",
+        "style": "esriSMSCircle",
+        "outline": {
+          "color": [
+            255,
+            0,
+            0,
+            255
+          ],
+          "width": 0.75,
+          "type": "esriSLS",
+          "style": "esriSLSSolid"
+        }
+      },
+      "objectIdField": "OBJECTID"
+    }
+  ]
+}

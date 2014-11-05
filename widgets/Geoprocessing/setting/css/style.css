@@ -1,0 +1,189 @@
+@import url("../../common.css");
+
+.jimu-widget-setting-gp{
+  height: 100%;
+  overflow: hidden;
+}
+.jimu-widget-setting-gp .section.common-property{
+  overflow: hidden;
+}
+.jimu-widget-setting-gp .url-section{
+  position: relative;
+  height: 40px;
+}
+.jimu-widget-setting-gp .url-section .label{
+  left: 0;
+  top:5px;
+  height:30px;
+  line-height: 30px;
+  float: left;
+}
+.jimu-widget-setting-gp .jimu-gp-service-chooser{
+  float: right;
+  width: 850px;
+}
+
+/*main stack section*/
+.jimu-widget-setting-gp .stack-section{
+}
+
+.jimu-widget-setting-gp .jimu-widget-setting-gp-detail{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+/* nav pane*/
+.jimu-widget-setting-gp .nav-pane{
+  float: left;
+  width: 250px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.claro .jimu-widget-setting-gp .nav-pane .dijitTitlePaneTitleClosed,
+.jimu-widget-setting-gp .nav-pane .nav-pane-node{
+  background-color: #fafafc;
+  border: 1px solid #d2dae2;
+  border-radius: 4px;
+}
+.claro .jimu-widget-setting-gp .nav-pane .dijitTitlePaneTitleClosed,
+.jimu-widget-setting-gp .nav-pane .nav-pane-node,
+.claro .jimu-widget-setting-gp .nav-pane .dijitTitlePaneTitleOpen{
+  margin-top: 10px;
+  height: 35px;
+}
+.jimu-widget-setting-gp .nav-pane .nav-pane-node{
+  padding: 7px;
+  vertical-align: middle;
+}
+.jimu-widget-setting-gp .nav-pane .link-action-node{
+  cursor: pointer;
+}
+.jimu-widget-setting-gp .nav-pane .param-node{
+  padding: 5px 5px 5px 15px;
+  border-top: 1px solid #d2dae2;
+}
+.claro .jimu-widget-setting-gp .nav-pane .dijitTitlePaneContentInner {
+  padding: 0;
+}
+.jimu-widget-setting-gp .link-action-node.jimu-state-active{
+  background-color: #e3ecf2;
+  border-left: 3px solid #15A4FA;
+  padding-left: 12px;
+}
+.jimu-widget-setting-gp .nav-pane .dijitTitlePaneContentOuter{
+  border-radius: 0 0 4px 4px;
+}
+.claro .jimu-widget-setting-gp .nav-pane .dijitTitlePaneTitleOpen{
+  background-color: #6f7e95;
+  color: #fff;
+  border:1px solid #6f7e95;
+  border-radius: 4px 4px 0 0;
+  background-image: linear-gradient(#6f7e95 0%, #6f7e95 100%);
+}
+.claro .jimu-widget-setting-gp .nav-pane .dijitTitlePaneTitleFocus{
+  margin-top: 7px;
+}
+.claro .jimu-widget-setting-gp .nav-pane .dijitTitlePaneTitleOpen .dijitArrowNode{
+  background-image: url("images/focusArrow.png");
+}
+/*setting pane*/
+.jimu-widget-setting-gp .setting-pane{
+  float: right;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100%;
+  width: 685px;
+}
+
+
+/*parameter setting*/
+.jimu-widget-setting-gp .field{
+  position: relative;
+  overflow: hidden;
+}
+.jimu-widget-setting-gp .field label{
+  width: 55px;
+  display: inline-block;
+  text-align: left;
+}
+.jimu-widget-setting-gp .common-property .field{
+  height: 30px;
+  margin-top: 10px;
+}
+.jimu-widget-setting-gp .special-property .field{
+  height: 20px;
+  margin-top: 5px;
+}
+.jimu-widget-setting-gp .special-property .jimu-gp-editor-base{
+  display: block;
+}
+.jimu-widget-setting-gp .special-property .input-label{
+  margin: 10px 0px;
+  display: inline-block;
+}
+.jimu-widget-setting-gp .special-property .change-editor{
+  margin: 10px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.jimu-widget-setting-gp .jimu-widget-setting-gp-param .jimu-symbol-chooser{
+  margin-left: 100px;
+}
+
+/*layer order*/
+.jimu-widget-setting-gp .layer-node{
+  overflow: hidden;
+  margin-top: 10px;
+}
+.jimu-widget-setting-gp .layer-node .order{
+  float: left;
+}
+.jimu-widget-setting-gp .layer-node .label{
+  float: left;
+}
+.jimu-widget-setting-gp .layer-node .order-btn{
+  cursor: pointer;
+}
+.jimu-widget-setting-gp .layer-node:first-child .up{
+  color: rgba(0, 0, 0, 0.4);
+}
+.jimu-widget-setting-gp .layer-node:last-child .down{
+  color: rgba(0, 0, 0, 0.4);
+}
+/* options */
+.jimu-widget-setting-gp .jimu-widget-setting-gp-options .field{
+  margin-top: 10px;
+}
+.jimu-widget-setting-gp .jimu-widget-setting-gp-options .field label{
+  width: auto;
+}
+
+.jimu-gp-editor-chooser .editor-node{
+  display: inline-block;
+  width: 165px;
+  margin-left: 15px;
+}
+.jimu-gp-editor-chooser .editor-node .node-box{
+  width: 100%;
+  height: 105px;
+  line-height: 105px;
+  border: 1px solid #D4DCE3;
+  text-align: center;  
+  position: relative;
+  cursor: pointer;
+}
+.jimu-gp-editor-chooser img{
+  vertical-align: middle;
+}
+.jimu-gp-editor-chooser .editor-node .node-label{
+  display: inline-block;
+  margin-top: 10px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+.jimu-gp-editor-chooser .editor-node.jimu-state-selected .node-box{
+  border: 2px solid #15A4FA;
+}

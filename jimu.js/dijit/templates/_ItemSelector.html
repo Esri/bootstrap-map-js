@@ -1,0 +1,52 @@
+<div>
+	<div class="setting-tab-container">
+		<div data-dojo-attach-point="tabNode"></div>
+		
+		<div class="tab-content mycontent-tab" data-dojo-attach-point="mycontentTabNode">
+			<div class="tab-content-main mycontent-tab-content-main">
+				<div data-dojo-attach-point="mycontentSearch" data-dojo-type="jimu/dijit/Search" data-dojo-props='searchWhenInput:false' data-dojo-attach-event="onSearch:_onMyContentSearch" style="position:absolute;width:100%;top:0;"></div>
+				<div data-dojo-attach-point="mycontentItemTable" data-dojo-type="jimu/dijit/_ItemTable" data-dojo-props='types:${_itemTypes}'style="top:50px;"></div>
+			</div>
+		</div>
+
+		<div class="tab-content organization-tab" data-dojo-attach-point="organizationTabNode">
+			<div class="tab-content-main organization-tab-content-main">
+				<div data-dojo-attach-point="organizationSearch" data-dojo-type="jimu/dijit/Search" data-dojo-props='searchWhenInput:false' data-dojo-attach-event="onSearch:_onOrganizationSearch" style="position:absolute;width:100%;top:0;"></div>
+				<div data-dojo-attach-point="organizationItemTable" data-dojo-type="jimu/dijit/_ItemTable" data-dojo-props='types:${_itemTypes}' style="top:50px;"></div>
+			</div>
+		</div>
+
+		<div class="tab-content group-tab" data-dojo-attach-point="groupTabNode">
+			<div class="tab-content-main group-tab-content-main">
+				<div class="groups-section" style="position:absolute;width:100%;top:50px;" data-dojo-attach-point="groupsSection">
+					<span>${nls.groups}:</span>
+					<select class="groups-select" data-dojo-attach-point="groupsSelect">
+						<option value="nodata">${nls.noneGroups}</option>
+					</select>
+				</div>
+				<div data-dojo-attach-point="groupSearch" data-dojo-type="jimu/dijit/Search" data-dojo-props='searchWhenInput:false' data-dojo-attach-event="onSearch:_onGroupSearch" style="position:absolute;width:100%;top:0;"></div>
+				<div data-dojo-attach-point="groupItemTable" data-dojo-type="jimu/dijit/_ItemTable" data-dojo-props='types:${_itemTypes}' style="top:85px;"></div>
+			</div>
+		</div>
+
+		<div class="tab-content public-tab" data-dojo-attach-point="publicTabNode">
+			<div class="tab-content-main public-tab-content-main">
+				<div data-dojo-attach-point="publicSearch" data-dojo-type="jimu/dijit/Search" data-dojo-props='searchWhenInput:false' data-dojo-attach-event="onSearch:_onPublicSearch" style="position:absolute;width:100%;top:0;"></div>
+				<div class="public-search-radios">
+					<input data-dojo-attach-point="portalPublicRaido" type="radio" name="publicSearchRaido" style="margin-right:10px;" />
+					<span style="margin-right:28px;" data-dojo-attach-point="portalServer">Portal</span>
+					<input data-dojo-attach-point="onlinePublicRaido" type="radio" name="publicSearchRaido" style="margin-right:10px;" />
+					<span>ArcGIS.com</span>
+				</div>
+				<div data-dojo-attach-point="publicItemSection" class="public-item-section">
+					<div data-dojo-attach-point="publicPortalItemTable" data-dojo-type="jimu/dijit/_ItemTable" data-dojo-props='types:${_itemTypes}'></div>
+					<div data-dojo-attach-point="publicOnlineItemTable" data-dojo-type="jimu/dijit/_ItemTable" data-dojo-props='types:${_itemTypes}'></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="signin-section" data-dojo-attach-point="signinSection" style="display:none;">
+		<div class="signin-tip">${nls.signInTip}</div>
+		<!-- <div class="jimu-btn" data-dojo-attach-point="btnSignIn" style="margin-top:20px;padding:16px;" >${nls.signIn}</div> -->
+	</div>
+</div>
