@@ -138,13 +138,19 @@ body {
 }
 
 /*Controller*/
-.col-lg-12.center-block {
+.col-lg-12 {
     font-size: 1em;
-    padding: 4px;
+    padding: 8px 4px 4px 4px;
     border-style: outset;
+    background-color: rgba(0,0,0,.65);
 }
 
 /*Increment drop-down*/
+#increment-dropdown{
+    clear:both;
+}
+
+
 
 /*.col-md-8{
     width:69%
@@ -159,20 +165,29 @@ body {
     /*margin-bottom: 20px;*/
 }
 #attribute-table{
-    padding: 25px 20px 10px;
+    padding: 0px 20px 10px;
 }
 .icons {
     font-size: 23px;
-    margin: 5px 10px;
+    /*margin: 5px 10px;*/
     text-align: center;
+    margin:0;
+    padding-right: 0;
+}
+
+#controller .glyphicon{
+    border-style:outset;
 }
 
 .glyphicon {
-    padding: 3px 10px;
+    padding: 4px 10px;
+}
+#control-btns{
+    border-style:outset;
 }
 
 .esriSimpleSlider {
-    margin-top: 50px;
+    margin-top: 65px;
 }
 
 .btn-group.dropdown{
@@ -216,7 +231,7 @@ body {
 }
 
 #content-map{
-    padding-top: 30px;
+    padding-top: 15px;
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -234,9 +249,9 @@ body {
     background-color: #222 !important;
     position: absolute;
     max-width: 395px;
-    margin-right: 60px;
+    /*margin-right: 60px;*/
     top: 14px;
-    left: 14px;
+    right: 14px;
     opacity: .8;
     padding: 5px 9px 7px 7px;
     border-radius: 5px;
@@ -245,10 +260,17 @@ body {
     overflow: hidden;
 }
 .photo-caption{
-    position: absolute;
-    top: 14px;
-    left: 14px;
+    display:block;
+    position:absolute;
+    width:100%;
+    top:5%;
+    left:0;
+    z-index:2;
+    text-align:center;
+    font-weight:bold;
+    text-shadow:1px 1px #FFFFFF;
 }
+
 
 #date-button, #lane-button{
     /*background-color: #3FBF7F;*/
