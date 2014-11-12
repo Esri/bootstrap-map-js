@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="AhjungKim" content="">
 
     <title>KYTC PhotoLog2</title>
 
@@ -79,7 +78,6 @@
 </nav>
 
 
-
 <!-- Page Content -->
 <div id="inner-page" class="container">
     <!--Breadcrumb-->
@@ -100,7 +98,7 @@
                 <img class="img-responsive center-block" src="images/L.jpg" alt="">
             </a>
             <!--<caption>-->
-                <!--<a href="#">Left</a>-->
+            <!--<a href="#">Left</a>-->
             <!--</caption>-->
         </div>
         <div class="col-md-4 portfolio-item photo">
@@ -130,7 +128,6 @@
 
 
 
-            <ul>
                 <div id="increment-dropdown" class="btn-group dropdown">
                     <button type="button" class="btn btn-primary">Increment</button>
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -158,13 +155,13 @@
                 <a href="#"><span class="glyphicon glyphicon-fast-forward"></span></a>
                 <a href="#"><span class="glyphicon glyphicon-step-forward"></span></a>
                 <!--Direction: East, West-->
-                <li id = "direction-switch" class="btn-group btn-sm">
+                <div id="direction-switch" class="btn-group btn-sm">
                     <button type="button" class="btn btn-default">W</button>
                     <button type="button" class="btn btn-default">E</button>
-                </li>
+                </div>
 
                 <!--Collection date-->
-                <li class="btn-group dropdown">
+                <div class="btn-group dropdown">
                     <button id="date-button" type="button" class="btn btn-success">Collection Date</button>
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
@@ -177,10 +174,10 @@
                         <li>date</li>
                     </ul>
 
-                </li>
+                </div>
 
                 <!--Lane-->
-                <li class="btn-group dropdown">
+                <div class="btn-group dropdown">
                     <button id="lane-button" type="button" class="btn btn-success">Lane</button>
                     <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
@@ -194,14 +191,14 @@
                         <li>4</li>
                     </ul>
 
-                </li>
-            </ul>
+                </div>
+
 
         </div>
     </div>
 
     <!-- Projects Row -->
-    <div  id="content-map" class="row">
+    <div id="content-map" class="row">
         <div class="col-md-8">
             <div id="mapDiv">
 
@@ -209,21 +206,24 @@
             <div id="player-title-bar">
 
                 <div class="project-title">
-                    <h4><a href="http://transportation.ky.gov/Program-Management/Pages/2012-Highway-Plan.aspx" target="_top">Active Highway Plan</a></h4>
+                    <h4><a href="http://transportation.ky.gov/Program-Management/Pages/2012-Highway-Plan.aspx"
+                           target="_top">Active Highway Plan</a></h4>
                 </div>
                 <div class="project-byline">
-                    By <a href="http://transportation.ky.gov/Geographic-Information-Systems/Pages/GIS%20Main%20Page.aspx" target="_top">KYTC GIS</a>
+                    By <a
+                        href="http://transportation.ky.gov/Geographic-Information-Systems/Pages/GIS%20Main%20Page.aspx"
+                        target="_top">KYTC GIS</a>
                 </div>
 
             </div>
             <!--<div id="HomeButton"></div>
             <div id="LocateButton"></div>-->
             <!--<caption>-->
-                <!--<a href="#">Selected Route</a>-->
+            <!--<a href="#">Selected Route</a>-->
             <!--</caption>-->
         </div>
 
-        <div id="attribute-table" class="col-md-4 offset2" >
+        <div id="attribute-table" class="col-md-4 offset2">
 
             <!--&lt;!&ndash;Direction: East, West&ndash;&gt;
             <div class="btn-group btn-sm">
@@ -264,7 +264,7 @@
 
             </div>-->
             <a href="#">
-                <table class="table table-striped table-bordered">
+                <table class="table table-striped table-bordered table-condensed">
 
                     <tr>
                         <td>County</td>
@@ -332,7 +332,7 @@
         <div id="metadata" class="col-md-4"><h4>Metadata for Active Highway</h4>
             <hr/>
 
-            <span><p>
+            <span>
                 Description: Approved highway projects of 2014.<br/>
                 Data Owner: Someone (contact@ky.gov)<br/>
                 Coordinate System:<br/>
@@ -341,47 +341,49 @@
                 YMin: 3352139.9998731017<br/>
                 XMax: 5986733.163473498<br/>
                 YMax: 4298189.74202463<br/>
-                Spatial Reference: 102763  (3089)
-            </p></span>
+                Spatial Reference: 102763 (3089)
+            </span>
         </div>
 
         <div class="col-md-4"></div>
-        <div class="col-md-4">
+        <div class="container-fixed">
+            <div class="col-md-4">
             <h4 class="page-header">More Interactive Apps
                 <small>By KYTC GIS</small>
             </h4>
-            <div class="col-md-4 portfolio-item">
+            <div class="col-xs-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <img class="img-responsive" src="http://placehold.it/140x100" alt="">
                 </a>
             </div>
-            <div class="col-md-4 portfolio-item">
+            <div class="col-xs-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <img class="img-responsive" src="http://placehold.it/140x100" alt="">
                 </a>
             </div>
-            <div class="col-md-4 portfolio-item">
+            <div class="col-xs-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <img class="img-responsive" src="http://placehold.it/140x100" alt="">
                 </a>
             </div>
-            <div class="col-md-4 portfolio-item">
+            <div class="col-xs-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <img class="img-responsive" src="http://placehold.it/140x100" alt="">
                 </a>
             </div>
-            <div class="col-md-4 portfolio-item">
+            <div class="col-xs-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <img class="img-responsive" src="http://placehold.it/140x100" alt="">
                 </a>
             </div>
-            <div class="col-md-4 portfolio-item">
+            <div class="col-xs-4 portfolio-item">
                 <a href="#">
-                    <img class="img-responsive" src="http://placehold.it/750x450" alt="">
+                    <img class="img-responsive" src="http://placehold.it/140x100" alt="">
                 </a>
             </div>
         </div>
     </div>
+        </div>
     <!-- /.row -->
 
     <!-- Pagination -->
@@ -425,240 +427,73 @@
         <div id="footer" class="footer">
 
             <div id="footer-inner" class="inner">
-                <div id="footer_content"><div id="footer_content-inner"><div id="block-block-71" class="block block-block">
-                    <h2>Stay Connected</h2>
+                <div id="footer_content">
+                    <div id="footer_content-inner">
+                        <div id="block-block-71" class="block block-block">
+                            <h2>Stay Connected</h2>
 
-                    <div class="content">
-                        <div id="stay-connected">
+                            <div class="content">
+                                <div id="stay-connected">
 
-                            <table border="0" cellspacing="0" cellpadding="0">
+                                    <table>
 
-                                <tbody><tr class="first">
-                                    <td class="icon">
-                                        <a class="footer-connected-icon social-icon-sm social-icon-sm-twitter" href="https://twitter.com/KYTC">&nbsp;</a>
-                                    </td>
-                                    <td>
-                                        <a class="footer-connected-link footer-connected-link-twitter" href="https://twitter.com/KYTC">
-                                            Follow us on <span class="link-highlight">Twitter</span>
-                                        </a>
-                                    </td>
-                                </tr>
+                                        <tbody>
+                                        <tr class="first">
+                                            <td class="icon">
+                                                <a class="footer-connected-icon social-icon-sm social-icon-sm-twitter"
+                                                   href="https://twitter.com/KYTC">&nbsp;</a>
+                                            </td>
+                                            <td>
+                                                <a class="footer-connected-link footer-connected-link-twitter"
+                                                   href="https://twitter.com/KYTC">
+                                                    Follow us on <span class="link-highlight">Twitter</span>
+                                                </a>
+                                            </td>
+                                        </tr>
 
-                                <tr>
-                                    <td class="icon">
-                                        <a class="footer-connected-icon social-icon-sm social-icon-sm-rss" href="/rss.xml">&nbsp;</a>
-                                    </td>
-                                    <td>
-                                        <a class="footer-connected-link footer-connected-link-rss" href="/rss.xml">
-                                            <span class="link-highlight">RSS Feed</span><br>
-                                        </a>
-                                    </td>
-                                </tr>
+                                        <tr>
+                                            <td class="icon">
+                                                <a class="footer-connected-icon social-icon-sm social-icon-sm-rss"
+                                                   href="/rss.xml">&nbsp;</a>
+                                            </td>
+                                            <td>
+                                                <a class="footer-connected-link footer-connected-link-rss"
+                                                   href="/rss.xml">
+                                                    <span class="link-highlight">RSS Feed</span><br>
+                                                </a>
+                                            </td>
+                                        </tr>
 
-                                <tr class="last">
-                                    <td class="icon">
-                                        <a class="footer-connected-icon social-icon-sm social-icon-sm-newsletter" href="#">&nbsp;</a>
-                                    </td>
-                                    <td>
-                                        <a class="footer-connected-link footer-connected-link-newsletter" href="#">
-                                            <span class="link-highlight">Mailing List</span>
-                                        </a>
-                                    </td>
-                                </tr>
+                                        <tr class="last">
+                                            <td class="icon">
+                                                <a class="footer-connected-icon social-icon-sm social-icon-sm-newsletter"
+                                                   href="#">&nbsp;</a>
+                                            </td>
+                                            <td>
+                                                <a class="footer-connected-link footer-connected-link-newsletter"
+                                                   href="#">
+                                                    <span class="link-highlight">Mailing List</span>
+                                                </a>
+                                            </td>
+                                        </tr>
 
+                                        </tbody>
+                                    </table>
 
-
-                                </tbody></table>
-
-                        </div>  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                    <!--
-                                    <div id="block-views-Featured_Galleries-block_1" class="block block-views">
-                                        <h2>Featured Maps</h2>
-
-                                        <div class="content">
-                                            <div class="view view-Featured-Galleries view-id-Featured_Galleries view-display-id-block_1 view-main-image-float view-dom-id-4">
-
-
-
-                                                <div class="view-content">
-                                                    <div class="views-row views-row-1 views-row-odd views-row-first">
-
-                                                        <div class="views-field-field-main-image-fid">
-                                                            <div class="field-content"><div class="node-type-Gallery"><a href="/galleries/visualizing-highlights-october-2014" class="imagecache imagecache-thumbnail_small imagecache-linked imagecache-thumbnail_small_linked"><img src="http://www.visualizing.org/sites/default/files/imagecache/thumbnail_small/images/galleries/vg_highlightsoctober2014.png" alt="" title="" class="imagecache imagecache-thumbnail_small" width="50" height="50"></a></div></div>
-                                                        </div>
-
-                                                        <div class="views-field-title">
-                                                            <span class="field-content"><a href="/galleries/visualizing-highlights-october-2014">Visualizing Highlights: October 2014</a></span>
-                                                        </div>
-
-                                                        <div class="views-field-name">
-                                                            <label class="views-label-name">
-                                                                Curated by      </label>
-                                                            <span class="field-content"><a href="/users/visualizing" title="View user profile.">Visualizing</a></span>
-                                                        </div>
-                                                    </div>
-                                                    <div class="views-row views-row-2 views-row-even views-row-last">
-
-                                                        <div class="views-field-field-main-image-fid">
-                                                            <div class="field-content"><div class="node-type-Gallery"><a href="/galleries/news-week-103014" class="imagecache imagecache-thumbnail_small imagecache-linked imagecache-thumbnail_small_linked"><img src="http://www.visualizing.org/sites/default/files/imagecache/thumbnail_small/images/galleries/vg_inthenews103014.png" alt="" title="" class="imagecache imagecache-thumbnail_small" width="50" height="50"></a></div></div>
-                                                        </div>
-
-                                                        <div class="views-field-title">
-                                                            <span class="field-content"><a href="/galleries/news-week-103014">In the News: Week of 10/30/14</a></span>
-                                                        </div>
-
-                                                        <div class="views-field-name">
-                                                            <label class="views-label-name">
-                                                                Curated by      </label>
-                                                            <span class="field-content"><a href="/users/visualizing" title="View user profile.">Visualizing</a></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-
-
-
-
-
-                                            </div>   </div>
-                                    </div>
-                    -->
-                    <!--
-                                    <div id="block-block-81" class="block block-block">
-                                        <h2>Explore Visualizations</h2>
-
-                                        <div class="content">
-                                            <div class="view view-nodequeue-1 view-id-nodequeue_1 view-display-id-block_1 view-grid-tight view-col-4 view-dom-id-5">
-
-
-
-                                                <div class="view-content">
-                                                    <table class="views-view-grid col-4">
-                                                        <tbody>
-                                                        <tr class="row-1 row-first row-last">
-                                                            <td class="col-1 col-first">
-
-                                                                <div class="views-field-field-main-image-fid">
-                                                                    <div class="field-content"><div class="roll-info"><a href="/galleries/visualizing-highlights-october-2014" class="imagecache imagecache-thumbnail_small imagecache-linked imagecache-thumbnail_small_linked"><img src="http://www.visualizing.org/sites/default/files/imagecache/thumbnail_small/images/galleries/vg_highlightsoctober2014.png" alt="" title="" class="imagecache imagecache-thumbnail_small" width="50" height="50"></a><div class="roll-info-active"><a href="/galleries/visualizing-highlights-october-2014">Visualizing Highlights: October 2014</a><br><a href="/users/visualizing" title="View user profile.">Visualizing</a></div></div></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="col-2">
-
-                                                                <div class="views-field-field-main-image-fid">
-                                                                    <div class="field-content"><div class="roll-info"><a href="/visualizations/mapping-climate-communication-no2-network-actors" class="imagecache imagecache-thumbnail_small imagecache-linked imagecache-thumbnail_small_linked"><img src="http://www.visualizing.org/sites/default/files/imagecache/thumbnail_small/images/mapping-climate-communication-_-network-of-actors_15_oct2014-l-px.jpg" alt="" title="" class="imagecache imagecache-thumbnail_small" width="50" height="50"></a><div class="roll-info-active" style="display: none;"><a href="/visualizations/mapping-climate-communication-no2-network-actors">Mapping Climate Communication: No.2 Network of Actors</a><br><a href="/users/ecolabs" title="View user profile.">ecolabs</a></div></div></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="col-3">
-
-                                                                <div class="views-field-field-main-image-fid">
-                                                                    <div class="field-content"><div class="roll-info"><a href="/visualizations/golf-paths" class="imagecache imagecache-thumbnail_small imagecache-linked imagecache-thumbnail_small_linked"><img src="http://www.visualizing.org/sites/default/files/imagecache/thumbnail_small/images/screen_shot_2014-10-07_at_22.32.13.png" alt="" title="" class="imagecache imagecache-thumbnail_small" width="50" height="50"></a><div class="roll-info-active" style="display: none;"><a href="/visualizations/golf-paths">Golf Paths</a><br><a href="/users/adam-pearce" title="View user profile.">Adam Pearce</a></div></div></div>
-                                                                </div>
-                                                            </td>
-                                                            <td class="col-4 col-last">
-
-                                                                <div class="views-field-field-main-image-fid">
-                                                                    <div class="field-content"><div class="roll-info"><a href="/visualizations/kalevala-book-visualisation" class="imagecache imagecache-thumbnail_small imagecache-linked imagecache-thumbnail_small_linked"><img src="http://www.visualizing.org/sites/default/files/imagecache/thumbnail_small/images/kalevala_thumbnail_0.jpg" alt="" title="" class="imagecache imagecache-thumbnail_small" width="50" height="50"></a><div class="roll-info-active" style="display: none;"><a href="/visualizations/kalevala-book-visualisation">The Kalevala Book Visualisation</a><br><a href="/users/georgia-panagiotidou" title="View user profile.">Georgia Panagiotidou</a></div></div></div>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-
-
-
-
-
-
-                                            </div> <div class="view view-Tag-List view-id-Tag_List view-display-id-block_1 footer-tag-list view-dom-id-3 views-processed">
-
-
-
-                                            <div class="view-content">
-                                                <table class="views-view-grid col-2">
-                                                    <tbody>
-                                                    <tr class="row-1 row-first">
-                                                        <td class="col-1 col-first">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/109">Environment</a></span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-2 col-last">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/371">Economy</a></span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="row-2">
-                                                        <td class="col-1 col-first">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/426">Health</a></span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-2 col-last">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/108">Energy</a></span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="row-3">
-                                                        <td class="col-1 col-first">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/3906">Cities</a></span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-2 col-last">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/1821">Society</a></span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <tr class="row-4 row-last">
-                                                        <td class="col-1 col-first">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/105">Demographics</a></span>
-                                                            </div>
-                                                        </td>
-                                                        <td class="col-2 col-last">
-
-                                                            <div class="views-field-name">
-                                                                <span class="field-content"><a href="/visualizations/1831">Challenges</a></span>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-
-
-
-
-
-
-                                        </div>   </div>
-                                    </div>
-                    -->
-                </div>
-                </div>	</div> <!-- /footer-inner -->
-
+            </div>
+            <!-- /footer-inner -->
         </div>
     </div>
     <!-- /.row -->
 </footer>
 
 
-
-
 <!-- /.container -->
-
 
 <script type="text/javascript">
     var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));

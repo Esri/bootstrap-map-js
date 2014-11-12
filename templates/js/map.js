@@ -26,7 +26,7 @@ require([
              OverviewMap, Measurement, Popup) {
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create("mapDiv", {
-            basemap: "gray",
+            basemap: "streets",
             center: [-85.724, 37.593],
             zoom: 7,
             scrollWheelZoom: true,
@@ -40,31 +40,34 @@ require([
          map.addLayer(KYBase);*/
 
         // Add overview map
-        var overviewMapDijit = new esri.dijit.OverviewMap({
+        var overviewMapDijit;
+        overviewMapDijit = new esri.dijit.OverviewMap({
             map: map,
+
             attachTo: "bottom-right",
             height: 150,
             width: 200,
-            visible: false,
+            visible: true,
             opacity: 0.4,
             expandFactor: 3.0
-        });
 
+        });
         overviewMapDijit.startup();
+
 
 //        var measurement = new esri.dijit.Measurement({
 //            map:map
 //        },dojo.byId("measurement"));
 //        measurement.startup();
 
-        var home = new esri.dijit.HomeButton({
+        var home = new HomeButton({
             map: map
         }, "HomeButton");
         home.startup();
 
 
         // Add locate button
-        var geoLocate = new esri.dijit.LocateButton({
+        var geoLocate = new LocateButton({
             map: map,
             scale: null
         }, "LocateButton");
