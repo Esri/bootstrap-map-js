@@ -137,8 +137,14 @@ body {
     align-content: center;
 }
 
+.col-sm-4.portfolio-item.photo {
+    padding: 10px 0 0;
+    margin: 0 0 0 0;
+    align-content: center;
+}
+
 /*Controller*/
-.col-lg-12 {
+.col-sm-12 {
     font-size: 1em;
     padding: 8px 4px 4px 4px;
     border-style: outset;
@@ -158,7 +164,7 @@ body {
 .col-md-4.attribute{
     width:30%
 }*/
-.col-md-8 {
+.col-sm-8 {
     padding: 10px;
     /*margin-right: 1px;*/
     border: thin solid #d3d3d3;
@@ -200,29 +206,29 @@ body {
 #mapDiv{
     padding-left:55px;
 }
-.col-md-8 > #mapDiv {
+.col-sm-8 > #mapDiv {
     height: 421px;
 }
 
-.col-md-8 > #HomeButton {
+.col-sm-8 > #HomeButton {
     top: 100px;
     right: 16px;
     z-index: 50;
 }
 
-.col-md-8 > #LocateButton {
+.col-sm-8 > #LocateButton {
     top: 135px;
     right: 16px;
     z-index: 50;
 }
 
-.col-md-8 > #LocateButton {
+.col-sm-8 > #LocateButton {
     top: 135px;
     right: 16px;
     z-index: 50;
 }
 
-.col-md-8 > .esriSimpleSlider div {
+.col-sm-8 > .esriSimpleSlider div {
     top: 135px;
     right: 16px;
     z-index: 50;
@@ -233,13 +239,10 @@ body {
     padding-right: 5px;
 }
 
-#content-map{
+#content-map {
     padding-top: 15px;
     padding-left: 5px;
     padding-right: 5px;
-}
-#content-extra.row{
-    padding-top:60px;
 }
 
 #mapDiv{
@@ -247,7 +250,7 @@ body {
     margin:0;
     height:415px;
  }
-#player-title-bar {
+.player-title-bar {
     color: #ffffff;
     background-color: #222 !important;
     position: absolute;
@@ -262,7 +265,7 @@ body {
     -webkit-border-radius: 5px;
     overflow: hidden;
 }
-.photo-caption{
+.photo-figcaption{
     display:block;
     position:absolute;
     width:100%;
@@ -298,13 +301,43 @@ clear: both;
 padding-bottom: 15px;
 }
 
+.col-xs-4 a{
+    font-size:0.8em;
+    padding-bottom: 0;
+}
+
+@media  (max-width: 768px){
+    .col-xs-4 a{
+        font-size:0.7em;
+    }
+}
+
+.portfolio-item{
+    margin-bottom: 0;
+}
+
 footer{
     background-color: #555;
     color: #999;
     padding: 60px 25px;
     /*margin-top: -100px;*/
     margin-bottom: 0;
+    text-align: center;
 }
+
+footer> .container .center-block{
+    text-align:center;
+}
+
+footer ul li{
+    display: inline;
+    padding-right:5px;
+}
+
+#KystateLogoImage{
+    padding: 10px 0
+}
+
 
 
 /*!

@@ -45,8 +45,8 @@ require([
             map: map,
 
             attachTo: "bottom-right",
-            height: 150,
-            width: 200,
+            height: 120,
+            width: 144,
             visible: true,
             opacity: 0.4,
             expandFactor: 3.0
