@@ -188,9 +188,9 @@ body {
 .glyphicon {
     padding: 4px 10px;
 }
-#direction-switch{
+/*#direction-switch{
     padding-left:60px;
-}
+}*/
 #control-btns{
     border-style:outset;
 }
@@ -250,6 +250,11 @@ body {
     margin:0;
     height:415px;
  }
+#mapDiv.brp {
+    height: 200px;
+    /*border-style: solid;*/
+    /*border-color:gray;*/
+}
 .player-title-bar {
     color: #ffffff;
     background-color: #222 !important;

@@ -47,7 +47,7 @@ require([
             attachTo: "bottom-right",
             height: 120,
             width: 144,
-            visible: true,
+            visible: false,
             opacity: 0.4,
             expandFactor: 3.0
 
