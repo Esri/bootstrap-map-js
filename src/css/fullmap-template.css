@@ -9,11 +9,12 @@ body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse, .nav
 
 body {
     margin-bottom: 0;
+    padding-top: 0;
     font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica-,Arial,sans-serif;
     background: url('http://www.visualizing.org/sites/all/themes/visualizing/images/stripe-bkg.png') repeat;
 }
 
-.im-content{
+.content {
     overflow: hidden;
     position: absolute;
     top: 52px;
