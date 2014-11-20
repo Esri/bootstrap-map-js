@@ -8,9 +8,17 @@ body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse, .nav
 }
 
 body {
-    padding-top: 0;
+    margin-bottom: 0;
     font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica-,Arial,sans-serif;
     background: url('http://www.visualizing.org/sites/all/themes/visualizing/images/stripe-bkg.png') repeat;
+}
+
+.im-content{
+    overflow: hidden;
+    position: absolute;
+    top: 52px;
+    bottom: 0;
+    width: 100%;
 }
 
 .navbar-inverse{
@@ -47,10 +55,31 @@ body {
     margin:0;
 }
 
-#query-icon{
+#tools-icon{
+    font-size: 24px;
     position: absolute;
-    bottom: 5px;
-    right: 6px;
+    top: 75px;
+    left: 16px;
+    color: white;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 5px;
+    opacity: 0.8;
+}
+#accordion {
+    display:block;
+    position: absolute;
+    top:0;
+    left:0;
+    float:left;
+    width: 250px;
+    height: 100%;
+    background: white;
+    overflow: auto;
+}
+.scrollable-menu {
+    height: auto;
+    max-height: 200px;
+    overflow-x: hidden;
 }
 
 #HomeButton {
@@ -104,11 +133,11 @@ body {
     font-size: 30px;
 }
 
-.bs-docs-footer {
+/*.bs-docs-footer {
     background-color: #f1f1f1;
     padding-top: 40px;
     padding-bottom: 40px;
-    /*margin-top: 100px;*/
+    *//*margin-top: 100px;*//*
     color: #777;
     text-align: center;
     border-top: 1px solid #e5e5e5;
@@ -122,7 +151,7 @@ body {
 
 .bs-docs-footer-links li a {
     color: #003366;
-}
+}*/
 
 .simpleGeocoder .esriGeocoder {
     margin-bottom: 10px;
@@ -242,9 +271,6 @@ body {
     padding: 2px;
 }
 
-#mapDiv{
-    padding-left:55px;
-}
 .col-sm-8 > #mapDiv {
     height: 421px;
 }
@@ -384,132 +410,3 @@ footer ul li{
 
 
 
-/*!
- * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
-
-/* Toggle Styles */
-
-#wrapper {
-    /*padding-left:55px;*/
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled {
-    padding-left: 250px;
-}
-
-#sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #000;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-}
-
-#page-content-wrapper {
-    width: 100%;
-    padding: 15px;
-}
-
-#wrapper.toggled #page-content-wrapper {
-    position: absolute;
-    margin-right: -250px;
-}
-
-/* Sidebar Styles */
-
-.sidebar-nav {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.sidebar-nav li {
-    text-indent: 20px;
-    line-height: 40px;
-}
-
-.sidebar-nav li a {
-    display: block;
-    text-decoration: none;
-    color: #999999;
-}
-
-.sidebar-nav li a:hover {
-    text-decoration: none;
-    color: #fff;
-    background: rgba(255,255,255,0.2);
-}
-
-.sidebar-nav li a:active,
-.sidebar-nav li a:focus {
-    text-decoration: none;
-}
-
-.sidebar-nav > .sidebar-brand {
-    height: 65px;
-    font-size: 18px;
-    line-height: 60px;
-}
-
-.sidebar-nav > .sidebar-brand a {
-    color: #999999;
-}
-
-.sidebar-nav > .sidebar-brand a:hover {
-    color: #fff;
-    background: none;
-}
-
-
-.mag {
-    width:200px;
-    margin: 0 auto;
-    float: none;
-}
-
-.mag img {
-    max-width: 100%;
-}
-
-
-
-.magnify {
-    position: relative;
-    cursor: none
-}
-
-.magnify-large {
-    position: absolute;
-    display: none;
-    width: 175px;
-    height: 175px;
-
-    -webkit-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-    -moz-box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 0 0 7px 7px rgba(0, 0, 0, 0.25), inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
-
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%
-}

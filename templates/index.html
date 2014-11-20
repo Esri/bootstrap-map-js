@@ -11,7 +11,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=7,IE=9" />
     -->
 
-
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="../../bootstrap_v3/docs-assets/ico/favicon.png">
@@ -29,7 +28,8 @@
     <link rel="stylesheet" type="text/css" href="../src/css/bootstrapmap.css">
     <link rel="stylesheet" type="text/css" href="../src/css/fullmap-template.css">
     <link rel="stylesheet" type="text/css" href="../src/css/style.css">
-
+    <!--Font Awesome CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -84,604 +84,20 @@
                 </li>
                 <li><a href="#about">About</a>
                 </li>
-                <li><a href="#contact">Contact</a>
-                </li>
                 <li>
                     <div id="search">
                     </div>
                 </li>
             </ul>
-
         </div>
         <!--/.nav-collapse -->
     </div>
 </div>
 
+<div class="im-content">
+
 <!-- Map-related divs -->
 
-
-<div id="wrapper">
-    <!--&lt;!&ndash; Sidebar &ndash;&gt;
-    <div class="jimu-widget-sidebar-controller jimu-main-bgcolor jimu-widget"
-         id="themes/TabTheme/widgets/SidebarController/Widget_3"
-         widgetid="themes/TabTheme/widgets/SidebarController/Widget_3"
-         style="left: 0px; top: 44px; bottom: 24px; position: absolute; width: 55px;">
-        <div class="min-pane" data-dojo-attach-point="minStateNode" style="display: block;">
-
-            <div title="Legend" class="title-node" settingid="widgets/Legend/Widget.js" i="0">
-                <div class="tab-indicator" style="width: 0px;"></div>
-                <img src="../widgets/Legend/images/icon.png"></div>
-            <div title="LayerList" class="title-node" settingid="widgets/LayerList/Widget_11" i="1">
-                <div class="tab-indicator" style="width: 0px;"></div>
-                <img src="../widgets/LayerList/images/icon.png"></div>
-            <div title="Measurement" class="title-node" settingid="widgets/Measurement/Widget_12" i="2">
-                <div class="tab-indicator" style="width: 0px;"></div>
-                <img src="../widgets/Measurement/images/icon.png"></div>
-            <div title="Search" class="title-node" settingid="widgets/Query/Widget_13" i="3">
-                <div class="tab-indicator" style="width: 0px;"></div>
-                <img src="../widgets/Query/images/icon.png"></div>
-        </div>
-        <div class="max-pane" data-dojo-attach-point="maxStateNode" style="display: none;">
-            <div class="title-list" data-dojo-attach-point="titleListNode">
-                <div title="Legend" class="title-node" settingid="widgets/Legend/Widget_8" i="0">
-                    <div class="tab-indicator" style="width: 0px;"></div>
-                    <img src="../widgets/Legend/images/icon.png"></div>
-                <div title="LayerList" class="title-node" settingid="widgets/LayerList/Widget_11" i="1">
-                    <div class="tab-indicator" style="width: 0px;"></div>
-                    <img src="../widgets/LayerList/images/icon.png"></div>
-                <div title="Measurement" class="title-node" settingid="widgets/Measurement/Widget_12" i="2">
-                    <div class="tab-indicator" style="width: 0px;"></div>
-                    <img src="../widgets/Measurement/images/icon.png"></div>
-                <div title="Search" class="title-node" settingid="widgets/Query/Widget_13" i="3">
-                    <div class="tab-indicator" style="width: 0px;"></div>
-                    <img src="../widgets/Query/images/icon.png"></div>
-            </div>
-            <div class="content-list" data-dojo-attach-point="contentListNode">
-                <div class="content-node" style="display: block;">
-                    <div class="content-title-bg" style="background: rgb(236, 118, 85);"></div>
-                    <div class="content-title"></div>
-                    <div class="content-pane">
-                        <div class="jimu-widget-panel jimu-tab-panel jimu-main-bgcolor"
-                             id="widgets/Legend/Widget_8_panel" widgetid="widgets/Legend/Widget_8_panel"
-                             style="opacity: 1; top: 0px; left: 0px; bottom: 0px; display: block; right: 0px;">
-                            <div class="jimu-widget-frame tab-widget-frame" id="dijit__TemplatedMixin_2"
-                                 widgetid="dijit__TemplatedMixin_2" style="height: 100%;">
-                                <div class="title" data-dojo-attach-point="titleNode">
-                                    <div class="title-label" data-dojo-attach-point="titleLabelNode" title="Legend">
-                                        Legend
-                                    </div>
-                                    <div class="title-angle"></div>
-                                </div>
-                                <div class="jimu-container" data-dojo-attach-point="containerNode"
-                                     style="height: 750px;">
-                                    <div class="jimu-widget-legend jimu-widget" id="widgets/Legend/Widget_8"
-                                         widgetid="widgets/Legend/Widget_8">
-                                        <div data-dojo-attach-point="legendDiv" id="esri_dijit_Legend_0"
-                                             widgetid="esri_dijit_Legend_0" style="position: relative;">
-                                            <div id="esri_dijit_Legend_0_KAZC_Permit_7558" style="display: block;"
-                                                 class="esriLegendService">
-                                                <table width="95%">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td align="left"><span class="esriLegendServiceLabel">Proposed Structure</span>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div id="esri_dijit_Legend_0_KAZC_Permit_7558_0" style="display: block;"
-                                                     class="">
-                                                    <table width="95%" class="esriLegendLayerLabel">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td align="left"></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table cellpadding="0" cellspacing="0" width="95%"
-                                                           class="esriLegendLayer">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width: 30px; height: 20px; opacity: 1;">
-                                                                    <svg overflow="hidden" width="30" height="20">
-                                                                        <defs></defs>
-                                                                        <image fill-opacity="0" stroke="none"
-                                                                               stroke-opacity="0" stroke-width="1"
-                                                                               stroke-linecap="butt"
-                                                                               stroke-linejoin="miter"
-                                                                               stroke-miterlimit="4" x="-10" y="-10"
-                                                                               width="20" height="20"
-                                                                               preserveAspectRatio="none"
-                                                                               xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                               xlink:href="data:image/png;base64,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"
-                                                                               transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,10.00000000)"></image>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left"></td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div id="esri_dijit_Legend_0_KAZC_Permit_9728" style="display: none;"
-                                                 class="esriLegendService">
-                                                <table width="95%">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td align="left"><span class="esriLegendServiceLabel">Existing Structure</span>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div id="esri_dijit_Legend_0_KAZC_Permit_9728_1" style="display:none;"
-                                                     class="">
-                                                    <table width="95%" class="esriLegendLayerLabel">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td align="left"></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div id="esri_dijit_Legend_0_KAZC_Permit_6367" style="display: block;"
-                                                 class="esriLegendService">
-                                                <table width="95%">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td align="left"><span class="esriLegendServiceLabel">Airport Reference Point</span>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div id="esri_dijit_Legend_0_KAZC_Permit_6367_2" style="display: block;"
-                                                     class="">
-                                                    <table width="95%" class="esriLegendLayerLabel">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td align="left"></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table cellpadding="0" cellspacing="0" width="95%"
-                                                           class="esriLegendLayer">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width: 30px; height: 1px; opacity: 1;">
-                                                                    <svg overflow="hidden" width="30" height="1">
-                                                                        <defs></defs>
-                                                                        <image fill-opacity="0" stroke="none"
-                                                                               stroke-opacity="0" stroke-width="1"
-                                                                               stroke-linecap="butt"
-                                                                               stroke-linejoin="miter"
-                                                                               stroke-miterlimit="4" x="-1" y="-1"
-                                                                               width="1" height="1"
-                                                                               preserveAspectRatio="none"
-                                                                               xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                               xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAAXNSR0IB2cksfwAAAAlwSFlzAAAOxAAADsQBlSsOGwAAAKpJREFUGJV1yq0KwlAcQPFz/1wVtM1k9hkswl7AhWEQHFhWTD6A1S74AjbD8ANEYcknkIHNZ5hlA2FB4W6zWBT91XM0b1Y/6KRGbIQMI0fCwQ1Aw0lwk2Vq8KGEApB8gRP4hN5G4yQTCnw+1RG1wg0iDYz4rYphqBGsPwM1UU2NcKGg/Wt4iop0S8pZXKge0PjqZw73nY733tVy1nYqzKHsAhmw5VGZwjh/AYdXMMonjPAhAAAAAElFTkSuQmCC"
-                                                                               transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.50000000,1.00000000)"></image>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left"></td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div id="esri_dijit_Legend_0_KAZC_Permit_7570" style="display: block;"
-                                                 class="esriLegendService">
-                                                <table width="95%">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td align="left"><span class="esriLegendServiceLabel">Nautical Mile (602 KAR 50:030)</span>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div id="esri_dijit_Legend_0_KAZC_Permit_7570_3" style="display: block;"
-                                                     class="">
-                                                    <table width="95%" class="esriLegendLayerLabel">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td align="left"></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table cellpadding="0" cellspacing="0" width="95%"
-                                                           class="esriLegendLayer">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(0, 0, 0)" fill-opacity="0"
-                                                                              stroke="rgb(255, 255, 0)"
-                                                                              stroke-opacity="1"
-                                                                              stroke-width="0.5333333333333333"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left"></td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div id="esri_dijit_Legend_0_KAZC_Permit_6650" style="display: block;"
-                                                 class="esriLegendService">
-                                                <table width="95%">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td align="left"><span
-                                                                class="esriLegendServiceLabel">Part 77</span></td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div id="esri_dijit_Legend_0_KAZC_Permit_6650_4" style="display: block;"
-                                                     class="">
-                                                    <table width="95%" class="esriLegendLayerLabel">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td align="left"></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table cellpadding="0" cellspacing="0" width="95%"
-                                                           class="esriLegendLayer">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(252, 225, 56)"
-                                                                              fill-opacity="0.37145098039215685"
-                                                                              stroke="rgb(128, 128, 128)"
-                                                                              stroke-opacity="0.74" stroke-width="1"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left">Approach Surface</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(255, 247, 153)"
-                                                                              fill-opacity="0.37145098039215685"
-                                                                              stroke="rgb(128, 128, 128)"
-                                                                              stroke-opacity="0.74" stroke-width="1"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left">Clear Zone Surface</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(252, 210, 126)"
-                                                                              fill-opacity="0.37145098039215685"
-                                                                              stroke="rgb(128, 128, 128)"
-                                                                              stroke-opacity="0.74" stroke-width="1"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left">Conical Surface</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(241, 152, 60)"
-                                                                              fill-opacity="0.37145098039215685"
-                                                                              stroke="rgb(128, 128, 128)"
-                                                                              stroke-opacity="0.74" stroke-width="1"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left">Horizontal Surface</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(165, 83, 183)"
-                                                                              fill-opacity="0.37145098039215685"
-                                                                              stroke="rgb(128, 128, 128)"
-                                                                              stroke-opacity="0.74" stroke-width="1"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left">Outer Horizontal Surface</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(177, 169, 208)"
-                                                                              fill-opacity="0.37145098039215685"
-                                                                              stroke="rgb(128, 128, 128)"
-                                                                              stroke-opacity="0.74" stroke-width="1"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left">Primary Surface</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(110, 207, 252)"
-                                                                              fill-opacity="0.37145098039215685"
-                                                                              stroke="rgb(128, 128, 128)"
-                                                                              stroke-opacity="0.74" stroke-width="1"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left">Transitional Surface</td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div id="esri_dijit_Legend_0_Overview_1291" style="display: block;"
-                                                 class="esriLegendService">
-                                                <table width="95%">
-                                                    <tbody>
-                                                    <tr>
-                                                        <td align="left"><span class="esriLegendServiceLabel">County Boundary</span>
-                                                        </td>
-                                                    </tr>
-                                                    </tbody>
-                                                </table>
-                                                <div id="esri_dijit_Legend_0_Overview_1291_5" style="display: block;"
-                                                     class="">
-                                                    <table width="95%" class="esriLegendLayerLabel">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td align="left"></td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                    <table cellpadding="0" cellspacing="0" width="95%"
-                                                           class="esriLegendLayer">
-                                                        <tbody>
-                                                        <tr>
-                                                            <td width="35" align="center">
-                                                                <div style="width:30px;height:30px;">
-                                                                    <svg overflow="hidden" width="30" height="30">
-                                                                        <defs></defs>
-                                                                        <path fill="rgb(108, 151, 203)" fill-opacity="0"
-                                                                              stroke="rgb(152, 251, 152)"
-                                                                              stroke-opacity="1" stroke-width="2"
-                                                                              stroke-linecap="butt"
-                                                                              stroke-linejoin="miter"
-                                                                              stroke-miterlimit="4"
-                                                                              path="M -10,-10 L 10,0 L 10,10 L -10,10 L -10,-10 E"
-                                                                              d="M-10-10L 10 0L 10 10L-10 10L-10-10"
-                                                                              fill-rule="evenodd"
-                                                                              stroke-dasharray="none"
-                                                                              dojoGfxStrokeStyle="solid"
-                                                                              transform="matrix(1.00000000,0.00000000,0.00000000,1.00000000,15.00000000,15.00000000)"></path>
-                                                                    </svg>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <table width="95%">
-                                                                    <tbody>
-                                                                    <tr>
-                                                                        <td align="left"></td>
-                                                                    </tr>
-                                                                    </tbody>
-                                                                </table>
-                                                            </td>
-                                                        </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                            <div id="esri_dijit_Legend_0_msg" style="display: none;">No legend</div>
-                                        </div>
-                                        <div style="display:none" data-dojo-attach-point="removedDiv"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-node" style="display: none;">
-                    <div class="content-title-bg"></div>
-                    <div class="content-title"></div>
-                    <div class="content-pane"></div>
-                </div>
-                <div class="content-node" style="display: none;">
-                    <div class="content-title-bg"></div>
-                    <div class="content-title"></div>
-                    <div class="content-pane"></div>
-                </div>
-                <div class="content-node" style="display: none;">
-                    <div class="content-title-bg"></div>
-                    <div class="content-title"></div>
-                    <div class="content-pane"></div>
-                </div>
-            </div>
-        </div>
-        <div class="other-group-pane" data-dojo-attach-point="otherGroupNode"></div>
-
-        <div class="tab-resizer jimu-widget-bg" data-dojo-attach-point="resizerNode">
-            <div class="action-node" data-dojo-attach-event="click:_doResize" data-dojo-attach-point="doResizeNode">
-                <div class="right-arrow"></div>
-            </div>
-        </div>
-    </div>
-    <div class="jimu-widget-footer jimu-main-bgcolor jimu-widget" id="themes/TabTheme/widgets/Footer/Widget_2"
-         widgetid="themes/TabTheme/widgets/Footer/Widget_2"
-         style="left: 0px; right: 0px; bottom: 0px; height: 24px; position: absolute;">
-        <div class="footer-widget-copyright">All Rights Reserved Esri © 2013</div>
-    </div>-->
 
     <div id="mapDiv"></div>
     <div id="camera-icon" class="icons" data-toggle="tooltip" data-placement="left" title="Go to PhotoLog">
@@ -690,24 +106,152 @@
     </div>
     <div id="HomeButton"></div>
     <div id="LocateButton"></div>
+    <div id="tools-icon" class="icons" data-toggle="tooltip" data-placement="right" title="Open Tool Tabs">
+        <span class="glyphicon glyphicon-briefcase"></span>
+    </div>
 
-</div>
 
-<!-- Footer
-================================================== -->
-<!--<footer class="bs-docs-footer" role="contentinfo">-->
-<!--    <div class="container">-->
-<!--        <ul class="bs-docs-footer-links muted">-->
-<!--            <li><a href="#">Policies</a></li>-->
-<!--            <li><a href="#">Security</a></li>-->
-<!--            <li><a href="#">Disclaimer</a></li>-->
-<!--            <li><a href="#">Accessibility</a></li>-->
-<!--        </ul>-->
-<!--        <image src="images/KYTClogo.png"></image>-->
-<!--    </div>-->
-<!--</footer>-->
-<!--
--->
+
+    <!--Search Accordion-->
+    <div id="accordion" class="panel-group">
+    <!--Search by road name-->
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Road Name</a>
+            </h4>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-expanded="true">
+                        County
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-expanded="true">
+                        Route Prefix
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown" aria-expanded="true">
+                        Route Number
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <hr/>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Route Name">
+                </div>
+                <hr/>
+                <div class="btn-group">
+                    <button type="button" class="btn btn-primary">Locate</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">City</a>
+            </h4>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Action</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">County</a>
+            </h4>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+                <!-- Split button -->
+                <div class="btn-group">
+                    <button type="button" class="btn btn-danger">Action</button>
+                    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu scrollable-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
 
 
 <script type="text/javascript">
@@ -724,13 +268,16 @@
 <script src="http://js.arcgis.com/3.11"></script>
 <script src="js/map.js"></script>
 
-<!-- Bootstrap core JavaScript
-================================================== -->
-<!-- Placed at the end of the document so the pages load faster -->
-<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<!-- jQuery Version 1.11.0 -->
+<script src="../src/js/jquery-1.11.0.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../dist/js/bootstrap.min.js"></script>
 
 
+
+
+</div>
 </body>
 </html>
 
