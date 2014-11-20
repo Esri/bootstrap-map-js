@@ -4,8 +4,8 @@ A light-weight extension for building responsive web mapping apps with the [ArcG
 
 Photo Log displays road photos in driving view for seleted routes and attributes of each photo. 
 
-[Interactive Map](http://test1.maps.kytc.ky.gov/bootstrap-map-js/templates/index.html)
+[Interactive Map](http://test1.maps.kytc.ky.gov/bootstrap-map-js/index.html)
 
-[PhotoLog] (http://test1.maps.kytc.ky.gov/bootstrap-map-js/templates/photolog.html)
+[PhotoLog] (http://test1.maps.kytc.ky.gov/bootstrap-map-js/photolog.html)
 
 
