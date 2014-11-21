@@ -153,14 +153,14 @@ require([
         {
             if(timedelay == 5)
             {
-                $('#player-title-bar').fadeOut();
+                $('#title-bar').fadeOut();
                 timedelay = 1;
             }
             timedelay = timedelay+1;
         }
 
         $(document).mousemove(function() {
-            $('#player-title-bar').fadeIn();
+            $('#title-bar').fadeIn();
             timedelay = 1;
             clearInterval(_delay);
             _delay = setInterval(delayCheck, 500);
@@ -173,6 +173,5 @@ require([
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
-
 
     });
