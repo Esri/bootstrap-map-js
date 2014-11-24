@@ -101,25 +101,70 @@
 
 <div class="content">
 
-    <!-- Map-related divs -->
+      <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                      <h4 class="modal-title" id="myModalLabel">KYTC Interactive Maps</h4>
+                  </div>
+                  <div class="modal-body">
+                      <ul class="nav nav-tabs">
+                          <li class="active"><a data-toggle="tab" href="#how-it-works">How it works</a></li>
+                          <li><a data-toggle="tab" href="#known-issues">Known issues</a></li>
+                          <li><a data-toggle="tab" href="#about">About</a></li>
+                          <li><a data-toggle="tab" href="#disclaimer">Disclaimer</a></li>
+                      </ul>
+                      <div class="tab-content">
+                          <div id="how-it-works" class="tab-pane fade in active">
+                              <h3>This is how it all works.</h3>
+                              <img class="img-responsive" src=images/andrew-cooks.jpg alt="">
+                          </div>
+                          <div id="known-issues" class="tab-pane fade">
+                              <h3>known-issues</h3>
+                              <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                              <ul>
+                                  <li>Scott broke it</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                                  <li>Some issue</li>
+                              </ul>
+                          </div>
+                          <div id="about" class="tab-pane fade">
+                              <h3>about</h3>
+                              <img class="img-responsive" src=images/potato-head.jpg alt="">
 
-    <div class="modal fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div>
-        </div>
-    </div>
+                          </div>
+                          <div id="disclaimer" class="tab-pane fade">
+                              <h3>disclaimer</h3>
+                              <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                          </div>
+                      </div>
+                  </div>
+<!--
+                  <div class="modal-footer">
+                      <div class="input-group">
+                      <span class="input-group-addon">
+                        <input type="checkbox">
+                          Don't show on startup again!
+                          <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
+                      </span>
+                      </div>&lt;!&ndash; /input-group &ndash;&gt;
+                  </div>
+-->
+              </div>
+          </div>
+      </div>
+
+
+
 
 
     <div id="mapDiv"></div>
@@ -140,7 +185,6 @@
     </div>
     <div id="HomeButton"></div>
     <div id="LocateButton"></div>
-
     <div id="tools-icon" class="icons" data-toggle="tooltip" data-placement="right" title="Open Tool Tabs">
         <span class="glyphicon glyphicon-briefcase"></span>
     </div>
@@ -220,7 +264,9 @@
                     </div>
                     <hr/>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-primary">Locate</button>
+                        <button type="button" class="btn btn-sm btn-success has-spinner">
+                            <span class="spinner"><i class="icon-spin icon-refresh">Locate</i></span>
+                        </button>
                     </div>
                 </div>
             </div>

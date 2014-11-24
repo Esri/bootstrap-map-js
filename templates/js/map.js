@@ -148,6 +148,9 @@ require([
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
 //        map.addLayer(syp4);
+
+
+        /*Title disappear when mouse is inactibe*/
         var timedelay = 1;
         function delayCheck()
         {
@@ -173,5 +176,17 @@ require([
             e.preventDefault();
             $("#wrapper").toggleClass("toggled");
         });
+
+        /*Open modal window at startup*/
+        $(window).load(function(){
+            $("#themodal").modal("show");
+        });
+
+        /*if(localStorage.getItem("DontShow")) {
+            $("#themodal").hide();
+        }
+        $(document).on("click", "#forgetMe", function() {
+            localStorage.setItem("DontShow", "true");
+        });*/
 
     });
