@@ -2,22 +2,612 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e8614ca-6373-458f-83cd-5aae08d064f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/andrew-cooks.jpg" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\KYTClogo.png" afterPath="$PROJECT_DIR$/images/KYTClogo.png" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\L.jpg" afterPath="$PROJECT_DIR$/images/L.jpg" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\M.jpg" afterPath="$PROJECT_DIR$/images/M.jpg" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\R.jpg" afterPath="$PROJECT_DIR$/images/R.jpg" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\background.png" afterPath="$PROJECT_DIR$/images/background.png" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\blue-pin.png" afterPath="$PROJECT_DIR$/images/blue-pin.png" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\brand.png" afterPath="$PROJECT_DIR$/images/brand.png" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\favicon.ico" afterPath="$PROJECT_DIR$/images/favicon.ico" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\largephoto.jpg" afterPath="$PROJECT_DIR$/images/largephoto.jpg" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\map.png" afterPath="$PROJECT_DIR$/images/map.png" />
-      <change type="MOVED" beforePath="C:\inetpub\wwwroot\bootstrap-map-js\templates\images\purple-pin.png" afterPath="$PROJECT_DIR$/images/purple-pin.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/css/fullmap-template.css" afterPath="$PROJECT_DIR$/src/css/fullmap-template.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.bowerrc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/print.css" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\fullmap-template\fullmap-template.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\fullmap-template\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\geosearch-template\geosearch-template.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\geosearch-template\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\starter-template\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\starter-template\starter-template.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\webmap-template\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\templates\webmap-template\webmap-template.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\config_Attribute Table.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\css\images\arrow_down.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\css\images\arrow_up.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\clear.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\close.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\columns.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\down.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\export.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\more.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\page.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\refresh.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\select.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\symbol.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\up.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\images\zoom.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\AttributeTable\utils.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\config_Select a basemap.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\css\images\add_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\css\images\edit_map.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\images\default.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\images\imagery.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\images\streets.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\images\topo.jpg" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\Edit.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\Edit.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\css\images\add_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\css\images\add_map.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\css\images\delete_icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\css\images\delete_map.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\css\images\edit_map.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\BasemapGallery\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\ImageNode.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\common.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\css\images\add.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_arches_national_park.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_default.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_eiffel_tower.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_forbidden_city.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_giza_pyramid.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_great_wall.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_sf.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_sydney_opera.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\images\thumbnail_us.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\Edit.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\Edit.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\css\images\add.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\css\images\add_mark.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\css\images\delete_mark.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\css\images\drop.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\css\images\edit.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\css\images\edit_mark.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Bookmark\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Edit\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\BaseEditor.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\BaseResultRenderer.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\EditorChooser.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\common.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\editorManager.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\editors\FeatureSetEditorChooser.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\editors\FeatureSetEditorChooser.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\editors\FeatureSetRendererEditor.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\editors\FeatureSetResultEditor.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\editors\FeatureSetResultEditor.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\editors\simpleEditors.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\resultRendererManager.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\resultrenderers\simpleResultRenderers.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\LayerOrder.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\Options.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\Options.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\ParamSetting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\ParamSetting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\SettingDetail.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\SettingDetail.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\css\images\add.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\css\images\drop.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\css\images\edit.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\css\images\focusArrow.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\css\images\search.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Geoprocessing\utils.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\HomeButton\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\HomeButton\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\HomeButton\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\HomeButton\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\LayerListView.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\LayerListView.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\NlsStrings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\PopupMenu.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\PopupMenu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\css\images\current_basemap_indicator.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\images\loading.gif" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\images\noLegend.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\images\v.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\images\v_right.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\LayerList\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Legend\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Measurement\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\Parameters.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\Parameters.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\SingleParameter.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\SingleParameter.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\Widget.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\Widget.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\config.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\config_Search.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\css\images\arrow_left.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\css\images\arrow_right1.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\css\images\arrow_right2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\images\earthquake.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\images\icon.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\manifest.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\nls\zh-cn\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\FeaturelayerSourcePopup.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\PopupConfig.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\PopupConfig.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\Setting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\Setting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\SingleQuerySetting.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\SingleQuerySetting.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\css\images\help.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\css\style.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\ar\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\cs\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\da\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\de\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\es\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\et\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\fi\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\fr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\he\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\it\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\ja\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\ko\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\lt\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\lv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\nb\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\nl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\pl\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\pt-BR\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\pt-PT\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\ro\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\ru\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\sv\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\th\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\tr\strings.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\widgets\Query\setting\nls\zh-cn\strings.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/breakoutplayer.html" afterPath="$PROJECT_DIR$/breakoutplayer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/js/map.js" afterPath="$PROJECT_DIR$/templates/js/map.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photolog.html" afterPath="$PROJECT_DIR$/photolog.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\KYTClogo.png" afterPath="$PROJECT_DIR$/img/KYTClogo.png" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\L.jpg" afterPath="$PROJECT_DIR$/img/L.jpg" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\M.jpg" afterPath="$PROJECT_DIR$/img/M.jpg" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\R.jpg" afterPath="$PROJECT_DIR$/img/R.jpg" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\andrew-cooks.jpg" afterPath="$PROJECT_DIR$/img/andrew-cooks.jpg" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\background.png" afterPath="$PROJECT_DIR$/img/background.png" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\blue-pin.png" afterPath="$PROJECT_DIR$/img/blue-pin.png" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\brand.png" afterPath="$PROJECT_DIR$/img/brand.png" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\favicon.ico" afterPath="$PROJECT_DIR$/img/favicon.ico" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\largephoto.jpg" afterPath="$PROJECT_DIR$/img/largephoto.jpg" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\map.png" afterPath="$PROJECT_DIR$/img/map.png" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\potato-head.jpg" afterPath="$PROJECT_DIR$/img/potato-head.jpg" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\images\purple-pin.png" afterPath="$PROJECT_DIR$/img/purple-pin.png" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\src\css\fullmap-template.css" afterPath="$PROJECT_DIR$/css/fullmap-template.css" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\src\css\style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\templates\css\fullmap-template.css" afterPath="$PROJECT_DIR$/css/_fullmap-template.css" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\templates\css\template.css" afterPath="$PROJECT_DIR$/css/template.css" />
+      <change type="MOVED" beforePath="D:\Projects\bootstrap-map-js\templates\js\map.js" afterPath="$PROJECT_DIR$/js/map.js" />
     </list>
     <ignored path="bootstrap-map-js.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,62 +630,38 @@
     <favorites_list name="bootstrap-map-js" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.79766256">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="photolog.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/photolog.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.9814816" vertical-offset="3987" max-vertical-offset="6902">
-                  <caret line="289" column="44" selection-start-line="289" selection-start-column="41" selection-end-line="289" selection-end-column="55" />
-                  <folding>
-                    <element signature="n#table#0;n#a#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6573427" vertical-offset="1528" max-vertical-offset="5763">
-                  <caret line="151" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-                  <folding>
-                    <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="map.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/templates/js/map.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="2723" max-vertical-offset="3349">
-                  <caret line="189" column="13" selection-start-line="184" selection-start-column="8" selection-end-line="189" selection-end-column="13" />
-                  <folding>
-                    <element signature="n#!!doc" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="fullmap-template.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33277592" vertical-offset="56" max-vertical-offset="7123">
-                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.3618881" vertical-offset="2819" max-vertical-offset="6324">
+              <caret line="178" column="93" selection-start-line="178" selection-start-column="93" selection-end-line="178" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photolog.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/photolog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.9259257" vertical-offset="0" max-vertical-offset="7667">
+              <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="breakoutplayer.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/breakoutplayer.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1853">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -119,10 +685,11 @@
         <option value="$PROJECT_DIR$/templates/photolog.html" />
         <option value="$PROJECT_DIR$/templates/css/fullmap-template.css" />
         <option value="$PROJECT_DIR$/templates/index.html" />
-        <option value="$PROJECT_DIR$/breakoutplayer.html" />
-        <option value="$PROJECT_DIR$/photolog.html" />
         <option value="$PROJECT_DIR$/src/css/fullmap-template.css" />
         <option value="$PROJECT_DIR$/templates/js/map.js" />
+        <option value="$PROJECT_DIR$/.bowerrc" />
+        <option value="$PROJECT_DIR$/photolog.html" />
+        <option value="$PROJECT_DIR$/breakoutplayer.html" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -198,6 +765,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -205,15 +773,9 @@
               <option name="myItemId" value="bootstrap-map-js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -223,28 +785,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -259,28 +799,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -312,20 +830,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="dist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -341,6 +845,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="dist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -350,15 +868,14 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="options.lastSelected" value="JavaScript.Libraries" />
+    <property name="options.lastSelected" value="editing.templates" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../KAZC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -371,9 +888,13 @@
     <property name="LayoutCode.rearrangeEntriesCSS" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="replace&#9;ACTION&#9;Replace&#10;find and replace&#9;null&#9;null&#10;browsers&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="inde&#9;FILE&#9;file://C:/inetpub/wwwroot/bootstrap-map-js/index.html&#10;replace&#9;ACTION&#9;Replace&#10;find and replace&#9;null&#9;null&#10;browsers&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://maps.kytc.ky.gov/photolog/?config=ActiveHighwayPlan" />
+      <recent name="http://test1.maps.kytc.ky.gov/kazc" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates\images" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates\js" />
@@ -381,23 +902,23 @@
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates" />
     </key>
-    <key name="OPEN_URL_DIALOG">
-      <recent name="http://maps.kytc.ky.gov/photolog/?config=ActiveHighwayPlan" />
-      <recent name="http://test1.maps.kytc.ky.gov/kazc" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Projects\bootstrap-map-js\css" />
+      <recent name="D:\Projects\bootstrap-map-js" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js" />
       <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates" />
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\src\css" />
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates\images" />
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.breakoutplayer.html">
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+      <method />
+    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -405,10 +926,6 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -448,6 +965,8 @@
       <method />
     </configuration>
     <configuration default="false" name="breakoutplayer.html" type="JavascriptDebugType" factoryName="JavaScript Debug" nameIsGenerated="true" uri="http://localhost:63342/bootstrap-map-js/breakoutplayer.html">
+      <RunnerSettings RunnerId="JavascriptDebugRunner" />
+      <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
       <method />
     </configuration>
     <list size="2">
@@ -469,31 +988,54 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1696" height="1036" extended-state="7" />
+    <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24204545" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24118316" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32423207" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21699266" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39817974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21699266" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16320294" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22555012" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24204545" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23882353" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21699266" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3989011" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16503668" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -518,59 +1060,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/photolog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3151" max-vertical-offset="6902">
-          <caret line="204" column="0" selection-start-line="204" selection-start-column="0" selection-end-line="250" selection-end-column="0" />
-          <folding>
-            <element signature="n#table#0;n#a#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2306" max-vertical-offset="5610">
-          <caret line="150" column="41" selection-start-line="150" selection-start-column="41" selection-end-line="150" selection-end-column="41" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js/map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2283" max-vertical-offset="3094">
-          <caret line="167" column="25" selection-start-line="167" selection-start-column="23" selection-end-line="167" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7123">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photolog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1655" max-vertical-offset="7327">
-          <caret line="113" column="68" selection-start-line="113" selection-start-column="68" selection-end-line="113" selection-end-column="68" />
-          <folding>
-            <element signature="n#table#0;n#a#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
+    <entry file="file://$PROJECT_DIR$/css/fullmap-template.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="7123">
           <caret line="24" column="16" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -585,17 +1078,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3077">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
+    <entry file="file://$PROJECT_DIR$/css/fullmap-template.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8959">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -634,20 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/fullmap-template/fullmap-template.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/fullmap-template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="2380">
-          <caret line="17" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/js/bootstrapmap.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="925" max-vertical-offset="6613">
@@ -659,27 +1135,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="5066">
           <caret line="42" column="74" selection-start-line="42" selection-start-column="74" selection-end-line="42" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/fullmap-template/fullmap-template.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/fullmap-template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="2380">
-          <caret line="17" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/license.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.716329" vertical-offset="96" max-vertical-offset="935">
-          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -697,34 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1328" max-vertical-offset="3230">
           <caret line="103" column="20" selection-start-line="96" selection-start-column="4" selection-end-line="107" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/fullmap-template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24558587" vertical-offset="289" max-vertical-offset="2380">
-          <caret line="26" column="12" selection-start-line="21" selection-start-column="4" selection-end-line="26" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/fullmap-template/fullmap-template.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="221">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webmap-template/webmap-template.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="563">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/webmap-template/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.26923" vertical-offset="255" max-vertical-offset="3570">
-          <caret line="46" column="25" selection-start-line="46" selection-start-column="25" selection-end-line="46" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -770,13 +1197,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Edit/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="703">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="108188">
@@ -799,11 +1219,6 @@
         <state vertical-scroll-proportion="0.32458234" vertical-offset="0" max-vertical-offset="38726">
           <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/widgets/Legend/images/icon.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config.json">
@@ -834,65 +1249,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/map.png">
+    <entry file="file://$PROJECT_DIR$/img/map.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/geosearch-template/index.html">
+    <entry file="file://$PROJECT_DIR$/img/andrew-cooks.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.038462" vertical-offset="3819" max-vertical-offset="4658">
-          <caret line="266" column="0" selection-start-line="266" selection-start-column="0" selection-end-line="266" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.840188" vertical-offset="2498" max-vertical-offset="3349">
+          <caret line="189" column="13" selection-start-line="184" selection-start-column="8" selection-end-line="189" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/breakoutplayer.html">
+    <entry file="file://$PROJECT_DIR$/bower.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39130434" vertical-offset="385" max-vertical-offset="1853">
-          <caret line="38" column="55" selection-start-line="38" selection-start-column="55" selection-end-line="38" selection-end-column="55" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="642">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/css/fullmap-template.css">
+    <entry file="file://$PROJECT_DIR$/.bowerrc">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33277592" vertical-offset="56" max-vertical-offset="7123">
+        <state vertical-scroll-proportion="-0.65384614" vertical-offset="0" max-vertical-offset="136">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/images/popup.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5474">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/license.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7159904" vertical-offset="97" max-vertical-offset="935">
+          <caret line="41" column="3" selection-start-line="41" selection-start-column="3" selection-end-line="41" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/fullmap-template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45053002" vertical-offset="0" max-vertical-offset="7123">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/print.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="566">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/_fullmap-template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1003">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/template.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15962441" vertical-offset="0" max-vertical-offset="639">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/photolog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.9814816" vertical-offset="3987" max-vertical-offset="6902">
-          <caret line="289" column="44" selection-start-line="289" selection-start-column="41" selection-end-line="289" selection-end-column="55" />
-          <folding>
-            <element signature="n#table#0;n#a#0;n#div#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-6.9259257" vertical-offset="0" max-vertical-offset="7667">
+          <caret line="22" column="49" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/js/map.js">
+    <entry file="file://$PROJECT_DIR$/breakoutplayer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2723" max-vertical-offset="3349">
-          <caret line="189" column="13" selection-start-line="184" selection-start-column="8" selection-end-line="189" selection-end-column="13" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1853">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
+          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/images/andrew-cooks.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6573427" vertical-offset="1528" max-vertical-offset="5763">
-          <caret line="151" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.3618881" vertical-offset="2819" max-vertical-offset="6324">
+          <caret line="178" column="93" selection-start-line="178" selection-start-column="93" selection-end-line="178" selection-end-column="93" />
+          <folding />
         </state>
       </provider>
     </entry>
