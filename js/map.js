@@ -148,45 +148,4 @@ require([
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
 //        map.addLayer(syp4);
-
-
-        /*Title disappear when mouse is inactibe*/
-        var timedelay = 1;
-        function delayCheck()
-        {
-            if(timedelay == 5)
-            {
-                $('#title-bar').fadeOut();
-                timedelay = 1;
-            }
-            timedelay = timedelay+1;
-        }
-
-        $(document).mousemove(function() {
-            $('#title-bar').fadeIn();
-            timedelay = 1;
-            clearInterval(_delay);
-            _delay = setInterval(delayCheck, 500);
-        });
-        // page loads starts delay timer
-        _delay = setInterval(delayCheck, 500)
-
-
-        $("#menu-toggle").click(function(e) {
-            e.preventDefault();
-            $("#wrapper").toggleClass("toggled");
-        });
-
-        /*Open modal window at startup*/
-        $(window).load(function(){
-            $("#themodal").modal("show");
-        });
-
-        /*if(localStorage.getItem("DontShow")) {
-            $("#themodal").hide();
-        }
-        $(document).on("click", "#forgetMe", function() {
-            localStorage.setItem("DontShow", "true");
-        });*/
-
     });
