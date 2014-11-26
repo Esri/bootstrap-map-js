@@ -208,19 +208,6 @@ body {
     }
 }
 
-/*Increment drop-down*/
-#increment-dropdown{
-    clear:both;
-}
-
-
-
-/*.col-md-8{
-    width:69%
-}
-.col-md-4.attribute{
-    width:30%
-}*/
 .col-sm-8 {
     padding: 10px 20px;
     /*margin-right: 1px;*/
@@ -238,9 +225,9 @@ body {
     padding-right: 0;
 }
 
-#controller .glyphicon{
-    border-style:outset;
-    color: white;
+button{
+    border-style: outset;
+    background-color: #FFFFFF;
 }
 
 .glyphicon {
@@ -250,6 +237,15 @@ body {
 .glyphicon-camera{
     padding:0;
     margin: 0;
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+and (orientation : portrait){
+    #controller{
+        display: inline;
+    }
 }
 
 
@@ -266,7 +262,7 @@ body {
 }
 
 .btn-group.dropdown{
-    padding: 2px;
+    padding: 3px;
 }
 
 .col-sm-8 > #mapDiv {
@@ -348,13 +344,6 @@ body {
 .bp.photo-figcaption{
     position:fixed;
 
-}
-
-
-#date-button, #lane-button{
-    /*background-color: #3FBF7F;*/
-    /*#EE5A28;*/
-    /*font-weight: bold;*/
 }
 
 #metadata{
