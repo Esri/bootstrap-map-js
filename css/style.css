@@ -10,10 +10,8 @@ body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse,
 }
 
 a{
-    color:#428bca;
+    color: #448dce;
 }
-
-
 
 .nav>li{
     margin-right: 10px;
@@ -398,5 +396,11 @@ footer ul li{
 
 #KystateLogoImage{
     padding: 10px 0
+}
+
+#u-turn{
+    color: #448dce;
+    transform: rotate(90deg);
+    margin:0;
 }
 

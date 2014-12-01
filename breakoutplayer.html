@@ -2,32 +2,26 @@
 <html lang="en">
 
 <head>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <link rel="shortcut icon" href="img/KYTClogo.png">
 
-
-
     <title>Breakout Player</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- Bootstrap-map-css -->
     <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.11/esri/css/esri.css">
     <link rel="stylesheet" type="text/css" href="src/css/bootstrapmap.css">
-    <link rel="stylesheet" type="text/css" href="css/fullmap-template.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <!-- FontAwesome css-->
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="css/3-col-portfolio.css">
-
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -62,7 +56,11 @@
                     </ul>
                 </div>
 
-                <button  class="btn btn-sm" onclick="javascript:alert('clicked');"><a href="#"><span class="fa fa-step-backward"></span></a></button>
+                <button  class="btn btn-sm" onclick="alert('clicked');">
+                    <a href="#"><span class="fa fa-step-backward"></span></a>
+                </button>
+                <button class="btn btn-sm"><a href="#"><span class="fa fa-fast-backward"></span></a></button>
+
                 <button class="btn btn-sm"><a href="#"><span class="fa fa-backward"></span></a></button>
                 <button class="btn btn-sm"><a href="#"><span class="fa fa-play fa-rotate-180"></span></a></button>
                 <button class="btn btn-sm"><a href="#"><span class="fa fa-stop"></span></a></button>
@@ -70,9 +68,11 @@
                 <button class="btn btn-sm"><a href="#"><span class="fa fa-forward"></span></a></button>
                 <button class="btn btn-sm"><a href="#"><span class="fa fa-fast-forward"></span></a></button>
                 <button class="btn btn-sm"><a href="#"><span class="fa fa-step-forward"></span></a></button>
-                <button class="btn btn-sm"><a href="#"><span class="fa fa-undo"></span></a></button>
-                <button class="btn btn-sm"><a href="#"><span class="fa fa-arrows-alt"></span></a></button>
+                <!--<button class="btn btn-sm"><a href="#"><span class="fa fa-undo"></span></a></button>-->
+                <!--<button class="btn btn-sm"><a href="#"><img id="u-turn" src="img/arrow476.png"></a></button>-->
 
+                <button class="btn btn-sm"><a href="#"><span class="fa fa-long-arrow-down"></span></a></button>
+                <button class="btn btn-sm"><a href="#"><span class="fa fa-arrows-alt"></span></a></button>
 
             </div>
         </div>
@@ -81,26 +81,6 @@
 
 
     </div>
-</div>
-    </div>
-</div>
-
-
-
-<script type="text/javascript">
-    var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
-    var dojoConfig = {
-        //The location.pathname.replace() logic below may look confusing but all its doing is
-        // enabling us to load the api from a CDN and load local modules from the correct location.
-        packages: [{
-            name: "application",
-            location: package_path + '../../src/js'
-        }]
-    };
-
-</script>
-<!--<script src="http://js.arcgis.com/3.11"></script>-->
-<!--<script src="js/map.js"></script>-->
 
 <!-- jQuery Version 1.11.1 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
