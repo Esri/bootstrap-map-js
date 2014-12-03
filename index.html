@@ -147,17 +147,13 @@
                           </div>
                       </div>
                   </div>
-<!--
                   <div class="modal-footer">
-                      <div class="input-group">
-                      <span class="input-group-addon">
-                        <input type="checkbox">
-                          Don't show on startup again!
-                          <button type="button" class="btn btn-sm btn-default" data-dismiss="modal">Close</button>
-                      </span>
-                      </div>&lt;!&ndash; /input-group &ndash;&gt;
+                      <div id="show-on-startup-container" class="pull-left">
+                          <input type="checkbox" id="show-on-startup" checked="checked">
+                          <label for="show-on-startup">Don't show on startup</label>
+
+                      </div>
                   </div>
--->
               </div>
           </div>
       </div>
@@ -334,9 +330,8 @@
             </div>
         </div>
     </div>
-
+    <!-- esri snippet for path to application -->
     <script src="js/esri-code.js"></script>
-    <script src="http://js.arcgis.com/3.11"></script>
 
     <!-- jQuery Version 1.11.0 -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -344,11 +339,11 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="dist/js/bootstrap.min.js"></script>
 
+
     <!--Custom JavaScript-->
     <script src="js/modal.js"></script>
     <script src="js/map.js"></script>
     <script src="js/map-title.js"></script>
-
 
 </div>
 </body>
