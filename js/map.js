@@ -4,7 +4,12 @@
 /**
  * Created by Ahjung.Kim on 9/4/2014.
  */
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+
 require([
+        "esri/config",
         "esri/map",
         "dojo/dom",
         "application/bootstrapmap",
@@ -22,7 +27,7 @@ require([
 
         "dojo/domReady!"
     ],
-    function(Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton, LocateButton, Geocoder,
+    function(esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton, LocateButton, Geocoder,
              OverviewMap, Measurement, Popup) {
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create("mapDiv", {
@@ -36,12 +41,9 @@ require([
 //            infoWindow: popup
         });
 
-        /*var KYBase = new ArcGISTiledMapServiceLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
-         map.addLayer(KYBase);*/
-
         // Add overview map
         var overviewMapDijit;
-        overviewMapDijit = new esri.dijit.OverviewMap({
+        overviewMapDijit = new OverviewMap({
             map: map,
 
             attachTo: "bottom-right",
@@ -55,11 +57,7 @@ require([
         overviewMapDijit.startup();
 
 
-//        var measurement = new esri.dijit.Measurement({
-//            map:map
-//        },dojo.byId("measurement"));
-//        measurement.startup();
-
+        // Add home button
         var home = new HomeButton({
             map: map
         }, "HomeButton");
@@ -73,10 +71,6 @@ require([
         }, "LocateButton");
         geoLocate.startup();
 
-//        var scalebar = new Scalebar({
-//            map: map,
-//            scalebarUnit: "dual"
-//        });
 
         // Add geocoder
         var geocoder2 = new esri.dijit.Geocoder({
@@ -126,7 +120,7 @@ require([
             outFields: ["*"]
             //infoTemplate: popupTemplate,
         });
-        var syp1 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
+        /*var syp1 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
             mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
             //infoTemplate: popupTemplate,
             outFields: ["*"]
@@ -139,11 +133,17 @@ require([
         });
         var syp4 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
             mode: esri.layers.FeatureLayer.MODE_ONDEMAND
+        });*/
+        var countyPolyg = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/Overview/MapServer/5", {
+            mode: esri.layers.FeatureLayer.MODE_ONDEMAND
         });
 
 
+
         map.addLayer(KYTCBasemap);
+        map.addLayer(countyPolyg);
         map.addLayer(syp0);
+
 //        map.addLayer(syp1);
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);

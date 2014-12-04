@@ -10,5 +10,6 @@
     <orderEntry type="library" name="jQuery-2.0.0" level="application" />
     <orderEntry type="library" name="bootstrap" level="project" />
     <orderEntry type="library" name="jquery" level="application" />
+    <orderEntry type="library" name="bootstrap-map-js node_modules" level="project" />
   </component>
 </module>
