@@ -5,8 +5,9 @@
  * Created by Ahjung.Kim on 9/4/2014.
  */
 $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-})
+    $('[data-toggle="tooltip"]').tooltip();
+});
+var map;
 
 require([
         "esri/config",
@@ -30,7 +31,7 @@ require([
     function(esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton, LocateButton, Geocoder,
              OverviewMap, Measurement, Popup) {
         // Get a reference to the ArcGIS Map class
-        var map = BootstrapMap.create("mapDiv", {
+        map = BootstrapMap.create("mapDiv", {
             basemap: "streets",
             center: [-85.724, 37.593],
             zoom: 7,
@@ -43,9 +44,8 @@ require([
 
         // Add overview map
         var overviewMapDijit;
-        overviewMapDijit = new OverviewMap({
+        overviewMapDijit = new esri.dijit.OverviewMap({
             map: map,
-
             attachTo: "bottom-right",
             height: 120,
             width: 144,
@@ -134,14 +134,14 @@ require([
         var syp4 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
             mode: esri.layers.FeatureLayer.MODE_ONDEMAND
         });*/
-        var countyPolyg = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/Overview/MapServer/5", {
-            mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-        });
+        //var countyPolyg = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/Overview/MapServer/5", {
+        //    mode: esri.layers.FeatureLayer.MODE_ONDEMAND
+        //});
 
 
 
         map.addLayer(KYTCBasemap);
-        map.addLayer(countyPolyg);
+        //map.addLayer(countyPolyg);
         map.addLayer(syp0);
 
 //        map.addLayer(syp1);
