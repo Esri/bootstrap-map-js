@@ -83,7 +83,7 @@
                         </li>
                     </ul>
                 </li>
-                <li data-toggle="modal"  data-target="#themodal"><a href="#">About</a>
+                <li data-toggle="modal"  data-target="#accordion"><a href="#">About</a>
                 </li>
 
 
@@ -109,31 +109,27 @@
                 </div>
                 <div class="modal-body">
                     <ul class="nav nav-tabs">
-                        <li class="active"><a data-toggle="tab" href="#how-it-works">How it works</a></li>
-                        <li><a data-toggle="tab" href="#known-issues">Known issues</a></li>
+                        <li><a data-toggle="tab" href="#how-it-works">How it works</a></li>
+                        <li class="active"><a data-toggle="tab" href="#known-issues">Known issues</a></li>
                         <li><a data-toggle="tab" href="#about">About</a></li>
                         <li><a data-toggle="tab" href="#disclaimer">Disclaimer</a></li>
                     </ul>
                     <div class="tab-content">
-                        <div id="how-it-works" class="tab-pane fade in active">
+                        <div id="how-it-works" class="tab-pane fade">
                             <h3>This is how it all works.</h3>
                             <img class="img-responsive" src=img/andrew-cooks.jpg alt="">
                         </div>
-                        <div id="known-issues" class="tab-pane fade">
-                            <h3>known-issues</h3>
-                            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+                        <div id="known-issues" class="tab-pane fade in active">
                             <ul>
-                                <li>Scott broke it</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
-                                <li>Some issue</li>
+                                <h3></h3>
+                                <li>Don't show modal on start up doesn't work (yet)</li>
+                                <li>Tool tips bug on touch screen devices</li>
+                                <li>UI breaks on IE8</li>
+                                <li>Play buttons for Photolog breaks inappropriately on small devices</li>
+                                <li>List button does nothing</li>
+                                <li>KYTC Tools button does nothing</li>
+                                <li>Print page CSS is not set</li>
+                                <li>List button width 2px wider</li>
                             </ul>
                         </div>
                         <div id="about" class="tab-pane fade">
@@ -177,18 +173,26 @@
 
     <div id="HomeButton"></div>
     <div id="LocateButton"></div>
-    <div id="tools-icon" class="icons" data-toggle="tooltip" data-placement="right" title="Open Tool Tabs">
-        <span class="glyphicon glyphicon-briefcase"></span>
-    </div>
+    
+    
+    <button  id="query-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right" title="Zoom to selection">
+        <a href="#"><i class="fa fa-search-plus"></i></a></button>
+    <button  id="layers-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right" title="Layers">
+        <a href="#"><i class="fa fa-list-ul"></i></a></button>
+    <button  id="kytc-tools-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right" title="KYTC tools">
+        <a href="#"><i class="fa fa-wrench"></i></a></button>
+
 
     <!--Search Accordion-->
-    <div id="accordion" class="panel-group">
+    <div id="accordion" class="panel-group" style="display:none;">
         <!--Search by road name-->
         <div class="panel panel-default">
             <div class="panel-heading">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Road Name</a>
+                    <button type="button" id="accordion-close" class="close" data-dismiss="#accordion">&times;</button>
                 </h4>
+
             </div>
             <div id="collapseOne" class="panel-collapse collapse in">
                 <div class="panel-body">
@@ -350,7 +354,10 @@
     <!--Custom JavaScript-->
     <!--<script src="js/modal.js"></script>-->
     <script src="js/map.js"></script>
-    <script src="js/map-title.js"></script>
+    <!--<script src="js/map-title.js"></script>-->
+    <script src="js/index.js"></script>
+    <script src="js/modal.js"></script>
+
 
 </div>
 </body>

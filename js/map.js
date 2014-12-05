@@ -4,10 +4,13 @@
 /**
  * Created by Ahjung.Kim on 9/4/2014.
  */
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip();
-});
-var map;
+
+/*if (!window.matchMedia || (window.matchMedia("(max-width: 767px)").matches)) {
+
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+}*/
 
 require([
         "esri/config",

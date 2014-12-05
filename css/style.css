@@ -58,16 +58,30 @@ body {
 }
 
 
-#tools-icon{
+.map-tools-top.map-tools-left{
     font-size: 24px;
     position: absolute;
-    top: 75px;
-    left: 16px;
-    color: white;
+    left: 1px;
     background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
-    opacity: 0.8;
+    opacity: 1;
 }
+
+.fa-search-plus, .fa-list-ul, .fa-wrench{
+    color: #fff;
+}
+
+#query-icon{
+    top: 1px;
+}
+
+#layers-icon{
+    top: 50px;
+}
+#kytc-tools-icon{
+    top: 99px;
+}
+
 #accordion {
     display:block;
     position: absolute;
@@ -207,10 +221,10 @@ body {
 }
 
 .col-sm-8 {
-    padding: 10px 20px;
-    /*margin-right: 1px;*/
+    /*padding: 10px 20px;
+    */
     border: thin solid #d3d3d3;
-    /*margin-bottom: 20px;*/
+
 }
 #attribute-table{
     padding: 0px 20px 10px;
@@ -402,5 +416,9 @@ footer ul li{
     color: #448dce;
     transform: rotate(90deg);
     margin:0;
+}
+
+#accordion-close{
+    top: 16px;
 }
 
