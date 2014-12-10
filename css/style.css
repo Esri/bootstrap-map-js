@@ -179,7 +179,7 @@ body {
 }
 
 /*Controller*/
-.pl.col-sm-12 {
+#controller{
     font-size: 1em;
     padding: 8px 4px 4px 4px;
     border-style: outset;
@@ -422,3 +422,6 @@ footer ul li{
     top: 16px;
 }
 
+.panel-body3{
+    height: 200px;
+}
