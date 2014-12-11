@@ -26,3 +26,10 @@ queryIcon.on("click", function (){
 accordionClose.on("click", function () {
     accordion.hide();
 });
+
+//noinspection JSUnresolvedFunction
+$('.selectpicker').selectpicker();
+
+
+
+

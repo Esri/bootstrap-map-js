@@ -88,7 +88,7 @@ body {
     top:0;
     left:0;
     float:left;
-    width: 250px;
+    width: 260px;
     height: 100%;
     background: white;
     overflow: auto;
@@ -227,7 +227,7 @@ body {
 
 }
 #attribute-table{
-    padding: 0px 20px 10px;
+    padding: 0 20px 10px;
 }
 .icons {
     font-size: 23px;
@@ -422,6 +422,23 @@ footer ul li{
     top: 16px;
 }
 
-.panel-body3{
-    height: 200px;
+.panel-body{
+    height: 320px;
 }
+.dropdown{
+    position: fixed;
+    overflow-x: auto;
+
+}
+
+.bootstrap-select.btn-group .dropdown-menu li  a{
+    padding:2px;
+}
+
+.dropdown-menu.open {
+    position: relative;
+}
+
+
+
+
