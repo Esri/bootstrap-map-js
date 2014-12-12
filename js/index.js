@@ -3,9 +3,8 @@
  */
 
 /*$(".elements-with-tooltips").on('show', function (e) {
-    if ('ontouchstart' in document.documentElement) e.preventDefault();
-});*/
-
+ if ('ontouchstart' in document.documentElement) e.preventDefault();
+ });*/
 
 
 $(function () {
@@ -13,14 +12,12 @@ $(function () {
 });
 
 
-
-
 var accordion = $("#accordion");
 var accordionClose = $("#accordion-close");
-var queryIcon = $("#query-icon");
+var queryIcon = $(".query-icon");
 
-queryIcon.on("click", function (){
-        accordion.show();
+queryIcon.on("click", function () {
+    accordion.show();
 });
 
 accordionClose.on("click", function () {

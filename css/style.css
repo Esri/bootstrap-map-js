@@ -75,6 +75,11 @@ body {
     top: 1px;
 }
 
+#query-icon-pl{
+    top: 1px;
+    float: left;
+}
+
 #layers-icon{
     top: 50px;
 }
@@ -91,12 +96,12 @@ body {
     width: 260px;
     height: 100%;
     background: white;
-    overflow: auto;
+    /*overflow: auto;*/
 }
 .scrollable-menu {
     height: auto;
     max-height: 200px;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 #HomeButton {
@@ -327,8 +332,8 @@ and (orientation : portrait){
     background-color: #222 !important;
     position: absolute;
     max-width: 395px;
-    top: 14px;
-    right: 23px;
+    top: 1px;
+    right: 17px;
     opacity: .9;
     padding: 5px 9px 7px 7px;
     border-radius: 5px;
@@ -423,21 +428,19 @@ footer ul li{
 }
 
 .panel-body{
-    height: 320px;
-}
-.dropdown{
-    position: fixed;
-    overflow-x: auto;
-
+    height: 300px;
 }
 
 .bootstrap-select.btn-group .dropdown-menu li  a{
     padding:2px;
 }
 
-.dropdown-menu.open {
-    position: relative;
+.panel-group .panel {
+    overflow: visible;
 }
+
+
+
 
 
 

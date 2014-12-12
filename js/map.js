@@ -7,10 +7,11 @@
 
 /*if (!window.matchMedia || (window.matchMedia("(max-width: 767px)").matches)) {
 
-    $(function () {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-}*/
+ $(function () {
+ $('[data-toggle="tooltip"]').tooltip();
+ });
+ }*/
+var map;
 
 require([
         "esri/config",
@@ -31,8 +32,8 @@ require([
 
         "dojo/domReady!"
     ],
-    function(esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton, LocateButton, Geocoder,
-             OverviewMap, Measurement, Popup) {
+    function (esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton, LocateButton, Geocoder,
+              OverviewMap, Measurement, Popup) {
         // Get a reference to the ArcGIS Map class
         map = BootstrapMap.create("mapDiv", {
             basemap: "streets",
@@ -42,8 +43,8 @@ require([
             logo: false,
             nav: false,
             sliderPosition: "top-right"
-//            infoWindow: popup
         });
+
 
         // Add overview map
         var overviewMapDijit;
@@ -85,8 +86,8 @@ require([
         }, "search");
         geocoder2.startup();
 
-        $(document).ready(function() {
-            $("#basemapList li").click(function(e) {
+        $(document).ready(function () {
+            $("#basemapList li").click(function (e) {
                 switch (e.target.text) {
                     case "Streets":
                         map.setBasemap("streets");
@@ -114,7 +115,7 @@ require([
         });
 
         // Add DGN basemap
-        var KYTCBasemap  =
+        var KYTCBasemap =
             //new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
             new esri.layers.ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
         // Add layers
@@ -124,23 +125,22 @@ require([
             //infoTemplate: popupTemplate,
         });
         /*var syp1 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
-            mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
-            //infoTemplate: popupTemplate,
-            outFields: ["*"]
-        });
-        var syp2 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/2", {
-            mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-        });
-        var syp3 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/3", {
-            mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-        });
-        var syp4 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
-            mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-        });*/
+         mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
+         //infoTemplate: popupTemplate,
+         outFields: ["*"]
+         });
+         var syp2 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/2", {
+         mode: esri.layers.FeatureLayer.MODE_ONDEMAND
+         });
+         var syp3 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/3", {
+         mode: esri.layers.FeatureLayer.MODE_ONDEMAND
+         });
+         var syp4 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
+         mode: esri.layers.FeatureLayer.MODE_ONDEMAND
+         });*/
         //var countyPolyg = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/Overview/MapServer/5", {
         //    mode: esri.layers.FeatureLayer.MODE_ONDEMAND
         //});
-
 
 
         map.addLayer(KYTCBasemap);
@@ -151,7 +151,6 @@ require([
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
 //        map.addLayer(syp4);
-
 
 
     });
