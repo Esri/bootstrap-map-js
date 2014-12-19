@@ -129,7 +129,7 @@
   <div id="controller" class="row hidden-print text-center">
     <!-- Increment -->
     <div class="span12 center-block">
-      <button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="To start point"
+     <div id = "conrol-buttons"> <button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="To start point"
               onclick="alert('clicked');"><a href="#"><i class="fa fa-step-backward"></i></a></button>
       <button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="One frame backward"><a href="#"><i
               class="fa fa-fast-backward"></i></a></button>
@@ -149,9 +149,9 @@
               class="fa fa-step-forward"></i></a></button>
       <!--<button class="btn btn-sm"><a href="#"><i class="fa fa-undo"></i></a></button>-->
       <button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="U-turn"><a href="#"><i
-              class="fa fa-reply fa-rotate-270"></i></a></button>
+              class="fa fa-reply fa-rotate-270"></i></a></button></div>
 
-      <div id="increment-dropdown" class="btn-group dropdown">
+      <div id="control-dropdowns"><div id="increment-dropdown" class="btn-group dropdown">
         <button type="button" class="btn btn-primary btn-sm">Increment</button>
         <button type="button" class="btn btn-default btn-sm dropdown-toggle" data-toggle="dropdown">
           <span class="caret"></span>
@@ -193,21 +193,21 @@
           <li>3</li>
           <li>4</li>
         </ul>
-      </div>
+      </div></div>
     </div>
   </div>
 
   <!-- Projects Row -->
   <div id="content-map" class="row">
     <div class="col-sm-8">
-      <div id="mapDiv">
-      </div>
-
+      <div id="mobileMapDiv"></div>
+      <div id="HomeButton-pl"></div>
+      <div id="LocateButton-pl"></div>
       <!-- Query Accordion -->
-      <button id="query-icon-pl" class="query-icon btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip"
+      <button id="query-icon-pl" class="query-icon btn btn-smapBm map-tools-top map-tools-left" data-toggle="tooltip"
               data-placement="right"
               title="Zoom to selection">
-        <a href="#"><i class="fa fa-search-plus"></i></a></button>
+              <i class="fa fa-search-plus"></i></button>
 
 
       <!-- Search Accordion -->
@@ -1426,7 +1426,7 @@
       <div id="title-bar" class="title-bar">
 
         <div class="project-title">
-          <h4><a href="//transportation.ky.gov/Program-Management/Pages/2012-Highway-Plan.aspx"
+          <h4><a href="//test1.maps.kytc.ky.gov/bootstrap-map-js/index.html"
                  target="_top">Active Highway Plan</a></h4>
         </div>
         <div class="project-byline">
@@ -1665,17 +1665,19 @@
 <!-- Esri js -->
 <script src="//js.arcgis.com/3.11"></script>
 
+
 <!-- Bootstrap Core JavaScript -->
 <script src="dist/js/bootstrap.min.js"></script>
+<script src="js/mobile-map.js"></script>
+
 
 <!-- Selecpick js-->
 <script src="js/bootstrap-select.min.js"></script>
 
 <!-- Custom JavaScripts-->
 <script src="js/index.js"></script>
-<script src="js/map.js"></script>
 
-<script src="js/map-title.js"></script>
+<!--<script src="js/map-title.js"></script>-->
 
 
 </body>

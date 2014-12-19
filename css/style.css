@@ -51,7 +51,7 @@ body {
 
 #camera-icon{
     position: absolute;
-    top: 142px;
+    top: 140px;
     right: 2px;
     font-size: 32px;
     margin:0;
@@ -111,9 +111,22 @@ body {
     z-index: 50;
 }
 
+#HomeButton-pl{
+    position: absolute;
+    z-index: 50;
+    top:75px;
+    right:2px;
+}
+
 #LocateButton {
     position: absolute;
-    top: 215px;
+    top: 212px;
+    right: 2px;
+    z-index: 50;
+}
+#LocateButton-pl {
+    position: absolute;
+    top: 108px;
     right: 2px;
     z-index: 50;
 }
@@ -226,8 +239,7 @@ body {
 }
 
 .col-sm-8 {
-    /*padding: 10px 20px;
-    */
+    padding: 0;
     border: thin solid #d3d3d3;
 
 }
@@ -251,6 +263,8 @@ button{
     padding: 4px 10px;
 }
 
+
+
 .glyphicon-camera{
     padding:0;
     margin: 0;
@@ -261,7 +275,7 @@ and (min-device-width : 320px)
 and (max-device-width : 568px)
 and (orientation : portrait){
     #controller{
-        display: inline;
+        display: inline-block;
     }
 }
 
@@ -269,12 +283,9 @@ and (orientation : portrait){
 /*#direction-switch{
     padding-left:60px;
 }*/
-#control-btns{
-    border-style:outset;
-}
 
 .esriSimpleSlider {
-    margin-top: 68px;
+    margin-top: 59px;
     right: 2px;
 }
 
@@ -282,33 +293,8 @@ and (orientation : portrait){
     padding: 3px;
 }
 
-.col-sm-8 > #mapDiv {
-    height: 421px;
-}
 
-.col-sm-8 > #HomeButton {
-    top: 100px;
-    right: 16px;
-    z-index: 50;
-}
 
-.col-sm-8 > #LocateButton {
-    top: 135px;
-    right: 16px;
-    z-index: 50;
-}
-
-.col-sm-8 > #LocateButton {
-    top: 135px;
-    right: 16px;
-    z-index: 50;
-}
-
-.col-sm-8 > .esriSimpleSlider div {
-    top: 135px;
-    right: 2px;
-    z-index: 50;
-}
 
 #controller.row.text-center{
     padding-left: 5px;
@@ -327,13 +313,18 @@ and (orientation : portrait){
     height:415px;
  }
 
+
+#conrol-buttons, #control-dropdowns{
+    display: inline-block;
+}
+
 .title-bar {
     color: #ffffff;
     background-color: #222 !important;
     position: absolute;
     max-width: 395px;
     top: 1px;
-    right: 17px;
+    right: 2px;
     opacity: .9;
     padding: 5px 9px 7px 7px;
     border-radius: 5px;
@@ -389,6 +380,10 @@ padding-bottom: 15px;
     .col-xs-4 a{
         font-size:0.7em;
     }
+
+    .btn-sm {
+        font-size: 7px;
+    }
 }
 
 .portfolio-item{
@@ -437,6 +432,17 @@ footer ul li{
 
 .panel-group .panel {
     overflow: visible;
+}
+
+@media (min-device-width : 320px)
+and (max-device-width : 568px){
+    #mobileMapDiv{
+        padding-right:75px;
+    }
+}
+
+#mobileMapDiv{
+    padding-right:33px;
 }
 
 

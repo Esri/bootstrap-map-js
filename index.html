@@ -86,7 +86,7 @@
             </li>
           </ul>
         </li>
-        <li data-toggle="modal" data-target="#accordion"><a href="#">About</a>
+        <li data-toggle="modal" data-target="#themodal"><a href="#">About</a>
         </li>
 
 
@@ -102,7 +102,7 @@
 
 <div class="content">
 
-  <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -1391,7 +1391,7 @@
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-          <select id="CountyInput" class="selectpicker" data-bind="options: Counties,
+          <label for="CountyInput"></label><select id="CountyInput" class="selectpicker" data-bind="options: Counties,
                     optionsText: function (item) { return item.Name; },
                     value: selectedCounty, optionsCaption: 'Select a county...'">
           </select>
@@ -1421,9 +1421,11 @@
 <script src="js/bootstrap-select.min.js"></script>
 
 <!-- Custom JavaScripts-->
+<script src="js/modal.js"></script>
+
 <script src="js/index.js"></script>
+
 <script src="js/map.js"></script>
 <script src="js/map-title.js"></script>
-<!--<script src="js/modal.js"></script>-->
 </body>
 </html>
