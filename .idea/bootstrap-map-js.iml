@@ -12,5 +12,6 @@
     <orderEntry type="library" name="jquery" level="application" />
     <orderEntry type="library" name="bootstrap-map-js node_modules" level="project" />
     <orderEntry type="library" name="Knockout" level="project" />
+    <orderEntry type="library" name="es5-shim" level="application" />
   </component>
 </module>
