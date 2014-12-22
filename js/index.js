@@ -14,7 +14,7 @@ $(function () {
 
 var accordion = $("#accordion");
 var accordionClose = $("#accordion-close");
-var queryIcon = $(".query-icon");
+var queryIcon = $("#query-icon");
 
 queryIcon.on("click", function () {
     accordion.show();
