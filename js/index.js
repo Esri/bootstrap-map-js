@@ -6,11 +6,17 @@
  if ('ontouchstart' in document.documentElement) e.preventDefault();
  });*/
 
-
+/*
+    Activate tool tip
+* */
 $(function () {
     $('[data-toggle="tooltip"]').tooltip();
 });
 
+
+/*
+    Query icon opens zoom-to-sel panel
+*/
 
 var accordion = $("#accordion");
 var accordionClose = $("#accordion-close");
@@ -23,6 +29,13 @@ queryIcon.on("click", function () {
 accordionClose.on("click", function () {
     accordion.hide();
 });
+
+/*  */
+
+
+
+
+
 
 //noinspection JSUnresolvedFunction
 $('.selectpicker').selectpicker();

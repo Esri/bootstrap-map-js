@@ -29,11 +29,14 @@ require([
         "esri/dijit/Scalebar",
         "esri/dijit/Popup",
         "esri/dijit/PopupTemplate",
+        "esri/dijit/Legend",
+
 
         "dojo/domReady!"
     ],
-    function (esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton, LocateButton, Geocoder,
-              OverviewMap, Measurement, Popup) {
+    function (esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton,
+              LocateButton, Geocoder, Legend, arrayUtils, OverviewMap, Measurement, Popup) {
+
         // Get a reference to the ArcGIS Map class
         map = BootstrapMap.create("mapDiv", {
             basemap: "streets",
@@ -143,7 +146,19 @@ require([
         //});
 
 
-        map.addLayer(KYTCBasemap);
+
+
+        //add the legend
+
+        var legend = new esri.dijit.Legend({
+
+            map:map
+
+        },"legendDiv");
+
+        legend.startup();
+
+        //map.addLayer(KYTCBasemap);
         //map.addLayer(countyPolyg);
         map.addLayer(syp0);
 

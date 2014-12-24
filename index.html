@@ -102,6 +102,7 @@
 
 <div class="content">
 
+<!--
   <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -160,6 +161,7 @@
       </div>
     </div>
   </div>
+-->
 
   <div id="mapDiv"></div>
   <div id="title-bar" class="im title-bar">
@@ -1405,14 +1407,34 @@
       </div>
     </div>
   </div>
-</div>
-<script src="js/esri-code.js"></script>
+
+
+
+<!-- Layers-List -->
+
+  <div id="layers-list" class="panel-group" style="display:block;">
+    <!-- Search by road name -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          Layers
+        </h4>
+      </div>
+      <div class="panel-body">
+        <div id="legendDiv"></div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <script src="js/esri-code.js"></script>
 
 <!-- jQuery Version 1.11.1 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 <!-- Esri js -->
-<script src="//js.arcgis.com/3.11"></script>
+<script src="//js.arcgis.com/3.12"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="dist/js/bootstrap.min.js"></script>

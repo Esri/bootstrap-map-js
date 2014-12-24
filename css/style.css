@@ -87,8 +87,8 @@ body {
     top: 99px;
 }
 
-#accordion {
-    display:block;
+#accordion, #layers-list {
+    display:none;
     position: absolute;
     top:0;
     left:0;
@@ -97,6 +97,17 @@ body {
     height: 100%;
     background: white;
     /*overflow: auto;*/
+}
+
+
+
+#legendDiv{
+    /*background-color: red;*/
+    position: absolute;
+    top:0;
+    float:left;
+    overflow: scroll;
+
 }
 .scrollable-menu {
     height: auto;
