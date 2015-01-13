@@ -22,14 +22,25 @@ var accordion = $("#accordion");
 var accordionClose = $("#accordion-close");
 var queryIcon = $("#query-icon");
 
-queryIcon.on("click", function () {
+queryIcon.on("click", function() {
     accordion.show();
 });
 
-accordionClose.on("click", function () {
+accordionClose.on("click", function() {
     accordion.hide();
 });
 
+var layersList = $("#layers-list");
+var layersListClose = $("#layers-list-close");
+var layersIcon = $("#layers-icon");
+
+layersListClose.on("click", function(){
+    layersList.hide();
+});
+
+layersIcon.on("click", function(){
+    layersList.show();
+});
 /*  */
 
 

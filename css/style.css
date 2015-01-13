@@ -101,14 +101,7 @@ body {
 
 
 
-#legendDiv{
-    /*background-color: red;*/
-    position: absolute;
-    top:0;
-    float:left;
-    overflow: scroll;
 
-}
 .scrollable-menu {
     height: auto;
     max-height: 200px;
@@ -142,10 +135,6 @@ body {
     z-index: 50;
 }
 
-/*.logo {
-    width: 30px;
-    height: 30px;
-}*/
 .simpleGeocoder .esriGeocoderIcon {
     margin: 9px 0 6px 6px;
     color: #006699;
@@ -274,8 +263,6 @@ button{
     padding: 4px 10px;
 }
 
-
-
 .glyphicon-camera{
     padding:0;
     margin: 0;
@@ -290,7 +277,6 @@ and (orientation : portrait){
     }
 }
 
-
 /*#direction-switch{
     padding-left:60px;
 }*/
@@ -303,9 +289,6 @@ and (orientation : portrait){
 .btn-group.dropdown{
     padding: 3px;
 }
-
-
-
 
 #controller.row.text-center{
     padding-left: 5px;
@@ -429,12 +412,24 @@ footer ul li{
     margin:0;
 }
 
-#accordion-close{
+#accordion-close, #layers-list-close{
     top: 16px;
 }
 
 .panel-body{
-    height: 300px;
+    /*height: 880px;*/
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#legendDiv{
+    /*background-color: red;*/
+    /*position: absolute;*/
+    top:0;
+    float:left;
+    /*overflow: scroll;*/
+    /*overflow-x: hidden;*/
 }
 
 .bootstrap-select.btn-group .dropdown-menu li  a{

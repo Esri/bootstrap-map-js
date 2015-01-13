@@ -117,7 +117,10 @@ require([
             });
         });
 
-        // Add DGN basemap
+
+/*
+        Add layers
+*/
         var KYTCBasemap =
             //new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
             new esri.layers.ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
@@ -145,10 +148,7 @@ require([
         //    mode: esri.layers.FeatureLayer.MODE_ONDEMAND
         //});
 
-
-
-
-        //add the legend
+        //add legend
 
         var legend = new esri.dijit.Legend({
 
@@ -158,7 +158,7 @@ require([
 
         legend.startup();
 
-        //map.addLayer(KYTCBasemap);
+        map.addLayer(KYTCBasemap);
         //map.addLayer(countyPolyg);
         map.addLayer(syp0);
 
