@@ -417,11 +417,16 @@ footer ul li{
     top: 16px;
 }
 
+.panel-group{
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 .panel-body{
     /*height: 880px;*/
     height: auto;
-    overflow-x: hidden;
-    overflow-y: auto;
+    /*overflow-x: hidden;*/
+    /*overflow-y: auto;*/
 }
 
 #legendDiv{
@@ -452,7 +457,9 @@ and (max-device-width : 568px){
     padding-right:33px;
 }
 
-
+#measurementDiv{
+    display: inline;
+}
 
 
 

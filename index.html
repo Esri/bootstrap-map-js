@@ -21,7 +21,7 @@
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
 
-
+  <link rel="stylesheet" href="http://js.arcgis.com/3.12/dijit/themes/claro/claro.css">
   <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.11/esri/css/esri.css">
   <link rel="stylesheet" type="text/css" href="src/css/bootstrapmap.css">
 
@@ -303,6 +303,7 @@
         </h4>
       </div>
       <div class="panel-body">
+        <!--<div id="TableOfContents"></div>-->
         <div id="legendDiv"></div>
       </div>
     </div>
@@ -331,8 +332,10 @@
       </div>
       <div id="collapseMeasure" class="panel-collapse collapse">
         <div class="panel-body">
-          <hr/>
-        </div>
+          <div id="titlePane" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Measurement', closable:'false', open:'false'">
+            <div id="measurementDiv"></div>
+            <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
+          </div>        </div>
       </div>
     </div>
     <div class="panel panel-default">
@@ -373,7 +376,6 @@
     </div>
   </div>
 </div>
-
 
 <script src="js/esri-code.js"></script>
 

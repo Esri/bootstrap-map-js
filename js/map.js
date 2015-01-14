@@ -20,7 +20,6 @@ require([
         "application/bootstrapmap",
         "esri/layers/ArcGISTiledMapServiceLayer",
         "esri/layers/FeatureLayer",
-
         "esri/dijit/OverviewMap",
         "esri/dijit/HomeButton",
         "esri/dijit/LocateButton",
@@ -30,8 +29,6 @@ require([
         "esri/dijit/Popup",
         "esri/dijit/PopupTemplate",
         "esri/dijit/Legend",
-
-
         "dojo/domReady!"
     ],
     function (esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton,
@@ -63,6 +60,12 @@ require([
         });
         overviewMapDijit.startup();
 
+        // Add measurement dijit
+        var measurement = new esri.dijit.Measurement({
+            map: map
+        }, "measurementDiv");
+        measurement.startup();
+
 
         // Add home button
         var home = new HomeButton({
@@ -72,7 +75,7 @@ require([
 
 
         // Add locate button
-        var geoLocate = new LocateButton({
+        var geoLocate = new esri.dijit.LocateButton({
             map: map,
             scale: null
         }, "LocateButton");
@@ -148,7 +151,10 @@ require([
         //    mode: esri.layers.FeatureLayer.MODE_ONDEMAND
         //});
 
-        //add legend
+        //Add legend
+
+        map.addLayer(syp0);
+        map.addLayer(KYTCBasemap);
 
         var legend = new esri.dijit.Legend({
 
@@ -158,14 +164,22 @@ require([
 
         legend.startup();
 
-        //map.addLayer(KYTCBasemap);
-        //map.addLayer(countyPolyg);
-        map.addLayer(syp0);
+/*
+        var myWidget = new TableOfContents({
+            map: map,
+            layers: syp0
+        }, "TableOfContents");
+        myWidget.startup();
+*/
 
 //        map.addLayer(syp1);
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
 //        map.addLayer(syp4);
+
+
+
+
 
 
     });
