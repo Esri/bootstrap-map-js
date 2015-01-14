@@ -87,7 +87,7 @@ body {
     top: 99px;
 }
 
-#accordion, #layers-list {
+#accordion, #layers-list, #tool-accordion {
     display:none;
     position: absolute;
     top:0;
@@ -412,7 +412,8 @@ footer ul li{
     margin:0;
 }
 
-#accordion-close, #layers-list-close{
+#accordion-close, #layers-list-close
+, #tool-accordion-close{
     top: 16px;
 }
 
@@ -432,7 +433,7 @@ footer ul li{
     /*overflow-x: hidden;*/
 }
 
-.bootstrap-select.btn-group .dropdown-menu li  a{
+.bootstrap-select.btn-group .dropdown-menu li a{
     padding:2px;
 }
 

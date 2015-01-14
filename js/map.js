@@ -158,7 +158,7 @@ require([
 
         legend.startup();
 
-        map.addLayer(KYTCBasemap);
+        //map.addLayer(KYTCBasemap);
         //map.addLayer(countyPolyg);
         map.addLayer(syp0);
 
