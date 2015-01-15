@@ -22,7 +22,7 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
 
   <link rel="stylesheet" href="http://js.arcgis.com/3.12/dijit/themes/claro/claro.css">
-  <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.11/esri/css/esri.css">
+  <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.12/esri/css/esri.css">
   <link rel="stylesheet" type="text/css" href="src/css/bootstrapmap.css">
 
   <!-- FontAwesome css-->
@@ -41,7 +41,7 @@
 
 </head>
 
-<body>
+<body id="MapBody">
 
 <div class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
@@ -86,7 +86,7 @@
             </li>
           </ul>
         </li>
-        <li data-toggle="modal" data-target="#themodal"><a href="#">About</a>
+        <li data-toggle="modal" data-target="#themodal"><a href="#">Help</a>
         </li>
 
 
@@ -102,7 +102,6 @@
 
 <div class="content">
 
-  <!--
     <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -120,7 +119,7 @@
             </ul>
             <div class="tab-content">
               <div id="how-it-works" class="tab-pane fade">
-                <h3>This is how it all works.</h3>
+                <h3>How it works</h3>
                 <img class="img-responsive" src=img/andrew-cooks.jpg alt="">
               </div>
               <div id="known-issues" class="tab-pane fade in active">
@@ -161,7 +160,6 @@
         </div>
       </div>
     </div>
-  -->
 
   <div id="mapDiv"></div>
   <div id="title-bar" class="im title-bar">
@@ -175,13 +173,17 @@
             target="_top">KYTC GIS</a>
     </div>
   </div>
-  <div id="camera-icon" class="icons" data-toggle="tooltip" data-placement="left" title="Go to PhotoLog">
-    <a href="http://test1.maps.kytc.ky.gov/bootstrap-map-js/photolog.html" target="_blank">
-      <i class="fa fa-camera-retro"></i></a>
-  </div>
 
+  <div id="camera-icon" class="icons"><a href="http://test1.maps.kytc.ky.gov/bootstrap-map-js/photolog.html" target="_blank"><i class="fa fa-camera-retro"></i></a></div>
   <div id="HomeButton"></div>
   <div id="LocateButton"></div>
+  <!--<button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="One frame backward"><a href="#"><i-->
+  <div id="PrevExtent" class="icons"><button class="btn btn-md"><i class="fa fa-angle-left"></i></button></div>
+  <div id="NextExtent" class="icons"><button class="btn btn-md"><i class="fa fa-angle-right"></i></button></div>
+
+
+
+
 
 
   <button id="query-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
@@ -345,11 +347,10 @@
         </h4>
       </div>
       <div id="collapseDraw" class="panel-collapse collapse">
-        <div class="panel-body">
           <hr/>
         </div>
       </div>
-    </div>
+
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -358,7 +359,7 @@
       </div>
       <div id="collapseDir" class="panel-collapse collapse">
         <div class="panel-body">
-          <hr/>
+          <!--<div id="dir"></div>-->
         </div>
       </div>
     </div>
@@ -393,10 +394,11 @@
 
 <!-- Custom JavaScripts-->
 <script src="js/modal.js"></script>
+<script src="js/map.js"></script>
 
 <script src="js/index.js"></script>
 
-<script src="js/map.js"></script>
+
 <script src="js/map-title.js"></script>
 </body>
 </html>

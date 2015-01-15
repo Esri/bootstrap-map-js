@@ -1,7 +1,10 @@
 /**
  * Created by ahjung.kim on 11/26/2014.
- */
-/*Title disappear when mouse is inactive*/
+ *//*
+
+*/
+/*Title disappear when mouse is inactive*//*
+
 var timedelay = 1;
 function delayCheck()
 {
@@ -25,4 +28,4 @@ _delay = setInterval(delayCheck, 500)
 $("#menu-toggle").click(function(e) {
     e.preventDefault();
     $("#wrapper").toggleClass("toggled");
-});
+});*/

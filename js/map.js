@@ -20,7 +20,9 @@ require([
         "application/bootstrapmap",
         "esri/layers/ArcGISTiledMapServiceLayer",
         "esri/layers/FeatureLayer",
+
         "esri/dijit/OverviewMap",
+        "esri/dijit/Directions",
         "esri/dijit/HomeButton",
         "esri/dijit/LocateButton",
         "esri/dijit/Geocoder",
@@ -29,10 +31,21 @@ require([
         "esri/dijit/Popup",
         "esri/dijit/PopupTemplate",
         "esri/dijit/Legend",
+
+        "esri/toolbars/navigation",
+
+        "dijit/registry",
+
+        "dojo/parser",
+        "dojo/on",
+        "dijit/layout/BorderContainer", "dijit/layout/ContentPane",
+
+
         "dojo/domReady!"
     ],
     function (esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton,
-              LocateButton, Geocoder, Legend, arrayUtils, OverviewMap, Measurement, Popup) {
+              LocateButton, Geocoder, Legend, parser, Directions, arrayUtils, OverviewMap, Measurement, Popup,
+              registry, Navigation, on) {
 
         // Get a reference to the ArcGIS Map class
         map = BootstrapMap.create("mapDiv", {
@@ -44,6 +57,28 @@ require([
             nav: false,
             sliderPosition: "top-right"
         });
+
+        /*var navToolbar = new esri.toolbars.Navigation(map);
+        on(navToolbar, "onExtentHistoryChange", extentHistoryChangeHandler);
+
+
+        registry.byId("PrevExtent").on("click", function () {
+            navToolbar.zoomToPrevExtent();
+        });
+
+        registry.byId("NextExtent").on("click", function () {
+            navToolbar.zoomToNextExtent();
+        });
+
+        function extentHistoryChangeHandler () {
+            registry.byId("zoomprev").disabled = navToolbar.isFirstExtent();
+            registry.byId("zoomnext").disabled = navToolbar.isLastExtent();
+        }*/
+
+/*        var directions = new esri.dijit.Directions({
+            map: map
+        }, "dir");
+        directions.startup();*/
 
 
         // Add overview map
@@ -68,7 +103,7 @@ require([
 
 
         // Add home button
-        var home = new HomeButton({
+        var home = new esri.dijit.HomeButton({
             map: map
         }, "HomeButton");
         home.startup();
@@ -157,9 +192,7 @@ require([
         map.addLayer(KYTCBasemap);
 
         var legend = new esri.dijit.Legend({
-
             map:map
-
         },"legendDiv");
 
         legend.startup();
