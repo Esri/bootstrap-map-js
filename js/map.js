@@ -23,8 +23,6 @@ require(["esri/map",
         "esri/dijit/LocateButton",
         "esri/dijit/Geocoder",
         "esri/dijit/Measurement",
-        "esri/dijit/Popup",
-        "esri/dijit/PopupTemplate",
         "esri/InfoTemplate",
         "esri/dijit/Legend",
         "esri/toolbars/navigation",
@@ -36,7 +34,7 @@ require(["esri/map",
         "dojo/dom",
         "dojo/domReady!"],
     function (Map, BootstrapMap, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, OverviewMap, Directions, HomeButton,
-              LocateButton, Geocoder, Measurement, Popup, PopupTemplate, InfoTemplate, Legend, Navigation, Registry, Parser, on,
+              LocateButton, Geocoder, Measurement, InfoTemplate, Legend, Navigation, Registry, Parser, on,
               BorderContainer, ContentPane, dom)
 
     {
@@ -136,9 +134,15 @@ require(["esri/map",
 
 
 */
+        var json = {
+            title: "<b>Six Year Plan</b>",
+            content:"<b>District Number</b> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DISTNO}<br>" +
+                "<b>Item Number</b> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_ITEMNO}<br>"
+        };
+        var ConstInfoTemplate =  new InfoTemplate(json);
 
-        var ConstInfoTemplate =  new InfoTemplate();
-        infoTemplate.setTitle("Six Year Plan");
+        var PlanningInfoTemplate =  new InfoTemplate();
+        PlanningInfoTemplate.setTitle("Planning Project");
 
         var KYTCBasemap =
             //new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
@@ -151,22 +155,22 @@ require(["esri/map",
         });
         var syp1 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
             mode: FeatureLayer.MODE_ONDEMAND,
-            infoTemplate: infoTemplate,
+            infoTemplate: PlanningInfoTemplate,
             outFields: ["*"]
         });
         var syp2 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/2", {
             mode: FeatureLayer.MODE_ONDEMAND,
-            infoTemplate: infoTemplate,
+            //infoTemplate: infoTemplate,
             outFields: ["*"]
         });
         var syp3 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/3", {
             mode: FeatureLayer.MODE_ONDEMAND,
-            infoTemplate: infoTemplate,
+            //infoTemplate: infoTemplate,
             outFields: ["*"]
         });
         var syp4 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
             mode: FeatureLayer.MODE_ONDEMAND,
-            infoTemplate: infoTemplate,
+            //infoTemplate: infoTemplate,
             outFields: ["*"]
         });
 
@@ -175,7 +179,7 @@ require(["esri/map",
 
         //Add legend
 
-        map.addLayers([syp0, syp1, syp2, syp3, syp4]);
+        map.addLayers([syp0]);
         //map.addLayer(countyPolyg);
         //map.addLayer(KYTCBasemap);
 

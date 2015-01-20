@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e8614ca-6373-458f-83cd-5aae08d064f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/learnDojo.html" />
-      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\src\js\TableOfContents.js" afterPath="" />
-      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\src\js\dijit\templates\TableOfContents.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/bootstrap-map-js.iml" afterPath="$PROJECT_DIR$/.idea/bootstrap-map-js.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/esri-code.js" afterPath="$PROJECT_DIR$/js/esri-code.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/map.js" afterPath="$PROJECT_DIR$/js/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="bootstrap-map-js.iws" />
@@ -35,7 +26,7 @@
     <favorites_list name="bootstrap-map-js" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.77933985">
+    <splitter split-orientation="horizontal" split-proportion="0.72738385">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
@@ -53,44 +44,14 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="bootstrap-select.min.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/bootstrap-select.min.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="esri-code.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/esri-code.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-                  <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="map.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/map.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2785888" vertical-offset="2134" max-vertical-offset="3621">
-                  <caret line="139" column="18" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.5908529" vertical-offset="2123" max-vertical-offset="3689">
+                  <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="photolog.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/photolog.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-11.038462" vertical-offset="28171" max-vertical-offset="28747">
-                  <caret line="1674" column="13" selection-start-line="1674" selection-start-column="13" selection-end-line="1674" selection-end-column="13" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -102,8 +63,8 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.33333334" vertical-offset="6380" max-vertical-offset="8602">
-                  <caret line="391" column="6" selection-start-line="391" selection-start-column="1" selection-end-line="391" selection-end-column="6" />
+                <state vertical-scroll-proportion="0.33333334" vertical-offset="328" max-vertical-offset="8602">
+                  <caret line="35" column="71" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="71" />
                   <folding />
                 </state>
               </provider>
@@ -451,7 +412,7 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="false" name="Interactive App" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://test1.maps.kytc.ky.gov/bootstrap-map-js/index.html">
+    <configuration default="false" name="Interactive App" type="JavascriptDebugType" factoryName="JavaScript Debug" uri="http://localhost:63342/bootstrap-map-js/index.html">
       <mapping url="http://test1.maps.kytc.ky.gov/bootstrap-map-js/index.html" local-file="$PROJECT_DIR$/index.html" />
       <RunnerSettings RunnerId="JavascriptDebugRunner" />
       <ConfigurationWrapper RunnerId="JavascriptDebugRunner" />
@@ -882,20 +843,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/esri-code.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -908,9 +861,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/esri-code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13983549" vertical-offset="0" max-vertical-offset="851">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/photolog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.038462" vertical-offset="28171" max-vertical-offset="28747">
+        <state vertical-scroll-proportion="0.6440887" vertical-offset="27935" max-vertical-offset="28747">
           <caret line="1674" column="13" selection-start-line="1674" selection-start-column="13" selection-end-line="1674" selection-end-column="13" />
           <folding />
         </state>
@@ -918,8 +879,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="6380" max-vertical-offset="8602">
-          <caret line="391" column="6" selection-start-line="391" selection-start-column="1" selection-end-line="391" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="328" max-vertical-offset="8602">
+          <caret line="35" column="71" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -939,8 +900,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2785888" vertical-offset="2134" max-vertical-offset="3621">
-          <caret line="139" column="18" selection-start-line="139" selection-start-column="18" selection-end-line="139" selection-end-column="18" />
+        <state vertical-scroll-proportion="0.5908529" vertical-offset="2123" max-vertical-offset="3689">
+          <caret line="153" column="27" selection-start-line="153" selection-start-column="27" selection-end-line="153" selection-end-column="27" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
