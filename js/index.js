@@ -61,7 +61,7 @@ layersIcon.on("click", function () {
 */
 
 //noinspection JSUnresolvedFunction
-$('.selectpicker').selectpicker();
+//$('.selectpicker').selectpicker();
 
 
 

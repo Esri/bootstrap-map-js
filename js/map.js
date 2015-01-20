@@ -11,44 +11,37 @@
  $('[data-toggle="tooltip"]').tooltip();
  });
  }*/
-var map;
 
-require([
-        "esri/config",
-        "esri/map",
-        "dojo/dom",
+require(["esri/map",
         "application/bootstrapmap",
-        "esri/layers/ArcGISTiledMapServiceLayer",
+        "esri/dijit/Scalebar",
         "esri/layers/FeatureLayer",
-
+        "esri/layers/ArcGISTiledMapServiceLayer",
         "esri/dijit/OverviewMap",
         "esri/dijit/Directions",
         "esri/dijit/HomeButton",
         "esri/dijit/LocateButton",
         "esri/dijit/Geocoder",
         "esri/dijit/Measurement",
-        "esri/dijit/Scalebar",
         "esri/dijit/Popup",
         "esri/dijit/PopupTemplate",
+        "esri/InfoTemplate",
         "esri/dijit/Legend",
-
         "esri/toolbars/navigation",
-
         "dijit/registry",
-
         "dojo/parser",
         "dojo/on",
-        "dijit/layout/BorderContainer", "dijit/layout/ContentPane",
+        "dijit/layout/BorderContainer",
+        "dijit/layout/ContentPane",
+        "dojo/dom",
+        "dojo/domReady!"],
+    function (Map, BootstrapMap, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, OverviewMap, Directions, HomeButton,
+              LocateButton, Geocoder, Measurement, Popup, PopupTemplate, InfoTemplate, Legend, Navigation, Registry, Parser, on,
+              BorderContainer, ContentPane, dom)
 
-
-        "dojo/domReady!"
-    ],
-    function (esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton,
-              LocateButton, Geocoder, Legend, parser, Directions, arrayUtils, OverviewMap, Measurement, Popup,
-              registry, Navigation, on) {
-
+    {
         // Get a reference to the ArcGIS Map class
-        map = BootstrapMap.create("mapDiv", {
+        var map = BootstrapMap.create("mapDiv", {
             basemap: "streets",
             center: [-85.724, 37.593],
             zoom: 7,
@@ -58,37 +51,19 @@ require([
             sliderPosition: "top-right"
         });
 
-        /*var navToolbar = new esri.toolbars.Navigation(map);
-        on(navToolbar, "onExtentHistoryChange", extentHistoryChangeHandler);
-
-
-        registry.byId("PrevExtent").on("click", function () {
-            navToolbar.zoomToPrevExtent();
+        var scalebar = new Scalebar({
+            map: map,
+            scalebarUnit: "dual"
         });
-
-        registry.byId("NextExtent").on("click", function () {
-            navToolbar.zoomToNextExtent();
-        });
-
-        function extentHistoryChangeHandler () {
-            registry.byId("zoomprev").disabled = navToolbar.isFirstExtent();
-            registry.byId("zoomnext").disabled = navToolbar.isLastExtent();
-        }*/
-
-/*        var directions = new esri.dijit.Directions({
-            map: map
-        }, "dir");
-        directions.startup();*/
-
 
         // Add overview map
         var overviewMapDijit;
-        overviewMapDijit = new esri.dijit.OverviewMap({
+        overviewMapDijit = new OverviewMap({
             map: map,
             attachTo: "bottom-right",
             height: 120,
             width: 144,
-            visible: false,
+            visible: true,
             opacity: 0.4,
             expandFactor: 3.0
 
@@ -96,21 +71,21 @@ require([
         overviewMapDijit.startup();
 
         // Add measurement dijit
-        var measurement = new esri.dijit.Measurement({
+        var measurement = new Measurement({
             map: map
         }, "measurementDiv");
         measurement.startup();
 
 
         // Add home button
-        var home = new esri.dijit.HomeButton({
+        var home = new HomeButton({
             map: map
         }, "HomeButton");
         home.startup();
 
 
         // Add locate button
-        var geoLocate = new esri.dijit.LocateButton({
+        var geoLocate = new LocateButton({
             map: map,
             scale: null
         }, "LocateButton");
@@ -118,7 +93,7 @@ require([
 
 
         // Add geocoder
-        var geocoder2 = new esri.dijit.Geocoder({
+        var geocoder2 = new Geocoder({
             map: map,
             autoComplete: true,
             arcgisGeocoder: {
@@ -158,40 +133,53 @@ require([
 
 /*
         Add layers
+
+
 */
+
+        var ConstInfoTemplate =  new InfoTemplate();
+        infoTemplate.setTitle("Six Year Plan");
+
         var KYTCBasemap =
             //new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
-            new esri.layers.ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
+            new ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
         // Add layers
-        var syp0 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/0", {
-            mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
+        var syp0 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/0", {
+            mode: FeatureLayer.MODE_ONDEMAND,
+            infoTemplate: ConstInfoTemplate,
             outFields: ["*"]
-            //infoTemplate: popupTemplate,
         });
-        /*var syp1 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
-         mode: esri.layers.FeatureLayer.MODE_ONDEMAND,
-         //infoTemplate: popupTemplate,
-         outFields: ["*"]
-         });
-         var syp2 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/2", {
-         mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-         });
-         var syp3 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/3", {
-         mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-         });
-         var syp4 = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
-         mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-         });*/
-        //var countyPolyg = new esri.layers.FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/Overview/MapServer/5", {
-        //    mode: esri.layers.FeatureLayer.MODE_ONDEMAND
-        //});
+        var syp1 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
+            mode: FeatureLayer.MODE_ONDEMAND,
+            infoTemplate: infoTemplate,
+            outFields: ["*"]
+        });
+        var syp2 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/2", {
+            mode: FeatureLayer.MODE_ONDEMAND,
+            infoTemplate: infoTemplate,
+            outFields: ["*"]
+        });
+        var syp3 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/3", {
+            mode: FeatureLayer.MODE_ONDEMAND,
+            infoTemplate: infoTemplate,
+            outFields: ["*"]
+        });
+        var syp4 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
+            mode: FeatureLayer.MODE_ONDEMAND,
+            infoTemplate: infoTemplate,
+            outFields: ["*"]
+        });
+
+
+
 
         //Add legend
 
-        map.addLayer(syp0);
-        map.addLayer(KYTCBasemap);
+        map.addLayers([syp0, syp1, syp2, syp3, syp4]);
+        //map.addLayer(countyPolyg);
+        //map.addLayer(KYTCBasemap);
 
-        var legend = new esri.dijit.Legend({
+        var legend = new Legend({
             map:map
         },"legendDiv");
 

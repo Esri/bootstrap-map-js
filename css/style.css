@@ -21,14 +21,16 @@ a{
     height: 45px;
 }
 
+
 #MapBody {
     margin-bottom: 0;
     padding-top: 0;
     font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica-,Arial,sans-serif;
     background-image: url("../img/background.png");
     background-repeat: repeat;
-
 }
+
+
 
 #PhotoLogBody{
     background-image: url("http://media.mediatemple.netdna-cdn.com/wp-content/themes/smashing-magazine/images/smbg.png")
@@ -109,10 +111,11 @@ a{
     position: absolute;
     top: 80px;
     right: 37px;
-    /*background: white;*/
-}#NextExtent{
+}
+
+#NextExtent{
      right: 2px;
- }
+}
 
 .esriSimpleSlider {
     margin-top: 107px;
@@ -134,11 +137,15 @@ a{
     position: absolute;
     top: 220px;
     right: 17px;
-    z-index: 50;}
+    z-index: 50;
+}
+
 .HomeButton .home{
     background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
-}#HomeButton-pl{
+}
+
+#HomeButton-pl{
     position: absolute;
     top:75px;
     right:2px;
@@ -150,10 +157,13 @@ a{
     right: 17px;
     z-index: 50;
 }
+
 .LocateButton .zoomLocateButton{
     background-color: rgba(0,0,0,0.6);
     border-radius: 5px;
-}#LocateButton-pl {
+}
+
+#LocateButton-pl {
     position: absolute;
     top: 108px;
     right: 2px;
@@ -481,6 +491,8 @@ and (max-device-width : 568px){
 #measurementDiv{
     display: inline;
 }
+
+
 
 
 
