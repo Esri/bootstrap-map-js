@@ -30,8 +30,6 @@ a{
     background-repeat: repeat;
 }
 
-
-
 #PhotoLogBody{
     background-image: url("http://media.mediatemple.netdna-cdn.com/wp-content/themes/smashing-magazine/images/smbg.png")
 }
@@ -107,13 +105,13 @@ a{
     /*overflow-x: hidden;*/
 }
 
-#PrevExtent, #NextExtent{
+#zoomprev, #zoomnext{
     position: absolute;
     top: 80px;
     right: 37px;
 }
 
-#NextExtent{
+#zoomnext{
      right: 2px;
 }
 
@@ -493,8 +491,38 @@ and (max-device-width : 568px){
 }
 
 
+.esriPopup.light .titlePane{
+    /*height:auto;*/
+    width:auto;
+    /*padding:0;*/
+    /*margin:0;*/
+    /*background-color: darkgray;*/
+}
 
+.esriPopup.light .esriPopupWrapper{
+    height:auto;
+    width: AUTO;
+    margin:0;
+    padding:0;
+    /*background-color: lightblue;*/
+}
 
+.esriPopup.light .contentPane{
+    height: auto;
+    margin-top: 0;
+    padding-top: 0;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+    /*margin-bottom: 10px;*/
+    /*background-color: lawngreen;*/
+}
+
+.esriPopup.light .actionsPane, .esriPopup.dark .actionsPane{
+    height:0;
+    width:0;
+    padding:0
+}
 
 
 

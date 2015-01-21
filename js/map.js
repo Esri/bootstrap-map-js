@@ -14,6 +14,10 @@
 
 require(["esri/map",
         "application/bootstrapmap",
+
+        "esri/toolbars/navigation",
+        "dojo/on",
+
         "esri/dijit/Scalebar",
         "esri/layers/FeatureLayer",
         "esri/layers/ArcGISTiledMapServiceLayer",
@@ -24,20 +28,38 @@ require(["esri/map",
         "esri/dijit/Geocoder",
         "esri/dijit/Measurement",
         "esri/InfoTemplate",
+        "esri/dijit/InfoWindow",
+        "dojo/dom-construct",
+        "esri/dijit/Popup",
+        "esri/dijit/PopupTemplate",
+
+        "esri/toolbars/draw",
+        "esri/graphic",
+
+        "esri/symbols/SimpleMarkerSymbol",
+        "esri/symbols/SimpleLineSymbol",
+        "esri/symbols/SimpleFillSymbol",
+
         "esri/dijit/Legend",
-        "esri/toolbars/navigation",
         "dijit/registry",
+        "dijit/Toolbar",
         "dojo/parser",
-        "dojo/on",
-        "dijit/layout/BorderContainer",
-        "dijit/layout/ContentPane",
         "dojo/dom",
+        "dijit/form/Button",
         "dojo/domReady!"],
-    function (Map, BootstrapMap, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, OverviewMap, Directions, HomeButton,
-              LocateButton, Geocoder, Measurement, InfoTemplate, Legend, Navigation, Registry, Parser, on,
-              BorderContainer, ContentPane, dom)
+    function (Map, BootstrapMap, Navigation, on, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, OverviewMap, Directions, HomeButton,
+              LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup,
+              PopupTemplate, Draw, Graphic,
+              SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,
+              Legend, registry, parser, dom)
 
     {
+
+        var popup = new Popup(null, dojo.create("div"));
+
+
+        var navToolbar;
+
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create("mapDiv", {
             basemap: "streets",
@@ -46,8 +68,61 @@ require(["esri/map",
             scrollWheelZoom: true,
             logo: false,
             nav: false,
-            sliderPosition: "top-right"
+            sliderPosition: "top-right",
+            infoWindow: popup,
+            showInfoWindowOnClick: true
         });
+
+        map.infoWindow.resize(320,500);
+
+
+        navToolbar = new Navigation(map);
+        on(navToolbar, "onExtentHistoryChange", extentHistoryChangeHandler);
+
+        //jQuery.noConflict();
+
+        $("#zoomprev").on("click", function () {
+            navToolbar.zoomToPrevExtent();
+        });
+        $("#zoomnext").on("click", function () {
+            navToolbar.zoomToNextExtent();
+        });
+
+        /*registry.byId("zoomin").on("click", function () {
+            navToolbar.activate(Navigation.ZOOM_IN);
+        });
+
+        registry.byId("zoomout").on("click", function () {
+            navToolbar.activate(Navigation.ZOOM_OUT);
+        });
+
+        registry.byId("zoomfullext").on("click", function () {
+            navToolbar.zoomToFullExtent();
+        });
+
+        registry.byId("zoomprev").on("click", function () {
+            navToolbar.zoomToPrevExtent();
+        });
+
+        registry.byId("zoomnext").on("click", function () {
+            navToolbar.zoomToNextExtent();
+        });
+
+        registry.byId("pan").on("click", function () {
+            navToolbar.activate(Navigation.PAN);
+        });
+
+        registry.byId("deactivate").on("click", function () {
+            navToolbar.deactivate();
+        });*/
+
+        function extentHistoryChangeHandler () {
+            registry.byId("zoomprev").disabled = navToolbar.isFirstExtent();
+            registry.byId("zoomnext").disabled = navToolbar.isLastExtent();
+        }
+
+
+
 
         var scalebar = new Scalebar({
             map: map,
@@ -122,40 +197,66 @@ require(["esri/map",
                         map.setBasemap("osm");
                         break;
                     case "KYTC Basemap":
-                        alert("lol");
+                        window.alert("lol");
                         break;
                 }
             });
         });
 
-
-/*
-        Add layers
-
-
-*/
-        var json = {
-            title: "<b>Six Year Plan</b>",
-            content:"<b>District Number</b> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DISTNO}<br>" +
-                "<b>Item Number</b> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_ITEMNO}<br>"
-        };
-        var ConstInfoTemplate =  new InfoTemplate(json);
-
-        var PlanningInfoTemplate =  new InfoTemplate();
-        PlanningInfoTemplate.setTitle("Planning Project");
-
         var KYTCBasemap =
             //new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
             new ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
-        // Add layers
+
+        var json = {
+            title: "<b>CONSTRUCTION SYP</b>",
+            content:
+                "<strong>District No.</strong> : <td>${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DISTNO}<br>"+
+                "<strong>Item No.</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_ITEMNO}<br>" +
+                "<strong>Highway Plan </strong>: <a target='_blank' href = ${KYTCDynamic.PROGMGMT.SYP.PRECON_INFO_LINK}>Open Link</a><br>" +
+                "<strong>County & Route</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.LOCUNIQUE}<br>" +
+                "<strong>Beginning Mile Point</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.BMP}<br>" +
+                "<strong>Ending Mile Point</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.EM}<br>" +
+                "<strong>County Name</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.COUNTYNAME}<br>" +
+                "<strong>Type Work</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_TYPEWORK}<br>" +
+                "<strong>Project Description</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DESC}<br>" +
+                "<strong>Bridge Number</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_BRNO}<br>" +
+                "<strong>Construction Phase Stage</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_STAGE}<br>" +
+                "<strong>Contract Number</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_CONTRACTNO}<br>" +
+                "<strong>Date Awarded</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_AUTHDATE}<br>" +
+                "<strong>Project Status</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_PRECONFLAG}<br>"
+
+        };
+        var ConstInfoTemplate =  new InfoTemplate(json);
+
+        //define custom popup options
+        //create a popup to replace the map's info window
+
         var syp0 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/0", {
             mode: FeatureLayer.MODE_ONDEMAND,
             infoTemplate: ConstInfoTemplate,
-            outFields: ["*"]
+            outFields : ["*"]
         });
+
+        map.addLayer(syp0);
+
+        /*var earthquakes = new FeatureLayer("http://tmservices1.esri.com/arcgis/rest/services/LiveFeeds/Earthquakes/MapServer/0",{ mode:
+        FeatureLayer.MODE_SNAPSHOT, outFields: ["Magnitude"]});
+
+            var infoTemplate = new InfoTemplate("Test", "Magnitude : ${MAGNITUDE}");
+            var featureLayer = new FeatureLayer("http://tmservices1.esri.com/arcgis/rest/services/LiveFeeds/Earthquakes/MapServer/0",{
+            mode: FeatureLayer.MODE_ONDEMAND,
+                outFields: ["MAGNITUDE"],
+                infoTemplate: infoTemplate
+        });
+        map.addLayer(featureLayer);
+        map.infoWindow.resize(155,75);*/
+
+
+
+
         var syp1 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
             mode: FeatureLayer.MODE_ONDEMAND,
-            infoTemplate: PlanningInfoTemplate,
+            //infoTemplate: PlanningInfoTemplate,
             outFields: ["*"]
         });
         var syp2 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/2", {
@@ -179,7 +280,6 @@ require(["esri/map",
 
         //Add legend
 
-        map.addLayers([syp0]);
         //map.addLayer(countyPolyg);
         //map.addLayer(KYTCBasemap);
 
@@ -200,11 +300,6 @@ require(["esri/map",
 //        map.addLayer(syp1);
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
-//        map.addLayer(syp4);
-
-
-
-
 
 
     });
