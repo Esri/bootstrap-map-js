@@ -21,6 +21,7 @@ require(["esri/map",
         "esri/dijit/Scalebar",
         "esri/layers/FeatureLayer",
         "esri/layers/ArcGISTiledMapServiceLayer",
+        "esri/layers/LabelLayer",
         "esri/dijit/OverviewMap",
         "esri/dijit/Directions",
         "esri/dijit/HomeButton",
@@ -36,10 +37,15 @@ require(["esri/map",
         "esri/toolbars/draw",
         "esri/graphic",
 
+        "dojo/_base/Color",
+        "esri/renderers/SimpleRenderer",
         "esri/symbols/SimpleMarkerSymbol",
         "esri/symbols/SimpleLineSymbol",
         "esri/symbols/SimpleFillSymbol",
+        "esri/symbols/TextSymbol",
+        "esri/symbols/Font",
 
+        "esri/dijit/Print",
         "esri/dijit/Legend",
         "dijit/registry",
         "dijit/Toolbar",
@@ -47,11 +53,11 @@ require(["esri/map",
         "dojo/dom",
         "dijit/form/Button",
         "dojo/domReady!"],
-    function (Map, BootstrapMap, Navigation, on, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, OverviewMap, Directions, HomeButton,
-              LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup,
-              PopupTemplate, Draw, Graphic,
-              SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,
-              Legend, registry, parser, dom)
+    function (Map, BootstrapMap, Navigation, on, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, LabelLayer, OverviewMap, Directions, HomeButton,
+              LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup, PopupTemplate,
+              Draw, Graphic,
+              Color, SimpleRenderer, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,TextSymbol, Font,
+              Print, Legend, registry, Toolbar, parser, dom)
 
     {
 
@@ -87,6 +93,13 @@ require(["esri/map",
         $("#zoomnext").on("click", function () {
             navToolbar.zoomToNextExtent();
         });
+
+
+        var printer = new Print({
+            map: map,
+            url: "http://maps.kytc.ky.gov/arcgis/rest/services/ExportWebMap/GPServer/Export%20Web%20Map"
+    }, dom.byId("printButton"));
+        printer.startup();
 
         /*registry.byId("zoomin").on("click", function () {
             navToolbar.activate(Navigation.ZOOM_IN);
@@ -136,7 +149,7 @@ require(["esri/map",
             attachTo: "bottom-right",
             height: 120,
             width: 144,
-            visible: true,
+            visible: false,
             opacity: 0.4,
             expandFactor: 3.0
 
@@ -207,25 +220,55 @@ require(["esri/map",
             //new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
             new ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
 
+        var countyPolygon = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BusinessIntelligence/Boundaries/MapServer/0",{
+            mode: FeatureLayer.MODE_ONDEMAND,
+            outFields: ["NAME"]
+            });
+
+
+        var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
+            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
+            new Color([255,255,255,1.0]), 1),
+            new Color([125,125,125,0.35]));
+        countyPolygon.setRenderer(new SimpleRenderer(symbol));
+        map.addLayer(countyPolygon);
+
+
+
+        /* Add label for county polygon
+        var countyColor = new Color([125,125,125,1.0]);
+        var countyLabel = new TextSymbol().setColor(countyColor);
+        countyLabel.font.setSize("8pt");
+        countyLabel.font.setFamily("arial");
+        countyLabel.font.setWeight(Font.WEIGHT_BOLD);
+        var countyLabelRenderer = new SimpleRenderer(countyLabel);
+        var labels = new LabelLayer({ id: "labels" });
+        // tell the label layer to label the countries feature layer
+        // using the field named "admin"
+        labels.addFeatureLayer(countyPolygon, countyLabelRenderer, "{" + "NAME" + "}");
+        map.addLayer(labels);*/
+
+
+
         var json = {
             title: "<b>CONSTRUCTION SYP</b>",
             content:
                 "<strong>District No.</strong> : <td>${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DISTNO}<br>"+
                 "<strong>Item No.</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_ITEMNO}<br>" +
-                "<strong>Highway Plan </strong>: <a target='_blank' href = ${KYTCDynamic.PROGMGMT.SYP.PRECON_INFO_LINK}>Open Link</a><br>" +
-                "<strong>County & Route</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.LOCUNIQUE}<br>" +
-                "<strong>Beginning Mile Point</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.BMP}<br>" +
-                "<strong>Ending Mile Point</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.EM}<br>" +
-                "<strong>County Name</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.COUNTYNAME}<br>" +
-                "<strong>Type Work</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_TYPEWORK}<br>" +
-                "<strong>Project Description</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DESC}<br>" +
-                "<strong>Bridge Number</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_BRNO}<br>" +
-                "<strong>Construction Phase Stage</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_STAGE}<br>" +
-                "<strong>Contract Number</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_CONTRACTNO}<br>" +
-                "<strong>Date Awarded</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_AUTHDATE}<br>" +
-                "<strong>Project Status</strong>: ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_PRECONFLAG}<br>"
-
+                "<strong>Highway Plan </strong> : <a target='_blank' href = ${KYTCDynamic.PROGMGMT.SYP.PRECON_INFO_LINK}>${KYTCDynamic.PROGMGMT.SYP.PRECON_INFO_LINK}</a><br>" +
+                "<strong>County & Route</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.LOCUNIQUE}<br>" +
+                "<strong>Beginning Mile Point</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.BMP}<br>" +
+                "<strong>Ending Mile Point</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.EM}<br>" +
+                "<strong>County Name</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.COUNTYNAME}<br>" +
+                "<strong>Type Work</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_TYPEWORK}<br>" +
+                "<strong>Project Description</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DESC}<br>" +
+                "<strong>Bridge Number</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_BRNO}<br>" +
+                "<strong>Construction Phase Stage</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_STAGE}<br>" +
+                "<strong>Contract Number</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_CONTRACTNO}<br>" +
+                "<strong>Date Awarded</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_AUTHDATE}<br>" +
+                "<strong>Project Status</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_PRECONFLAG}<br>"
         };
+
         var ConstInfoTemplate =  new InfoTemplate(json);
 
         //define custom popup options
@@ -238,6 +281,8 @@ require(["esri/map",
         });
 
         map.addLayer(syp0);
+
+
 
         /*var earthquakes = new FeatureLayer("http://tmservices1.esri.com/arcgis/rest/services/LiveFeeds/Earthquakes/MapServer/0",{ mode:
         FeatureLayer.MODE_SNAPSHOT, outFields: ["Magnitude"]});

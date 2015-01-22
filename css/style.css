@@ -133,9 +133,9 @@ a{
 
 #HomeButton {
     position: absolute;
-    top: 220px;
+    top: 222px;
     right: 17px;
-    z-index: 50;
+    /*z-index: 50;*/
 }
 
 .HomeButton .home{
@@ -153,7 +153,7 @@ a{
     position: absolute;
     top: 255px;
     right: 17px;
-    z-index: 50;
+    /*z-index: 50;*/
 }
 
 .LocateButton .zoomLocateButton{
@@ -508,7 +508,7 @@ and (max-device-width : 568px){
 }
 
 .esriPopup.light .contentPane{
-    height: auto;
+    height: 400px;
     margin-top: 0;
     padding-top: 0;
     padding-bottom: 5px;
@@ -519,9 +519,16 @@ and (max-device-width : 568px){
 }
 
 .esriPopup.light .actionsPane, .esriPopup.dark .actionsPane{
+    position: absolute;
     height:0;
     width:0;
     padding:0
+}
+
+#printButton{
+    position: absolute;
+    top: 300px;
+    right: 15px;
 }
 
 
