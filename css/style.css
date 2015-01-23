@@ -525,11 +525,13 @@ and (max-device-width : 568px){
     padding:0
 }
 
+/*
 #printButton{
     position: absolute;
     top: 300px;
     right: 15px;
 }
+*/
 
 
 

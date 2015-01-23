@@ -68,7 +68,7 @@ require(["esri/map",
 
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create("mapDiv", {
-            basemap: "streets",
+            basemap: "dark-gray",
             center: [-85.724, 37.593],
             zoom: 7,
             scrollWheelZoom: true,
@@ -86,6 +86,8 @@ require(["esri/map",
         on(navToolbar, "onExtentHistoryChange", extentHistoryChangeHandler);
 
         //jQuery.noConflict();
+
+        // TODO: using jQuery and Dojo together
 
         $("#zoomprev").on("click", function () {
             navToolbar.zoomToPrevExtent();
@@ -178,18 +180,25 @@ require(["esri/map",
                     case "Open Street Map":
                         map.setBasemap("osm");
                         break;
+                    case "Terrain":
+                        map.setBasemap("terrain");
+                        break;
+                    case "Dark Gray":
+                        map.setBasemap("dark-gray");
+                        break;
                     case "KYTC Basemap":
-                        window.alert("lol");
+                        map.setBasemap("");
                         break;
                 }
             });
         });
 
-        var KYTCBasemap =
-            //new esri.layers.ArcGISTiledMapServiceLayer("http://kytca00s06d.kytc.ds.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
+       /* var KYTCBasemap =
             new ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
 
-        var countyPolygon = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BusinessIntelligence/Boundaries/MapServer/0",{
+        map.addLayer(KYTCBasemap);*/
+
+        /*var countyPolygon = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BusinessIntelligence/Boundaries/MapServer/0",{
             mode: FeatureLayer.MODE_ONDEMAND,
             outFields: ["NAME"]
             });
@@ -201,6 +210,9 @@ require(["esri/map",
             new Color([125,125,125,0.35]));
         countyPolygon.setRenderer(new SimpleRenderer(symbol));
         map.addLayer(countyPolygon);
+*/
+
+
 
 
         /* Add label for county polygon
