@@ -1,0 +1,145 @@
+<div class="gis_PrintDijit">
+    <div class="formContainer">
+        <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="printSettingsFormDijit">
+            <table cellspacing="5" style="width:100%;">
+                <tr>
+                    <td style="width:50px;">
+                        ${i18n.title}:
+                    </td>
+                    <td>
+                        <input type="text" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-props="name:'title',trim:true,required:true,style:'width:100%;',value:'${defaultTitle}'" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ${i18n.format}:
+                    </td>
+                    <td>
+                        <input type="select" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="name:'format',autoComplete:true,required:true,searchAttr:'name',style:'width:100%;'" data-dojo-attach-point="formatDijit" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        ${i18n.layout}:
+                    </td>
+                    <td>
+                        <input type="select" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="name:'layout',autoComplete:true,required:true,searchAttr:'name',style:'width:100%;'" data-dojo-attach-point="layoutDijit" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="buttonActionBar">
+        <div data-dojo-type="dijit/form/DropDownButton" data-dojo-props="iconClass:'fa fa-cog fa-fw',showLabel:true" data-dojo-attach-point="layoutDropDownDijit">
+            <span>
+                ${i18n.settings}
+            </span>
+            <div data-dojo-type="dijit/TooltipDialog">
+                <div style="width:260px;">
+                    <div style="font-weight:bold;">
+                        ${i18n.mapScaleExtent}:
+                    </div>
+                    <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="preserveFormDijit">
+                        <table cellspacing="5">
+                            <tr>
+                                <td style="vertical-align:middle;">
+                                    ${i18n.preserve}:
+                                </td>
+                                <td>
+                                    <input type="radio" data-dojo-type="dijit/form/RadioButton" data-dojo-props="name:'preserveScale',checked:true,value:'true'" />
+                                    ${i18n.mapScale}&nbsp;&nbsp;
+                                    <input type="radio" data-dojo-type="dijit/form/RadioButton" data-dojo-props="name:'preserveScale',value:'false'" />
+                                    ${i18n.mapExtent}
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="font-weight:bold;">
+                        ${i18n.fullLayoutOptions}:
+                    </div>
+                    <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="layoutFormDijit">
+                        <table cellspacing="5">
+                            <tr>
+                                <td>
+                                    ${i18n.scaleBarUnits}:
+                                </td>
+                                <td>
+                                    <select data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="name:'scalebarUnit',style:'width:100px;'">
+                                        <option value="Miles" selected="selected">
+                                            ${i18n.miles}
+                                        </option>
+                                        <option value="Kilometers">
+                                            ${i18n.kilometers}
+                                        </option>
+                                        <option value="Meters">
+                                            ${i18n.meters}
+                                        </option>
+                                        <option value="Feet">
+                                            ${i18n.feet}
+                                        </option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ${i18n.includeLegend}:
+                                </td>
+                                <td>
+                                    <input type="checkbox" data-dojo-type="dijit/form/CheckBox" data-dojo-props="name:'legend',value:true,checked:true" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="font-weight:bold;">
+                        ${i18n.printQualityOptions}:
+                    </div>
+                    <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="mapQualityFormDijit">
+                        <table cellspacing="5">
+                            <tr>
+                                <td>
+                                    ${i18n.dpiInput.label}:
+                                </td>
+                                <td>
+                                    <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="name:'dpi',required:true,value:150,constraints:{min:100,max:300,places:0},invalidMessage:'${i18n.dpiInput.invalidMessage}',rangeMessage:'${i18n.dpiInput.rangeMessage}',style:'width:100px;'" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div style="font-weight:bold;">
+                        ${i18n.mapOnlyOptions}:
+                    </div>
+                    <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="mapOnlyFormDijit">
+                        <table cellspacing="5">
+                            <tr>
+                                <td>
+                                    ${i18n.width}:
+                                </td>
+                                <td>
+                                    <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="name:'width',required:true,value:3300,style:'width:100px;'" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    ${i18n.height}:
+                                </td>
+                                <td>
+                                    <input type="text" data-dojo-type="dijit/form/NumberTextBox" data-dojo-props="name:'height',required:true,value:2550,style:'width:100px;'" />
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="busyLabel:'${i18n.printButton.busyLabel}',iconClass:'fa fa-print fa-fw'" data-dojo-attach-event="onClick:print" data-dojo-attach-point="printButtonDijit">
+            ${i18n.printButton.label}
+        </div>
+    </div>
+    <div data-dojo-attach-point="printResultsNode" class="resultsContainer">
+    </div>
+    <div data-dojo-attach-point="clearActionBarNode" class="buttonActionBar" style="display:none;padding:0;">
+        <div data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-history fa-fw'" data-dojo-attach-event="onClick:clearResults">
+            ${i18n.clearHistoryButton.label}
+        </div>
+    </div>
+</div>

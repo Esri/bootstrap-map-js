@@ -2,9 +2,106 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9e8614ca-6373-458f-83cd-5aae08d064f0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/myModule.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/fonts/adw-icons.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/fonts/adw-icons.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/fonts/adw-icons.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView/images/blueArrow.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Basemaps/images/check.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Basemaps/images/clear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/images/clear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Find/images/clear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/images/clear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Geocoder/images/geocoder.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView/images/googleIcon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Help/images/help.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Identify/images/identify.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/images/image.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Geocoder/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Identify/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView/images/loading.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/images/pdf.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/images/print.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Find/images/search.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/images/settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView/images/svicon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/images/toolbar_icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Basemaps/css/Basemaps.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Basemaps/templates/Basemaps.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Basemaps.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Bookmarks/css/Bookmarks.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Bookmarks.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/CSV.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/templates/Control.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Directions/templates/Directions.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Directions.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/css/Draw.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/templates/Draw.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/Dynamic.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Editor/templates/Editor.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Editor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/Feature.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Find/css/Find.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Find/templates/Find.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Find.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/FloatingTitlePane/css/FloatingTitlePane.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/FloatingTitlePane.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/FloatingWidgetDialog.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/templates/Folder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/GeoRSS.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Geocoder/css/Geocoder.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Geocoder/templates/Geocoder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Geocoder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Growler/css/Growler.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Growler.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Help/css/Help.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Help.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Help/templates/HelpDialog.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Identify/css/Identify.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Identify/templates/Identify.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Identify.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/Image.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/KML.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/css/LayerControl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/plugins/LayerMenu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LocateButton.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/MapInfo/css/MapInfo.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/MapInfo.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Measurement.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/css/Print.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/templates/Print.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/templates/PrintResult.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView/css/StreetView.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView/templates/StreetView.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/templates/Sublayer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/Tiled.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/plugins/Transparency.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Vim.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/WMS.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/_Control.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/_DynamicFolder.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/controls/_DynamicSublayer.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/_FloatingWidgetMixin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/css/adw-icons.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/fonts/adw-icons.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/plugins/async.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/plugins/legendUtil.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Basemaps/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Directions/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Draw/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Editor/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Find/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Geocoder/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Identify/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/LayerControl/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/Print/nls/resource.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/gis/dijit/StreetView/nls/resource.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/esri-code.js" afterPath="$PROJECT_DIR$/js/esri-code.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/learnDojo.html" afterPath="$PROJECT_DIR$/learnDojo.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/map.js" afterPath="$PROJECT_DIR$/js/map.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -30,44 +127,14 @@
     <favorites_list name="bootstrap-map-js" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.6410614">
+    <splitter split-orientation="horizontal" split-proportion="0.579021">
       <split-first>
         <leaf>
           <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-2.8909092" vertical-offset="1116" max-vertical-offset="7021">
-                  <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="learnDojo.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/learnDojo.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="714">
-                  <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="esri-code.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/esri-code.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="myModule.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/js/myModule.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state vertical-scroll-proportion="-4.7454543" vertical-offset="2680" max-vertical-offset="7123">
+                  <caret line="173" column="19" selection-start-line="173" selection-start-column="11" selection-end-line="173" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -76,8 +143,56 @@
           <file leaf-file-name="map.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/js/map.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.22721598" vertical-offset="1008" max-vertical-offset="5729">
-                  <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+                <state vertical-scroll-proportion="0.47960445" vertical-offset="2043" max-vertical-offset="5848">
+                  <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="map-title.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/map-title.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+                  <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="modal.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/modal.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                  <folding>
+                    <element signature="n#!!doc" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="mobile-map.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/js/mobile-map.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="1992" max-vertical-offset="2873">
+                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
                   </folding>
@@ -92,8 +207,8 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.81861573" vertical-offset="8290" max-vertical-offset="9231">
-                  <caret line="528" column="0" selection-start-line="528" selection-start-column="0" selection-end-line="528" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.47960445" vertical-offset="6684" max-vertical-offset="9741">
+                  <caret line="416" column="33" selection-start-line="416" selection-start-column="33" selection-end-line="416" selection-end-column="33" />
                   <folding />
                 </state>
               </provider>
@@ -155,15 +270,15 @@
         <option value="$PROJECT_DIR$/js/modal.js" />
         <option value="$PROJECT_DIR$/js/map-title.js" />
         <option value="$PROJECT_DIR$/js/index.js" />
-        <option value="$PROJECT_DIR$/js/esri-code.js" />
         <option value="$PROJECT_DIR$/js/map1.js" />
         <option value="$PROJECT_DIR$/photolog.html" />
         <option value="$PROJECT_DIR$/lib/jsapi/jsapi.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/myModule.js" />
         <option value="$PROJECT_DIR$/learnDojo.html" />
-        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/esri-code.js" />
         <option value="$PROJECT_DIR$/js/map.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -269,54 +384,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap-map-js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -375,6 +442,68 @@
               <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="bootstrap-map-js">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT USER_OBJECT="gis">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bootstrap-map-js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -384,7 +513,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/jsapi/jsapi.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cmv-app" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
@@ -402,16 +531,16 @@
     <property name="LayoutCode.rearrangeEntriesJavaScript 1.5" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\bootstrap-map-js\js" />
-      <recent name="D:\Projects\bootstrap-map-js\img" />
-      <recent name="D:\Projects\bootstrap-map-js" />
-      <recent name="D:\Projects\bootstrap-map-js\css" />
-      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates\images" />
-    </key>
     <key name="OPEN_URL_DIALOG">
       <recent name="http://maps.kytc.ky.gov/photolog/?config=ActiveHighwayPlan" />
       <recent name="http://test1.maps.kytc.ky.gov/kazc" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Projects\bootstrap-map-js" />
+      <recent name="D:\Projects\bootstrap-map-js\js" />
+      <recent name="D:\Projects\bootstrap-map-js\img" />
+      <recent name="D:\Projects\bootstrap-map-js\css" />
+      <recent name="C:\inetpub\wwwroot\bootstrap-map-js\templates\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\bootstrap-map-js\src\js" />
@@ -422,14 +551,10 @@
     </key>
   </component>
   <component name="RunManager" selected="JavaScript Debug.local server">
-    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
-      <method />
-    </configuration>
     <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
       <method />
     </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
-      <envs />
+    <configuration default="true" type="DartUnitRunConfigurationType" factoryName="DartUnit">
       <method />
     </configuration>
     <configuration default="true" type="JSTestDriver:ConfigurationType" factoryName="JsTestDriver">
@@ -437,6 +562,10 @@
       <setting name="settingsFile" value="" />
       <setting name="serverType" value="INTERNAL" />
       <setting name="preferredDebugBrowser" value="Chrome" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma" config-file="">
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
@@ -534,28 +663,28 @@
     <frame x="-8" y="-8" width="1696" height="1036" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18885097" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.18811882" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24886364" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278328" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.298066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.083129585" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40273038" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21515892" sideWeight="0.40589198" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32764506" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.117359415" sideWeight="0.49944994" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12469438" sideWeight="0.59410805" order="0" side_tool="false" content_ui="combo" x="1284" y="104" width="224" height="909" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.083129585" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12591687" sideWeight="0.59410805" order="0" side_tool="false" content_ui="combo" x="1284" y="104" width="224" height="909" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.41638225" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21515892" sideWeight="0.40589198" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32939914" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.298066" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992035" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -576,9 +705,9 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16259168" sideWeight="0.59410805" order="0" side_tool="false" content_ui="combo" x="1284" y="104" width="224" height="909" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -614,14 +743,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="7769">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/js/bootstrapmap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29377714" vertical-offset="35" max-vertical-offset="1802">
@@ -798,13 +919,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/map-title.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3259587" vertical-offset="0" max-vertical-offset="678">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/img/background.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -838,13 +952,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/bootstrap-select.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="838">
@@ -870,9 +977,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.40762812" vertical-offset="30462" max-vertical-offset="31433">
           <caret line="1812" column="68" selection-start-line="1812" selection-start-column="68" selection-end-line="1812" selection-end-column="68" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -883,41 +987,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81861573" vertical-offset="8290" max-vertical-offset="9231">
-          <caret line="528" column="0" selection-start-line="528" selection-start-column="0" selection-end-line="528" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/modal.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/mobile-map.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2873">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/spatial-query.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="852">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -925,29 +998,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.03859251" vertical-offset="0" max-vertical-offset="881">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/esri-code.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="839">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/learnDojo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="714">
-          <caret line="22" column="70" selection-start-line="22" selection-start-column="70" selection-end-line="22" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/license.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gis/dijit/Draw/css/Draw.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1734">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
@@ -961,18 +1024,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/esri-code.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
+          <caret line="14" column="2" selection-start-line="14" selection-start-column="2" selection-end-line="14" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/learnDojo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615" vertical-offset="0" max-vertical-offset="714">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/mobile-map.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2873">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/modal.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/map-title.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.8909092" vertical-offset="1116" max-vertical-offset="7021">
-          <caret line="75" column="41" selection-start-line="75" selection-start-column="41" selection-end-line="75" selection-end-column="41" />
+        <state vertical-scroll-proportion="-4.7454543" vertical-offset="2680" max-vertical-offset="7123">
+          <caret line="173" column="19" selection-start-line="173" selection-start-column="11" selection-end-line="173" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47960445" vertical-offset="6684" max-vertical-offset="9741">
+          <caret line="416" column="33" selection-start-line="416" selection-start-column="33" selection-end-line="416" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/map.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22721598" vertical-offset="1008" max-vertical-offset="5729">
-          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
+        <state vertical-scroll-proportion="0.47960445" vertical-offset="2043" max-vertical-offset="5848">
+          <caret line="143" column="28" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>

@@ -8,5 +8,8 @@ var dojoConfig = {
     packages: [{
         name: "application",
         location: package_path + '../../../src/js'
+    }, {
+        name: 'gis',
+        location: location.pathname.replace(/[^\/]+$/, '') + 'js/gis'
     }]
 };

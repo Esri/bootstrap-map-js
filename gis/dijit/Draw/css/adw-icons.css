@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "adw-icons";
+  src:url("../fonts/adw-icons.eot");
+  src:url("../fonts/adw-icons.eot?#iefix") format("embedded-opentype"),
+  url("../fonts/adw-icons.woff") format("woff"),
+  url("../fonts/adw-icons.ttf") format("truetype"),
+  url("../fonts/adw-icons.svg#adw-icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "adw-icons" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="adw-icon-"]:before,
+[class*=" adw-icon-"]:before {
+  font-family: "adw-icons" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.adw-icon-cancel:before {
+  content: "\e000";
+}
+.adw-icon-circle:before {
+  content: "\e001";
+}
+.adw-icon-freehand-polygon:before {
+  content: "\e002";
+}
+.adw-icon-point:before {
+  content: "\e003";
+}
+.adw-icon-polyline:before {
+  content: "\e004";
+}
+.adw-icon-rectangle:before {
+  content: "\e005";
+}
+.adw-icon-text:before {
+  content: "\e006";
+}
+.adw-icon-freehand-polyline:before {
+  content: "\e007";
+}
+.adw-icon-polygon:before {
+  content: "\e008";
+}

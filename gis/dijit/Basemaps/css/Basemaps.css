@@ -1,0 +1,14 @@
+.selectedIcon:before {
+    font-family: FontAwesome;
+    content: "\f046";
+}
+
+.emptyIcon:before {
+    font-family: FontAwesome;
+    content: "\f096";
+}
+
+.basemapsIcon:before {
+    font-family: FontAwesome;
+    content: "\f009";
+}

@@ -1,0 +1,60 @@
+.gis_StreetView {
+	padding: 5px;
+}
+
+.gis_StreetView .buttonActionBar {
+    padding: 3px 0px 2px 0px;
+    text-align: right;
+    width: 100%;
+}
+
+.gis_StreetView .buttonActionBar .loadingStreetView {
+    display: none;
+    width: 18px;
+    position: relative;
+    top: 5px;
+    margin-right: 10px;
+    background-image: url('../images/loading.gif');
+}
+
+.gis_StreetView .streetViewNode {
+    border: 1px solid #999999;
+    width: 100%;
+    height: 275px;
+}
+
+.floatingWidget .gis_StreetView .streetViewNode {
+    width: 400px;
+    height: 275px;
+}
+
+.gis_StreetView .pegmanIcon {
+    background-image: url(../images/googleIcon.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 20px;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-bottom: -4px;
+}
+
+.gis_StreetView .noStreetViewResults {
+    display: none;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    position: relative;
+}
+
+.gis_StreetView .noStreetViewResultsText {
+    color: white;
+    background-color: black;
+    z-index: 2;
+    position: relative;
+    top: 40%;
+    text-align: center;
+    font-size: 12pt;
+    padding: 10px;
+}

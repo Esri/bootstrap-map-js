@@ -68,7 +68,7 @@ require(["esri/map",
 
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create("mapDiv", {
-            basemap: "dark-gray",
+            basemap: "streets",
             center: [-85.724, 37.593],
             zoom: 7,
             scrollWheelZoom: true,
@@ -187,16 +187,23 @@ require(["esri/map",
                         map.setBasemap("dark-gray");
                         break;
                     case "KYTC Basemap":
-                        map.setBasemap("");
+                        map.addLayer(KYTCBasemap);
                         break;
                 }
             });
         });
 
-       /* var KYTCBasemap =
-            new ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
 
-        map.addLayer(KYTCBasemap);*/
+
+        var KYTCBasemap =
+            new ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
+        $('#basemap-toggle').change(function(){
+            if($(this).is(":checked")){
+                map.addLayer(KYTCBasemap);}
+            if(!$(this).is(":checked")){
+                map.removeLayer(KYTCBasemap);}
+        });
+
 
         /*var countyPolygon = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BusinessIntelligence/Boundaries/MapServer/0",{
             mode: FeatureLayer.MODE_ONDEMAND,

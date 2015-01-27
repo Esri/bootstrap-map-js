@@ -1,0 +1,100 @@
+<div class="gis_DrawDijit">
+    <div class="formContainer">
+        <div style="padding:5px;">
+            <ul class="list-unstyled outerList">
+
+                <li>
+                    <ul class="list-inline list-unstyled">
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'adw-icon-point',showLabel:false"
+                                    data-dojo-attach-event="onClick:drawPoint"
+                                    class="drawButton"
+                                    title="${i18n.labels.point}">
+                                ${i18n.labels.point}
+                            </button>
+                        </li>
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'adw-icon-circle',showLabel:false,drawType:'CIRCLE'"
+                                    data-dojo-attach-event="onClick:drawCircle"
+                                    class="drawButton"
+                                    title="${i18n.labels.circle}">
+                                ${i18n.labels.circle}
+                            </button>
+                        </li>
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'adw-icon-polyline',showLabel:false"
+                                    data-dojo-attach-event="onClick:drawLine"
+                                    class="drawButton"
+                                    title="${i18n.labels.polyline}">
+                                ${i18n.labels.polyline}
+                            </button>
+                        </li>
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'adw-icon-freehand-polyline',showLabel:false"
+                                    data-dojo-attach-event="onClick:drawFreehandLine"
+                                    class="drawButton"
+                                    title="${i18n.labels.freehandPolyline}">
+                                ${i18n.labels.freehandPolyline}
+                            </button>
+                        </li>
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'adw-icon-polygon',showLabel:false"
+                                    data-dojo-attach-event="onClick:drawPolygon"
+                                    class="drawButton"
+                                    title="${i18n.labels.polygon}">
+                                ${i18n.labels.polygon}
+                            </button>
+                        </li>
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'adw-icon-freehand-polygon',showLabel:false"
+                                    data-dojo-attach-event="onClick:drawFreehandPolygon"
+                                    class="drawButton"
+                                    title="${i18n.labels.freehandPolygon}">
+                                ${i18n.labels.freehandPolygon}
+                            </button>
+                        </li>
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button"
+                                 data-dojo-attach-point="stopDrawingButton"
+                                 data-dojo-props="iconClass:'fa fa-stop fa-fw',showLabel:false,disabled:true"
+                                 data-dojo-attach-event="onClick:stopDrawing"
+                                 class="drawButton"
+                                 title="${i18n.labels.stopDrawing}">
+                                ${i18n.labels.stopDrawing}
+                            </button>
+                        </li>
+
+                        <li>
+                            <button data-dojo-type="dijit/form/Button"
+                                 data-dojo-attach-point="eraseDrawingButton"
+                                 data-dojo-props="iconClass:'fa fa-history fa-fw',showLabel:false,disabled:true"
+                                 data-dojo-attach-event="onClick:clearGraphics"
+                                 class="drawButton"
+                                 title="${i18n.labels.clearDrawing}">
+                                ${i18n.labels.clearDrawing}
+                            </button>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li>
+                    <div class="drawModeIndicatorNode">
+                        <span style="font-weight: bold">${i18n.labels.currentDrawMode}</span>
+                        <span data-dojo-attach-point="drawModeTextNode">${i18n.labels.currentDrawModeNone}</span>
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+</div>

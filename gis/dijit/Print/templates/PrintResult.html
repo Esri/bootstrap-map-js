@@ -1,0 +1,16 @@
+<div class="printResult" data-dojo-attach-point="resultNode" data-dojo-attach-event="onclick:_openPrint">
+    <table class="printResultTable">
+        <tr>
+            <td width="25px">
+                <span class="bold">${count}.</span>
+            </td>
+            <td width="30px">
+                <img src="${icon}">
+            </td>
+            <td data-dojo-attach-point="nameNode">
+                <div data-dojo-type="dijit/ProgressBar" data-dojo-props="value:Infinity,label:'${i18n.printResults.progressBar.label}'">
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

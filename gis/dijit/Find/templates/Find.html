@@ -1,0 +1,26 @@
+<div class="gis_FindDijit" >
+    <div class="formContainer">
+        <div data-dojo-type="dijit/form/Form" data-dojo-attach-point="searchFormDijit">
+            <div data-dojo-attach-point="querySelectDom">
+                <label>${i18n.selectQuery}:</label><br/>
+    			<input type="select" data-dojo-type="dijit/form/FilteringSelect" data-dojo-props="name:'query',autoComplete:true,required:true,searchAttr:'description','class':'querySelect'" data-dojo-attach-point="querySelectDijit" data-dojo-attach-event="onChange:_onQueryChange"/>
+            </div>
+            <div data-dojo-attach-point="queryTextDom">
+                <label>${i18n.searchText.label}:</label><br/>
+    			<input type="text" data-dojo-type="dijit/form/ValidationTextBox" data-dojo-attach-point="searchTextDijit" data-dojo-props="name:'searchText',trim:true,required:true,value:'',placeholder:'${i18n.searchText.placeholder}','class':'searchText'" /><br/>
+            </div>
+            <div data-dojo-attach-point="queryContainsDom">
+                <input type="checkbox" data-dojo-attach-point="containsSearchText" data-dojo-type="dijit/form/CheckBox" data-dojo-props="'class':'containsCheck'"/>
+                <label>${i18n.exactMatches}</label>
+            </div>
+			<div data-dojo-type="dijit/form/Button" data-dojo-props="busyLabel:'${i18n.searchButton.busyLabel}',iconClass:'fa fa-search fa-fw','class':'searchButton'" data-dojo-attach-event="onClick:search" data-dojo-attach-point="searchButtonDijit">
+                ${i18n.searchButton.label}
+			</div>
+			<div data-dojo-type="dijit/form/Button" data-dojo-props="iconClass:'fa fa-history fa-fw','class':'clearButton'" data-dojo-attach-event="onClick:clearResults" data-dojo-attach-point="clearButtonDijit">
+                ${i18n.clearButton.label}
+			</div>
+    	</div>
+	</div>
+    <div data-dojo-attach-point="findResultsNode" class="resultsContainer"></div>
+    <div data-dojo-attach-point="findResultsGrid" class="resultsGrid"></div>
+</div>

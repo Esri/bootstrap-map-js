@@ -78,7 +78,13 @@
             <li class="divider"></li>
             <li><a href="#">Open Street Map</a></li>
             <li class="divider"></li>
-            <li><a href="#">KYTC Basemap</a></li>
+            <li>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="basemap-toggle"> KYTC Basemap
+                </label>
+                </div>
+            </li>
           </ul>
         </li>
 
@@ -165,14 +171,14 @@
     </div>
   </div>
 
-  <div id="camera-icon" class="icons">
+  <div id="CameraButton" class="icons">
     <a href="http://test1.maps.kytc.ky.gov/bootstrap-map-js/photolog.html" target="_blank">
       <i class="fa fa-camera-retro"></i></a></div>
   <div id="HomeButton"></div>
   <div id="LocateButton"></div>
   <!--<button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="One frame backward"><a href="#"><i-->
-  <div id="zoomprev" class="icons" ><button class="btn btn-md"><i class="fa fa-angle-left"></i></button></div>
-  <div id="zoomnext" class="icons" ><button class="btn btn-md"><i class="fa fa-angle-right"></i></button></div>
+  <div id="zoomprev" class="icons nav-btn" ><button class="btn btn-md"><i class="fa fa-angle-left"></i></button></div>
+  <div id="zoomnext" class="icons nav-btn" ><button class="btn btn-md"><i class="fa fa-angle-right"></i></button></div>
 
   <button id="query-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
           title="Zoom to selection">

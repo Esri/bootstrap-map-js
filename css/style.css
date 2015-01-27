@@ -120,7 +120,7 @@ a{
     right: 17px;
 }
 
-#camera-icon{
+#CameraButton {
     position: absolute;
     top: 188px;
     right: 17px;
@@ -353,6 +353,7 @@ and (orientation : portrait){
     -webkit-border-radius: 5px;
     overflow: hidden;
 }
+
 .im.title-bar{
     top: 2px;
     right: 2px;
@@ -397,6 +398,7 @@ padding-bottom: 15px;
     padding-bottom: 0;
 }
 
+/* Small device adjusstments*/
 @media  (max-width: 768px){
     .col-xs-4 a{
         font-size:0.7em;
@@ -405,6 +407,30 @@ padding-bottom: 15px;
     .btn-sm {
         font-size: 7px;
     }
+    /* Hide title bar and navigation buttons*/
+    #title-bar,.nav-btn,
+    .esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
+    .esriSimpleSliderVertical .esriSimpleSliderDecrementButton{
+        display: none;
+    }
+
+    /* Relocate remaining buttons*/
+    #CameraButton, #HomeButton, #LocateButton{
+        right:1px;
+    }
+
+    #CameraButton{
+        top: 2px;
+    }
+    #HomeButton{
+        top: 34px;
+    }
+    #LocateButton{
+        top: 66px;
+    }
+
+
+
 }
 
 .portfolio-item{
@@ -501,7 +527,7 @@ and (max-device-width : 568px){
 
 .esriPopup.light .esriPopupWrapper{
     height:auto;
-    width: AUTO;
+    width: auto;
     margin:0;
     padding:0;
     /*background-color: lightblue;*/
@@ -523,6 +549,10 @@ and (max-device-width : 568px){
     height:0;
     width:0;
     padding:0
+}
+
+.checkbox{
+    margin-left: 15px;
 }
 
 /*
