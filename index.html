@@ -19,11 +19,16 @@
 
   <!-- Bootstrap core CSS -->
   <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+
+  <!-- Bootstrap select -->
+  <link rel="stylesheet" type="text/css"
+        href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css">
 
   <link rel="stylesheet" href="http://js.arcgis.com/3.12/dijit/themes/claro/claro.css">
   <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.12/esri/css/esri.css">
   <link rel="stylesheet" type="text/css" href="src/css/bootstrapmap.css">
+
+  <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/dojo/1.7.4/dijit/themes/claro/claro.css"/>
 
   <!-- FontAwesome css-->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -35,15 +40,19 @@
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
-  <script src="../bootstrap_v3/docs-assets/js/html5shiv.js"></script>
-  <script src="../bootstrap_v3/docs-assets/js/respond.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
+
+
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+
 
 </head>
 
-<body id="MapBody">
+<body class="claro" id="MapBody">
 
-<div class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -58,12 +67,15 @@
       <div class="navbar-text hidden-xs hidden-sm hidden-md">An Official Website of the Commonwealth of Kentucky
       </div>
 
-
       <!--<div class="header-text"></div>-->
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <!--<li class="active dropdown" id="basemapList">-->
+        <li id="search-window">
+          <div id="search">
+          </div>
+        </li>
         <li class="dropdown" id="basemapList">
 
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Basemaps<b class="caret"></b></a>
@@ -80,114 +92,138 @@
             <li class="divider"></li>
             <li>
               <div class="checkbox">
+                <input type="checkbox" id="ky-basemap-toggle" class="checkbox"> KY Transportation
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
                 <label>
-                  <input type="checkbox" id="basemap-toggle"> KYTC Basemap
+                  <input type="checkbox" id="dgi-toggle" class="checkbox"> Dept. of Geographic Info.
                 </label>
-                </div>
+              </div>
+              </li>
+            <li>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="usgs-10m-dem" class="checkbox"> USGS Shaded Relief(10m)
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="ky-krg-toggle" class="checkbox"> Topo Quadrangles
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" id="ky-gq-toggle" class="checkbox"> Geologic Quadrangles
+                </label>
+              </div>
             </li>
           </ul>
         </li>
-
         <li data-toggle="modal" data-target="#themodal"><a href="#">Help</a>
-        </li>
-
-
-        <li id="search-window">
-          <div id="search">
-          </div>
         </li>
       </ul>
     </div>
     <!--/.nav-collapse -->
   </div>
-</div>
+</nav>
 
 <div class="content">
 
-    <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"  aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
-                    class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel">KYTC Interactive Maps</h4>
-          </div>
-          <div class="modal-body">
-            <ul class="nav nav-tabs">
-              <li><a data-toggle="tab" href="#how-it-works">How it works</a></li>
-              <li class="active"><a data-toggle="tab" href="#known-issues">Known issues</a></li>
-              <li><a data-toggle="tab" href="#about">About</a></li>
-              <li><a data-toggle="tab" href="#disclaimer">Disclaimer</a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="how-it-works" class="tab-pane fade">
-                <h3>How it works</h3>
-                <img class="img-responsive" src=img/andrew-cooks.jpg alt="">
-              </div>
-              <div id="known-issues" class="tab-pane fade in active">
-                <ul>
-                  <li>Tool tips bug on touch screen devices</li>
-                  <li>KYTC Tools button does nothing</li>
-                  <li>Print page CSS is not set</li>
-                  <li>List button width 2px wider</li>
-                </ul>
-              </div>
-              <div id="about" class="tab-pane fade">
-                <h3>about</h3>
-                <img class="img-responsive" src=img/potato-head.jpg alt="">
-
-              </div>
-              <div id="disclaimer" class="tab-pane fade">
-                <h3>disclaimer</h3>
-
-                <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
-                  mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
-                  turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis.
-                  Nunc facilisis leo at faucibus adipiscing.</p>
-              </div>
+  <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
+                  class="sr-only">Close</span></button>
+          <h4 class="modal-title" id="myModalLabel">KYTC Interactive Maps</h4>
+        </div>
+        <div class="modal-body">
+          <ul class="nav nav-tabs">
+            <li><a data-toggle="tab" href="#how-it-works">How it works</a></li>
+            <li class="active"><a data-toggle="tab" href="#known-issues">Known issues</a></li>
+            <li><a data-toggle="tab" href="#about">About</a></li>
+            <li><a data-toggle="tab" href="#disclaimer">Disclaimer</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="how-it-works" class="tab-pane fade">
+              <h3>How it works</h3>
+              <!--<img class="img-responsive" src=img/andrew-cooks.jpg alt="">-->
             </div>
-          </div>
-          <div class="modal-footer">
-            <div id="show-on-startup-container" class="pull-left">
-              <input type="checkbox" id="show-on-startup" checked="checked">
-              <label for="show-on-startup">Don't show on startup</label>
+            <div id="known-issues" class="tab-pane fade in active">
+              <h3>Known Issues</h3>
+              <ul>
+                <li><strike>Tool tips bug on touch screen devices</strike></li>
+                <li><strike>KYTC Tools button does nothing</strike></li>
+                <li>Print page CSS is not set</li>
+                <li><strike>List button width 2px wider</strike></li>
+              </ul>
+            </div>
+            <div id="about" class="tab-pane fade">
+              <h3>about</h3>
+              <!--<img class="img-responsive" src=img/potato-head.jpg alt="">-->
 
             </div>
+            <div id="disclaimer" class="tab-pane fade">
+              <h3>disclaimer</h3>
+
+              <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
+                mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
+                turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis.
+                Nunc facilisis leo at faucibus adipiscing.</p>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <div id="show-on-startup-container" class="pull-left">
+            <input type="checkbox" id="show-on-startup" checked="checked">
+            <label for="show-on-startup">Don't show on startup</label>
+
           </div>
         </div>
       </div>
     </div>
+  </div>
 
   <div id="mapDiv"></div>
   <div id="title-bar" class="im title-bar">
 
     <div class="project-title">
-      <h4><a href="http://transportation.ky.gov/Program-Management/Pages/2012-Highway-Plan.aspx" target="_top">Active
+      <h4><a href="//transportation.ky.gov/planning/Pages/default.aspx" target="_blank">Active
         Highway Plan</a></h4>
     </div>
     <div class="project-byline">
-      By <a href="http://transportation.ky.gov/Geographic-Information-Systems/Pages/GIS%20Main%20Page.aspx"
-            target="_top">KYTC GIS</a>
+      By <a href="//transportation.ky.gov/Geographic-Information-Systems/Pages/GIS%20Main%20Page.aspx"
+            target="_blank">KYTC GIS</a>
     </div>
   </div>
 
   <div id="CameraButton" class="icons">
     <a href="http://test1.maps.kytc.ky.gov/bootstrap-map-js/photolog.html" target="_blank">
-      <i class="fa fa-camera-retro"></i></a></div>
+      <i class="fa fa-camera-retro" data-toggle="tooltip" data-placement="left" title="PhotoLog"></i></a></div>
   <div id="HomeButton"></div>
   <div id="LocateButton"></div>
   <!--<button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="One frame backward"><a href="#"><i-->
-  <div id="zoomprev" class="icons nav-btn" ><button class="btn btn-md"><i class="fa fa-angle-left"></i></button></div>
-  <div id="zoomnext" class="icons nav-btn" ><button class="btn btn-md"><i class="fa fa-angle-right"></i></button></div>
+  <div id="zoomprev" class="icons nav-btn">
+    <button class="btn btn-md"><i class="fa fa-angle-left" data-toggle="tooltip" data-placement="left" title="Previous extent"></i></button>
+  </div>
+  <div id="zoomnext" class="icons nav-btn">
+    <button class="btn btn-md"><i class="fa fa-angle-right" data-toggle="tooltip" data-placement="left" title="Next extent"></i></button>
+  </div>
 
-  <button id="query-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
-          title="Zoom to selection">
+  <button id="query-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
+          title="Find">
     <a href="#"><i class="fa fa-search-plus"></i></a></button>
-  <button id="layers-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
+  <button id="layers-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
           title="Layers">
     <a href="#"><i class="fa fa-list-ul"></i></a></button>
-  <button id="kytc-tools-icon" class="btn btn-sm map-tools-top map-tools-left" data-toggle="tooltip"
-          data-placement="right" title="KYTC tools">
+  <button id="kytc-tools-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip"
+          data-placement="right" title="Tools">
     <a href="#"><i class="fa fa-wrench"></i></a></button>
 
   <!-- Search Accordion -->
@@ -195,35 +231,22 @@
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
-
         <h4 class="panel-title">
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Road Name</a>
           <button type="button" id="accordion-close" class="close" data-dismiss="#accordion">&times;</button>
         </h4>
-
       </div>
       <div id="collapseOne" class="panel-collapse collapse in">
         <div class="panel-body">
-          <select id="CountyInput2" class="selectpicker scroll-menu"
-                  data-bind="options: Counties, size= 12 optionsText: function (item) { return item.Name; }, value: selectedCounty, optionsCaption: 'Select a county...'">
+          <select id="CountyInput2" class="selectpicker">
             <option value="">Select a county...</option>
           </select>
 
-          <select id="RoadPrefixInput" class="selectpicker"
-                  data-bind="options: Prefixes, optionsText: function (item) { return item.PreDescr }, value: selectedPrefix, optionsCaption: 'Select a prefix...'">
-            <option value="">Select a prefix...</option>
-            <option value="">County Road</option>
-            <option value="">City Street</option>
-            <option value="">Federal Agency</option>
-            <option value="">KY</option>
-            <option value="">PR-Private</option>
-            <option value="">PS-Private</option>
-            <option value="">PV-Private</option>
-            <option value="">US</option>
+          <select id="RoadPrefixInput" class="selectpicker">
+            <option value="">Select a road prefix</option>
           </select>
 
-          <select id="RoadNumberInput" class="selectpicker"
-                  data-bind="options: RoadNumbers, value: selectedRoadNumber, optionsCaption: 'Select a route number...'">
+          <select id="RoadNumberInput" class="selectpicker">
             <option value="">Select a route number...</option>
           </select>
           <hr/>
@@ -233,7 +256,7 @@
           </div>
           <hr/>
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-success has-spinner">
+            <button type="button" class="btn btn-md btn-success has-spinner">
               Locate
             </button>
           </div>
@@ -250,10 +273,6 @@
       <div id="collapseTwo" class="panel-collapse collapse">
         <div class="panel-body">
           <!-- Split button -->
-<!--
-          <select class="selectpicker">
-          </select>
--->
           <hr/>
           <div class="btn-group">
             <button type="button" class="btn btn-sm btn-success has-spinner">
@@ -273,142 +292,141 @@
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-          <label for="CountyInput"></label><select id="CountyInput" class="selectpicker" data-bind="options: Counties,
-                    optionsText: function (item) { return item.Name; },
-                    value: selectedCounty, optionsCaption: 'Select a county...'">
-        </select>
-          <hr/>
-          <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-success">
-              Locate
-            </button>
-          </div>
+          <select id="countySelect" class="selectpicker">
+            <option>Select a county</option>
+          </select>
         </div>
       </div>
     </div>
   </div>
-
-
   <!-- Layers-List -->
   <div id="layers-list" class="panel-group" style="display:none;">
-    <!-- Search by road name -->
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          Legend
-          <button type="button" id="layers-list-close" class="close" data-dismiss="#layers-list">&times;</button>
-        </h4>
-      </div>
+  <!-- Search by road name -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        Legend
+        <button type="button" id="layers-list-close" class="close" data-dismiss="#layers-list">&times;</button>
+      </h4>
+    </div>
+    <div class="panel-body">
+      <!--<div id="TableOfContents"></div>-->
+      <div id="legendDiv"></div>
+    </div>
+  </div>
+</div>
+
+  <div id="tool-accordion" class="panel-group" style="display:none;">
+  <!-- Search by road name -->
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseIdentify">Identify</a>
+        <button type="button" id="tool-accordion-close" class="close" data-dismiss="#tool-accordion">&times;</button>
+      </h4>
+    </div>
+    <div id="collapseIdentify" class="panel-collapse collapse">
       <div class="panel-body">
-        <!--<div id="TableOfContents"></div>-->
-        <div id="legendDiv"></div>
+        <hr/>
       </div>
     </div>
   </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseMeasure">Measurement</a>
+      </h4>
+    </div>
+    <div id="collapseMeasure" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div id="titlePane" data-dojo-type="dijit/TitlePane"
+             data-dojo-props="title:'Measurement', closable:'false', open:'false'">
+          <div id="measurementDiv"></div>
+          <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDraw">Draw</a>
+      </h4>
+    </div>
+    <div id="collapseDraw" class="panel-collapse collapse">
+      <hr/>
+    </div>
+  </div>
 
-  <div id="tool-accordion" class="panel-group" style="display:none;">
-    <!-- Search by road name -->
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseIdentify">Identify</a>
-          <button type="button" id="tool-accordion-close" class="close" data-dismiss="#tool-accordion">&times;</button>
-        </h4>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDir">Directions</a>
+      </h4>
+    </div>
+    <div id="collapseDir" class="panel-collapse collapse">
+      <div class="panel-body">
+        <!--<div id="dir"></div>-->
       </div>
-      <div id="collapseIdentify" class="panel-collapse collapse">
-        <div class="panel-body">
-          <hr/>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseRoadInfo">Road Information</a>
+      </h4>
+    </div>
+    <div id="collapseRoadInfo" class="panel-collapse collapse">
+      <div class="panel-body">
+        <hr/>
+      </div>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapsePrint">Print</a>
+      </h4>
+    </div>
+    <div id="collapsePrint" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div>
+          <button id="printButton" class="fa fa-print"></button>
         </div>
       </div>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseMeasure">Measurement</a>
-        </h4>
-      </div>
-      <div id="collapseMeasure" class="panel-collapse collapse">
-        <div class="panel-body">
-          <div id="titlePane" data-dojo-type="dijit/TitlePane" data-dojo-props="title:'Measurement', closable:'false', open:'false'">
-            <div id="measurementDiv"></div>
-            <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
-          </div>        </div>
-      </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseBookmark">Bookmark</a>
+      </h4>
     </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDraw">Draw</a>
-        </h4>
-      </div>
-      <div id="collapseDraw" class="panel-collapse collapse">
-          <hr/>
-        </div>
-      </div>
-
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDir">Directions</a>
-        </h4>
-      </div>
-      <div id="collapseDir" class="panel-collapse collapse">
-        <div class="panel-body">
-          <!--<div id="dir"></div>-->
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseRoadInfo">Road Information</a>
-        </h4>
-      </div>
-      <div id="collapseRoadInfo" class="panel-collapse collapse">
-        <div class="panel-body">
-          <hr/>
-        </div>
-      </div>
-    </div>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapsePrint">Print</a>
-        </h4>
-      </div>
-      <div id="collapsePrint" class="panel-collapse collapse">
-        <div class="panel-body">
-          <div><button id="printButton" class="fa fa-print"></button></div>
+    <div id="collapseBookmark" class="panel-collapse collapse">
+      <div class="panel-body">
+        <div>
+          <button id="bookmarks"></button>
         </div>
       </div>
     </div>
   </div>
 </div>
-
+</div>
 <script src="js/esri-code.js"></script>
-
 <!-- jQuery Version 1.11.1 -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
 <!-- Esri js -->
 <script src="//js.arcgis.com/3.12"></script>
-
-
 <!-- Bootstrap Core JavaScript -->
 <script src="dist/js/bootstrap.min.js"></script>
-
-
 <!-- Selecpick js-->
-<script src="js/bootstrap-select.min.js"></script>
-
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 <!-- Custom JavaScripts-->
 <script src="js/modal.js"></script>
-
 <script src="js/index.js"></script>
-
-
 <script src="js/map-title.js"></script>
 <script src="js/map.js"></script>
-
+<script src="js/query.js"></script>
+<!--<script src="js/toggle-layer.js"></script>-->
 </body>
 </html>

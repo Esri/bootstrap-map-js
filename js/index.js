@@ -6,10 +6,26 @@
  if ('ontouchstart' in document.documentElement) e.preventDefault();
  });*/
 
-// Active tool tip
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip();
+/* Disbale tooltip on touch device */
+if(!('ontouchstart' in window))
+{
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip();
+    });
+
+}
+
+/* Mutually exclusive checkbox */
+$('.checkbox').click(function () {
+    var checkedState = $(this).attr('checked');
+    $(this).parent('div').children('.checkbox:checked').each(function () {
+        $(this).attr('checked', false);
+    });
+    $(this).attr('checked', checkedState);
 });
+
+
+
 
 /*Panel open close*/
 PanelToggle("#accordion", "#accordion-close", "#query-icon");
@@ -29,6 +45,14 @@ function PanelToggle (objectId,closeBtnId, btnId){
         object.hide();
     });
 }
+
+$('li>div .checkbox').click(function () {
+    var checkedState = $(this).attr('checked');
+    $(this).parent('div').children('.checkbox:checked').each(function () {
+        $(this).attr('checked', false);
+    });
+    $(this).attr('checked', checkedState);
+});
 
 
 

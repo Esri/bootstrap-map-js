@@ -1,10 +1,3 @@
-/**
- * Created by ak on 9/26/14.
- */
-/**
- * Created by Ahjung.Kim on 9/4/2014.
- */
-
 /*if (!window.matchMedia || (window.matchMedia("(max-width: 767px)").matches)) {
 
  $(function () {
@@ -12,8 +5,12 @@
  });
  }*/
 
+
 require(["esri/map",
         "application/bootstrapmap",
+
+        "esri/tasks/query",
+        "esri/tasks/QueryTask",
 
         "esri/toolbars/navigation",
         "dojo/on",
@@ -21,9 +18,11 @@ require(["esri/map",
         "esri/dijit/Scalebar",
         "esri/layers/FeatureLayer",
         "esri/layers/ArcGISTiledMapServiceLayer",
+        "esri/layers/ArcGISImageServiceLayer",
+        "esri/layers/ArcGISDynamicMapServiceLayer",
         "esri/layers/LabelLayer",
         "esri/dijit/OverviewMap",
-        "esri/dijit/Directions",
+        //"esri/dijit/Directions",
         "esri/dijit/HomeButton",
         "esri/dijit/LocateButton",
         "esri/dijit/Geocoder",
@@ -33,6 +32,7 @@ require(["esri/map",
         "dojo/dom-construct",
         "esri/dijit/Popup",
         "esri/dijit/PopupTemplate",
+        "esri/dijit/Bookmarks",
 
         "esri/toolbars/draw",
         "esri/graphic",
@@ -53,34 +53,40 @@ require(["esri/map",
         "dojo/dom",
         "dijit/form/Button",
         "dojo/domReady!"],
-    function (Map, BootstrapMap, Navigation, on, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, LabelLayer, OverviewMap, Directions, HomeButton,
+    function (Map, BootstrapMap, Query, QueryTask, Navigation, on, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer,
+              ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton,
               LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup, PopupTemplate,
-              Draw, Graphic,
+              Bookmarks, Draw, Graphic,
               Color, SimpleRenderer, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol,TextSymbol, Font,
               Print, Legend, registry, Toolbar, parser, dom)
-
     {
-
-        var popup = new Popup(null, dojo.create("div"));
-
+        //var popup = new Popup(null, dojo.create("div"));
 
         var navToolbar;
 
         // Get a reference to the ArcGIS Map class
         var map = BootstrapMap.create("mapDiv", {
-            basemap: "streets",
+            basemap: "gray",
             center: [-85.724, 37.593],
-            zoom: 7,
+            zoom: 8,
             scrollWheelZoom: true,
             logo: false,
             nav: false,
-            sliderPosition: "top-right",
-            infoWindow: popup,
-            showInfoWindowOnClick: true
+            sliderPosition: "top-right"
+            //infoWindow: popup,
+            //showInfoWindowOnClick: true
         });
 
-        map.infoWindow.resize(320,500);
+        // Create the bookmark widget
+        var bookmarks = new Bookmarks({
+            map: map,
+            bookmarks: [],
+            editable: true
+        }, dojo.byId('bookmarks'));
+        //bookmarks.startup();
 
+
+        //map.infoWindow.resize(320,500);
 
         navToolbar = new Navigation(map);
         on(navToolbar, "onExtentHistoryChange", extentHistoryChangeHandler);
@@ -95,7 +101,6 @@ require(["esri/map",
         $("#zoomnext").on("click", function () {
             navToolbar.zoomToNextExtent();
         });
-
 
         var printer = new Print({
             map: map,
@@ -114,16 +119,18 @@ require(["esri/map",
         });
 
         // Add overview map
+        var overviewBase = new ArcGISTiledMapServiceLayer(
+            "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer");
         var overviewMapDijit;
         overviewMapDijit = new OverviewMap({
             map: map,
+            baseLayer: overviewBase,
             attachTo: "bottom-right",
             height: 120,
             width: 144,
-            visible: false,
+            visible: true,
             opacity: 0.4,
             expandFactor: 3.0
-
         });
         overviewMapDijit.startup();
 
@@ -186,30 +193,23 @@ require(["esri/map",
                     case "Dark Gray":
                         map.setBasemap("dark-gray");
                         break;
-                    case "KYTC Basemap":
-                        map.addLayer(KYTCBasemap);
-                        break;
                 }
             });
         });
 
-
-
-        var KYTCBasemap =
-            new ArcGISTiledMapServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer");
+        /*var KYTCBasemap =
+            new ArcGISDynamicMapServiceLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
         $('#basemap-toggle').change(function(){
             if($(this).is(":checked")){
                 map.addLayer(KYTCBasemap);}
             if(!$(this).is(":checked")){
                 map.removeLayer(KYTCBasemap);}
-        });
-
+        });*/
 
         /*var countyPolygon = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BusinessIntelligence/Boundaries/MapServer/0",{
             mode: FeatureLayer.MODE_ONDEMAND,
             outFields: ["NAME"]
             });
-
 
         var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
             new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
@@ -218,9 +218,6 @@ require(["esri/map",
         countyPolygon.setRenderer(new SimpleRenderer(symbol));
         map.addLayer(countyPolygon);
 */
-
-
-
 
         /* Add label for county polygon
         var countyColor = new Color([125,125,125,1.0]);
@@ -234,8 +231,6 @@ require(["esri/map",
         // using the field named "admin"
         labels.addFeatureLayer(countyPolygon, countyLabelRenderer, "{" + "NAME" + "}");
         map.addLayer(labels);*/
-
-
 
         var json = {
             title: "<b>CONSTRUCTION SYP</b>",
@@ -260,32 +255,13 @@ require(["esri/map",
 
         //define custom popup options
         //create a popup to replace the map's info window
-
         var syp0 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/0", {
             mode: FeatureLayer.MODE_ONDEMAND,
             infoTemplate: ConstInfoTemplate,
             outFields : ["*"]
         });
-
         map.addLayer(syp0);
-
-
-
-        /*var earthquakes = new FeatureLayer("http://tmservices1.esri.com/arcgis/rest/services/LiveFeeds/Earthquakes/MapServer/0",{ mode:
-        FeatureLayer.MODE_SNAPSHOT, outFields: ["Magnitude"]});
-
-            var infoTemplate = new InfoTemplate("Test", "Magnitude : ${MAGNITUDE}");
-            var featureLayer = new FeatureLayer("http://tmservices1.esri.com/arcgis/rest/services/LiveFeeds/Earthquakes/MapServer/0",{
-            mode: FeatureLayer.MODE_ONDEMAND,
-                outFields: ["MAGNITUDE"],
-                infoTemplate: infoTemplate
-        });
-        map.addLayer(featureLayer);
-        map.infoWindow.resize(155,75);*/
-
-
-
-
+        //map.infoWindow.resize(500, 500);
         var syp1 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
             mode: FeatureLayer.MODE_ONDEMAND,
             //infoTemplate: PlanningInfoTemplate,
@@ -306,20 +282,66 @@ require(["esri/map",
             //infoTemplate: infoTemplate,
             outFields: ["*"]
         });
-
-
-
-
-        //Add legend
-
-        //map.addLayer(countyPolyg);
-        //map.addLayer(KYTCBasemap);
-
         var legend = new Legend({
             map:map
         },"legendDiv");
-
         legend.startup();
+
+        map.addLayers([syp0,syp1, syp3, syp4]);
+
+        function ToggleImageServiceLayer(serviceURL,ID) {
+
+            var Layer = new ArcGISImageServiceLayer(serviceURL);
+            $(ID).change(function(){
+                if($(this).is(":checked")){
+                    map.addLayer(Layer);}
+                if(!$(this).is(":checked")){
+                    map.removeLayer(Layer);}
+            });
+        }
+
+        ToggleImageServiceLayer("http://kyraster.ky.gov/arcgis/rest/services/ImageServices/Ky_KRG/ImageServer","#ky-krg-toggle");
+        ToggleImageServiceLayer("http://kyraster.ky.gov/arcgis/rest/services/ImageServices/Ky_Geologic_Quadrangle_Maps/ImageServer","#ky-gq-toggle");
+        ToggleImageServiceLayer("http://kyraster.ky.gov/arcgis/rest/services/ElevationServices/KY_ShadedRelief_USGS_10M/ImageServer", "#usgs-10m-dem");
+
+        function ToggleDynamicServiceLayer(serviceURL,ID) {
+
+            var Layer = new ArcGISDynamicMapServiceLayer(serviceURL);
+            $(ID).change(function(){
+                if($(this).is(":checked")){
+                    map.addLayer(Layer);}
+                if(!$(this).is(":checked")){
+                    map.removeLayer(Layer);}
+            });
+        }
+        ToggleDynamicServiceLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer",'#ky-basemap-toggle');
+
+        function ToggleTiledServiceLayer(serviceURL,ID) {
+
+            var Layer = new ArcGISTiledMapServiceLayer(serviceURL);
+            $(ID).change(function(){
+                if($(this).is(":checked")){
+                    map.addLayer(Layer);}
+                if(!$(this).is(":checked")){
+                    map.removeLayer(Layer);}
+            });
+        }
+        ToggleTiledServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer", "#dgi-toggle");
+
+
+        //map.on("click", addPoint);
+
+        /*function addPoint(evt) {
+            var latitude = evt.mapPoint.getLatitude();
+            var longitude = evt.mapPoint.getLongitude();
+            map.infoWindow.setTitle("Coordinates");
+            map.infoWindow.setContent(
+                "lat/lon : " + latitude.toFixed(2) + ", " + longitude.toFixed(2) +
+                "<br>screen x/y : " + evt.screenPoint.x + ", " + evt.screenPoint.y
+            );
+            map.infoWindow.resize(250, 100);
+            map.infoWindow.show(evt.mapPoint, map.getInfoWindowAnchor(evt.screenPoint));
+        }*/
 
 /*
         var myWidget = new TableOfContents({
@@ -332,7 +354,5 @@ require(["esri/map",
 //        map.addLayer(syp1);
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
-
-
     });
 

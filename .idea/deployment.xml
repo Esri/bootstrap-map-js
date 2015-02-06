@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" uploadOnCheckin="ca78a013-fcaf-4204-94fc-a2f3b50b7e58" showNewOnTargetInSync="false">
+  <component name="PublishConfigData" uploadOnCheckin="ca78a013-fcaf-4204-94fc-a2f3b50b7e58" showNewOnTargetInSync="false" showExcludedInSync="true">
     <serverData>
       <paths name="KYTC Test">
         <serverdata>

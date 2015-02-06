@@ -1,6 +1,9 @@
 body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse,
 .navbar-nav > .open > a, .navbar-inverse.navbar-nav > .open > a:hover,
-.navbar-inverse .navbar-nav > .open > a:focus, .navbar-toggle:focus, .navbar-toggle:hover {
+.navbar-inverse .navbar-nav > .open > a:focus, .navbar-toggle:focus, .navbar-toggle:hover,
+ul.nav.navbar-nav.navbar-right,
+div.navbar-collapse.collapsing,
+div.navbar-collapse.collapse.in{
     /*color: #fff;*/
     background: -webkit-linear-gradient(top, #006699, #003366); /*For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(top, #006699, #003366); /*For Opera 11.1 to 12.0 */
@@ -9,10 +12,34 @@ body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse,
     background-image: -ms-linear-gradient(top, #006699, #003366);
 }
 
+.navbar-inverse .navbar-nav .open .dropdown-menu .divider{
+    background-color: gray;
+}
+
+.navbar-inverse .navbar-toggle {
+    border-color: #ffffff;
+}
+
+@media (max-width: 767px) {
+    .li .divider {
+        background-color: #080808;
+    }
+}
+
+button.btn.btn-md{
+    border: 1px solid #d3d3d3;
+}
+
 a{
     color: #6DBAFD;
 }
 
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
+    .checkbox label {
+        color: lightgray;
+    }
+}
 .nav>li{
     margin-right: 10px;
 }
@@ -172,6 +199,7 @@ a{
     margin: 9px 0 6px 6px;
     color: #006699;
 }
+
 
 .navbar-inverse .navbar-text, .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
     color: #ffffff;
@@ -398,7 +426,7 @@ padding-bottom: 15px;
     padding-bottom: 0;
 }
 
-/* Small device adjusstments*/
+/* Small device adjustments*/
 @media  (max-width: 768px){
     .col-xs-4 a{
         font-size:0.7em;
@@ -429,8 +457,10 @@ padding-bottom: 15px;
         top: 66px;
     }
 
-
-
+/*    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
+    .checkbox label {
+        color: #FFF;
+    }*/
 }
 
 .portfolio-item{
@@ -473,6 +503,7 @@ footer ul li{
 .panel-group{
     overflow-x: hidden;
     overflow-y: auto;
+    z-index: 50;
 }
 
 .panel-body{
@@ -555,6 +586,9 @@ and (max-device-width : 568px){
     margin-left: 15px;
 }
 
+.esriBookmarkEditBox{
+    height: 20px;
+}
 /*
 #printButton{
     position: absolute;
