@@ -45,7 +45,7 @@
   <![endif]-->
 
 
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>
+  <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>-->
 
 
 </head>
@@ -92,7 +92,8 @@
             <li class="divider"></li>
             <li>
               <div class="checkbox">
-                <input type="checkbox" id="ky-basemap-toggle" class="checkbox"> KY Transportation
+                
+                <label><input type="checkbox" id="ky-basemap-toggle" class="checkbox"> KY Transportation</label>
               </div>
             </li>
             <li>
@@ -412,21 +413,31 @@
   </div>
 </div>
 </div>
-<script src="js/esri-code.js"></script>
+<script>
+  var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+  var dojoConfig = {
+    //The location.pathname.replace() logic below may look confusing but all its doing is
+    // enabling us to load the api from a CDN and load local modules from the correct location.
+    packages: [{
+      name: "application",
+      location: package_path + '../../../src/js'
+    }
+    ]};
+</script>
 <!-- jQuery Version 1.11.1 -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script async src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Esri js -->
 <script src="//js.arcgis.com/3.12"></script>
 <!-- Bootstrap Core JavaScript -->
-<script src="dist/js/bootstrap.min.js"></script>
+<script async src="dist/js/bootstrap.min.js"></script>
 <!-- Selecpick js-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+<script async src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 <!-- Custom JavaScripts-->
-<script src="js/modal.js"></script>
-<script src="js/index.js"></script>
-<script src="js/map-title.js"></script>
-<script src="js/map.js"></script>
-<script src="js/query.js"></script>
+<!--<script src="js/modal.js"></script>-->
+<script async src="js/index.js"></script>
+<script async src="js/map-title.js"></script>
+<script async src="js/map.js"></script>
+<script async src="js/query.js"></script>
 <!--<script src="js/toggle-layer.js"></script>-->
 </body>
 </html>

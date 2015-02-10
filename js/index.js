@@ -15,7 +15,8 @@ if(!('ontouchstart' in window))
 
 }
 
-/* Mutually exclusive checkbox */
+ //Mutually exclusive checkbox
+
 $('.checkbox').click(function () {
     var checkedState = $(this).attr('checked');
     $(this).parent('div').children('.checkbox:checked').each(function () {
@@ -23,6 +24,17 @@ $('.checkbox').click(function () {
     });
     $(this).attr('checked', checkedState);
 });
+
+/*
+ Another method. Doesn't work
+ $('li>div .checkbox').click(function () {
+ var checkedState = $(this).attr('checked');
+ $(this).parent('div').children('.checkbox:checked').each(function () {
+ $(this).attr('checked', false);
+ });
+ $(this).attr('checked', checkedState);
+ });*/
+
 
 
 
@@ -46,13 +58,6 @@ function PanelToggle (objectId,closeBtnId, btnId){
     });
 }
 
-$('li>div .checkbox').click(function () {
-    var checkedState = $(this).attr('checked');
-    $(this).parent('div').children('.checkbox:checked').each(function () {
-        $(this).attr('checked', false);
-    });
-    $(this).attr('checked', checkedState);
-});
 
 
 

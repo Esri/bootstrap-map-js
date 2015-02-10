@@ -197,41 +197,6 @@ require(["esri/map",
             });
         });
 
-        /*var KYTCBasemap =
-            new ArcGISDynamicMapServiceLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer");
-        $('#basemap-toggle').change(function(){
-            if($(this).is(":checked")){
-                map.addLayer(KYTCBasemap);}
-            if(!$(this).is(":checked")){
-                map.removeLayer(KYTCBasemap);}
-        });*/
-
-        /*var countyPolygon = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/BusinessIntelligence/Boundaries/MapServer/0",{
-            mode: FeatureLayer.MODE_ONDEMAND,
-            outFields: ["NAME"]
-            });
-
-        var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
-            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
-            new Color([255,255,255,1.0]), 1),
-            new Color([125,125,125,0.35]));
-        countyPolygon.setRenderer(new SimpleRenderer(symbol));
-        map.addLayer(countyPolygon);
-*/
-
-        /* Add label for county polygon
-        var countyColor = new Color([125,125,125,1.0]);
-        var countyLabel = new TextSymbol().setColor(countyColor);
-        countyLabel.font.setSize("8pt");
-        countyLabel.font.setFamily("arial");
-        countyLabel.font.setWeight(Font.WEIGHT_BOLD);
-        var countyLabelRenderer = new SimpleRenderer(countyLabel);
-        var labels = new LabelLayer({ id: "labels" });
-        // tell the label layer to label the countries feature layer
-        // using the field named "admin"
-        labels.addFeatureLayer(countyPolygon, countyLabelRenderer, "{" + "NAME" + "}");
-        map.addLayer(labels);*/
-
         var json = {
             title: "<b>CONSTRUCTION SYP</b>",
             content:
@@ -328,7 +293,6 @@ require(["esri/map",
         }
         ToggleTiledServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer", "#dgi-toggle");
 
-
         //map.on("click", addPoint);
 
         /*function addPoint(evt) {
@@ -342,7 +306,6 @@ require(["esri/map",
             map.infoWindow.resize(250, 100);
             map.infoWindow.show(evt.mapPoint, map.getInfoWindowAnchor(evt.screenPoint));
         }*/
-
 /*
         var myWidget = new TableOfContents({
             map: map,
@@ -350,7 +313,6 @@ require(["esri/map",
         }, "TableOfContents");
         myWidget.startup();
 */
-
 //        map.addLayer(syp1);
 //        map.addLayer(syp2);
 //        map.addLayer(syp3);
