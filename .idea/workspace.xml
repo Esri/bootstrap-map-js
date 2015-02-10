@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e8614ca-6373-458f-83cd-5aae08d064f0" name="Default" comment="">
-      <change type="DELETED" beforePath="D:\Projects\bootstrap-map-js\js\esri-code.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/index.js" afterPath="$PROJECT_DIR$/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/map.js" afterPath="$PROJECT_DIR$/js/map.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/photolog.html" afterPath="$PROJECT_DIR$/photolog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="9e8614ca-6373-458f-83cd-5aae08d064f0" name="Default" comment="" />
     <ignored path="bootstrap-map-js.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,10 +26,10 @@
     <splitter split-orientation="horizontal" split-proportion="0.61126375">
       <split-first>
         <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/index.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-10.461538" vertical-offset="6596" max-vertical-offset="7191">
+                <state vertical-scroll-proportion="0.45714286" vertical-offset="6596" max-vertical-offset="7191">
                   <caret line="429" column="8" selection-start-line="429" selection-start-column="8" selection-end-line="429" selection-end-column="8" />
                   <folding>
                     <element signature="n#style#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -50,10 +43,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="photolog.html" pinned="false" current-in-tab="true">
+          <file leaf-file-name="photolog.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/photolog.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.54453784" vertical-offset="28015" max-vertical-offset="28900">
+                <state vertical-scroll-proportion="-12.461538" vertical-offset="28015" max-vertical-offset="28900">
                   <caret line="1667" column="7" selection-start-line="1667" selection-start-column="7" selection-end-line="1667" selection-end-column="7" />
                   <folding />
                 </state>
@@ -919,9 +912,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/photolog.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.461538" vertical-offset="28015" max-vertical-offset="28900">
+          <caret line="1667" column="7" selection-start-line="1667" selection-start-column="7" selection-end-line="1667" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.461538" vertical-offset="6596" max-vertical-offset="7191">
+        <state vertical-scroll-proportion="0.45714286" vertical-offset="6596" max-vertical-offset="7191">
           <caret line="429" column="8" selection-start-line="429" selection-start-column="8" selection-end-line="429" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#div#8;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -931,14 +932,6 @@
             <element signature="n#style#0;n#span#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#10;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#div#4;n#div#10;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photolog.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54453784" vertical-offset="28015" max-vertical-offset="28900">
-          <caret line="1667" column="7" selection-start-line="1667" selection-start-column="7" selection-end-line="1667" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
