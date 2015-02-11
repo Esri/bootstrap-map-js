@@ -92,37 +92,43 @@
             <li class="divider"></li>
             <li>
               <div class="checkbox">
-                
-                <label><input type="checkbox" id="ky-basemap-toggle" class="checkbox"> KY Transportation</label>
+                <label>
+                  <input name ="myCheckbox" type="checkbox" id="ky-basemap-toggle" class="mutually"> KY Transportation
+                </label>
+                <!--<label>
+                  <input type="checkbox" id="dgi-toggle" class="mutually"> Dept. of Geographic Info.
+                </label>-->
               </div>
             </li>
             <li>
               <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="dgi-toggle" class="checkbox"> Dept. of Geographic Info.
-                </label>
-              </div>
-              </li>
-            <li>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="usgs-10m-dem" class="checkbox"> USGS Shaded Relief(10m)
-                </label>
+
+                  <input name ="myCheckbox" type="checkbox" id="dgi-toggle" class="test"> Dept. of Geographic Info.
+                  <input name ="myCheckbox" type="checkbox" id="usgs-10m-dem" class="test"> USGS Shaded Relief(10m)
+                  <input name ="myCheckbox" type="checkbox" id="ky-krg-toggle" class="test"> Topo Quadrangles
+
+
+
               </div>
             </li>
-            <li>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="ky-krg-toggle" class="checkbox"> Topo Quadrangles
-                </label>
-              </div>
-            </li>
-            <li>
-              <div class="checkbox">
-                <label>
-                  <input type="checkbox" id="ky-gq-toggle" class="checkbox"> Geologic Quadrangles
-                </label>
-              </div>
+          <li>
+            <div class="checkbox">
+              <label>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label>
+              </label>
+            </div>
+          </li>
+          <li>
+            <div class="checkbox">
+              <label>
+                <input name ="myCheckbox" type="checkbox" id="ky-gq-toggle" class="mutuallyexclusive"> Geologic Quadrangles
+              </label>
+            </div>
             </li>
           </ul>
         </li>
@@ -431,7 +437,7 @@
 <!-- Bootstrap Core JavaScript -->
 <script async src="dist/js/bootstrap.min.js"></script>
 <!-- Selecpick js-->
-<script async src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 <!-- Custom JavaScripts-->
 <!--<script src="js/modal.js"></script>-->
 <script async src="js/index.js"></script>

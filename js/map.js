@@ -68,7 +68,7 @@ require(["esri/map",
         var map = BootstrapMap.create("mapDiv", {
             basemap: "gray",
             center: [-85.724, 37.593],
-            zoom: 8,
+            zoom: 7,
             scrollWheelZoom: true,
             logo: false,
             nav: false,
@@ -198,22 +198,19 @@ require(["esri/map",
         });
 
         var json = {
-            title: "<b>CONSTRUCTION SYP</b>",
+            title: "<b>Awarded Current Hwy Plan</b>",
             content:
-                "<strong>District No.</strong> : <td>${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DISTNO}<br>"+
-                "<strong>Item No.</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_ITEMNO}<br>" +
-                "<strong>Highway Plan </strong> : <a target='_blank' href = ${KYTCDynamic.PROGMGMT.SYP.PRECON_INFO_LINK}>${KYTCDynamic.PROGMGMT.SYP.PRECON_INFO_LINK}</a><br>" +
-                "<strong>County & Route</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.LOCUNIQUE}<br>" +
-                "<strong>Beginning Mile Point</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.BMP}<br>" +
-                "<strong>Ending Mile Point</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.EM}<br>" +
-                "<strong>County Name</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.COUNTYNAME}<br>" +
-                "<strong>Type Work</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_TYPEWORK}<br>" +
-                "<strong>Project Description</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_DESC}<br>" +
-                "<strong>Bridge Number</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_BRNO}<br>" +
-                "<strong>Construction Phase Stage</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_STAGE}<br>" +
-                "<strong>Contract Number</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_CONTRACTNO}<br>" +
-                "<strong>Date Awarded</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PHA_AUTHDATE}<br>" +
-                "<strong>Project Status</strong> : ${KYTCDynamic.ARCGISSERVERREAD.%SYP_CONSTRUCTION_Query_Layer_1_2_3_4_5_6_7_8_1_2.SYP_PRO_PRECONFLAG}<br>"
+                "<strong>District No.</strong> : <td>${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_PRO_DISTNO}<br>"+
+                "<strong>Item No.</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_PRO_ITEMNO}<br>" +
+                "<strong>Highway Plan </strong> : <a target='_blank' href = ${KYTCDynamic_ProgramMgmt.DBO.SYP.PRECON_INFO_LINK}>${KYTCDynamic_ProgramMgmt.DBO.SYP.PRECON_INFO_LINK}</a><br>" +
+                "<strong>County & Route</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.LOCUNIQUE}<br>" +
+                "<strong>Beginning Mile Point</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.BMP}<br>" +
+                "<strong>Ending Mile Point</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.EM}<br>" +
+                "<strong>County Name</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.COUNTYNAME}<br>" +
+                "<strong>Type Work</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_TYPEWORK}<br>" +
+                "<strong>Project Description</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_DESC }<br>" +
+                "<strong>Bridge Number</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.RPL_BRG_NUM}<br>" +
+                "<strong>Construction Phase Stage</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_STAGEC}<br>"
         };
 
         var ConstInfoTemplate =  new InfoTemplate(json);
@@ -226,8 +223,8 @@ require(["esri/map",
             outFields : ["*"]
         });
         map.addLayer(syp0);
-        //map.infoWindow.resize(500, 500);
-        var syp1 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
+        map.infoWindow.resize(320, 350);
+        /*var syp1 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
             mode: FeatureLayer.MODE_ONDEMAND,
             //infoTemplate: PlanningInfoTemplate,
             outFields: ["*"]
@@ -237,22 +234,14 @@ require(["esri/map",
             //infoTemplate: infoTemplate,
             outFields: ["*"]
         });
-        var syp3 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/3", {
-            mode: FeatureLayer.MODE_ONDEMAND,
-            //infoTemplate: infoTemplate,
-            outFields: ["*"]
-        });
-        var syp4 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/4", {
-            mode: FeatureLayer.MODE_ONDEMAND,
-            //infoTemplate: infoTemplate,
-            outFields: ["*"]
-        });
+
+
+        map.addLayers([syp0,syp1, syp2]);*/
+
         var legend = new Legend({
             map:map
         },"legendDiv");
         legend.startup();
-
-        map.addLayers([syp0,syp1, syp3, syp4]);
 
         function ToggleImageServiceLayer(serviceURL,ID) {
 
@@ -293,28 +282,14 @@ require(["esri/map",
         }
         ToggleTiledServiceLayer("http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer", "#dgi-toggle");
 
-        //map.on("click", addPoint);
+/* TODO: Mutually exclusive checkbox */
+        /*$('input[name="myCheckbox"]').click(function () {
+            checkedState = $(this).attr('checked');
+            $(this).parent('div').children('.test:checked').each(function () {
+                $(this).attr('checked', false);
+            });
+            $(this).attr('checked', checkedState);
+        });*/
 
-        /*function addPoint(evt) {
-            var latitude = evt.mapPoint.getLatitude();
-            var longitude = evt.mapPoint.getLongitude();
-            map.infoWindow.setTitle("Coordinates");
-            map.infoWindow.setContent(
-                "lat/lon : " + latitude.toFixed(2) + ", " + longitude.toFixed(2) +
-                "<br>screen x/y : " + evt.screenPoint.x + ", " + evt.screenPoint.y
-            );
-            map.infoWindow.resize(250, 100);
-            map.infoWindow.show(evt.mapPoint, map.getInfoWindowAnchor(evt.screenPoint));
-        }*/
-/*
-        var myWidget = new TableOfContents({
-            map: map,
-            layers: syp0
-        }, "TableOfContents");
-        myWidget.startup();
-*/
-//        map.addLayer(syp1);
-//        map.addLayer(syp2);
-//        map.addLayer(syp3);
     });
 

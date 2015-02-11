@@ -589,6 +589,11 @@ and (max-device-width : 568px){
 .esriBookmarkEditBox{
     height: 20px;
 }
+
+.esriAttributionItem, .esriAttributionList{
+    display: none;
+}
+
 /*
 #printButton{
     position: absolute;

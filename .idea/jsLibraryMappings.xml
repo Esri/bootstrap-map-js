@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{ArcGIS Javascript, Dojo-1.8.3, Node.js v0.10.30 Core Modules, bootstrap-select, dojo, jQuery-2.0.0, jquery, knockout}" />
+    <file url="PROJECT" libraries="{Node.js v0.10.30 Core Modules, bootstrap-select, dojo, jQuery-2.0.0, jquery, knockout}" />
     <includedPredefinedLibrary name="Node.js Globals" />
   </component>
 </project>
