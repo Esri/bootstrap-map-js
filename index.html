@@ -93,40 +93,35 @@
             <li>
               <div class="checkbox">
                 <label>
-                  <input name ="myCheckbox" type="checkbox" id="ky-basemap-toggle" class="mutually"> KY Transportation
+                  <input name ="myCheckbox" type="checkbox" id="ky-basemap-toggle"> KYTC
                 </label>
-                <!--<label>
-                  <input type="checkbox" id="dgi-toggle" class="mutually"> Dept. of Geographic Info.
-                </label>-->
               </div>
             </li>
             <li>
               <div class="checkbox">
-
-                  <input name ="myCheckbox" type="checkbox" id="dgi-toggle" class="test"> Dept. of Geographic Info.
-                  <input name ="myCheckbox" type="checkbox" id="usgs-10m-dem" class="test"> USGS Shaded Relief(10m)
-                  <input name ="myCheckbox" type="checkbox" id="ky-krg-toggle" class="test"> Topo Quadrangles
-
-
-
+                <input name ="myCheckbox" type="checkbox" id="dgi-toggle"> DGI
               </div>
             </li>
           <li>
             <div class="checkbox">
               <label>
+                <input name ="myCheckbox" type="checkbox" id="ky-krg-toggle"> Topo Quadrangles
               </label>
             </div>
           </li>
           <li>
             <div class="checkbox">
               <label>
+                <input name ="myCheckbox" type="checkbox" id="usgs-10m-dem"> USGS Shaded Relief(10m)
+
               </label>
             </div>
           </li>
           <li>
             <div class="checkbox">
               <label>
-                <input name ="myCheckbox" type="checkbox" id="ky-gq-toggle" class="mutuallyexclusive"> Geologic Quadrangles
+                <input name ="myCheckbox" type="checkbox" id="ky-gq-toggle"> Geologic Quadrangles
+
               </label>
             </div>
             </li>
@@ -419,7 +414,7 @@
   </div>
 </div>
 </div>
-<script>
+<script type="text/javascript">
   var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
   var dojoConfig = {
     //The location.pathname.replace() logic below may look confusing but all its doing is
