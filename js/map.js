@@ -242,16 +242,12 @@ require(["esri/map",
         // TODO:
         $(this).prop("checked", true);
       }
-      ToggleBasemap($(this));
+      //ToggleBasemap($(this));
+      ToggleBasemap();
     });
 
-
-
-   /* function IterateTest() {
-      console.log($("#ky-basemaps").find())
-    }*/
-
     // Add case switch for each checkbox ID toggle
+/*
     function ToggleBasemap(element) {
       switch ($(element).attr("id")) {
         case "ky-basemap-toggle":
@@ -312,6 +308,56 @@ require(["esri/map",
           break;
       }
     }
+*/
+    function ToggleBasemap() {
+      $("input[name=myCheckbox]").each(function () {
+        var Layer;
+
+        if ($(this).attr("id") === "ky-basemap-toggle") {
+          Layer = new ArcGISDynamicMapServiceLayer(
+            "http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer",
+            {id: "kytc-basemap"});
+          if (this.checked) {
+            map.addLayer(Layer);
+          }
+          else {
+            if($.inArray(Layer.id, map.getLayerIds)){
+              map.removeLayer(map.getLayer(Layer.id));}
+          }
+        }
+        if ($(this).attr("id") === "dgi-toggle") {
+          Layer = new ArcGISTiledMapServiceLayer(
+            "http://kygisserver.ky.gov/arcgis/rest/services/WGS84WM_Services/Ky_TCM_Base_WGS84WM/MapServer",
+            {id: "dgi-basemap"});
+          if (this.checked) {
+            map.addLayer(Layer);
+          }
+          else {
+            if($.inArray(Layer.id, map.getLayerIds)){
+              map.removeLayer(map.getLayer(Layer.id));}
+          }
+        }
+        if ($(this).attr("id") === "ky-krg-toggle") {
+          Layer = new ArcGISImageServiceLayer(
+            "http://kyraster.ky.gov/arcgis/rest/services/ImageServices/Ky_KRG/ImageServer",
+            {id: "krg-basemap"});
+
+        }
+        if ($(this).attr("id") === "usgs-10m-dem") {
+          Layer = new ArcGISImageServiceLayer(
+            "http://kyraster.ky.gov/arcgis/rest/services/ElevationServices/KY_ShadedRelief_USGS_10M/ImageServer",
+            {id: "10m-dem-basemap"});
+
+        }
+        if ($(this).attr("id") === "ky-gq-toggle") {
+          Layer = new ArcGISImageServiceLayer(
+            "http://kyraster.ky.gov/arcgis/rest/services/ImageServices/Ky_Geologic_Quadrangle_Maps/ImageServer",
+            {id: "gq-basemap"});
+        }
+
+      });
+    }
+
 
     /*
      function ToggleDynamicServiceLayer(serviceURL,ID) {

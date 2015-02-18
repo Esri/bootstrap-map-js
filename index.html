@@ -93,37 +93,37 @@
             <li>
               <div class="checkbox">
                 <label>
-                  <input name ="myCheckbox" type="checkbox" id="ky-basemap-toggle"> KYTC
+                  <input name="myCheckbox" type="checkbox" id="ky-basemap-toggle"> KYTC
                 </label>
               </div>
             </li>
             <li>
               <div class="checkbox">
-                <input name ="myCheckbox" type="checkbox" id="dgi-toggle"> DGI
+                <input name="myCheckbox" type="checkbox" id="dgi-toggle"> DGI
               </div>
             </li>
-          <li>
-            <div class="checkbox">
-              <label>
-                <input name ="myCheckbox" type="checkbox" id="ky-krg-toggle"> Topo Quadrangles
-              </label>
-            </div>
-          </li>
-          <li>
-            <div class="checkbox">
-              <label>
-                <input name ="myCheckbox" type="checkbox" id="usgs-10m-dem"> USGS Shaded Relief(10m)
+            <li>
+              <div class="checkbox">
+                <label>
+                  <input name="myCheckbox" type="checkbox" id="ky-krg-toggle"> Topo Quadrangles
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <label>
+                  <input name="myCheckbox" type="checkbox" id="usgs-10m-dem"> USGS Shaded Relief(10m)
 
-              </label>
-            </div>
-          </li>
-          <li>
-            <div class="checkbox">
-              <label>
-                <input name ="myCheckbox" type="checkbox" id="ky-gq-toggle"> Geologic Quadrangles
+                </label>
+              </div>
+            </li>
+            <li>
+              <div class="checkbox">
+                <label>
+                  <input name="myCheckbox" type="checkbox" id="ky-gq-toggle"> Geologic Quadrangles
 
-              </label>
-            </div>
+                </label>
+              </div>
             </li>
           </ul>
         </li>
@@ -137,12 +137,13 @@
 
 <div class="content">
 
-  <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal in fade" id="themodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+       aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span
-                  class="sr-only">Close</span></button>
+            class="sr-only">Close</span></button>
           <h4 class="modal-title" id="myModalLabel">KYTC Interactive Maps</h4>
         </div>
         <div class="modal-body">
@@ -173,7 +174,6 @@
             </div>
             <div id="disclaimer" class="tab-pane fade">
               <h3>disclaimer</h3>
-
               <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
                 mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
                 turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis.
@@ -185,7 +185,6 @@
           <div id="show-on-startup-container" class="pull-left">
             <input type="checkbox" id="show-on-startup" checked="checked">
             <label for="show-on-startup">Don't show on startup</label>
-
           </div>
         </div>
       </div>
@@ -212,10 +211,12 @@
   <div id="LocateButton"></div>
   <!--<button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="One frame backward"><a href="#"><i-->
   <div id="zoomprev" class="icons nav-btn">
-    <button class="btn btn-md"><i class="fa fa-angle-left" data-toggle="tooltip" data-placement="left" title="Previous extent"></i></button>
+    <button class="btn btn-md"><i class="fa fa-angle-left" data-toggle="tooltip" data-placement="left"
+                                  title="Previous extent"></i></button>
   </div>
   <div id="zoomnext" class="icons nav-btn">
-    <button class="btn btn-md"><i class="fa fa-angle-right" data-toggle="tooltip" data-placement="left" title="Next extent"></i></button>
+    <button class="btn btn-md"><i class="fa fa-angle-right" data-toggle="tooltip" data-placement="left"
+                                  title="Next extent"></i></button>
   </div>
 
   <button id="query-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
@@ -302,117 +303,117 @@
     </div>
   </div>
   <!-- Layers-List -->
-  <div id="layers-list" class="panel-group" style="display:none;">
-  <!-- Search by road name -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        Legend
-        <button type="button" id="layers-list-close" class="close" data-dismiss="#layers-list">&times;</button>
-      </h4>
-    </div>
-    <div class="panel-body">
-      <!--<div id="TableOfContents"></div>-->
-      <div id="legendDiv"></div>
-    </div>
-  </div>
-</div>
-
-  <div id="tool-accordion" class="panel-group" style="display:none;">
-  <!-- Search by road name -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseIdentify">Identify</a>
-        <button type="button" id="tool-accordion-close" class="close" data-dismiss="#tool-accordion">&times;</button>
-      </h4>
-    </div>
-    <div id="collapseIdentify" class="panel-collapse collapse">
-      <div class="panel-body">
-        <hr/>
+  <div id="layers-list" class="panel-group" style="display:block;">
+    <!-- Search by road name -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          Legend
+          <button type="button" id="layers-list-close" class="close" data-dismiss="#layers-list">&times;</button>
+        </h4>
       </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseMeasure">Measurement</a>
-      </h4>
-    </div>
-    <div id="collapseMeasure" class="panel-collapse collapse">
       <div class="panel-body">
-        <div id="titlePane" data-dojo-type="dijit/TitlePane"
-             data-dojo-props="title:'Measurement', closable:'false', open:'false'">
-          <div id="measurementDiv"></div>
-          <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
-        </div>
+        <!--<div id="TableOfContents"></div>-->
+        <div id="legendDiv"></div>
       </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDraw">Draw</a>
-      </h4>
-    </div>
-    <div id="collapseDraw" class="panel-collapse collapse">
-      <hr/>
     </div>
   </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDir">Directions</a>
-      </h4>
-    </div>
-    <div id="collapseDir" class="panel-collapse collapse">
-      <div class="panel-body">
-        <!--<div id="dir"></div>-->
+  <div id="tool-accordion" class="panel-group" style="display:none;">
+    <!-- Search by road name -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseIdentify">Identify</a>
+          <button type="button" id="tool-accordion-close" class="close" data-dismiss="#tool-accordion">&times;</button>
+        </h4>
+      </div>
+      <div id="collapseIdentify" class="panel-collapse collapse">
+        <div class="panel-body">
+          <hr/>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseRoadInfo">Road Information</a>
-      </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseMeasure">Measurement</a>
+        </h4>
+      </div>
+      <div id="collapseMeasure" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div id="titlePane" data-dojo-type="dijit/TitlePane"
+               data-dojo-props="title:'Measurement', closable:'false', open:'false'">
+            <div id="measurementDiv"></div>
+            <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="collapseRoadInfo" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDraw">Draw</a>
+        </h4>
+      </div>
+      <div id="collapseDraw" class="panel-collapse collapse">
         <hr/>
       </div>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapsePrint">Print</a>
-      </h4>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDir">Directions</a>
+        </h4>
+      </div>
+      <div id="collapseDir" class="panel-collapse collapse">
+        <div class="panel-body">
+          <!--<div id="dir"></div>-->
+        </div>
+      </div>
     </div>
-    <div id="collapsePrint" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div>
-          <button id="printButton" class="fa fa-print"></button>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseRoadInfo">Road Information</a>
+        </h4>
+      </div>
+      <div id="collapseRoadInfo" class="panel-collapse collapse">
+        <div class="panel-body">
+          <hr/>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapsePrint">Print</a>
+        </h4>
+      </div>
+      <div id="collapsePrint" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div>
+            <button id="printButton" class="fa fa-print"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseBookmark">Bookmark</a>
+        </h4>
+      </div>
+      <div id="collapseBookmark" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div>
+            <button id="bookmarks"></button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseBookmark">Bookmark</a>
-      </h4>
-    </div>
-    <div id="collapseBookmark" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div>
-          <button id="bookmarks"></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 <script type="text/javascript">
   var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
@@ -423,7 +424,8 @@
       name: "application",
       location: package_path + '../../../src/js'
     }
-    ]};
+    ]
+  };
 </script>
 <!-- jQuery Version 1.11.1 -->
 <script async src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
