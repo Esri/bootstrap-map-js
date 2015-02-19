@@ -6,12 +6,14 @@ require(["esri/map",
 
     "esri/toolbars/navigation",
     "dojo/on",
+    "dojo/_base/array",
 
     "esri/dijit/Scalebar",
     "esri/layers/FeatureLayer",
     "esri/layers/ArcGISTiledMapServiceLayer",
     "esri/layers/ArcGISImageServiceLayer",
     "esri/layers/ArcGISDynamicMapServiceLayer",
+    "esri/layers/WebTiledLayer",
     "esri/layers/LabelLayer",
     "esri/dijit/OverviewMap",
     "esri/dijit/HomeButton",
@@ -44,8 +46,8 @@ require(["esri/map",
     "dojo/dom",
     "dijit/form/Button",
     "dojo/domReady!"],
-  function (Map, BootstrapMap, Query, QueryTask, Navigation, on, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer,
-            ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton,
+  function (Map, BootstrapMap, Query, QueryTask, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer,
+            ArcGISDynamicMapServiceLayer, WebTiledLayer, LabelLayer, OverviewMap, HomeButton,
             LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup, PopupTemplate,
             Bookmarks, Draw, Graphic,
             Color, SimpleRenderer, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSymbol, Font,
@@ -56,7 +58,7 @@ require(["esri/map",
 
     // Get a reference to the ArcGIS Map class
     var map = BootstrapMap.create("mapDiv", {
-      basemap: "gray",
+      //basemap: "streets",
       center: [-85.724, 37.593],
       zoom: 7,
       scrollWheelZoom: true,
@@ -111,13 +113,25 @@ require(["esri/map",
     var overviewBase = new ArcGISTiledMapServiceLayer(
       "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer");
     var overviewMapDijit;
+
+    var visibleBool;
+    if(!('ontouchstart' in window))
+    {
+      visibleBool = true;
+    }
+    // If touch screen,
+    else {
+      visibleBool = false;
+    }
+
+
     overviewMapDijit = new OverviewMap({
       map: map,
       baseLayer: overviewBase,
       attachTo: "bottom-right",
       height: 120,
       width: 144,
-      visible: true,
+      visible: visibleBool,
       opacity: 0.4,
       expandFactor: 3.0
     });
@@ -155,7 +169,19 @@ require(["esri/map",
     }, "search");
     geocoder2.startup();
 
+
+/*    if (map.basemapLayerIds && map.basemapLayerIds.length > 0) {
+      array.forEach(map.basemapLayerIds, function(lid) {
+        map.removeLayer(map.getLayer(lid));
+      });
+      map.basemapLayerIds = [];
+    } else {
+      map.removeLayer(map.getLayer(map.layerIds[0]));
+    }*/
+
+
     $(document).ready(function () {
+      var l, options;
       $("#basemapList").find("li").click(function (e) {
         switch (e.target.text) {
           case "Streets":
@@ -210,7 +236,15 @@ require(["esri/map",
       infoTemplate: ConstInfoTemplate,
       outFields: ["*"]
     });
+
+
+    var KytcBaseLayer = new ArcGISDynamicMapServiceLayer(
+      "http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer",
+      {id: "kytc-basemap"});
+    map.addLayer(KytcBaseLayer);
     map.addLayer(syp0);
+
+
     map.infoWindow.resize(320, 285);
 
     /*var syp1 = new FeatureLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ActiveHighwayPlan/MapServer/1", {
