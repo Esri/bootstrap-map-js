@@ -1,0 +1,134 @@
+.layerControlDijit .vectorLayerContainer {}
+
+.layerControlDijit .vectorLabelContainer {
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+.layerControlDijit .overlayLayerContainer {}
+
+.layerControlDijit .overlayLabelContainer {
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 4px;
+}
+
+.layerControlDijit .layerControl {
+    padding-bottom: 6px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.layerControlDijit .layerControlExpand {
+    border-bottom: solid 1px #DDD;
+}
+
+.layerControlDijit .layerControlTable {
+    width: 100%;
+}
+
+.layerControlDijit .layerControlTable tr {
+    vertical-align: middle;
+}
+
+.layerControlDijit .layerControlTable td {
+    padding: 0;
+}
+
+.layerControlDijit .layerControlTableExpand {
+    cursor: pointer;
+    width: 18px;
+    height: 15px;
+    line-height: 15px;
+}
+
+.layerControlDijit .layerControlTableCheck,
+.layerControlDijit .layerControlTableMenu {
+    cursor: pointer;
+    width: 19px;
+    height: 16px;
+    line-height: 16px;
+}
+
+.layerControlDijit .layerControlTableLabel {
+    font-size: 15px;
+    height: 16px;
+    line-height: 16px;
+    cursor: default;
+}
+
+.layerControlDijit .layerControlTableUpdate {
+    width: 21px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+}
+
+.layerControlDijit .layerControlIndent {
+    padding-left: 22px;
+}
+
+.layerControlDijit .layerControlIcon {
+    font-size: 17px;
+}
+
+.layerControlDijit .layerControlUpdateIcon {
+    font-size: 12px;
+}
+
+.layerControlDijit .layerControlMenuIcon {
+    font-size: 15px;
+    color: #666;
+}
+
+.layerControlDijit .layerControlMenuIcon:hover {
+    color: #111;
+}
+
+.layerControlDijit .layerControlCheckIconOutScale {
+    color: #BBB;
+}
+
+/* not in use - retain for links */
+.layerControlDijit .layerControlClick {
+    cursor: pointer;
+    color: #1f78af;
+    text-decoration: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.layerControlDijit .layerControlClick:hover {
+    text-decoration: underline;
+}
+
+.layerControlDijit .layerControlLegendTable tr {
+    vertical-align: middle;
+}
+
+.layerControlDijit .layerControlLegendImage > img {
+    border: none;
+    padding: 0;
+}
+
+.layerControlDijit .layerControlLegendLabel {
+    padding: 0 0 0 4px;
+}
+
+/* temp esri/Legend overrides */
+.layerControlDijit .esriLegendService td {
+    padding: 0;
+}
+
+.layerControlDijit .esriLegendGroupLayer, .layerControlDijit .esriLegendLayerLabel {
+    padding: 0;
+}
+
+.layerControlDijit .esriLegendServiceLabel {
+    display: none;
+}

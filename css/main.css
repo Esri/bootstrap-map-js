@@ -1,0 +1,351 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /*font-family: Tahoma;*/
+    font-size: 14px;
+}
+.appHeader {
+    background: url("../images/linen.jpg") repeat-x scroll left top transparent;
+    height: 70px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.appHeader .headerLogo {
+    float: left;
+    left: 30px;
+    position: relative;
+    top: 8px;
+}
+.appHeader .headerTitle {
+    color: #FFFFFF;
+    float: left;
+    font-size: 16pt;
+    font-weight: bold;
+    left: 60px;
+    top: 15px;
+    position: relative;
+}
+.appHeader .subHeaderTitle {
+    color: #CFCFCF;
+    font-size: small;
+    padding-left: 20px;
+}
+.appHeader .search {
+    float: left;
+    left: 80px;
+    position: relative;
+    top: 18px;
+}
+.appHeader .headerLinks {
+    float: right;
+    color: #FFFFFF;
+    position: relative;
+    top: 27px;
+    right: 10px;
+    text-align: right;
+}
+.appHeader .headerLinks a {
+    color: #FFFFFF;
+}
+#borderContainerOuter {
+    position: absolute;
+    top: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: none;
+    padding: 0;
+    background-color: #FFFFFF
+}
+#sidebarLeft {
+    width: 334px;
+    padding: 4px;
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    border-right: 1px solid #B5BCC7;
+}
+#sidebarRight {
+    width: 300px;
+    padding: 4px;
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    border-left: 1px solid #B5BCC7;
+}
+#sidebarBottom {
+    height: 100px;
+    padding: 4px;
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    border-top: 1px solid #B5BCC7;
+}
+#sidebarTop {
+    height: 50px;
+    padding: 4px;
+    margin: 0;
+    overflow: auto;
+    overflow-x: hidden;
+    border-bottom: 1px solid #B5BCC7;
+}
+#mapCenter {
+    padding: 0;
+    overflow: hidden;
+    background: url("../images/noisy_grid.png") #fff;
+}
+.panetop {
+    border-top: 1px solid #B5BCC7;
+}
+.panebottom {
+    border-bottom: 1px solid #B5BCC7;
+}
+.paneleft {
+    border-left: 1px solid #B5BCC7;
+}
+.paneright {
+    border-right: 1px solid #B5BCC7;
+}
+.HomeButton, .LocateButton {
+    margin-bottom: 10px;
+}
+.titlePaneBottomFix {
+    margin-bottom: -1px;
+}
+.titlePaneRightFix {
+    margin-right: -1px;
+}
+.sidebarCollapseButton {
+    position: absolute;
+    z-index: 40;
+    background-color: white;
+    cursor: pointer;
+    color: #666666;
+    font-size: 1.3em;
+    font-family: FontAwesome;
+}
+.sidebarCollapseButtonHorz {
+    width: 16px;
+    height: 25px;
+    top: 48%;
+    top: -webkit-calc(50% - 12px);
+    top: -moz-calc(50% - 12px);
+    top: -o-calc(50% - 12px);
+    top: calc(50% - 12px);
+    border-bottom: 1px solid #B5BCC7;
+    border-top: 1px solid #B5BCC7;
+}
+.sidebarCollapseButtonVert {
+    width: 25px;
+    height: 18px;
+    left: 48%;
+    left: -webkit-calc(50% - 12px);
+    left: -moz-calc(50% - 12px);
+    left: -o-calc(50% - 12px);
+    left: calc(50% - 12px);
+    border-left: 1px solid #B5BCC7;
+    border-right: 1px solid #B5BCC7;
+}
+.sidebarleftCollapseButton {
+    left: -1px;
+    border-radius: 0 5px 5px 0;
+    border-right: 1px solid #B5BCC7;
+}
+.sidebarrightCollapseButton {
+    right: -1px;
+    border-radius: 5px 0 0 5px;
+    border-left: 1px solid #B5BCC7;
+}
+.sidebarbottomCollapseButton {
+    bottom: -1px;
+    border-radius: 5px 5px 0 0;
+    border-top: 1px solid #B5BCC7;
+}
+.sidebartopCollapseButton {
+    top: -1px;
+    border-radius: 0 0 5px 5px;
+    border-bottom: 1px solid #B5BCC7;
+}
+.sidebarCollapseButtonHorz .button {
+    padding-top: 4px;
+    padding-left: 2px;
+}
+.sidebarCollapseButtonVert .button {
+    padding-left: 4px;
+    margin-top: -2px;
+}
+.sidebarleftCollapseButton .open:before {
+    content: "\f054";
+}
+.sidebarleftCollapseButton .close:before {
+    content: "\f053";
+}
+.sidebarrightCollapseButton .open:before {
+    content: "\f053";
+}
+.sidebarrightCollapseButton .close:before {
+    content: "\f054";
+}
+.sidebarbottomCollapseButton .open:before {
+    content: "\f077";
+}
+.sidebarbottomCollapseButton .close:before {
+    content: "\f078";
+}
+.sidebartopCollapseButton .open:before {
+    content: "\f078";
+}
+.sidebartopCollapseButton .close:before {
+    content: "\f077";
+}
+.floatingWidget_underlay {
+    display: none
+}
+#help_parent_underlay {
+    display: block;
+}
+
+/* dbootstrap overrides*/
+
+.dbootstrap .dijitToolbar .dijitButtonContents {
+    padding: 1px !important;
+}
+.dbootstrap .dijitTitlePane {
+    border: 1px solid #DDDDDD;
+    margin-bottom: 2px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+.dbootstrap .dijitTitlePaneTitle {
+    color: #666666 !important;
+    border-bottom: none;
+    padding: 8px 15px;
+    background-color: #F5F5F5;
+}
+.dijitSliderBarContainerH {
+    z-index: 0 !important;
+}
+.dbootstrap .dijitTitlePaneContentInner {
+    background-color: #FFFFFF;
+}
+.dijitBorderContainerNoGutterPane {
+    z-index: auto;
+}
+.dbootstrap :focus {
+    outline: none !important;
+}
+
+/* end dbootstrap overrides*/
+
+/* esri popup window overrides */
+
+.esriPopup .sizer {
+    width: 325px;
+}
+
+.esriPopup .esriPopupWrapper {
+    background-color: #FFFFFF;
+}
+.esriPopup .attachmentsSection div {
+    font-weight: bold;
+}
+.esriPopup .contentPane table.attrTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+.esriPopup .contentPane table.attrTable td {
+    padding: 2px;
+}
+.esriPopup .contentPane table.attrTable td.attrName {
+    text-align: right;
+    font-weight: bold;
+    color: #333333;
+    width: 40%;
+    padding-right: 5px;
+}
+.esriPopup .contentPane table.attrTable td.attrValue {
+    width: 60%;
+}
+.esriPopup .contentPane table.attrTable tr {
+    vertical-align: top;
+    border-bottom: 1px solid rgb(221, 221, 221);
+}
+.esriPopup .contentPane table.attrTable tr:nth-child(odd) {
+    background-color: none;
+}
+.esriPopup .contentPane table.attrTable tr:nth-child(even) {
+    background-color: rgb(238, 238, 238);
+}
+
+/* end esri popup window overrides */
+
+/* esri mobile popup overrides */
+
+.esriPopupMobile {
+    z-index: 999;
+}
+.esriMobileNavigationBar {
+    background-color: #666666;
+    background: url("../images/linen.jpg") repeat-x scroll left top transparent;
+    color: #FFFFFF;
+}
+.esriPopupMobile .titlePane {
+    background-color: #666666;
+    background: url("../images/linen.jpg") repeat-x scroll left top transparent;
+    color: #FFFFFF;
+}
+.esriPopupMobile .pointer.bottom{
+    background:url("../images/pointertop.png");
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.esriPopupMobile .pointer.top {
+    background:url("../images/pointertop.png");
+}
+
+/* end esri mobile popup overrides */
+
+/*
+    media queries bootstrap style
+    http://getbootstrap.com/css/#grid-media-queries
+*/
+
+@media screen and (max-width: 991px) {
+    /* adjust the l/r sidebars on small and extra-small devices. */
+    #sidebarLeft {
+        width: 204px;
+        max-width: 95%;
+    }
+
+    #sidebarRight {
+        max-width: 95%;
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    /* hide the sidebars by default on extra-small devices (phones) */
+    #sidebarLeft, #sidebarBottom, #sidebarTop {
+        display: none;
+    }
+    /* no search widget in app header */
+    .appHeader .search {
+        display: none;
+    }
+    /* no logo in app header */
+    .appHeader .headerLogo {
+        display: none;
+    }
+    /* move the title when no logo */
+    .appHeader .headerTitle {
+        left: 10px;
+    }
+}
+
+/* end media queries bootstrap style */

@@ -1,0 +1,97 @@
+.gis_DrawDijit {
+}
+
+.gis_DrawDijit .outerList>li {
+    margin-bottom: 1em;
+}
+.gis_DrawDijit .list-unstyled {
+    padding-left: 0px;
+    list-style-type: none;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+.gis_DrawDijit .list-inline {
+    padding-left: 0px;
+    margin-left: -5px;
+    list-style-type: none;
+    list-style-position: outside;
+    list-style-image: none;
+}
+
+.gis_DrawDijit .list-inline > li {
+    display: inline-block;
+}
+
+.gis_DrawDijit .drawButton {
+    width: 50px;
+}
+
+.gis_DrawDijit .stopIcon {
+    color: red;
+}
+
+.gis_DrawDijit .drawButton .dijitButtonText {
+    /*display: none;*/
+}
+.gis_DrawDijit .polyIcon {
+    background-image: url(../images/toolbar_icons.png);
+    background-position: -68px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gis_DrawDijit .pointIcon {
+    background-image: url(../images/toolbar_icons.png);
+    background-position: 0px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gis_DrawDijit .circleDrawIcon {
+    background-image: url(../images/toolbar_icons.png);
+    background-position: -390px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gis_DrawDijit .lineIcon {
+    background-image: url(../images/toolbar_icons.png);
+    background-position: -34px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gis_DrawDijit .freehandDrawIcon {
+    background-image: url(../images/toolbar_icons.png);
+    background-position: -102px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gis_DrawDijit .freehandPolygonDrawIcon {
+    background-image: url(../images/toolbar_icons_2.png);
+    background-position: -473px 0;
+    width: 16px;
+    height: 16px;
+}
+
+.gis_DrawDijit .clearIcon {
+    background-image: url(../images/clear.png);
+    width: 16px;
+    height: 16px;
+}
+
+.gis_DrawDijit .formContainer {
+    /*border: 1px solid #bbb;*/
+    margin-bottom: -1px;
+    width: 100%;
+}
+
+.gis_DrawDijit .buttonActionBar {
+    /*background-color: #F2F2F2;
+    border: 1px solid #CDCDCD;*/
+    padding: 3px 0px 2px 0px;
+    text-align: right;
+    width: 100%;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="img/KYTClogo.png">
+
+    <title>Breakout Player</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap-map-css -->
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.11/esri/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="src/css/bootstrapmap.css">
+
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- FontAwesome css-->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="//oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<div class="container-fluid">
+    <div class="row-fluid ">
+        <img src="//roadview-images.kytc.ky.gov/Mandli_Data_8/09-05-2012/2012_V2_059-I-75S~1/2012_V2_059-I-75S~1/FRONT/Dir_138/F_13848.jpg" style="width:100%;height:100%;" class="img-responsive" alt="Responsive image">
+        <div class="bp photo-figcaption">LEFT</div>
+
+        <div id="controller" class="navbar-fixed-bottom">
+            <div class="bp col-sm-12">
+                <div id="increment-dropdown" class="btn-group dropup">
+                    <button type="button" class="btn btn-primary btn-sm">Increment</button>
+                    <button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <!-- Dropdown menu links -->
+                        <li><a tabindex="-1" href="#">Every Image: 26ft.</a></li>
+                        <li><a tabindex="-1" href="#">Every Other: 52ft.</a></li>
+                        <li><a tabindex="-1" href="#">Every Third: 78ft.</a></li>
+                        <li><a tabindex="-1" href="#">Every Fourth: 104ft.</a></li>
+                        <li><a tabindex="-1" href="#">Every Fifth: 130ft.</a></li>
+                    </ul>
+                </div>
+
+                <button  class="btn btn-sm" onclick="alert('clicked');">
+                    <a href="#"><span class="fa fa-step-backward"></span></a>
+                </button>
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-fast-backward"></i></a></button>
+
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-backward"></i></a></button>
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-play fa-rotate-180"></i></a></button>
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-stop"></i></a></button>
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-play"></i></a></button>
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-forward"></i></a></button>
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-fast-forward"></i></a></button>
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-step-forward"></i></a></button>
+                <!--<button class="btn btn-sm"><a href="#"><span class="fa fa-undo"></span></a></button>-->
+                <!--<button class="btn btn-sm"><a href="#"><img id="u-turn" src="img/arrow476.png"></a></button>-->
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-reply fa-rotate-270"></i></a></button>
+                <!--<button class="btn btn-sm"><a href="#"><i class="fa fa-long-arrow-down"></i></a></button>-->
+                <button class="btn btn-sm"><a href="#"><i class="fa fa-arrows-alt"></i></a></button>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+<!-- jQuery Version 1.11.1 -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="dist/js/bootstrap.min.js"></script>
+</body>
+</html>
