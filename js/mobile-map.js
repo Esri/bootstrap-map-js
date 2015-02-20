@@ -35,8 +35,8 @@ require([
 
         "dojo/domReady!"
     ],
-    function (esriConfig, Map, Scalebar, BootstrapMap, FeatureLayer, ArcGISTiledMapServiceLayer, dom, HomeButton, LocateButton, Geocoder,
-              OverviewMap, Measurement, Popup) {
+    function (esriConfig, Map, dom, BootstrapMap, ArcGISTiledMapServiceLayer, FeatureLayer, OverviewMap, HomeButton, LocateButton, Geocoder,
+              Measurement, Scalebar, Popup, PopupTemplate) {
         // Get a reference to the ArcGIS Map class
         map = BootstrapMap.create("mobileMapDiv", {
             basemap: "streets",
@@ -54,7 +54,7 @@ require([
 
         // Add overview map
         var overviewMapDijit;
-        overviewMapDijit = new esri.dijit.OverviewMap({
+        overviewMapDijit = new OverviewMap({
             map: map,
             attachTo: "bottom-right",
             height: 120,
@@ -83,7 +83,7 @@ require([
 
 
         // Add geocoder
-        var geocoder2 = new esri.dijit.Geocoder({
+        var geocoder2 = new Geocoder({
             map: map,
             autoComplete: true,
             arcgisGeocoder: {

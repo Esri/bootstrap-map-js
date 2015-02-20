@@ -3,215 +3,215 @@ body > div > div.container > div.collapse.navbar-collapse, .navbar-inverse,
 .navbar-inverse .navbar-nav > .open > a:focus, .navbar-toggle:focus, .navbar-toggle:hover,
 ul.nav.navbar-nav.navbar-right,
 div.navbar-collapse.collapsing,
-div.navbar-collapse.collapse.in{
-    /*color: #fff;*/
-    background: -webkit-linear-gradient(top, #006699, #003366); /*For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(top, #006699, #003366); /*For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(top, #006699, #003366); /*For Firefox 3.6 to 15 */
-    background: linear-gradient(top, #006699, #003366);
-    background-image: -ms-linear-gradient(top, #006699, #003366);
+div.navbar-collapse.collapse.in {
+  /*color: #fff;*/
+  background: -webkit-linear-gradient(top, #006699, #003366); /*For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(top, #006699, #003366); /*For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(top, #006699, #003366); /*For Firefox 3.6 to 15 */
+  background: linear-gradient(top, #006699, #003366);
+  background-image: -ms-linear-gradient(top, #006699, #003366);
 }
 
-.navbar-inverse .navbar-nav .open .dropdown-menu .divider{
-    background-color: gray;
+.navbar-inverse .navbar-nav .open .dropdown-menu .divider {
+  background-color: gray;
 }
 
 .navbar-inverse .navbar-toggle {
-    border-color: #ffffff;
+  border-color: #ffffff;
 }
 
 @media (max-width: 767px) {
-    .li .divider {
-        background-color: #080808;
-    }
+  .li .divider {
+    background-color: #080808;
+  }
 }
 
-button.btn.btn-md{
-    border: 1px solid #d3d3d3;
+button.btn.btn-md {
+  border: 1px solid #d3d3d3;
 }
 
-a{
-    color: #6DBAFD;
+a {
+  color: #6DBAFD;
 }
 
 @media (max-width: 767px) {
-    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
-    .checkbox label {
-        color: lightgray;
-    }
-}
-.nav>li{
-    margin-right: 10px;
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
+  .checkbox label {
+    color: lightgray;
+  }
 }
 
-.navbar{
-    height: 45px;
+.nav > li {
+  margin-right: 10px;
 }
 
+.navbar {
+  height: 45px;
+}
 
 #MapBody {
-    margin-bottom: 0;
-    padding-top: 0;
-    font-family: "Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica-,Arial,sans-serif;
-    background-image: url("../img/background.png");
-    background-repeat: repeat;
+  margin-bottom: 0;
+  padding-top: 0;
+  font-family: "Gotham SSm A", "Gotham SSm B", "Helvetica Neue", Helvetica-, Arial, sans-serif;
+  background-image: url("../img/background.png");
+  background-repeat: repeat;
 }
 
-#PhotoLogBody{
-    background-image: url("http://media.mediatemple.netdna-cdn.com/wp-content/themes/smashing-magazine/images/smbg.png")
+#PhotoLogBody {
+  background-image: url("http://media.mediatemple.netdna-cdn.com/wp-content/themes/smashing-magazine/images/smbg.png")
 }
 
 .content {
-    overflow: hidden;
-    position: absolute;
-    top: 50px;
-    bottom: 0;
-    width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  width: 100%;
 }
 
-#inner-page{
-    background-color: white;
-    box-shadow: 1px 5px 1px #888888,
-                -1px 5px 1px #888888;
-    padding-top: 32px;
-    padding-bottom: 60px;
+#inner-page {
+  background-color: white;
+  box-shadow: 1px 5px 1px #888888,
+  -1px 5px 1px #888888;
+  padding-top: 32px;
+  padding-bottom: 60px;
 }
 
 .starter-template {
-    padding: 40px 15px;
-    text-align: center;
+  padding: 40px 15px;
+  text-align: center;
 }
 
-.map-tools-top.map-tools-left{
-    font-size: 24px;
-    position: absolute;
-    left: 1px;
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 5px;
-    opacity: 1;
+.map-tools-top.map-tools-left {
+  font-size: 24px;
+  position: absolute;
+  left: 1px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  opacity: 1;
 }
 
-.fa-search-plus, .fa-list-ul, .fa-wrench{
-    color: #fff;
-}
-.fa-list-ul{
-    font-size: 22px;
+.fa-search-plus, .fa-list-ul, .fa-wrench {
+  color: #fff;
 }
 
-#query-icon{
-    top: 1px;
+.fa-list-ul {
+  font-size: 22px;
 }
 
-#query-icon-pl{
-    top: 1px;
-    float: left;
+#query-icon {
+  top: 1px;
 }
 
-#layers-icon{
-    top: 50px;
+#query-icon-pl {
+  top: 1px;
+  float: left;
 }
-#kytc-tools-icon{
-    top: 99px;
+
+#layers-icon {
+  top: 50px;
+}
+
+#kytc-tools-icon {
+  top: 99px;
 }
 
 #accordion, #layers-list, #tool-accordion {
-    display:none;
-    position: absolute;
-    top:0;
-    left:0;
-    float:left;
-    width: 300px;
-    height: 100%;
-    background: white;
-    /*overflow: auto;*/
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  float: left;
+  width: 300px;
+  height: 100%;
+  background: white;
+  /*overflow: auto;*/
 }
 
 .scrollable-menu {
-    height: auto;
-    max-height: 200px;
-    /*overflow-x: hidden;*/
+  height: auto;
+  max-height: 200px;
+  /*overflow-x: hidden;*/
 }
 
-#zoomprev, #zoomnext{
-    position: absolute;
-    top: 80px;
-    right: 37px;
+#zoomprev, #zoomnext {
+  position: absolute;
+  top: 80px;
+  right: 37px;
 }
 
-#zoomnext{
-     right: 2px;
+#zoomnext {
+  right: 2px;
 }
 
 .esriSimpleSlider {
-    margin-top: 107px;
-    right: 17px;
+  margin-top: 107px;
+  right: 17px;
 }
 
 #CameraButton {
-    position: absolute;
-    top: 188px;
-    right: 17px;
-    width: 30px;
-    height: 30px;
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 5px;
+  position: absolute;
+  top: 188px;
+  right: 17px;
+  width: 30px;
+  height: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
 }
-
 
 #HomeButton {
-    position: absolute;
-    top: 222px;
-    right: 17px;
-    /*z-index: 50;*/
+  position: absolute;
+  top: 222px;
+  right: 17px;
+  /*z-index: 50;*/
 }
 
-.HomeButton .home{
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 5px;
+.HomeButton .home {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
 }
 
-#HomeButton-pl{
-    position: absolute;
-    top:75px;
-    right:2px;
+#HomeButton-pl {
+  position: absolute;
+  top: 75px;
+  right: 2px;
 }
 
 #LocateButton {
-    position: absolute;
-    top: 255px;
-    right: 17px;
-    /*z-index: 50;*/
+  position: absolute;
+  top: 255px;
+  right: 17px;
+  /*z-index: 50;*/
 }
 
-.LocateButton .zoomLocateButton{
-    background-color: rgba(0,0,0,0.6);
-    border-radius: 5px;
+.LocateButton .zoomLocateButton {
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
 }
 
 #LocateButton-pl {
-    position: absolute;
-    top: 108px;
-    right: 2px;
-    z-index: 50;
+  position: absolute;
+  top: 108px;
+  right: 2px;
+  z-index: 50;
 }
 
 .simpleGeocoder .esriGeocoderIcon {
-    margin: 9px 0 6px 6px;
-    color: #006699;
+  margin: 9px 0 6px 6px;
+  color: #006699;
 }
-
 
 .navbar-inverse .navbar-text, .navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav > li > a {
-    color: #ffffff;
+  color: #ffffff;
 }
 
-.navbar-inverse{
-    margin-bottom: 0;
-    height: 45px;
+.navbar-inverse {
+  margin-bottom: 0;
+  height: 45px;
 }
 
 .navbar-brand {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 /*.bs-docs-footer {
@@ -235,364 +235,384 @@ a{
 }*/
 
 .simpleGeocoder .esriGeocoder {
-   margin-bottom: 5px;
-   margin-left: 5px;
+  margin-bottom: 5px;
+  margin-left: 5px;
 }
 
-#road-photo{
-    padding-left: 5px;
-    padding-right: 5px;
+#road-photo {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /*Thumbnail photo*/
 .col-md-4.portfolio-item.photo {
-    padding: 10px 0 0;
-    margin: 0 0 0 0;
-    align-content: center;
+  padding: 10px 0 0;
+  margin: 0 0 0 0;
+  align-content: center;
 }
 
 .col-sm-4.portfolio-item.photo {
-    padding: 10px 0 0;
-    margin: 0 0 0 0;
-    align-content: center;
+  padding: 10px 0 0;
+  margin: 0 0 0 0;
+  align-content: center;
 }
 
 /*Controller*/
-#controller{
-    font-size: 1em;
-    padding: 8px 4px 4px 4px;
-    border-style: outset;
-    background-color: rgba(0,0,0,.65);
+#controller {
+  font-size: 1em;
+  padding: 8px 4px 4px 4px;
+  border-style: outset;
+  background-color: rgba(0, 0, 0, .65);
 }
 
-.container-fluid{
-    text-align: center;
-    padding:1px;
+.container-fluid {
+  text-align: center;
+  padding: 1px;
 }
 
 /*Controller*/
 .bp.col-sm-12 {
-    padding-top: 3px;
-    width:80%;
-    left:10%;
-    position: fixed;
-    bottom: 5%;
-    /*left: 50%;*/
-    /*transform: translate(-50%, -50%);*/
-    font-size: 1em;
-    /*padding: 8px 4px 4px 4px;*/
-    border-style: outset;
-    background-color: rgba(0,0,0,.65);
-    opacity: 0.98;
-}
-.btn-group>.btn+.dropdown-toggle{
-    margin-bottom: 5px;
+  padding-top: 3px;
+  width: 80%;
+  left: 10%;
+  position: fixed;
+  bottom: 5%;
+  /*left: 50%;*/
+  /*transform: translate(-50%, -50%);*/
+  font-size: 1em;
+  /*padding: 8px 4px 4px 4px;*/
+  border-style: outset;
+  background-color: rgba(0, 0, 0, .65);
+  opacity: 0.98;
 }
 
-@media only screen and (max-width: 768px){
-    .bp.col-sm-12 {
-        position: relative;
-        margin-top:10px;
-        top: 80%;
-        left:10%;
-        right:10%;
-    }
+.btn-group > .btn + .dropdown-toggle {
+  margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .bp.col-sm-12 {
+    position: relative;
+    margin-top: 10px;
+    top: 80%;
+    left: 10%;
+    right: 10%;
+  }
 }
 
 .col-sm-8 {
-    padding: 0;
-    border: thin solid #d3d3d3;
+  padding: 0;
+  border: thin solid #d3d3d3;
 
 }
-#attribute-table{
-    padding: 0 20px 10px;
+
+#attribute-table {
+  padding: 0 20px 10px;
 }
+
 .icons {
-    font-size: 23px;
-    /*margin: 5px 10px;*/
-    text-align: center;
-    margin:0;
-    padding-right: 0;
+  font-size: 23px;
+  /*margin: 5px 10px;*/
+  text-align: center;
+  margin: 0;
+  padding-right: 0;
 }
 
-button{
-    border-style: outset;
-    background-color: #FFFFFF;
+button {
+  border-style: outset;
+  background-color: #FFFFFF;
 }
 
 .glyphicon {
-    padding: 4px 10px;
+  padding: 4px 10px;
 }
 
-
-
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
-and (orientation : portrait){
-    #controller{
-        display: inline-block;
-    }
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (orientation: portrait) {
+  #controller {
+    display: inline-block;
+  }
 }
 
 /*#direction-switch{
     padding-left:60px;
 }*/
 
-
-
-.btn-group.dropdown{
-    padding: 3px;
+.btn-group.dropdown {
+  padding: 3px;
 }
 
-#controller.row.text-center{
-    padding-left: 5px;
-    padding-right: 5px;
+#controller.row.text-center {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 #content-map {
-    padding-top: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#mapDiv{
-    padding:0;
-    margin:0;
-    height:415px;
- }
+#mapDiv {
+  padding: 0;
+  margin: 0;
+  height: 415px;
+}
 
-
-#conrol-buttons, #control-dropdowns{
-    display: inline-block;
+#control-buttons, #control-dropdowns {
+  display: inline-block;
 }
 
 .title-bar {
-    color: #ffffff;
-    background-color: #222 !important;
-    position: absolute;
-    max-width: 395px;
-    top: 1px;
-    right: 2px;
-    opacity: .9;
-    padding: 5px 9px 7px 7px;
-    border-radius: 5px;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    overflow: hidden;
+  color: #ffffff;
+  background-color: #222 !important;
+  position: absolute;
+  max-width: 395px;
+  top: 1px;
+  right: 2px;
+  opacity: .9;
+  padding: 5px 9px 7px 7px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  overflow: hidden;
 }
 
-.im.title-bar{
-    top: 2px;
-    right: 2px;
+.im.title-bar {
+  top: 2px;
+  right: 2px;
 }
 
-.photo-figcaption{
-    display:block;
-    position:absolute;
-    width:100%;
-    top:5%;
-    left:0;
-    z-index:2;
-    text-align:center;
-    font-weight:bold;
-    text-shadow:1px 1px #FFFFFF;
+.photo-figcaption {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 5%;
+  left: 0;
+  z-index: 2;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px #FFFFFF;
 }
 
-.bp.photo-figcaption{
-    position:fixed;
+.bp.photo-figcaption {
+  position: fixed;
 
 }
 
-#metadata{
-    color: #EE5A28;
-    padding-top:10px;
-    padding-bottom: 10px;
-    margin-top: 20px;
-    height: auto;
-    background-color: lightgray;
-}
-#metadata p{
-    color:black;
+#metadata {
+  color: #EE5A28;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  height: auto;
+  background-color: lightgray;
 }
 
-.panel-pane{
-clear: both;
-padding-bottom: 15px;
+#metadata p {
+  color: black;
 }
 
-.col-xs-4 a{
-    font-size:0.8em;
-    padding-bottom: 0;
+.panel-pane {
+  clear: both;
+  padding-bottom: 15px;
+}
+
+.col-xs-4 a {
+  font-size: 0.8em;
+  padding-bottom: 0;
 }
 
 /* Small device adjustments*/
-@media  (max-width: 768px){
-    .col-xs-4 a{
-        font-size:0.7em;
-    }
+@media (max-width: 768px) {
+  .col-xs-4 a {
+    font-size: 0.7em;
+  }
 
-    .btn-sm {
-        font-size: 7px;
-    }
-    /* Hide title bar and navigation buttons*/
-    #title-bar,.nav-btn,
-    .esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
-    .esriSimpleSliderVertical .esriSimpleSliderDecrementButton{
-        display: none;
-    }
+  .btn-sm {
+    font-size: 7px;
+  }
 
-    /* Relocate remaining buttons*/
-    #CameraButton, #HomeButton, #LocateButton{
-        right:1px;
-    }
+  /* Hide title bar and navigation buttons*/
+  #title-bar, .nav-btn,
+  .esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
+  .esriSimpleSliderVertical .esriSimpleSliderDecrementButton {
+    display: none;
+  }
 
-    #CameraButton{
-        top: 2px;
-    }
-    #HomeButton{
-        top: 34px;
-    }
-    #LocateButton{
-        top: 66px;
-    }
+  /* Relocate remaining buttons*/
+  #CameraButton, #HomeButton, #LocateButton {
+    right: 1px;
+  }
 
-/*    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
-    .checkbox label {
-        color: #FFF;
-    }*/
+  #CameraButton {
+    top: 2px;
+  }
+
+  #HomeButton {
+    top: 34px;
+  }
+
+  #LocateButton {
+    top: 66px;
+  }
+
+  /*    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
+      .checkbox label {
+          color: #FFF;
+      }*/
 }
 
-.portfolio-item{
-    margin-bottom: 0;
+.portfolio-item {
+  margin-bottom: 0;
 }
 
-footer{
-    background-color: #555;
-    color: #999;
-    padding: 60px 25px;
-    /*margin-top: -100px;*/
-    margin-bottom: 0;
-    text-align: center;
+footer {
+  background-color: #555;
+  color: #999;
+  padding: 60px 25px;
+  /*margin-top: -100px;*/
+  margin-bottom: 0;
+  text-align: center;
 }
 
-footer> .container .center-block{
-    text-align:center;
+footer > .container .center-block {
+  text-align: center;
 }
 
-footer ul li{
-    display: inline;
-    padding-right:5px;
+footer ul li {
+  display: inline;
+  padding-right: 5px;
 }
 
-#KystateLogoImage{
-    padding: 10px 0
+#KystateLogoImage {
+  padding: 10px 0
 }
 
-#u-turn{
-    color: #448dce;
-    transform: rotate(90deg);
-    margin:0;
+#u-turn {
+  color: #448dce;
+  transform: rotate(90deg);
+  margin: 0;
 }
 
-#accordion-close, #layers-list-close
-, #tool-accordion-close{
-    top: 16px;
+#accordion-close, #layers-list-close, #tool-accordion-close {
+  top: 16px;
 }
 
-.panel-group{
-    overflow-x: hidden;
-    overflow-y: auto;
-    z-index: 50;
+.panel-group {
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 50;
 }
 
-.panel-body{
-    /*height: 880px;*/
-    height: auto;
-    width: auto;
-    /*overflow-x: hidden;*/
-    /*overflow-y: auto;*/
+.panel-body {
+  /*height: 880px;*/
+  height: auto;
+  width: auto;
+  /*overflow-x: hidden;*/
+  /*overflow-y: auto;*/
 }
 
-#legendDiv{
-    /*background-color: red;*/
-    /*position: absolute;*/
-    top:0;
-    /*float:left;*/
-    /*overflow: scroll;*/
-    /*overflow-x: hidden;*/
+#legendDiv {
+  /*background-color: red;*/
+  /*position: absolute;*/
+  top: 0;
+  /*float:left;*/
+  /*overflow: scroll;*/
+  /*overflow-x: hidden;*/
 }
 
-.bootstrap-select.btn-group .dropdown-menu li a{
-    padding:2px;
+.bootstrap-select.btn-group .dropdown-menu li a {
+  padding: 2px;
 }
 
 .panel-group .panel {
-    overflow: visible;
+  overflow: visible;
 }
 
-@media (min-device-width : 320px)
-and (max-device-width : 568px){
-    #mobileMapDiv{
-        padding-right:75px;
-    }
+@media (min-device-width: 320px)
+and (max-device-width: 568px) {
+  #mobileMapDiv {
+    padding-right: 75px;
+  }
 }
 
-#mobileMapDiv{
-    padding-right:33px;
-    background: url("../img/background.png")
+#mobileMapDiv {
+  padding-right: 33px;
+  background: url("../img/background.png")
 }
 
-#measurementDiv{
-    display: inline;
+#measurementDiv {
+  display: inline;
 }
 
-
-.esriPopup.light .titlePane{
-    /*height:auto;*/
-    width:auto;
-    /*padding:0;*/
-    /*margin:0;*/
-    /*background-color: darkgray;*/
+.esriPopup.light .titlePane {
+  /*height:auto;*/
+  width: auto;
+  /*padding:0;*/
+  margin-bottom: -50px;
+  /*background-color: darkgray;*/
 }
 
-.esriPopup.light .esriPopupWrapper{
-    height:auto;
-    width: auto;
-    margin:0;
-    padding:0;
-    /*background-color: lightblue;*/
+.esriPopup.light .esriPopupWrapper {
+  height: auto;
+  width: auto;
+  margin: 0;
+  padding: 0;
+  -webkit-overflow-scrolling: touch;
+
+  /*background-color: lightblue;*/
 }
 
-.esriPopup.light .contentPane{
-    height: 400px;
-    margin-top: 0;
-    padding-top: 0;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-
-    /*margin-bottom: 10px;*/
-    /*background-color: lawngreen;*/
+.esriPopup.light .contentPane {
+  height: 400px;
+  margin-top: 0;
+  padding-top: 0;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+  -webkit-overflow-scrolling: touch;
+  /*background-color: lightskyblue;*/
+  color: #000000;
 }
 
-.esriPopup.light .actionsPane, .esriPopup.dark .actionsPane{
-    position: absolute;
-    height:0;
-    width:0;
-    padding:0
+.esriPopup.light .actionsPane {
+  position: absolute;
+  height: 0;
+  width: 0;
+  padding: 0
 }
 
-.checkbox{
-    margin-left: 15px;
+.checkbox {
+  margin-left: 15px;
 }
 
-.esriBookmarkEditBox{
-    height: 20px;
+.esriBookmarkEditBox {
+  height: 20px;
 }
 
-.esriAttributionItem, .esriAttributionList{
-    display: none;
+/* Hide attribution */
+.esriAttributionItem, .esriAttributionList {
+  display: none;
 }
+
+/*TODO: ZoomTo action*/
+.esriPopup .actionsPane .actionList {
+  display: none;
+}
+
+/*.esriPopup.light .actionsPane .action{
+  padding-left: 10px;
+  color: #6DBAFD;
+  font-size: 15px;
+}*/
+
+/*
+.action:after{
+  content: "Zoom to"
+}
+*/
 
 /*
 #printButton{
