@@ -58,7 +58,7 @@ require(["esri/map",
 
     // Get a reference to the ArcGIS Map class
     var map = BootstrapMap.create("mapDiv", {
-      //basemap: "streets",
+      basemap: "streets",
       center: [-85.724, 37.593],
       zoom: 7,
       scrollWheelZoom: true,
@@ -243,7 +243,6 @@ require(["esri/map",
       {id: "kytc-basemap"});
     map.addLayer(KytcBaseLayer);
     map.addLayer(syp0);
-
 
     map.infoWindow.resize(320, 285);
 
