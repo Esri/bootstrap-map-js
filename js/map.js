@@ -47,8 +47,8 @@ $(document).ready(function () {
         "dojo/dom",
         "dijit/form/Button",
         "dojo/domReady!"],
-      function (Map, BootstrapMap, Query, QueryTask, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer,
-                ArcGISDynamicMapServiceLayer, WebTiledLayer, LabelLayer, OverviewMap, HomeButton,
+      function (Map, BootstrapMap, Query, QueryTask, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer,
+                ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, WebTiledLayer, LabelLayer, OverviewMap, HomeButton,
                 LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup, PopupTemplate,
                 Bookmarks, Draw, Graphic,
                 Color, SimpleRenderer, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSymbol, Font,
@@ -68,7 +68,8 @@ $(document).ready(function () {
         });
 
         // Create the bookmark widget
-        var bookmarks = new Bookmarks({
+        var bookmarks;
+        bookmarks = new Bookmarks({
           map: map,
           bookmarks: [],
           editable: true
@@ -88,7 +89,8 @@ $(document).ready(function () {
 
         // Printer widget
         // TODO: Try Viewer map's widget
-        var printer = new Print({
+        var printer;
+        printer = new Print({
           map: map,
           url: "http://maps.kytc.ky.gov/arcgis/rest/services/ExportWebMap/GPServer/Export%20Web%20Map"
         }, dom.byId("printButton"));
@@ -100,7 +102,8 @@ $(document).ready(function () {
         }
 
         // Add scale bar
-        var scalebar = new Scalebar({
+        var scalebar;
+        scalebar = new Scalebar({
           map: map,
           scalebarUnit: "dual"
         });
@@ -197,11 +200,11 @@ $(document).ready(function () {
           });
         });
         /* Mutually exclusive checkbox for toggling basemaps */
-        $('input[name="myCheckbox"]').change(function () {
+        $("input[name=myCheckbox]").change(function () {
 
           // If this checkbox is checked, turn off other checkboxes
           if ($(this).prop("checked")) {
-            $('input[name="myCheckbox"]').prop("checked", false);
+            $("input[name=myCheckbox]").prop("checked", false);
             // TODO:
             $(this).prop("checked", true);
           }
@@ -278,10 +281,9 @@ $(document).ready(function () {
           "<strong>Plan Funding Code</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_CSYFUNDCODEP}<br>" +
           "<strong>Plan Funding Cost</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_CSYFUNDCOSTP}<br>" +
           //"<strong></strong> : ${}<br>" +
-
           "<strong>County & Route</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.LOCUNIQUE}<br>" +
           "<strong>Bridge Number</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.RPL_BRG_NUM}<br>" +
-          "<strong>Construction Phase Stage</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_STAGEC}<br>"
+          "<strong>Construction Phase Stage</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_STAGEC}<br>";
 
         var json0 = {
           title: "<strong>Awarded Current Hwy Plan</strong>",
@@ -319,7 +321,6 @@ $(document).ready(function () {
           infoTemplate: sypInfoTemplate2,
           outFields: ["*"]
         });
-        4        //
 
         // Add KYTC basemap on startup
         var KytcBaseLayer = new ArcGISDynamicMapServiceLayer(
