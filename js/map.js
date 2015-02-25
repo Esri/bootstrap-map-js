@@ -362,42 +362,41 @@ $(document).ready(function () {
       });
 
       function ToggleOpLayer() {
-        $("input[name=opLayerCheckbox]").each(function () {
-          var opLayer;
-          switch ($(this).attr("id")) {
-            case "prjArchToggle":
-              opLayer = new ArcGISDynamicMapServiceLayer(
-              "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",
-                {id: "prj-archive-lyrs"});
-              break;
-            case "trafficToggle":
-              opLayer = new ArcGISTiledMapServiceLayer(
-                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",
-                {id: "traffic-counts-layers"});
-              break;
-          }
-          /*if (opLayer == null) {
-           opLayer = new esri.layers.ArcGISDynamicMapServiceLayer(
-           "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer", {
-           opacity: 0.8
-           });*/
-          var h = dojo.connect(map, 'onLayerAddResult', function (result) {
-            toc.layerInfos.splice(0, 0, {
-              layer: opLayer,
-              //title: "Traffic Counts",
-              // collapsed: true, // whether this root layer should be collapsed initially, default false.
-              slider: true, // whether to display a transparency slider. default false.
-              autoToggle: false //whether to automatically collapse when turned off, and expand when turn on for groups layers. default true.
-            });
-            toc.refresh();
-            dojo.disconnect(h);
+          $("input[name=opLayerCheckbox]").each(function () {
+              var opLayer;
+              /*switch ($(this).attr("id")) {
+               case "prjArchToggle":
+               opLayer = new ArcGISDynamicMapServiceLayer(
+               "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",
+               {id: "prj-archive-lyrs"});
+               break;
+               case "trafficToggle":
+               opLayer = new ArcGISTiledMapServiceLayer(
+               "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",
+               {id: "traffic-counts-layers"});
+               break;
+               }*/
+              if (opLayer == null) {
+                  opLayer = new esri.layers.ArcGISDynamicMapServiceLayer(
+                      "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer", {
+                          opacity: 0.8
+                      });
+                  var h = dojo.connect(map, 'onLayerAddResult', function (result) {
+                      toc.layerInfos.splice(0, 0, {
+                          layer: opLayer,
+                          //title: "Traffic Counts",
+                          // collapsed: true, // whether this root layer should be collapsed initially, default false.
+                          slider: true, // whether to display a transparency slider. default false.
+                          autoToggle: false //whether to automatically collapse when turned off, and expand when turn on for groups layers. default true.
+                      });
+                      toc.refresh();
+                      dojo.disconnect(h);
+                  });
+                  map.addLayer(opLayer);
+              }
           });
-          map.addLayer(opLayer);
-        });
-      }
-    });
-  // Camera button brings up photo log divs
+      }})});
+  /*// Camera button brings up photo log divs
   $("#CameraButton").click(function () {
     //$(".content").css({"width":"550px"});
-  });
-});
+  });*/
