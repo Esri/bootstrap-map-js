@@ -243,7 +243,6 @@ $(document).ready(function () {
               break;
           }
           if (!this.checked) {
-
             if ($.inArray(Layer.id, map.layerIds) !== -1) {
               map.removeLayer(map.getLayer(Layer.id));
             }
@@ -255,8 +254,7 @@ $(document).ready(function () {
 
       // Add layers
       // Awarded current Hwy Plan Projects
-      var infoTempalteContentString =
-        "<strong>Object ID</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.OBJECTID}<br>" +
+      var infoTempalteContentString = "<strong>Object ID</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.OBJECTID}<br>" +
         "<strong>Plan Year</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.PLAN_YEAR}<br>" +
         "<strong>Current Plan</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.CURRENT_PLAN }<br>" +
         "<strong>Publication Status</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.PUBLICATION_STATUS}<br>" +
@@ -291,7 +289,6 @@ $(document).ready(function () {
         content: infoTempalteContentString
       }; // json for InfoTemplate
       var sypInfoTemplate0 = new InfoTemplate(json0);
-
 
       var json1 = {
         title: "<strong>Current Hwy Plan</strong>",
@@ -339,6 +336,7 @@ $(document).ready(function () {
       map.addLayers([syp2, syp1, syp0]);
 
       // Map.on addlayers then TOC
+      // TODO: Add this to config for prod.
       var toc = new agsjs.dijit.TOC({
         map: map,
         layerInfos: [{
@@ -354,7 +352,6 @@ $(document).ready(function () {
           title: 'Previous Hwy Plan Projects',
           slider: true
         }]
-
       }, 'tocDiv');
 
       $("input[name=opLayerCheckbox]").change(function () {
@@ -362,41 +359,68 @@ $(document).ready(function () {
       });
 
       function ToggleOpLayer() {
-          $("input[name=opLayerCheckbox]").each(function () {
-              var opLayer;
-              /*switch ($(this).attr("id")) {
-               case "prjArchToggle":
-               opLayer = new ArcGISDynamicMapServiceLayer(
-               "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",
-               {id: "prj-archive-lyrs"});
-               break;
-               case "trafficToggle":
-               opLayer = new ArcGISTiledMapServiceLayer(
-               "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",
-               {id: "traffic-counts-layers"});
-               break;
-               }*/
-              if (opLayer == null) {
-                  opLayer = new esri.layers.ArcGISDynamicMapServiceLayer(
-                      "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer", {
-                          opacity: 0.8
-                      });
-                  var h = dojo.connect(map, 'onLayerAddResult', function (result) {
-                      toc.layerInfos.splice(0, 0, {
-                          layer: opLayer,
-                          //title: "Traffic Counts",
-                          // collapsed: true, // whether this root layer should be collapsed initially, default false.
-                          slider: true, // whether to display a transparency slider. default false.
-                          autoToggle: false //whether to automatically collapse when turned off, and expand when turn on for groups layers. default true.
-                      });
-                      toc.refresh();
-                      dojo.disconnect(h);
-                  });
-                  map.addLayer(opLayer);
-              }
-          });
-      }})});
-  /*// Camera button brings up photo log divs
-  $("#CameraButton").click(function () {
-    //$(".content").css({"width":"550px"});
-  });*/
+        $("input[name=opLayerCheckbox]").each(function () {
+          var opLayer, h;
+          //if (opLayer == null) {
+          switch ($(this).attr("id")) {
+            case "prjArchToggle":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",
+                {id: "prj-archive-lyrs"});
+              break;
+            case "trafficToggle":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",
+                {id: "traffic-counts-layers"});
+              break;
+            case "envToggle":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/EnvironmentalOverview/MapServer",
+                {id: "env-lyrs"});
+              break;
+            case "bridgeToggle":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/BridgeDataMiner/MapServer",
+                {id: "bridge-lyrs"});
+              break
+          }
+          // If box is unchecked, remove layer from the map and TOC
+          var removeTOC = "#TOCNode_" + opLayer.id;
+          // UNCHECKED
+          if (!this.checked) {
+            //TOCNode_traffic-counts-layers
+            console.log(this + " unchecked");
+            if ($.inArray(opLayer.id, map.layerIds) !== -1) {
+              map.removeLayer(map.getLayer(opLayer.id));
+              // Remove layer from TOC
+            }
+            $(removeTOC).detach();
+            toc.refresh();
+          }
+          // If checked, add layer to the map and layer control
+          else {
+            console.log($(this).attr("id") + " checked");
+            map.addLayer(opLayer);
+            if (!($(removeTOC).length>0)){
+              h = dojo.connect(map, 'onLayerAddResult', function (result) {
+                toc.layerInfos.splice(0, 0, {
+                  layer: opLayer,
+                  //title: "Traffic Counts",
+                  // collapsed: true, // whether this root layer should be collapsed initially, default false.
+                  slider: true, // whether to display a transparency slider. default false.
+                  autoToggle: false //whether to automatically collapse when turned off, and expand when turn on for groups layers. default true.
+                });
+                toc.refresh();
+                dojo.disconnect(h);
+              });
+            }
+          }
+        })
+      }// ToogleOpLayer
+    });//require
+}); // doc ready
+
+/*// Camera button brings up photo log divs
+ $("#CameraButton").click(function () {
+ //$(".content").css({"width":"550px"});
+ });*/

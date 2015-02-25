@@ -35,9 +35,11 @@ a {
 }
 
 @media (max-width: 767px) {
-  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a,
-  .checkbox label {
-    color: lightgray;
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a, li .checkbox label{
+    color: #ffffff;
+  }
+  .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover, li .checkbox label:hover{
+    color: #6DBAFD;
   }
 }
 

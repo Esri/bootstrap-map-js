@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,10 +34,8 @@
   <!-- FontAwesome css-->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
-
   <!-- Custom css -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
 
   <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!--[if lt IE 9]>
@@ -46,9 +43,7 @@
   <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 
-
   <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>-->
-
 
 </head>
 
@@ -58,7 +53,6 @@
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -74,7 +68,7 @@
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
         <!--<li class="active dropdown" id="basemapList">-->
-        <li id="search-window">
+        <li class="nav navbar-nav" id="search-window">
           <div id="search">
           </div>
         </li>
@@ -90,7 +84,6 @@
             <li><a href="#">Gray</a></li>
             <li class="divider"></li>
             <li><a href="#">Open Street Map</a></li>
-
             <li class="divider"></li>
             <li>
               <div class="checkbox">
@@ -127,6 +120,7 @@
                 </label>
               </div>
             </li>
+            <li class="divider"></li>
           </ul>
         </li>
         <li data-toggle="modal" data-target="#themodal"><a href="#">Help</a>
@@ -157,11 +151,11 @@
           <div class="tab-content">
             <div id="how-it-works" class="tab-pane fade">
               <h3>How it works</h3>
-              <!--<img class="img-responsive" src=img/andrew-cooks.jpg alt="">-->
             </div>
             <div id="known-issues" class="tab-pane fade in active">
               <h3>Known Issues</h3>
               <ul>
+                <li>Layer Control adds unchecked layers</li>
                 <li><strike>Tool tips bug on touch screen devices</strike></li>
                 <li><strike>KYTC Tools button does nothing</strike></li>
                 <li>Print page CSS is not set</li>
@@ -170,12 +164,9 @@
             </div>
             <div id="about" class="tab-pane fade">
               <h3>about</h3>
-              <!--<img class="img-responsive" src=img/potato-head.jpg alt="">-->
-
             </div>
             <div id="disclaimer" class="tab-pane fade">
               <h3>disclaimer</h3>
-
               <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
                 mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
                 turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis.
@@ -195,7 +186,6 @@
 
   <div id="mapDiv"></div>
   <div id="title-bar" class="im title-bar">
-
     <div class="project-title">
       <h4><a href="//transportation.ky.gov/planning/Pages/default.aspx" target="_blank">Active
         Highway Plan</a></h4>
@@ -246,11 +236,9 @@
           <select id="CountyInput2" class="selectpicker">
             <option value="">Select a county...</option>
           </select>
-
           <select id="RoadPrefixInput" class="selectpicker">
             <option value="">Select a road prefix</option>
           </select>
-
           <select id="RoadNumberInput" class="selectpicker">
             <option value="">Select a route number...</option>
           </select>
@@ -268,7 +256,6 @@
         </div>
       </div>
     </div>
-
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -277,7 +264,6 @@
       </div>
       <div id="collapseTwo" class="panel-collapse collapse">
         <div class="panel-body">
-          <!-- Split button -->
           <hr/>
           <div class="btn-group">
             <button type="button" class="btn btn-sm btn-success has-spinner">
@@ -287,7 +273,6 @@
         </div>
       </div>
     </div>
-
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -304,7 +289,7 @@
     </div>
   </div>
   <!-- Layers-List -->
-  <div id="layers-list" class="panel-group" style="display:block;">
+  <div id="layers-list" class="panel-group" style="display:none;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -314,13 +299,13 @@
           <button type="button" id="layers-list-close" class="close" data-dismiss="#layers-list">&times;</button>
         </h4>
       </div>
-      <div id="collapseAddLayers" class="panel-collapse collapse in">
+      <div id="collapseAddLayers" class="panel-collapse collapse">
         <div class="panel-body">
           <div class="checkbox">
-            <label>
+            <span><label>
               <input type="checkbox" name="opLayerCheckbox" id="prjArchToggle" data-toggle="toggle">
               Project Archive
-            </label>
+            </label></span>
           </div>
           <div class="checkbox">
             <label>
@@ -358,7 +343,6 @@
       </div>
     </div>
   </div>
-
   <div class="panel panel-default">
     <div class="panel-heading">
       <h4 class="panel-title">
