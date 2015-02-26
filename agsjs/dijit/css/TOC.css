@@ -1,0 +1,55 @@
+.agsjsTOCNode {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.agsjsTOCContent {
+    white-space: nowrap;
+}
+
+.agsjsTOCOutOfScale {
+    color: grey;
+    opacity: 0.5;
+}
+
+.agsjsTOCIcon {
+  vertical-align:bottom
+}
+
+.agsjsTOCRootLayer {
+}
+
+.agsjsTOCRootLayerLabel {
+    font-size: 11pt;
+    font-weight: bold;
+}
+
+.agsjsTOCGroupLayer {
+    font-weight: bold;
+}
+
+.agsjsTOCGroupLayerLabel {
+    font-size: 10pt;
+}
+
+.agsjsTOCServiceLayer {
+    font-weight: bold;
+}
+
+.agsjsTOCServiceLayerLabel {
+    font-size: 10pt;
+    padding-left: 2px;
+}
+
+.agsjsTOCLegendIcon {
+    /* width: 50px;*/
+}
+
+.agsjsTOCLegendLabel {
+    font-size: 8pt;
+    padding-left: 2px;
+}
+
+.agsjsTOCSlider {
+    padding: 5px 20px 5px 30px;
+}

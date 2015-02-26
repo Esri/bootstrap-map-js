@@ -4,14 +4,5 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="bootstrap" level="project" />
-    <orderEntry type="library" name="ArcGIS Javascript" level="project" />
-    <orderEntry type="library" name="jquery" level="application" />
-    <orderEntry type="library" name="dojo" level="application" />
-    <orderEntry type="library" name="jQuery-2.0.0" level="application" />
-    <orderEntry type="library" name="Dojo-1.8.3" level="project" />
-    <orderEntry type="library" name="Node.js v0.10.30 Core Modules" level="application" />
-    <orderEntry type="library" name="knockout" level="application" />
-    <orderEntry type="library" name="bootstrap-select" level="application" />
   </component>
 </module>
