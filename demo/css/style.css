@@ -3,6 +3,8 @@ body {
 }
 
 .navbar-brand {
+  display: inline-flex;
+  line-height: 28px;
   padding-top: 10px;
   padding-bottom: 5px;
 }

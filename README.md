@@ -49,8 +49,8 @@ This repository contains the following:
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- Step 1. Add CSS for Bootstrap, ArcGIS and Bootstrap-map-js -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">   
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
     <style>
       /* Set the responsive map size here */
@@ -93,7 +93,7 @@ This repository contains the following:
             }]
         };
     </script>
-    <script src="http://js.arcgis.com/3.10compact"></script>
+    <script src="//js.arcgis.com/3.13compact"></script>
     <script>
       require(["application/bootstrapmap", "dojo/domReady!"], 
         function(BootstrapMap) {
@@ -110,7 +110,7 @@ This repository contains the following:
     <!-- jQuery (for Bootstrap's JavaScript plugins). NOTE: You can also use pure Dojo. See examples. -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- Include all  plugins or individual files as needed -->
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>
 ```

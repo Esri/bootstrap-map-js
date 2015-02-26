@@ -17,13 +17,13 @@
     <title>Bootstrap Map JS - Get Started</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/style.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
-    <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.10/js/esri/css/esri.css">   
+    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13/esri/css/esri.css">   
     <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
 
     <style type="text/css">
@@ -66,6 +66,7 @@
                 <li><a href="#">National Geographic</a></li>
                 <li><a href="#">Topographic</a></li>
                 <li><a href="#">Gray</a></li>
+                <li><a href="#">DarkGray</a></li>
                 <li class="divider"></li>
                 <li><a href="#">Open Street Map</a></li>
               </ul>
@@ -100,13 +101,13 @@
             }]
         };
     </script>
-    <script src="http://js.arcgis.com/3.10compact"></script>
+    <script src="//js.arcgis.com/3.13compact"></script>
     <script>
         require(["esri/map", "esri/dijit/Scalebar", "application/bootstrapmap", "dojo/domReady!"], 
           function(Map, Scalebar, BootstrapMap) {
             // Get a reference to the ArcGIS Map class
             var map = BootstrapMap.create("mapDiv",{
-              basemap:"national-geographic",
+              basemap:"dark-gray",
               center:[-122.45,37.77],
               zoom:12
             });
@@ -134,6 +135,9 @@
                   case "Gray":
                     map.setBasemap("gray");
                     break;
+                  case "DarkGray":
+                    map.setBasemap("dark-gray");
+                    break;
                   case "Open Street Map":
                     map.setBasemap("osm");
                     break;
@@ -150,6 +154,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   </body>
 </html>
