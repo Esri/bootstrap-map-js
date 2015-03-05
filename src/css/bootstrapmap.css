@@ -85,6 +85,10 @@
 }
 
 /* Soften corners */
+.esriPopup.light .esriPopupWrapper, .esriPopup.dark .esriPopupWrapper {
+  border-radius: 1em;
+  -webkit-border-radius: 1em;
+}
 .esriPopup.light .titlePane, .esriPopup.dark .titlePane {
   border-radius: 0.3em 0.3em 0 0;
   -webkit-border-radius: 0.3em 0.3em 0 0;
