@@ -85,18 +85,13 @@
 }
 
 /* Soften corners */
-.esriPopup.light, .esriPopup.dark, 
-.esriPopup.light .esriPopupWrapper, .esriPopup.dark .esriPopupWrapper {
-  border-radius: 5px;
-  -webkit-border-radius: 5px;
-}
 .esriPopup.light .titlePane, .esriPopup.dark .titlePane {
-  border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
+  border-radius: 0.3em 0.3em 0 0;
+  -webkit-border-radius: 0.3em 0.3em 0 0;
 }
 .esriPopup.light .actionsPane, .esriPopup.dark .actionsPane {
-  border-radius: 0px 0px 5px 5px;
-  -webkit-border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 0.3em 0.3em;
+  -webkit-border-radius: 0px 0px 0.3em 0.3em;
 }
 
 /* Title Pane font and buttons */
@@ -115,7 +110,10 @@
   color: #333;  
 }
 .esriPopup.light .titleButton.next, .esriPopup.dark .titleButton.next {
-  right: 40px;
+  right: 35px;
+}
+.esriPopup.light .titleButton.prev, .esriPopup.dark .titleButton.prev {
+  right: 60px;
 }
 
 .esriPopup.light .titleButton.next, .esriPopup.dark .titleButton.next, 
