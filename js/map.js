@@ -56,8 +56,12 @@ $(document).ready(function () {
               Print, Legend, registry, Toolbar, parser, dom) {
 
       // Get a reference to the ArcGIS Map class
+
+     /* $(document).bind("mobileinit", function(){
+        $.mobile.touchOverflowEnabled = true;
+      });*/
       var map = BootstrapMap.create("mapDiv", {
-        basemap: "streets",
+        basemap: "dark-gray",
         center: [-85.724, 37.593],
         zoom: 7,
         scrollWheelZoom: true,
@@ -149,7 +153,7 @@ $(document).ready(function () {
       // Add locate me button
       var geoLocate = new LocateButton({
         map: map,
-        scale: null
+        scale: 20000
       }, "LocateButton");
       geoLocate.startup();
 
@@ -202,7 +206,6 @@ $(document).ready(function () {
       });
       /* Mutually exclusive checkbox for toggling basemaps */
       $("input[name=myCheckbox]").change(function () {
-
         // If this checkbox is checked, turn off other checkboxes
         if ($(this).prop("checked")) {
           $("input[name=myCheckbox]").prop("checked", false);
@@ -247,14 +250,20 @@ $(document).ready(function () {
               map.removeLayer(map.getLayer(Layer.id));
             }
           } else {
+            console.log(map.layerIds);
+            console.log(map.graphicsLayerIds);
             map.addLayer(Layer);
+
+
+            /*var totalLayersLength = map.LayerIds.length + map.graphicsLayerIds.length;
+            map.addLayer(Layer, totalLayersLength - 1);*/
           }
         });
       }
 
       // Add layers
       // Awarded current Hwy Plan Projects
-      var infoTempalteContentString = "<strong>Object ID</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.OBJECTID}<br>" +
+      var infoTemplateContentString = "<strong>Object ID</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.OBJECTID}<br>" +
         "<strong>Plan Year</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.PLAN_YEAR}<br>" +
         "<strong>Current Plan</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.CURRENT_PLAN }<br>" +
         "<strong>Publication Status</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.PUBLICATION_STATUS}<br>" +
@@ -286,19 +295,19 @@ $(document).ready(function () {
 
       var json0 = {
         title: "<strong>Awarded Current Hwy Plan</strong>",
-        content: infoTempalteContentString
+        content: infoTemplateContentString
       }; // json for InfoTemplate
       var sypInfoTemplate0 = new InfoTemplate(json0);
 
       var json1 = {
         title: "<strong>Current Hwy Plan</strong>",
-        content: infoTempalteContentString
+        content: infoTemplateContentString
       };
       var sypInfoTemplate1 = new InfoTemplate(json1);
 
       var json2 = {
         title: "<strong>Previous Hwy Plan</strong>",
-        content: infoTempalteContentString
+        content: infoTemplateContentString
       };
       var sypInfoTemplate2 = new InfoTemplate(json2);
 
@@ -325,17 +334,11 @@ $(document).ready(function () {
       KytcBaseLayer = new ArcGISDynamicMapServiceLayer(
         "http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer",
         {id: "kytc-basemap"});
-      map.addLayer(KytcBaseLayer);
+      //map.addLayer(KytcBaseLayer);
       //map.infoWindow.resize(320, 285);
-
-      /* var TrafficCountLayer;
-       TrafficCountLayer = new ArcGISDynamicMapServiceLayer(
-       "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",
-       {id: "Traffic Counts"});*/
 
       map.addLayers([syp2, syp1, syp0]);
 
-      // Map.on addlayers then TOC
       // TODO: Add this to config for prod.
       var toc = new agsjs.dijit.TOC({
         map: map,
@@ -354,14 +357,15 @@ $(document).ready(function () {
         }]
       }, 'tocDiv');
 
-      $("input[name=opLayerCheckbox]").change(function () {
-        ToggleOpLayer();
+      // Disable add layer buttons on click
+      $(".add-layer-btn").click(function () {
+        $(this).attr('disabled', true);
+        AddOpLayer();
       });
 
-      function ToggleOpLayer() {
-        $("input[name=opLayerCheckbox]").each(function () {
+      function AddOpLayer() {
+        $(".add-layer-btn").each(function () {
           var opLayer, h;
-          //if (opLayer == null) {
           switch ($(this).attr("id")) {
             case "prjArchToggle":
               opLayer = new ArcGISDynamicMapServiceLayer(
@@ -370,8 +374,10 @@ $(document).ready(function () {
               break;
             case "trafficToggle":
               opLayer = new ArcGISDynamicMapServiceLayer(
-                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",
-                {id: "traffic-counts-layers"});
+                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",{
+                "showAttribution": true,
+                "id": "traffic-counts-layers"});
+              //opLayer.setInfoTemplate(infoTemplateContentString);
               break;
             case "envToggle":
               opLayer = new ArcGISDynamicMapServiceLayer(
@@ -382,41 +388,27 @@ $(document).ready(function () {
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "//maps.kytc.ky.gov/arcgis/rest/services/Apps/BridgeDataMiner/MapServer",
                 {id: "bridge-lyrs"});
-              break
+              break;
           }
-          // If box is unchecked, remove layer from the map and TOC
-          var removeTOC = "#TOCNode_" + opLayer.id;
-          // UNCHECKED
-          if (!this.checked) {
-            //TOCNode_traffic-counts-layers
-            console.log(this + " unchecked");
-            if ($.inArray(opLayer.id, map.layerIds) !== -1) {
-              map.removeLayer(map.getLayer(opLayer.id));
-              // Remove layer from TOC
-            }
-            $(removeTOC).detach();
-            toc.refresh();
-          }
-          // If checked, add layer to the map and layer control
-          else {
-            console.log($(this).attr("id") + " checked");
-            map.addLayer(opLayer);
-            if (!($(removeTOC).length>0)){
+          // If button is disabled, add the map to the layer and the TOC node
+          if ($(this).attr("disabled")) {
+            //console.log(this.id);
+            if ($.inArray(opLayer.id, map.layerIds) == -1) {
+              map.addLayer(opLayer,1);
               h = dojo.connect(map, 'onLayerAddResult', function (result) {
                 toc.layerInfos.splice(0, 0, {
                   layer: opLayer,
-                  //title: "Traffic Counts",
-                  // collapsed: true, // whether this root layer should be collapsed initially, default false.
+                  collapsed: true, // whether this root layer should be collapsed initially, default false.
                   slider: true, // whether to display a transparency slider. default false.
-                  autoToggle: false //whether to automatically collapse when turned off, and expand when turn on for groups layers. default true.
+                  autoToggle: true //whether to automatically collapse when turned off, and expand when turn on for groups layers. default true.
                 });
                 toc.refresh();
                 dojo.disconnect(h);
               });
             }
           }
-        })
-      }// ToogleOpLayer
+        });
+      }
     });//require
 }); // doc ready
 

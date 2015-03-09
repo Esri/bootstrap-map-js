@@ -88,7 +88,7 @@
             <li>
               <div class="checkbox">
                 <label>
-                  <input name="myCheckbox" type="checkbox" id="ky-basemap-toggle" checked="checked"> KYTC
+                  <input name="myCheckbox" type="checkbox" id="ky-basemap-toggle"> KYTC
                 </label>
               </div>
             </li>
@@ -116,11 +116,11 @@
             <li>
               <div class="checkbox">
                 <label>
-                  <input name="myCheckbox" type="checkbox" id="ky-gq-toggle"> Geologic Quadrangles
+                  <input name="myCheckbox" type="checkbox" id="ky-gq-toggle">Geologic Quadrangles
                 </label>
               </div>
             </li>
-            <li class="divider"></li>
+            <!--<li class="divider"></li>-->
           </ul>
         </li>
         <li data-toggle="modal" data-target="#themodal"><a href="#">Help</a>
@@ -155,7 +155,7 @@
             <div id="known-issues" class="tab-pane fade in active">
               <h3>Known Issues</h3>
               <ul>
-                <li>Layer Control adds unchecked layers</li>
+                <li>Can't scroll info template on touch devices</li>
                 <li><strike>Tool tips bug on touch screen devices</strike></li>
                 <li><strike>KYTC Tools button does nothing</strike></li>
                 <li>Print page CSS is not set</li>
@@ -167,6 +167,7 @@
             </div>
             <div id="disclaimer" class="tab-pane fade">
               <h3>disclaimer</h3>
+
               <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut,
                 mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum
                 turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis.
@@ -289,172 +290,241 @@
     </div>
   </div>
   <!-- Layers-List -->
-  <div id="layers-list" class="panel-group" style="display:none;">
+  <div id="layers-list" class="panel-group" style="display:block;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" href="#collapseAddLayers"> Add Layers
+          <a data-toggle="collapse" href="#collapseAddLayers"> More Layers
           </a>
           <button type="button" id="layers-list-close" class="close" data-dismiss="#layers-list">&times;</button>
         </h4>
       </div>
       <div id="collapseAddLayers" class="panel-collapse collapse">
         <div class="panel-body">
-          <div class="checkbox">
-            <span><label>
-              <input type="checkbox" name="opLayerCheckbox" id="prjArchToggle" data-toggle="toggle">
-              Project Archive
-            </label></span>
+          <div class="panel-group">
+            <div class="panel">
+              <a data-toggle="collapse" href="#collapseAnalysis">Analysis »
+              </a>
+
+              <div id="collapseAnalysis" class="panel-collapse collapse">
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                  <div class="btn btn-md btn-primary add-layer-btn" id="trafficToggle">Traffic Counts</div>
+                  <div class="btn btn-md btn-primary add-layer-btn">Snow and Ice</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <a data-toggle="collapse" href="#collapseAssets">Assets »
+              </a>
+
+              <div id="collapseAssets" class="panel-collapse collapse">
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                  <div class="btn btn-md btn-primary">Bridge Data Miner</div>
+                  <div class="btn btn-md btn-primary">Right of Way Monument</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <a data-toggle="collapse" href="#collapseAviation">Aviation »
+              </a>
+
+              <div id="collapseAviation" class="panel-collapse collapse">
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                  <div class="btn btn-md btn-primary">Airport</div>
+                  <div class="btn btn-md btn-primary">KAZC Permit</div>
+                  <div class="btn btn-md btn-primary">Part77</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <a data-toggle="collapse" href="#collapseTransportation">Transportation »
+              </a>
+
+              <div id="collapseTransportation" class="panel-collapse collapse">
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                  <div class="btn btn-md btn-primary">Local Roads</div>
+                  <div class="btn btn-md btn-primary">Emergency Funding Routes</div>
+                  <div class="btn btn-md btn-primary">General Highway</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <a data-toggle="collapse" href="#collapseEnvironmental">Environmental »
+              </a>
+
+              <div id="collapseEnvironmental" class="panel-collapse collapse">
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                  <div class="btn btn-md btn-primary">Environemntal Overview</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <a data-toggle="collapse" href="#collapseProjects">Projects »
+              </a>
+
+              <div id="collapseProjects" class="panel-collapse collapse">
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                  <div class="btn btn-md btn-primary">Active Highway Plan</div>
+                  <div class="btn btn-md btn-primary">Project Plan Archive</div>
+                </div>
+              </div>
+            </div>
+            <div class="panel">
+              <a data-toggle="collapse" href="#collapseTwoTwo">Sensors and Monitors »
+              </a>
+
+              <div id="collapseTwoTwo" class="panel-collapse collapse">
+                <div class="btn-group-vertical" role="group" aria-label="...">
+                  <div class="btn btn-md btn-primary">Traffic Camera</div>
+                  <div class="btn btn-md btn-primary">GeoEvent Processor</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="checkbox">
-            <label>
-            <input type="checkbox" name="opLayerCheckbox" id="trafficToggle">
-            Traffic Counts
-          </label>
-          </div>
-          <div class="checkbox">
-            <label>
-            <input type="checkbox" name="opLayerCheckbox" id="envToggle">
-            Environmental Overview
-          </label></div>
-          <div class="checkbox">
-            <label>
-            <input type="checkbox" name="opLayerCheckbox" id="bridgeToggle">
-            Bridge
-          </label>
-          </div>
+        </div>
+        <div>
+          <!--<div class="btn-group-vertical" role="group" aria-label="...">
+            <div class="btn btn-primary btn-sm add-layer-btn" name="opLayerCheckbox" id="prjArchToggle">
+              Project Archive</div>
+            <div class="btn btn-primary btn-sm add-layer-btn" name="opLayerCheckbox" id="trafficToggle">
+              Traffic Counts</div>
+            <div class="btn btn-primary btn-sm add-layer-btn" name="opLayerCheckbox" id="envToggle">
+              Environmental Overview</div>
+            <div class="btn btn-primary btn-sm add-layer-btn" name="opLayerCheckbox" id="bridgeToggle">
+              Bridge</div>
+          </div>-->
         </div>
       </div>
     </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" href="#collapseLayerInfo"> Layer Control
-        </a>
-      </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapseLayerInfo"> Layer Control
+          </a>
+        </h4>
+      </div>
+      <div id="collapseLayerInfo" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div id="tocDiv"></div>
+          <br>
+          <!--<div id="legendDiv"></div>-->
+        </div>
+      </div>
     </div>
-    <div id="collapseLayerInfo" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div id="tocDiv"></div>
-        <br>
-        <!--<div id="legendDiv"></div>-->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <!-- Detach from data parent -->
+          <!--<a data-toggle="collapse" data-parent="#layers-list" href="#collapseLegend">Legend</a>-->
+          <a data-toggle="collapse" href="#collapseLegend">Legend</a>
+        </h4>
+      </div>
+      <div id="collapseLegend" class="panel-collapse collapse in">
+        <div class="panel-body">
+          <div id="legendDiv"></div>
+          <br>
+        </div>
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <!-- Detach from data parent -->
-        <!--<a data-toggle="collapse" data-parent="#layers-list" href="#collapseLegend">Legend</a>-->
-        <a data-toggle="collapse" href="#collapseLegend">Legend</a>
-      </h4>
-    </div>
-    <div id="collapseLegend" class="panel-collapse collapse in">
-      <div class="panel-body">
-        <div id="legendDiv"></div>
-        <br>
-      </div>
-    </div>
-  </div>
-</div>
 
-<div id="tool-accordion" class="panel-group" style="display:none;">
-  <!-- Search by road name -->
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseIdentify">Identify</a>
-        <button type="button" id="tool-accordion-close" class="close" data-dismiss="#tool-accordion">&times;</button>
-      </h4>
+  <div id="tool-accordion" class="panel-group" style="display:none;">
+    <!-- Search by road name -->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseIdentify">Identify</a>
+          <button type="button" id="tool-accordion-close" class="close" data-dismiss="#tool-accordion">&times;</button>
+        </h4>
+      </div>
+      <div id="collapseIdentify" class="panel-collapse collapse">
+        <div class="panel-body">
+          <hr/>
+        </div>
+      </div>
     </div>
-    <div id="collapseIdentify" class="panel-collapse collapse">
-      <div class="panel-body">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseMeasure">Measurement</a>
+        </h4>
+      </div>
+      <div id="collapseMeasure" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div id="titlePane" data-dojo-type="dijit/TitlePane"
+               data-dojo-props="title:'Measurement', closable:'false', open:'false'">
+            <div id="measurementDiv"></div>
+            <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDraw">Draw</a>
+        </h4>
+      </div>
+      <div id="collapseDraw" class="panel-collapse collapse">
         <hr/>
       </div>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseMeasure">Measurement</a>
-      </h4>
-    </div>
-    <div id="collapseMeasure" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div id="titlePane" data-dojo-type="dijit/TitlePane"
-             data-dojo-props="title:'Measurement', closable:'false', open:'false'">
-          <div id="measurementDiv"></div>
-          <span style="font-size:smaller;padding:5px 5px;">Press <b>CTRL</b> to enable snapping.</span>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDraw">Draw</a>
-      </h4>
-    </div>
-    <div id="collapseDraw" class="panel-collapse collapse">
-      <hr/>
-    </div>
-  </div>
 
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDir">Directions</a>
-      </h4>
-    </div>
-    <div id="collapseDir" class="panel-collapse collapse">
-      <div class="panel-body">
-        <!--<div id="dir"></div>-->
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseDir">Directions</a>
+        </h4>
+      </div>
+      <div id="collapseDir" class="panel-collapse collapse">
+        <div class="panel-body">
+          <!--<div id="dir"></div>-->
+        </div>
       </div>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseRoadInfo">Road Information</a>
-      </h4>
-    </div>
-    <div id="collapseRoadInfo" class="panel-collapse collapse">
-      <div class="panel-body">
-        <hr/>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseRoadInfo">Road Information</a>
+        </h4>
+      </div>
+      <div id="collapseRoadInfo" class="panel-collapse collapse">
+        <div class="panel-body">
+          <hr/>
+        </div>
       </div>
     </div>
-  </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapsePrint">Print</a>
-      </h4>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapsePrint">Print</a>
+        </h4>
+      </div>
+      <div id="collapsePrint" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div>
+            <button id="printButton" class="fa fa-print"></button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="collapsePrint" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div>
-          <button id="printButton" class="fa fa-print"></button>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseBookmark">Bookmark</a>
+        </h4>
+      </div>
+      <div id="collapseBookmark" class="panel-collapse collapse">
+        <div class="panel-body">
+          <div>
+            <button id="bookmarks"></button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#tool-accordion" href="#collapseBookmark">Bookmark</a>
-      </h4>
-    </div>
-    <div id="collapseBookmark" class="panel-collapse collapse">
-      <div class="panel-body">
-        <div>
-          <button id="bookmarks"></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 </div>
 <script type="text/javascript">
   var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
@@ -473,7 +543,7 @@
 <!-- jQuery Version 1.11.1 -->
 <script async src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Esri js -->
-<script src="//js.arcgis.com/3.12"></script>
+<script src="//js.arcgis.com/3.13"></script>
 <!-- Bootstrap Core JavaScript -->
 <script async src="dist/js/bootstrap.min.js"></script>
 <!-- Selecpick js-->
@@ -481,9 +551,9 @@
 <!-- Custom JavaScripts-->
 <!--<script src="js/modal.js"></script>-->
 <script async src="js/index.js"></script>
-<script async src="js/map-title.js"></script>
+<!--<script async src="js/map-title.js"></script>-->
 <script async src="js/map.js"></script>
-<script async src="js/query.js"></script>
+<!--<script async src="js/query.js"></script>-->
 <!--<script src="js/toggle-layer.js"></script>-->
 </body>
 </html>
