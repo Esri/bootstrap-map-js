@@ -563,7 +563,7 @@ and (max-device-width: 568px) {
   width: auto;
   margin: 0;
   padding: 0;
-  -webkit-overflow-scrolling: touch;
+  /*overflow: scroll;*/
 
   /*background-color: lightblue;*/
 }
@@ -574,7 +574,7 @@ and (max-device-width: 568px) {
   padding-top: 0;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  -webkit-overflow-scrolling: touch;
+  overflow: scroll;
   /*background-color: lightskyblue;*/
   color: #000000;
 }
@@ -604,6 +604,12 @@ and (max-device-width: 568px) {
   display: none;
 }
 
+.btn-group-vertical{
+  padding-left: 50px;
+}
+[name="opLayerCheckbox"]{
+  border-color: #ffffff;
+}
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
   color: #6DBAFD;
@@ -623,6 +629,4 @@ and (max-device-width: 568px) {
     right: 15px;
 }
 */
-
-
 

@@ -365,20 +365,37 @@ $(document).ready(function () {
 
       function AddOpLayer() {
         $(".add-layer-btn").each(function () {
-          var opLayer, h;
+          var opLayer, h, serviceTitle
           switch ($(this).attr("id")) {
+            case "traffic-counts":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",{
+                  "showAttribution": true,
+                  "id": "traffic-counts-lyrs"});
+              //opLayer.setInfoTemplate(infoTemplateContentString);
+              break;
+            case "snow-and-ice":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/SNIC/MapServer",
+                {id: "snow-ice-lyrs"});
+              break;
+            case "bridge":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/BridgeDataMiner/MapServer",
+                {id: "bridge-lyrs"});
+              break;
+            case "row-monument":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectControl/MapServer",
+                {id: "row-monumnet-lyrs"});
+              serviceTitle = "Right-of-Way Monument"
+              break;
             case "prjArchToggle":
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "//maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",
                 {id: "prj-archive-lyrs"});
               break;
-            case "trafficToggle":
-              opLayer = new ArcGISDynamicMapServiceLayer(
-                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",{
-                "showAttribution": true,
-                "id": "traffic-counts-layers"});
-              //opLayer.setInfoTemplate(infoTemplateContentString);
-              break;
+
             case "envToggle":
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "//maps.kytc.ky.gov/arcgis/rest/services/Apps/EnvironmentalOverview/MapServer",
@@ -398,6 +415,7 @@ $(document).ready(function () {
               h = dojo.connect(map, 'onLayerAddResult', function (result) {
                 toc.layerInfos.splice(0, 0, {
                   layer: opLayer,
+                  title: serviceTitle,
                   collapsed: true, // whether this root layer should be collapsed initially, default false.
                   slider: true, // whether to display a transparency slider. default false.
                   autoToggle: true //whether to automatically collapse when turned off, and expand when turn on for groups layers. default true.
