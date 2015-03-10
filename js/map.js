@@ -252,7 +252,7 @@ $(document).ready(function () {
           } else {
             console.log(map.layerIds);
             console.log(map.graphicsLayerIds);
-            map.addLayer(Layer);
+            map.addLayer(Layer,1);
 
 
             /*var totalLayersLength = map.LayerIds.length + map.graphicsLayerIds.length;
@@ -359,20 +359,38 @@ $(document).ready(function () {
 
       // Disable add layer buttons on click
       $(".add-layer-btn").click(function () {
-        $(this).attr('disabled', true);
+        $(this).addClass("active");
         AddOpLayer();
       });
 
       function AddOpLayer() {
         $(".add-layer-btn").each(function () {
-          var opLayer, h, serviceTitle
+          var opLayer, h, serviceTitle;
           switch ($(this).attr("id")) {
             case "traffic-counts":
+              var _TrafficStationCountsInfoTemplate = new InfoTemplate();
+              _TrafficStationCountsInfoTemplate.setTitle("<strong>Traffic Station Counts</strong>");
+              _TrafficStationCountsInfoTemplate.setContent(
+                "<strong>Object ID :</strong> ${KYTCVector.HIS.TS.OBJECTID}<br>"+
+                "<strong>Station ID :</strong> ${KYTCVector.HIS.TS.ADTSTATN}<br>"+
+                "<strong>Shape :</strong> ${KYTCVector.HIS.TS.Shape}");
+
+              /*opLayer = new FeatureLayer("//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer/0",
+                {
+                  infoTemplate: _TrafficStationCountsInfoTemplate,
+                  mode: FeatureLayer.MODE_AUTO,
+                  outFields:["*"]
+                });
+*/
+
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",{
                   "showAttribution": true,
                   "id": "traffic-counts-lyrs"});
-              //opLayer.setInfoTemplate(infoTemplateContentString);
+              opLayer.setInfoTemplates({
+                  0:{infoTemplate: _TrafficStationCountsInfoTemplate}
+                });
+              serviceTitle = "Traffic Counts";
               break;
             case "snow-and-ice":
               opLayer = new ArcGISDynamicMapServiceLayer(
@@ -388,8 +406,22 @@ $(document).ready(function () {
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectControl/MapServer",
                 {id: "row-monumnet-lyrs"});
-              serviceTitle = "Right-of-Way Monument"
+              serviceTitle = "Right-of-Way Monument";
               break;
+            case "part77":
+              //var infoTemplate = new InfoTemplate("${NAME}");
+              var _permitInfoTemplate = new InfoTemplate();
+              _permitInfoTemplate.setTitle("Part77 Surface");
+              _permitInfoTemplate.setContent("Part 77 content");
+
+              opLayer = new ArcGISDynamicMapServiceLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/KAZC_Permit/MapServer",
+                {id: "part77-lyrs"});
+              opLayer.setInfoTemplates({
+                2:{infoTemplate:_permitInfoTemplate}
+              });
+              serviceTitle = "Part77";
+              break;
+
             case "prjArchToggle":
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "//maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",
@@ -401,17 +433,13 @@ $(document).ready(function () {
                 "//maps.kytc.ky.gov/arcgis/rest/services/Apps/EnvironmentalOverview/MapServer",
                 {id: "env-lyrs"});
               break;
-            case "bridgeToggle":
-              opLayer = new ArcGISDynamicMapServiceLayer(
-                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/BridgeDataMiner/MapServer",
-                {id: "bridge-lyrs"});
-              break;
+
           }
           // If button is disabled, add the map to the layer and the TOC node
           if ($(this).attr("disabled")) {
             //console.log(this.id);
             if ($.inArray(opLayer.id, map.layerIds) == -1) {
-              map.addLayer(opLayer,1);
+              map.addLayer(opLayer);
               h = dojo.connect(map, 'onLayerAddResult', function (result) {
                 toc.layerInfos.splice(0, 0, {
                   layer: opLayer,

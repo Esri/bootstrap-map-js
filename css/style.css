@@ -30,7 +30,7 @@ button.btn.btn-md {
   border: 1px solid #d3d3d3;
 }
 
-a {
+.fa .fa-camera-retro> a, h4>a, .project-byline >a {
   color: #6DBAFD;
 }
 
@@ -569,13 +569,11 @@ and (max-device-width: 568px) {
 }
 
 .esriPopup.light .contentPane {
-  height: 400px;
+  /*height: 400px;*/
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  overflow: scroll;
-  /*background-color: lightskyblue;*/
   color: #000000;
 }
 
@@ -605,10 +603,15 @@ and (max-device-width: 568px) {
 }
 
 .btn-group-vertical{
-  padding-left: 50px;
+  padding-left: 20px;
 }
 [name="opLayerCheckbox"]{
   border-color: #ffffff;
+}
+
+.btn-group-vertical>.btn.active{
+  background: #3887BE;
+  color: #FFF;
 }
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
