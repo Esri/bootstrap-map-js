@@ -359,11 +359,11 @@ $(document).ready(function () {
 
       // Disable add layer buttons on click
       $(".add-layer-btn").click(function () {
-        $(this).addClass("active");
-        AddOpLayer();
+        $(this).toggleClass("active");
+        ToggleOpLayer();
       });
 
-      function AddOpLayer() {
+      function ToggleOpLayer() {
         $(".add-layer-btn").each(function () {
           var opLayer, h, serviceTitle;
           switch ($(this).attr("id")) {
@@ -374,7 +374,6 @@ $(document).ready(function () {
                 "<strong>Object ID :</strong> ${KYTCVector.HIS.TS.OBJECTID}<br>"+
                 "<strong>Station ID :</strong> ${KYTCVector.HIS.TS.ADTSTATN}<br>"+
                 "<strong>Shape :</strong> ${KYTCVector.HIS.TS.Shape}");
-
               /*opLayer = new FeatureLayer("//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer/0",
                 {
                   infoTemplate: _TrafficStationCountsInfoTemplate,
@@ -382,11 +381,9 @@ $(document).ready(function () {
                   outFields:["*"]
                 });
 */
-
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "//maps.kytc.ky.gov/arcgis/rest/services/Apps/TrafficCounts/MapServer",{
-                  "showAttribution": true,
-                  "id": "traffic-counts-lyrs"});
+                  id: "traffic-counts-layers"});
               opLayer.setInfoTemplates({
                   0:{infoTemplate: _TrafficStationCountsInfoTemplate}
                 });
@@ -394,49 +391,72 @@ $(document).ready(function () {
               break;
             case "snow-and-ice":
               opLayer = new ArcGISDynamicMapServiceLayer(
-                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/SNIC/MapServer",
-                {id: "snow-ice-lyrs"});
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/SNIC/MapServer",{
+                  id: "snow-ice-layers"});
               break;
             case "bridge":
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/BridgeDataMiner/MapServer",
-                {id: "bridge-lyrs"});
+                {id: "bridge-layers"});
               break;
             case "row-monument":
               opLayer = new ArcGISDynamicMapServiceLayer(
-                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectControl/MapServer",
-                {id: "row-monumnet-lyrs"});
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectControl/MapServer",{
+                  id: "row-monument-layers"});
               serviceTitle = "Right-of-Way Monument";
               break;
-            case "part77":
+            case "kazc":
               //var infoTemplate = new InfoTemplate("${NAME}");
               var _permitInfoTemplate = new InfoTemplate();
               _permitInfoTemplate.setTitle("Part77 Surface");
               _permitInfoTemplate.setContent("Part 77 content");
-
-              opLayer = new ArcGISDynamicMapServiceLayer("http://maps.kytc.ky.gov/arcgis/rest/services/Apps/KAZC_Permit/MapServer",
-                {id: "part77-lyrs"});
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/KAZC_Permit/MapServer",{
+                id: "kazc-layers"});
               opLayer.setInfoTemplates({
                 2:{infoTemplate:_permitInfoTemplate}
               });
               serviceTitle = "Part77";
               break;
-
-            case "prjArchToggle":
+            case "local-roads":
               opLayer = new ArcGISDynamicMapServiceLayer(
-                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",
-                {id: "prj-archive-lyrs"});
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/LocalRoads/MapServer",{
+                id: "local-roads-layers"
+                });
+              opLayer.setVisibleLayers([6,7,8]);
+              serviceTitle = "Local Roads";
               break;
-
-            case "envToggle":
+            case "fema-emergency":
               opLayer = new ArcGISDynamicMapServiceLayer(
-                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/EnvironmentalOverview/MapServer",
-                {id: "env-lyrs"});
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/FEMA_FHWA_EmergencyFundingRoutes/MapServer",{
+                id: "fema-emergency-layers"});
+              serviceTitle = "Emergency Funding Routes";
               break;
-
+            case "general-hwy":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/GeneralHighwayRoads/MapServer",{
+                id: "general-hwy-layers"});
+              serviceTitle = "General Highway Roads"
+              break;
+            case "environmental":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "//maps.kytc.ky.gov/arcgis/rest/services/Apps/EnvironmentalOverview/MapServer",{
+                  id: "env-layers"});
+              break;
+            case "prj-archive":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/ProjectArchives/MapServer",{
+                  id: "prj-archive-layers"
+                 });
+              break;
+            case "traffic-camera":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/SensorsAndMonitors/TrafficCameras/MapServer",{
+              id: "traffic-camera-layers"
+            });
           }
           // If button is disabled, add the map to the layer and the TOC node
-          if ($(this).attr("disabled")) {
+          if ($(this).hasClass("active")) {
             //console.log(this.id);
             if ($.inArray(opLayer.id, map.layerIds) == -1) {
               map.addLayer(opLayer);
@@ -451,6 +471,19 @@ $(document).ready(function () {
                 toc.refresh();
                 dojo.disconnect(h);
               });
+            }
+          }
+          // If button is not active, remove the layer
+          else{
+            /*$("#tocDiv").children().each(function () {
+              console.log($(this));
+            });*/
+            if (opLayer) {
+              if ($.inArray(opLayer.id, map.layerIds) !== -1) {
+                map.removeLayer(map.getLayer(opLayer.id));
+                toc.layerInfos.slice(0,1)
+                toc.refresh();
+              }
             }
           }
         });

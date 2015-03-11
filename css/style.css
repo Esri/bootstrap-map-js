@@ -610,7 +610,7 @@ and (max-device-width: 568px) {
 }
 
 .btn-group-vertical>.btn.active{
-  background: #3887BE;
+  background: #56b881 ;
   color: #FFF;
 }
 /*.esriPopup.light .actionsPane .action{
