@@ -46,16 +46,16 @@ $( document ).ready(function() {
     //$("#mapDiv").css("padding-left","300px");
   }
 
-  // When panel is closed, no button is active
+  // When panel is closed, no left button is active
   function onPanelHide(){
     $(".map-tools-left").css("margin-left","0");
-    $(".map-tools-left").removeClass("active");
+    $(".map-tools-left.active").removeClass("active");
     //$("#mapDiv").css("padding-left","0");
   }
 
 // Only one tool is active in a group
   $(".map-tools-left").click(function () {
-    $('.active').removeClass('active');
+    $('.map-tools-left.active').removeClass('active');
     // add active class to clicked element
     $(this).addClass('active');
   });
