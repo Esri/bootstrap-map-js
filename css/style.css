@@ -101,7 +101,7 @@ button.btn.btn-md {
   font-size: 22px;
 }
 
-#query-icon {
+#find-icon {
   top: 1px;
 }
 
@@ -503,7 +503,7 @@ footer ul li {
   top: 16px;
 }
 
-.panel-group {
+.kytc-left-panel {
   overflow-x: hidden;
   overflow-y: auto;
   z-index: 50;
@@ -530,7 +530,7 @@ footer ul li {
   padding: 2px;
 }
 
-.panel-group .panel {
+.kytc-left-panel .panel {
   overflow: visible;
 }
 
@@ -612,6 +612,12 @@ and (max-device-width: 568px) {
 .btn-group-vertical>.btn.active{
   background: #56b881 ;
   color: #FFF;
+}
+
+.map-tools-top.map-tools-left.active{
+  /*background-color: #add8e6;*/
+  background-color: #6DBAFD;
+  border-style: inset;
 }
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;

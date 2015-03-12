@@ -72,6 +72,25 @@ $(document).ready(function () {
         //showInfoWindowOnClick: true
       });
 
+      // If panel display is block, mapDiv padding left 300px
+     /* $(".kytc-left-panel").each(function(){
+        if ($(this).css("display") == "block"){
+          $("#mapDiv").css("padding-left","300px");
+        }
+      });*/
+
+
+
+
+
+      //if ($(".kytc-left-panel:visible").length==0
+      //){
+      //  $("#mapDiv").css("padding-left","0");
+      //  alert("panel not visible");
+      //}
+
+
+
       // Create the bookmark widget
       var bookmarks;
       bookmarks = new Bookmarks({
@@ -253,8 +272,6 @@ $(document).ready(function () {
             console.log(map.layerIds);
             console.log(map.graphicsLayerIds);
             map.addLayer(Layer,1);
-
-
             /*var totalLayersLength = map.LayerIds.length + map.graphicsLayerIds.length;
             map.addLayer(Layer, totalLayersLength - 1);*/
           }
@@ -426,6 +443,12 @@ $(document).ready(function () {
               opLayer.setVisibleLayers([6,7,8]);
               serviceTitle = "Local Roads";
               break;
+            case "rural-secondary":
+              opLayer = new ArcGISDynamicMapServiceLayer(
+                "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/RuralAndSecondaryRoads/MapServer",{
+                  });
+              opLayer.setVisibleLayers([1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]);
+              break;
             case "fema-emergency":
               opLayer = new ArcGISDynamicMapServiceLayer(
                 "http://maps.kytc.ky.gov/arcgis/rest/services/Apps/FEMA_FHWA_EmergencyFundingRoutes/MapServer",{
@@ -460,7 +483,7 @@ $(document).ready(function () {
             //console.log(this.id);
             if ($.inArray(opLayer.id, map.layerIds) == -1) {
               map.addLayer(opLayer);
-              h = dojo.connect(map, 'onLayerAddResult', function (result) {
+              /*h = dojo.connect(map, 'onLayerAddResult', function (result) {
                 toc.layerInfos.splice(0, 0, {
                   layer: opLayer,
                   title: serviceTitle,
@@ -470,7 +493,7 @@ $(document).ready(function () {
                 });
                 toc.refresh();
                 dojo.disconnect(h);
-              });
+              });*/
             }
           }
           // If button is not active, remove the layer

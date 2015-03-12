@@ -156,6 +156,7 @@
               <h3>Known Issues</h3>
               <ul>
                 <li>Can't scroll info template on touch devices</li>
+                <li>Layer control doesn't update when new layer is added</li>
                 <li><strike>Tool tips bug on touch screen devices</strike></li>
                 <li><strike>KYTC Tools button does nothing</strike></li>
                 <li>Print page CSS is not set</li>
@@ -186,6 +187,7 @@
   </div>
 
   <div id="mapDiv"></div>
+  <!-- Title bar -->
   <div id="title-bar" class="im title-bar">
     <div class="project-title">
       <h4><a href="//transportation.ky.gov/planning/Pages/default.aspx" target="_blank">Active
@@ -212,7 +214,7 @@
                                   title="Next extent"></i></button>
   </div>
 
-  <button id="query-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
+  <button id="find-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
           title="Find">
     <a href="#"><i class="fa fa-search-plus"></i></a></button>
   <button id="layers-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
@@ -223,7 +225,7 @@
     <a href="#"><i class="fa fa-wrench"></i></a></button>
 
   <!-- Search Accordion -->
-  <div id="accordion" class="panel-group" style="display:none;">
+  <div id="accordion" class="panel-group kytc-left-panel" style="display:none;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -290,7 +292,7 @@
     </div>
   </div>
   <!-- Layers-List -->
-  <div id="layers-list" class="panel-group" style="display:none;">
+  <div id="layers-list" class="panel-group kytc-left-panel" style="display:none;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -339,6 +341,7 @@
               <div id="collapseTransportation" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
                   <div class="btn btn-md btn-default add-layer-btn" id="local-roads">Local Roads</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="rural-secondary">Rural & Secondary</div>
                   <div class="btn btn-md btn-default add-layer-btn" id="fema-emergency">Emergency Funding Routes</div>
                   <div class="btn btn-md btn-default add-layer-btn" id="general-hwy">General Highway</div>
                 </div>
@@ -423,7 +426,7 @@
     </div>
   </div>
 
-  <div id="tool-accordion" class="panel-group" style="display:none;">
+  <div id="tool-accordion" class="panel-group kytc-left-panel" style="display:none;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
