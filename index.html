@@ -44,6 +44,10 @@
   <![endif]-->
 
   <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>-->
+  <script async src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
+
 
 </head>
 
@@ -168,10 +172,21 @@
             <div id="disclaimer" class="tab-pane fade">
               <!--<h3>disclaimer</h3>-->
 
-              <p><br>The information contained in this website is for general information purposes only. The information is provided by the Kentucky Transportation Cabinet(KYTC) and while we endeavor to keep the information up to date and correct, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is therefore strictly at your own risk.
-                In no event will we be liable for any loss or damage including without limitation, indirect or consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits arising out of, or in connection with, the use of this website.
-                Through this website you are able to link to other websites which are not under the control of the KYTC. We have no control over the nature, content and availability of those sites. The inclusion of any links does not necessarily imply a recommendation or endorse the views expressed within them.
-                Every effort is made to keep the website up and running smoothly. However, the KYTC takes no responsibility for, and will not be liable for, the website being temporarily unavailable due to technical issues beyond our control.</p>
+              <p><br>The information contained in this website is for general information purposes only. The information
+                is provided by the Kentucky Transportation Cabinet(KYTC) and while we endeavor to keep the information
+                up to date and correct, we make no representations or warranties of any kind, express or implied, about
+                the completeness, accuracy, reliability, suitability or availability with respect to the website or the
+                information, products, services, or related graphics contained on the website for any purpose. Any
+                reliance you place on such information is therefore strictly at your own risk.
+                In no event will we be liable for any loss or damage including without limitation, indirect or
+                consequential loss or damage, or any loss or damage whatsoever arising from loss of data or profits
+                arising out of, or in connection with, the use of this website.
+                Through this website you are able to link to other websites which are not under the control of the KYTC.
+                We have no control over the nature, content and availability of those sites. The inclusion of any links
+                does not necessarily imply a recommendation or endorse the views expressed within them.
+                Every effort is made to keep the website up and running smoothly. However, the KYTC takes no
+                responsibility for, and will not be liable for, the website being temporarily unavailable due to
+                technical issues beyond our control.</p>
             </div>
           </div>
         </div>
@@ -224,7 +239,7 @@
     <a href="#"><i class="fa fa-wrench"></i></a></button>
 
   <!-- Search Accordion -->
-  <div id="accordion" class="panel-group kytc-left-panel" style="display:block;">
+  <div id="accordion" class="panel-group kytc-left-panel" style="display:none;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -322,8 +337,15 @@
 
               <div id="collapseAnalysis" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-counts">Traffic Counts</div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="snow-and-ice">Snow and Ice</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-counts"
+                       data-toggle="tooltip" data-placement="bottom"
+                       title="Traffic Count Station locations and most current Average Annual Daily Traffic (AADT) for each site">
+                    Traffic Counts
+                  </div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="snow-and-ice"
+                       data-toggle="tooltip" data-placement="bottom" title="Route priorities for snow and ice removal">
+                    Snow and Ice
+                  </div>
                 </div>
               </div>
             </div>
@@ -333,8 +355,12 @@
 
               <div id="collapseAssets" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="bridge">Bridge Data Miner</div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="row-monument">Right of Way Monument</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="bridge" data-toggle="tooltip"
+                       data-placement="bottom" title="">Bridge Data Miner
+                  </div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="row-monument" data-toggle="tooltip"
+                       data-placement="bottom" title="">Right of Way Monument
+                  </div>
                 </div>
               </div>
             </div>
@@ -344,7 +370,9 @@
 
               <div id="collapseAviation" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="kazc">Airport Zoning Commission</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="kazc" data-toggle="tooltip"
+                       data-placement="bottom" title="">Airport Zoning Commission
+                  </div>
                 </div>
               </div>
             </div>
@@ -354,10 +382,18 @@
 
               <div id="collapseTransportation" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="local-roads">Local Roads</div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="rural-secondary">Rural & Secondary</div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="fema-emergency">Emergency Funding Routes</div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="general-hwy">General Highway</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="local-roads" data-toggle="tooltip"
+                       data-placement="bottom" title="">Local Roads
+                  </div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="rural-secondary" data-toggle="tooltip"
+                       data-placement="bottom" title="">Rural & Secondary
+                  </div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="fema-emergency" data-toggle="tooltip"
+                       data-placement="bottom" title="">Emergency Funding Routes
+                  </div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="general-hwy" data-toggle="tooltip"
+                       data-placement="bottom" title="">General Highway
+                  </div>
                 </div>
               </div>
             </div>
@@ -367,39 +403,41 @@
 
               <div id="collapseEnvironmental" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="environmental">Environmental Overview</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="environmental" data-toggle="tooltip"
+                       data-placement="bottom" title="">Environmental Overview
+                  </div>
                 </div>
               </div>
             </div>
             <div class="panel">
               <a data-toggle="collapse" href="#collapseProjects">Projects »
               </a>
-
               <div id="collapseProjects" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <!--<div class="btn btn-md btn-default add-layer-btn" id="active-hwy-plan">Active Highway Plan</div>-->
-                  <div class="btn btn-md btn-default add-layer-btn" id="prj-archive">Project Plan Archive</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="prj-archive" data-toggle="tooltip"
+                       data-placement="bottom" title="">Project Plan Archive
+                  </div>
                 </div>
               </div>
             </div>
             <div class="panel">
               <a data-toggle="collapse" href="#collapseTwoTwo">Sensors and Monitors »
               </a>
-
               <div id="collapseTwoTwo" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-camera">Traffic Camera</div>
-                  <div class="btn btn-md btn-default ">GeoEvent Processor</div>
+                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-camera" data-toggle="tooltip"
+                       data-placement="bottom" title="">Traffic Camera
+                  </div>
+                  <div class="btn btn-md btn-default" data-toggle="tooltip" data-placement="bottom" title="">GeoEvent
+                    Processor
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div>
-        </div>
       </div>
     </div>
-
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -473,7 +511,6 @@
         <hr/>
       </div>
     </div>
-
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -543,13 +580,11 @@
   };
 </script>
 <!-- jQuery Version 1.11.1 -->
-<script async src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Esri js -->
 <script src="//js.arcgis.com/3.13"></script>
 <!-- Bootstrap Core JavaScript -->
 <script async src="dist/js/bootstrap.min.js"></script>
 <!-- Selecpick js-->
-<script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
 <!-- Custom JavaScripts-->
 <!--<script src="js/modal.js"></script>-->
 <script async src="js/index.js"></script>
