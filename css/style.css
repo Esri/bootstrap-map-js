@@ -563,18 +563,20 @@ and (max-device-width: 568px) {
   width: auto;
   margin: 0;
   padding: 0;
-  /*overflow: scroll;*/
+  /*position: fixed;*/
 
   /*background-color: lightblue;*/
 }
 
 .esriPopup.light .contentPane {
   /*height: 400px;*/
+  display: block;
   margin-top: 0;
   padding-top: 0;
   padding-bottom: 5px;
   margin-bottom: 5px;
-  color: #000000;
+  overflow: auto;
+  position: relative;
 }
 
 .esriPopup.light .actionsPane {
@@ -623,6 +625,8 @@ and (max-device-width: 568px) {
 .btn-group-vertical>.btn{
   width: 200px;
 }
+
+
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
   color: #6DBAFD;

@@ -61,9 +61,11 @@ $(document).ready(function () {
        $.mobile.touchOverflowEnabled = true;
        });*/
       var map = BootstrapMap.create("mapDiv", {
-        basemap: "dark-gray",
+        basemap: "national-geographic",
         center: [-85.724, 37.593],
-        zoom: 7,
+        zoom: 6,
+        /*minZoom: 2,
+        maxZoom: 10,*/
         scrollWheelZoom: true,
         logo: false,
         nav: false,
@@ -87,7 +89,7 @@ $(document).ready(function () {
       //}
 
 
-      // Create the bookmark widget
+      // Create a bookmark widget
       var bookmarks;
       bookmarks = new Bookmarks({
         map: map,
@@ -278,7 +280,7 @@ $(document).ready(function () {
       // Awarded current Hwy Plan Projects
       var infoTemplateContentString = "<strong>Object ID</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.OBJECTID}<br>" +
         "<strong>Plan Year</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.PLAN_YEAR}<br>" +
-        "<strong>Current Plan</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.CURRENT_PLAN }<br>" +
+        "<strong>Current Plan</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.CURRENT_PLAN}<br>" +
         "<strong>Publication Status</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP.PUBLICATION_STATUS}<br>" +
         "<strong>Highway Plan </strong> : <a target='_blank' href = ${KYTCDynamic_ProgramMgmt.DBO.SYP.PRECON_INFO_LINK}>${KYTCDynamic_ProgramMgmt.DBO.SYP.PRECON_INFO_LINK}</a><br>" +
         "<strong>District No.</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_PRO_DISTNO}<br>" +
@@ -292,7 +294,7 @@ $(document).ready(function () {
         "<strong>Route No.</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.ROUTENO}<br>" +
         "<strong>Suffix</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SUFFIX}<br>" +
         "<strong>Couplet ID</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.COUPLETID}<br>" +
-        "<strong>SYP Number 1</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.COUPLETID}<br>" +
+        "<strong>SYP Number 1</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.DIST_ITEM}<br>" +
         "<strong>RT Unique</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.RT_NE_UNIQUE}<br>" +
         "<strong>SYP Number 2</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.DIST_ITEM_MOD}<br>" +
         "<strong>Description</strong> : ${KYTCDynamic_ProgramMgmt.DBO.SYP_TABLE_VW.SYP_RPT_DESC}<br>" +
