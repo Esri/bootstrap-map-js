@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -161,10 +161,10 @@
               <ul>
                 <li>Can't scroll info template on touch devices</li>
                 <li>Layer control doesn't update when new layer is added</li>
-                <li><strike>Tool tips bug on touch screen devices</strike></li>
-                <li><strike>KYTC Tools button does nothing</strike></li>
+                <li style="text-decoration: line-through;">Tool tips bug on touch screen devices</li>
+                <li style="text-decoration: line-through;">KYTC Tools button does nothing</li>
                 <li>Print page CSS is not set</li>
-                <li><strike>List button width 2px wider</strike></li>
+                <li style="text-decoration: line-through;">List button width 2px wider</li>
               </ul>
             </div>
             <div id="about" class="tab-pane fade">
@@ -240,7 +240,7 @@
     <a href="#"><i class="fa fa-wrench"></i></a></button>
 
   <!-- Search Accordion -->
-  <div id="accordion" class="panel-group kytc-left-panel" style="display:none;">
+  <div id="accordion" class="panel-group kytc-left-panel" style="display:block;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -249,9 +249,23 @@
           <button type="button" id="accordion-close" class="close" data-dismiss="#accordion">&times;</button>
         </h4>
       </div>
-      <div id="collapseOne" class="panel-collapse collapse in">
+      <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
-
+          <label for="select-query">Select query:</label>
+          <select id="select-query" class="selectpicker">
+            <option value="">Find plan by project number</option>
+          </select>
+          <br>
+          <label for="search-for">Search for:</label>
+          <select id="search-for" class="selectpicker">
+            <option value="">Enter the keyword you want to search for
+            </option>
+          </select>
+          <br>
+          <input type="checkbox" id="find-exact"><label for="find-exact"> Find exact matches only</label>
+          <br>
+          <button type="button" class="btn btn-default"><i class="fa fa-search"></i> Search</button>
+          <button type="button" class="btn btn-default" id="clear-btn"><i class="fa fa-history"></i> Clear</button>
         </div>
       </div>
     </div>
@@ -279,7 +293,7 @@
           </div>
           <hr/>
           <div class="btn-group">
-            <button type="button" class="btn btn-md btn-success has-spinner">
+            <button type="button" class="btn btn-md btn-success">
               Locate
             </button>
           </div>
@@ -296,7 +310,7 @@
         <div class="panel-body">
           <hr/>
           <div class="btn-group">
-            <button type="button" class="btn btn-sm btn-success has-spinner">
+            <button type="button" class="btn btn-md btn-success">
               Locate
             </button>
           </div>
@@ -413,6 +427,7 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseProjects">Projects »
               </a>
+
               <div id="collapseProjects" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
                   <div class="btn btn-md btn-default add-layer-btn" id="prj-archive" data-toggle="tooltip"
@@ -424,6 +439,7 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseTwoTwo">Sensors and Monitors »
               </a>
+
               <div id="collapseTwoTwo" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
                   <div class="btn btn-md btn-default add-layer-btn" id="traffic-camera" data-toggle="tooltip"
