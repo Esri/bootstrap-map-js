@@ -46,14 +46,10 @@
 
   <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/knockout/3.1.0/knockout-min.js"></script>-->
   <script async src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
   <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/js/bootstrap-select.min.js"></script>
-
-
 </head>
 
 <body class="claro" id="MapBody">
-
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container">
     <div class="navbar-header">
@@ -62,17 +58,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-
       <a class="navbar-brand" href="http://kentucky.gov" target="_blank"><strong>Ky.</strong>gov</a>
-
       <div class="navbar-text hidden-xs hidden-sm hidden-md">An Official Website of the Commonwealth of Kentucky
       </div>
-
-      <!--<div class="header-text"></div>-->
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav navbar-right">
-        <!--<li class="active dropdown" id="basemapList">-->
         <li class="nav navbar-nav" id="search-window">
           <div id="search">
           </div>
@@ -171,8 +162,6 @@
               <h3>about</h3>
             </div>
             <div id="disclaimer" class="tab-pane fade">
-              <!--<h3>disclaimer</h3>-->
-
               <p><br>The information contained in this website is for general information purposes only. The information
                 is provided by the Kentucky Transportation Cabinet(KYTC) and while we endeavor to keep the information
                 up to date and correct, we make no representations or warranties of any kind, express or implied, about
@@ -200,9 +189,7 @@
       </div>
     </div>
   </div>
-
   <div id="mapDiv"></div>
-  <!-- Title bar -->
   <div id="title-bar" class="im title-bar">
     <div class="project-title">
       <h4><a href="//transportation.ky.gov/planning/Pages/default.aspx" target="_blank">Active
@@ -213,7 +200,6 @@
             target="_blank">KYTC GIS</a>
     </div>
   </div>
-
   <div id="CameraButton" class="icons">
     <a href="http://test1.maps.kytc.ky.gov/bootstrap-map-js/photolog.html" target="_blank">
       <i class="fa fa-camera-retro" data-toggle="tooltip" data-placement="left" title="PhotoLog"></i></a></div>
@@ -221,26 +207,20 @@
   <div id="LocateButton"></div>
   <!--<button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="One frame backward"><a href="#"><i-->
   <div id="zoomprev" class="icons nav-btn">
-    <button class="btn btn-md"><i class="fa fa-angle-left" data-toggle="tooltip" data-placement="left"
-                                  title="Previous extent"></i></button>
+    <button class="btn btn-md"><i class="fa fa-angle-left" data-toggle="tooltip" data-placement="left" title="Previous extent"></i></button>
   </div>
   <div id="zoomnext" class="icons nav-btn">
-    <button class="btn btn-md"><i class="fa fa-angle-right" data-toggle="tooltip" data-placement="left"
-                                  title="Next extent"></i></button>
+    <button class="btn btn-md"><i class="fa fa-angle-right" data-toggle="tooltip" data-placement="left" title="Next extent"></i></button>
   </div>
 
-  <button id="find-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
-          title="Find">
+  <button id="find-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right" title="Find">
     <a href="#"><i class="fa fa-search-plus"></i></a></button>
-  <button id="layers-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
-          title="Layers">
+  <button id="layers-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right" title="Layers">
     <a href="#"><i class="fa fa-list-ul"></i></a></button>
-  <button id="kytc-tools-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip"
-          data-placement="right" title="Tools">
+  <button id="kytc-tools-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right" title="Tools">
     <a href="#"><i class="fa fa-wrench"></i></a></button>
-
   <!-- Search Accordion -->
-  <div id="accordion" class="panel-group kytc-left-panel" style="display:block;">
+  <div id="accordion" class="panel-group kytc-left-panel" style="display:none;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -249,7 +229,7 @@
           <button type="button" id="accordion-close" class="close" data-dismiss="#accordion">&times;</button>
         </h4>
       </div>
-      <div id="collapseOne" class="panel-collapse collapse">
+      <div id="collapseOne" class="panel-collapse collapse in">
         <div class="panel-body">
           <label for="select-query">Select query:</label>
           <select id="select-query" class="selectpicker">
@@ -257,10 +237,7 @@
           </select>
           <br>
           <label for="search-for">Search for:</label>
-          <select id="search-for" class="selectpicker">
-            <option value="">Enter the keyword you want to search for
-            </option>
-          </select>
+          <input type="text" id="search-for" class="form-control" placeholder="Enter the keyword." value>
           <br>
           <input type="checkbox" id="find-exact"><label for="find-exact"> Find exact matches only</label>
           <br>
@@ -275,21 +252,21 @@
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseRoadName">Road Name</a>
         </h4>
       </div>
-      <div id="collapseRoadName" class="panel-collapse collapse">
+      <div id="collapseRoadName" class="panel-collapse collapse in">
         <div class="panel-body">
-          <select id="CountyInput2" class="selectpicker">
+          <label><select id="CountyInput2" class="selectpicker">
             <option value="">Select a county...</option>
-          </select>
-          <select id="RoadPrefixInput" class="selectpicker">
+          </select></label>
+e          <label> <select id="RoadPrefixInput" class="selectpicker">
             <option value="">Select a road prefix</option>
-          </select>
-          <select id="RoadNumberInput" class="selectpicker">
+          </select></label>
+          <label><select id="RoadNumberInput" class="selectpicker">
             <option value="">Select a route number...</option>
-          </select>
+          </select></label>
           <hr/>
           <div class="input-group">
             <h5>Or</h5>
-            <input type="text" class="form-control" placeholder="Route Name">
+            <input type="text" class="form-control" placeholder="Enter route name">
           </div>
           <hr/>
           <div class="btn-group">
@@ -325,9 +302,9 @@
       </div>
       <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
-          <select id="countySelect" class="selectpicker">
+          <label><select id="countySelect" class="selectpicker">
             <option>Select a county</option>
-          </select>
+          </select></label>
         </div>
       </div>
     </div>
@@ -349,16 +326,13 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseAnalysis">Analysis »
               </a>
-
-              <div id="collapseAnalysis" class="panel-collapse collapse">
+e              <div id="collapseAnalysis" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-counts"
-                       data-toggle="tooltip" data-placement="bottom"
+                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-counts" data-toggle="tooltip" data-placement="bottom"
                        title="Traffic Count Station locations and most current Average Annual Daily Traffic (AADT) for each site">
                     Traffic Counts
                   </div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="snow-and-ice"
-                       data-toggle="tooltip" data-placement="bottom" title="Route priorities for snow and ice removal">
+                  <div class="btn btn-md btn-default add-layer-btn" id="snow-and-ice" data-toggle="tooltip" data-placement="bottom" title="Route priorities for snow and ice removal">
                     Snow and Ice
                   </div>
                 </div>
@@ -367,14 +341,11 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseAssets">Assets »
               </a>
-
               <div id="collapseAssets" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="bridge" data-toggle="tooltip"
-                       data-placement="bottom" title="">Bridge Data Miner
+                  <div class="btn btn-md btn-default add-layer-btn" id="bridge" data-toggle="tooltip" data-placement="bottom" title="">Bridge Data Miner
                   </div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="row-monument" data-toggle="tooltip"
-                       data-placement="bottom" title="">Right of Way Monument
+                  <div class="btn btn-md btn-default add-layer-btn" id="row-monument" data-toggle="tooltip" data-placement="bottom" title="">Right of Way Monument
                   </div>
                 </div>
               </div>
@@ -385,8 +356,7 @@
 
               <div id="collapseAviation" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="kazc" data-toggle="tooltip"
-                       data-placement="bottom" title="">Airport Zoning Commission
+                  <div class="btn btn-md btn-default add-layer-btn" id="kazc" data-toggle="tooltip" data-placement="bottom" title="">Airport Zoning Commission
                   </div>
                 </div>
               </div>
@@ -397,17 +367,13 @@
 
               <div id="collapseTransportation" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="local-roads" data-toggle="tooltip"
-                       data-placement="bottom" title="">Local Roads
+                  <div class="btn btn-md btn-default add-layer-btn" id="local-roads" data-toggle="tooltip" data-placement="bottom" title="">Local Roads
                   </div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="rural-secondary" data-toggle="tooltip"
-                       data-placement="bottom" title="">Rural & Secondary
+                  <div class="btn btn-md btn-default add-layer-btn" id="rural-secondary" data-toggle="tooltip" data-placement="bottom" title="">Rural & Secondary
                   </div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="fema-emergency" data-toggle="tooltip"
-                       data-placement="bottom" title="">Emergency Funding Routes
+                  <div class="btn btn-md btn-default add-layer-btn" id="fema-emergency" data-toggle="tooltip" data-placement="bottom" title="">Emergency Funding Routes
                   </div>
-                  <div class="btn btn-md btn-default add-layer-btn" id="general-hwy" data-toggle="tooltip"
-                       data-placement="bottom" title="">General Highway
+                  <div class="btn btn-md btn-default add-layer-btn" id="general-hwy" data-toggle="tooltip" data-placement="bottom" title="">General Highway
                   </div>
                 </div>
               </div>
@@ -415,11 +381,9 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseEnvironmental">Environmental »
               </a>
-
               <div id="collapseEnvironmental" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="environmental" data-toggle="tooltip"
-                       data-placement="bottom" title="">Environmental Overview
+                  <div class="btn btn-md btn-default add-layer-btn" id="environmental" data-toggle="tooltip" data-placement="bottom" title="">Environmental Overview
                   </div>
                 </div>
               </div>
@@ -427,11 +391,9 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseProjects">Projects »
               </a>
-
               <div id="collapseProjects" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="prj-archive" data-toggle="tooltip"
-                       data-placement="bottom" title="">Project Plan Archive
+                  <div class="btn btn-md btn-default add-layer-btn" id="prj-archive" data-toggle="tooltip" data-placement="bottom" title="">Project Plan Archive
                   </div>
                 </div>
               </div>
@@ -442,8 +404,7 @@
 
               <div id="collapseTwoTwo" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-camera" data-toggle="tooltip"
-                       data-placement="bottom" title="">Traffic Camera
+                  <div class="btn btn-md btn-default add-layer-btn" id="traffic-camera" data-toggle="tooltip" data-placement="bottom" title="">Traffic Camera
                   </div>
                   <div class="btn btn-md btn-default" data-toggle="tooltip" data-placement="bottom" title="">GeoEvent
                     Processor
@@ -466,7 +427,6 @@
         <div class="panel-body">
           <div id="tocDiv"></div>
           <br>
-          <!--<div id="legendDiv"></div>-->
         </div>
       </div>
     </div>
@@ -474,7 +434,6 @@
       <div class="panel-heading">
         <h4 class="panel-title">
           <!-- Detach from data parent -->
-          <!--<a data-toggle="collapse" data-parent="#layers-list" href="#collapseLegend">Legend</a>-->
           <a data-toggle="collapse" href="#collapseLegend">Legend</a>
         </h4>
       </div>
@@ -486,9 +445,7 @@
       </div>
     </div>
   </div>
-
   <div id="tool-accordion" class="panel-group kytc-left-panel" style="display:none;">
-    <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
@@ -596,12 +553,10 @@
     }]
   };
 </script>
-<!-- jQuery Version 1.11.1 -->
 <!-- Esri js -->
 <script src="//js.arcgis.com/3.13"></script>
 <!-- Bootstrap Core JavaScript -->
 <script async src="dist/js/bootstrap.min.js"></script>
-<!-- Selecpick js-->
 <!-- Custom JavaScripts-->
 <!--<script src="js/modal.js"></script>-->
 <script async src="js/index.js"></script>
