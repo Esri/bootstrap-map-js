@@ -21,13 +21,13 @@ $( document ).ready(function() {
   });
 
   /*Panel open close*/
-  PanelToggle("#accordion", "#accordion-close", "#find-icon");
-  PanelToggle("#layers-list","#layers-list-close","#layers-icon");
-  PanelToggle("#tool-accordion","#tool-accordion-close","#kytc-tools-icon");
+  PanelToggle("#accordion", "#find-icon");
+  PanelToggle("#layers-list", "#layers-icon");
+  PanelToggle("#tool-accordion","#kytc-tools-icon");
 
-  function PanelToggle (objectId,closeBtnId, btnId){
+  function PanelToggle (objectId,btnId){
     var object = $(objectId);
-    var closeBtn = $(closeBtnId);
+    //var closeBtn = $(closeBtnId);
     var btn = $(btnId);
 
     btn.on("click", function(){

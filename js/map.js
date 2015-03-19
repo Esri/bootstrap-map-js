@@ -6,9 +6,11 @@ $(document).ready(function () {
       "esri/tasks/query",
       "esri/tasks/QueryTask",
 
+
       "esri/toolbars/navigation",
       "dojo/on",
       "dojo/_base/array",
+      "dojo/data/ItemFileReadStore",
 
       "esri/dijit/Scalebar",
       "esri/layers/FeatureLayer",
@@ -48,7 +50,7 @@ $(document).ready(function () {
       "dojo/dom",
       "dijit/form/Button",
       "dojo/domReady!"],
-    function (Map, BootstrapMap, TOC, Query, QueryTask, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer,
+    function (Map, BootstrapMap, TOC, Query, QueryTask, Navigation, on, array, ItemFileReadStore, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer,
               ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, WebTiledLayer, LabelLayer, OverviewMap, HomeButton,
               LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup, PopupTemplate,
               Bookmarks, Draw, Graphic,

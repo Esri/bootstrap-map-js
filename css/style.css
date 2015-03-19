@@ -633,6 +633,9 @@ and (max-device-width: 568px) {
 .panel-body label{
   margin: 5px;
 }
+#ky-text-logo{
+  font-weight: 800;
+}
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
   color: #6DBAFD;
