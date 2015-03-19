@@ -87,7 +87,6 @@ button.btn.btn-md {
 .map-tools-top.map-tools-left {
   font-size: 24px;
   position: absolute;
-  left: 1px;
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 5px;
   opacity: 1;
@@ -421,6 +420,9 @@ and (orientation: portrait) {
   clear: both;
   padding-bottom: 15px;
 }
+.panel-title>a{
+  font-weight: 600;
+}
 
 .col-xs-4 a {
   font-size: 0.8em;
@@ -625,8 +627,12 @@ and (max-device-width: 568px) {
 .btn-group-vertical>.btn{
   width: 200px;
 }
-
-
+#clear-btn{
+  margin-left: 50px;
+}
+.panel-body label{
+  margin: 5px;
+}
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
   color: #6DBAFD;
@@ -646,4 +652,6 @@ and (max-device-width: 568px) {
     right: 15px;
 }
 */
+
+
 

@@ -2,7 +2,8 @@
 
 
 $( document ).ready(function() {
-
+  // Enable select picker
+  $('.selectpicker').selectpicker();
   // Disable to
   if(!('ontouchstart' in window)){
     $(function () {
