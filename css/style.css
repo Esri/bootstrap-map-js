@@ -636,6 +636,10 @@ and (max-device-width: 568px) {
 #ky-text-logo{
   font-weight: 800;
 }
+
+#photolog-btn a{
+  color: #87cefa;
+}
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
   color: #6DBAFD;
