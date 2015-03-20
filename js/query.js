@@ -4,7 +4,7 @@ require(["dojo/parser", "dojo/ready", "dojo/dom", "dojo/dom-construct", "esri/ma
   function (parser, ready, dom, domConstruct, esri, Attribution, array, registry, QueryTask, Query) {
 
     ready(function () {
-      function showResults(results){
+      function showCounties(results){
         var features = results.features;
         var attrArray = [];
         array.forEach(features, function (feature) {
@@ -19,24 +19,43 @@ require(["dojo/parser", "dojo/ready", "dojo/dom", "dojo/dom-construct", "esri/ma
         $("#select-county").append(option);
         $('.selectpicker').selectpicker('refresh');
       }
+      function showCities(results){
+        var features = results.features;
+        var attrArray = [];
+        array.forEach(features, function (feature) {
+          attribute = feature.attributes.NAME;
+          attrArray.push(attribute);
+        });
+        var option = '';
+        attrArray.sort();
+        for (i=0;i<attrArray.length;i++){
+          option += '<option value="'+ attrArray[i] + '">' + attrArray[i] + '</option>';
+        }
+        $("#select-city").append(option);
+        $('.selectpicker').selectpicker('refresh');
+      }
 
-      function QueryAttribute(serviceLayer, attrName){
+      function QueryCounties(serviceLayer, attrName){
         var queryTask = new QueryTask(serviceLayer);
         var query = new Query();
         query.returnGeometry = true;
         query.outFields = [attrName];
         query.where = attrName + "<> ''";
-        queryTask.execute(query, showResults);
+        queryTask.execute(query, showCounties);
+      }
+      QueryCounties("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5", "NAME");
+
+      function QueryCities(serviceLayer, attrName){
+        var queryTask = new QueryTask(serviceLayer);
+        var query = new Query();
+        query.returnGeometry = true;
+        query.outFields = [attrName];
+        query.where = attrName + "<> ''";
+        queryTask.execute(query, showCities);
       }
 
 
-      QueryAttribute("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5", "NAME");
-      //QueryAttribute("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/1", "NAME");
-
-
-
-
-
+      QueryCities("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/268", "NAME");
       /*$("#locateCounty").click(function () {
         var county = $('#countySelect').val();
         var queryTask = new QueryTask("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5");
