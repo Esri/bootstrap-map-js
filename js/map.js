@@ -1,61 +1,7 @@
 $(document).ready(function () {
-  require(["esri/map",
-      "application/bootstrapmap",
-      "TOC/dijit/TOC",
-
-      "esri/tasks/query",
-      "esri/tasks/QueryTask",
-
-
-      "esri/toolbars/navigation",
-      "dojo/on",
-      "dojo/_base/array",
-      "dojo/data/ItemFileReadStore",
-
-      "esri/dijit/Scalebar",
-      "esri/layers/FeatureLayer",
-      "esri/layers/ArcGISTiledMapServiceLayer",
-      "esri/layers/ArcGISImageServiceLayer",
-      "esri/layers/ArcGISDynamicMapServiceLayer",
-      "esri/layers/WebTiledLayer",
-      "esri/layers/LabelLayer",
-      "esri/dijit/OverviewMap",
-      "esri/dijit/HomeButton",
-      "esri/dijit/LocateButton",
-      "esri/dijit/Geocoder",
-      "esri/dijit/Measurement",
-      "esri/InfoTemplate",
-      "esri/dijit/InfoWindow",
-      "dojo/dom-construct",
-      "esri/dijit/Popup",
-      "esri/dijit/PopupTemplate",
-      "esri/dijit/Bookmarks",
-
-      "esri/toolbars/draw",
-      "esri/graphic",
-
-      "dojo/_base/Color",
-      "esri/renderers/SimpleRenderer",
-      "esri/symbols/SimpleMarkerSymbol",
-      "esri/symbols/SimpleLineSymbol",
-      "esri/symbols/SimpleFillSymbol",
-      "esri/symbols/TextSymbol",
-      "esri/symbols/Font",
-
-      "esri/dijit/Print",
-      "esri/dijit/Legend",
-      "dijit/registry",
-      "dijit/Toolbar",
-      "dojo/parser",
-      "dojo/dom",
-      "dijit/form/Button",
-      "dojo/domReady!"],
-    function (Map, BootstrapMap, TOC, Query, QueryTask, Navigation, on, array, ItemFileReadStore, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer,
-              ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, WebTiledLayer, LabelLayer, OverviewMap, HomeButton,
-              LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Popup, PopupTemplate,
-              Bookmarks, Draw, Graphic,
-              Color, SimpleRenderer, SimpleMarkerSymbol, SimpleLineSymbol, SimpleFillSymbol, TextSymbol, Font,
-              Print, Legend, registry, Toolbar, parser, dom) {
+  require([
+      "esri/map", "application/bootstrapmap", "dojo/data/ItemFileReadStore", "esri/tasks/FindTask", "esri/tasks/FindParameters", "esri/SpatialReference", "esri/graphic", "esri/graphicsUtils", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "TOC/dijit/TOC", "esri/tasks/query", "esri/tasks/QueryTask", "esri/toolbars/navigation", "dojo/on", "dojo/_base/array", "esri/dijit/Scalebar", "esri/layers/FeatureLayer", "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/LabelLayer", "esri/dijit/OverviewMap", "esri/dijit/HomeButton", "esri/dijit/LocateButton", "esri/dijit/Geocoder", "esri/dijit/Measurement", "esri/InfoTemplate", "esri/dijit/InfoWindow", "dojo/dom-construct", "esri/dijit/Bookmarks", "esri/dijit/Print", "esri/dijit/Legend", "dijit/registry", "esri/dijit/Attribution", "dojo/parser", "dojo/dom", "dojo/domReady!"],
+    function (Map, BootstrapMap, ItemFileReadStore, FindTask, FindParameters, SpatialReference, Graphic, graphicsUtils, SimpleFillSymbol, SimpleLineSymbol, Color, TOC, Query, QueryTask, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton, LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Bookmarks, Print, Legend, registry, Attribution, parser, dom) {
 
       // Get a reference to the ArcGIS Map class
 
@@ -64,10 +10,10 @@ $(document).ready(function () {
        });*/
       var map = BootstrapMap.create("mapDiv", {
         basemap: "national-geographic",
-        center: [-85.724, 37.593],
+        center: [-85.50111111111111, 37.35138888888889],
         zoom: 6,
         /*minZoom: 2,
-        maxZoom: 10,*/
+         maxZoom: 10,*/
         scrollWheelZoom: true,
         logo: false,
         nav: false,
@@ -76,20 +22,104 @@ $(document).ready(function () {
         //showInfoWindowOnClick: true
       });
 
-      // If panel display is block, mapDiv padding left 300px
-      /* $(".kytc-left-panel").each(function(){
-       if ($(this).css("display") == "block"){
-       $("#mapDiv").css("padding-left","300px");
-       }
-       });*/
 
+      //function (ready, dom, Attribution, array, QueryTask, Query) {
+      function showCounties(results) {
+        var features = results.features;
+        var attrArray = [];
+        array.forEach(features, function (feature) {
+          attribute = feature.attributes.NAME;
+          attrArray.push(attribute);
+        });
+        var option = '';
+        attrArray.sort();
+        for (i = 0; i < attrArray.length; i++) {
+          option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
+        }
+        $("#select-county").append(option);
+        $('.selectpicker').selectpicker('refresh');
+      }
 
-      //if ($(".kytc-left-panel:visible").length==0
-      //){
-      //  $("#mapDiv").css("padding-left","0");
-      //  alert("panel not visible");
-      //}
+      function showCities(results) {
+        var features = results.features;
+        var attrArray = [];
+        array.forEach(features, function (feature) {
+          attribute = feature.attributes.NAME;
+          attrArray.push(attribute);
+        });
+        var option = '';
+        attrArray.sort();
+        for (i = 0; i < attrArray.length; i++) {
+          option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
+        }
+        $("#select-city").append(option);
+        $('.selectpicker').selectpicker('refresh');
+      }
 
+      function QueryCounties(serviceLayer, attrName) {
+        var queryTask = new QueryTask(serviceLayer);
+        var query = new Query();
+        query.returnGeometry = true;
+        query.outFields = [attrName];
+        query.where = attrName + "<> ''";
+        queryTask.execute(query, showCounties);
+      }
+
+      QueryCounties("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5", "NAME");
+      function QueryCities(serviceLayer, attrName) {
+        var queryTask = new QueryTask(serviceLayer);
+        var query = new Query();
+        query.returnGeometry = false;
+        query.outFields = [attrName];
+        query.where = attrName + "<> ''";
+        queryTask.execute(query, showCities);
+      }
+
+      QueryCities("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/268", "NAME");
+
+      $("#locate-county-btn").click(function () {
+        var county = $("#select-county").val();
+        var findParams = new FindParameters();
+        findParams.returnGeometry = true;
+        findParams.layerIds = [5];
+        findParams.searchFields = ["NAME"];
+        findParams.outSpatialReference = map.spatialReference;
+
+        //set the search text to find parameters
+        findParams.searchText = county;
+        var findTask = new FindTask("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/");
+        findTask.execute(findParams, showResults);
+
+        function showResults(results) {
+//This function works with an array of FindResult that the task returns
+          map.graphics.clear();
+          var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
+            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
+              new Color([98, 194, 204]), 2), new Color([98, 194, 204, 0.5]));
+          var items;
+          items = array.map(results, function (result) {
+            var graphic = result.feature;
+            graphic.setSymbol(symbol);
+            map.graphics.add(graphic);
+            var center = graphic.geometry.getExtent();
+            map.setExtent(center.expand(2.5));
+            return result.feature.attributes;
+          });
+
+//Create data object to be used in store
+          var data = {
+            identifier: "COUNTY", //This field needs to have unique values
+            label: "COUNTY", //Name field for display. Not pertinent to agrid but may be used elsewhere.
+            items: items
+          };
+//Create data store and bind to grid.
+          /*var store = new ItemFileReadStore({data: data});
+           var grid = dom.byId('grid');
+           grid.setStore(store);*/
+//Zoom back to the initial map extent
+//          map.centerAndZoom(center, zoom);
+        }
+      });
 
       // Create a bookmark widget
       var bookmarks;
@@ -137,13 +167,7 @@ $(document).ready(function () {
         "http://services.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer"), overviewMapDijit;
 
       var visibleBool;
-      if (!("ontouchstart" in window)) {
-        visibleBool = true;
-      }
-      // If touch screen,
-      else {
-        visibleBool = false;
-      }
+      visibleBool = !("ontouchstart" in window);
 
       overviewMapDijit = new OverviewMap({
         map: map,

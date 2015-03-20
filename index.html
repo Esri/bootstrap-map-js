@@ -235,7 +235,7 @@
           <button type="button" id="accordion-close" class="close" data-dismiss="#accordion">&times;</button>
         </h4>
       </div>
-      <div id="collapseOne" class="panel-collapse collapse in">
+      <div id="collapseOne" class="panel-collapse collapse">
         <div class="panel-body">
           <label for="select-query">Select query:</label>
           <select id="select-query" class="selectpicker">
@@ -276,7 +276,7 @@
           </div>
           <hr/>
           <div class="btn-group">
-            <button type="button" class="btn btn-md btn-success">
+            <button type="button" id="" class="btn btn-md btn-success">
               Locate
             </button>
           </div>
@@ -293,7 +293,6 @@
         <div class="panel-body">
           <label for="select-city">Select a city:</Label>
           <select id="select-city" class="selectpicker">
-            <option value=""></option>
           </select>
           <hr/>
           <div class="btn-group">
@@ -310,14 +309,14 @@
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">County</a>
         </h4>
       </div>
-      <div id="collapseThree" class="panel-collapse collapse">
+      <div id="collapseThree" class="panel-collapse collapse in">
         <div class="panel-body">
           <label>Select a county:
             <select name="county" id="select-county" class="selectpicker">
             </select>
           </label>
           <hr>
-          <button class="btn btn-success btn-md">Locate</button>
+          <button id="locate-county-btn" class="btn btn-success btn-md">Locate</button>
         </div>
       </div>
     </div>
@@ -591,7 +590,7 @@
 <script async src="js/index.js"></script>
 <!--<script async src="js/map-title.js"></script>-->
 <script async src="js/map.js"></script>
-<script async src="js/query.js"></script>
+<!--<script async src="js/query.js"></script>-->
 <!--<script src="js/toggle-layer.js"></script>-->
 </body>
 </html>

@@ -1,8 +1,5 @@
-require(["dojo/parser", "dojo/ready", "dojo/dom", "dojo/dom-construct", "esri/main",
-    "esri/dijit/Attribution", "dojo/_base/array", "dijit/registry", "esri/tasks/QueryTask", "esri/tasks/query"],
-
-  function (parser, ready, dom, domConstruct, esri, Attribution, array, registry, QueryTask, Query) {
-
+require(["dojo/ready", "dojo/dom", "esri/dijit/Attribution", "dojo/_base/array", "esri/tasks/QueryTask", "esri/tasks/query"],
+  function (ready, dom, Attribution, array, QueryTask, Query) {
     ready(function () {
       function showCounties(results){
         var features = results.features;
@@ -34,7 +31,6 @@ require(["dojo/parser", "dojo/ready", "dojo/dom", "dojo/dom-construct", "esri/ma
         $("#select-city").append(option);
         $('.selectpicker').selectpicker('refresh');
       }
-
       function QueryCounties(serviceLayer, attrName){
         var queryTask = new QueryTask(serviceLayer);
         var query = new Query();
@@ -44,31 +40,29 @@ require(["dojo/parser", "dojo/ready", "dojo/dom", "dojo/dom-construct", "esri/ma
         queryTask.execute(query, showCounties);
       }
       QueryCounties("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5", "NAME");
-
       function QueryCities(serviceLayer, attrName){
         var queryTask = new QueryTask(serviceLayer);
         var query = new Query();
-        query.returnGeometry = true;
+        query.returnGeometry = false;
         query.outFields = [attrName];
         query.where = attrName + "<> ''";
         queryTask.execute(query, showCities);
       }
-
-
       QueryCities("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/268", "NAME");
-      /*$("#locateCounty").click(function () {
-        var county = $('#countySelect').val();
-        var queryTask = new QueryTask("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5");
-        var query = new Query();
-        query.returnGeometry = true;
-        query.outFields = ["NAME"];
-        query.where = "NAME = " + county;
-        queryTask.execute(query, showResults);
+
+      $("#locate-county-btn").click(function(){
+        var county = $("#select-county").val();
+        if (county!=="Nothing selected"){
+        //  zoom to query
+          var queryTask = new QueryTask("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5");
+          var query = new Query();
+          query.returnGeometry = true;
+          query.outFields = "NAME";
+          query.where = "'NAME' = " +  county;
+          queryTask.executeForExtent(query, zoomToExtent);
+          zoomToExtent = map.setExtent;
+        }
       });
-      function showResults(results) {
-        var result = results[0];
-        var extent = result.geometry.getExtent().expand(5.0);
-      }*/
     });
   });
 
