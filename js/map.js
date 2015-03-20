@@ -102,7 +102,7 @@ $(document).ready(function () {
             graphic.setSymbol(symbol);
             map.graphics.add(graphic);
             var center = graphic.geometry.getExtent();
-            map.setExtent(center.expand(2.5));
+            map.setExtent(center.expand(2.0));
             return result.feature.attributes;
           });
 

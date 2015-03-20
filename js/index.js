@@ -43,7 +43,7 @@ $( document ).ready(function() {
   }
 
   function onPanelShow(){
-    $(".map-tools-left").css("margin-left","300px");
+    $(".map-tools-left").css("margin-left","125px");
     $(".content").css("padding-left","175px");
   }
 
