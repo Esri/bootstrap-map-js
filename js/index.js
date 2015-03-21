@@ -44,14 +44,14 @@ $( document ).ready(function() {
 
   function onPanelShow(){
     $(".map-tools-left").css("margin-left","125px");
-    $(".content").css("padding-left","175px");
+    $(".content.map-content").css("padding-left","175px");
   }
 
   // When panel is closed, no left button is active
   function onPanelHide(){
     $(".map-tools-left").css("margin-left","0");
     $(".map-tools-left.active").removeClass("active");
-    $(".content").css("padding-left","0");
+    $(".content.map-content").css("padding-left","0");
   }
 
 // Only one tool is active in a group
