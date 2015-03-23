@@ -43,13 +43,21 @@ $( document ).ready(function() {
   }
 
   function onPanelShow(){
-    $(".map-tools-left").css("margin-left","125px");
-    $(".content.map-content").css("padding-left","175px");
+
+    $(".map-tools-left").css("margin-left","300px");
+    /*$(".content.map-content").css("padding-left","300px");
+    $("#accordion, #layers-list, #tool-accordion").css({
+      "left":"0",
+      "top":"50px",
+      "position":"fixed"
+    });*/
+
   }
 
   // When panel is closed, no left button is active
   function onPanelHide(){
     $(".map-tools-left").css("margin-left","0");
+
     $(".map-tools-left.active").removeClass("active");
     $(".content.map-content").css("padding-left","0");
   }

@@ -1,13 +1,9 @@
 $(document).ready(function () {
   require([
-      "esri/map", "application/bootstrapmap", "dojo/data/ItemFileReadStore", "esri/tasks/FindTask", "esri/tasks/FindParameters", "esri/SpatialReference", "esri/graphic", "esri/graphicsUtils", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "TOC/dijit/TOC", "esri/tasks/query", "esri/tasks/QueryTask", "esri/toolbars/navigation", "dojo/on", "dojo/_base/array", "esri/dijit/Scalebar", "esri/layers/FeatureLayer", "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/LabelLayer", "esri/dijit/OverviewMap", "esri/dijit/HomeButton", "esri/dijit/LocateButton", "esri/dijit/Geocoder", "esri/dijit/Measurement", "esri/InfoTemplate", "esri/dijit/InfoWindow", "dojo/dom-construct", "esri/dijit/Bookmarks", "esri/dijit/Print", "esri/dijit/Legend", "dijit/registry", "esri/dijit/Attribution", "dojo/parser", "dojo/dom", "dojo/domReady!"],
-    function (Map, BootstrapMap, ItemFileReadStore, FindTask, FindParameters, SpatialReference, Graphic, graphicsUtils, SimpleFillSymbol, SimpleLineSymbol, Color, TOC, Query, QueryTask, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton, LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, domConstruct, Bookmarks, Print, Legend, registry, Attribution, parser, dom) {
+      "esri/map", "application/bootstrapmap", "dojo/data/ItemFileReadStore", "esri/tasks/FindTask", "esri/tasks/FindParameters", "esri/SpatialReference", "esri/graphic", "esri/graphicsUtils", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "TOC/dijit/TOC", "esri/toolbars/navigation", "dojo/on", "dojo/_base/array", "esri/dijit/Scalebar", "esri/layers/FeatureLayer", "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/LabelLayer", "esri/dijit/OverviewMap", "esri/dijit/HomeButton", "esri/dijit/LocateButton", "esri/dijit/Geocoder", "esri/dijit/Measurement", "esri/InfoTemplate", "esri/dijit/InfoWindow", "esri/dijit/Bookmarks", "esri/dijit/Print", "esri/dijit/Legend", "dijit/registry", "esri/dijit/Attribution", "dojo/parser", "dojo/dom", "dojo/domReady!"],
+    function (Map, BootstrapMap, ItemFileReadStore, FindTask, FindParameters, SpatialReference, Graphic, graphicsUtils, SimpleFillSymbol, SimpleLineSymbol, Color, TOC, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton, LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, Bookmarks, Print, Legend, registry, Attribution, parser, dom) {
 
-      // Get a reference to the ArcGIS Map class
 
-      /* $(document).bind("mobileinit", function(){
-       $.mobile.touchOverflowEnabled = true;
-       });*/
       var map = BootstrapMap.create("mapDiv", {
         basemap: "national-geographic",
         center: [-85.50111111111111, 37.35138888888889],
@@ -22,60 +18,60 @@ $(document).ready(function () {
         //showInfoWindowOnClick: true
       });
 
+      /*//function (ready, dom, Attribution, array, QueryTask, Query) {
+       function showCounties(results) {
+       var features = results.features;
+       var attrArray = [];
+       array.forEach(features, function (feature) {
+       attribute = feature.attributes.NAME;
+       attrArray.push(attribute);
+       });
+       var option = '';
+       attrArray.sort();
+       for (i = 0; i < attrArray.length; i++) {
+       option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
+       }
+       $("#select-county").append(option);
+       //$('.selectpicker').selectpicker('refresh');
+       }
 
-      //function (ready, dom, Attribution, array, QueryTask, Query) {
-      function showCounties(results) {
-        var features = results.features;
-        var attrArray = [];
-        array.forEach(features, function (feature) {
-          attribute = feature.attributes.NAME;
-          attrArray.push(attribute);
-        });
-        var option = '';
-        attrArray.sort();
-        for (i = 0; i < attrArray.length; i++) {
-          option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
-        }
-        $("#select-county").append(option);
-        $('.selectpicker').selectpicker('refresh');
-      }
+       function showCities(results) {
+       var features = results.features;
+       var attrArray = [];
+       array.forEach(features, function (feature) {
+       attribute = feature.attributes.NAME;
+       attrArray.push(attribute);
+       });
+       var option = '';
+       attrArray.sort();
+       for (i = 0; i < attrArray.length; i++) {
+       option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
+       }
+       $("#select-city").append(option);
+       //$('.selectpicker').selectpicker('refresh');
+       }
 
-      function showCities(results) {
-        var features = results.features;
-        var attrArray = [];
-        array.forEach(features, function (feature) {
-          attribute = feature.attributes.NAME;
-          attrArray.push(attribute);
-        });
-        var option = '';
-        attrArray.sort();
-        for (i = 0; i < attrArray.length; i++) {
-          option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
-        }
-        $("#select-city").append(option);
-        $('.selectpicker').selectpicker('refresh');
-      }
+       function QueryCounties(serviceLayer, attrName) {
+       var queryTask = new QueryTask(serviceLayer);
+       var query = new Query();
+       query.returnGeometry = true;
+       query.outFields = [attrName];
+       query.where = attrName + "<> ''";
+       queryTask.execute(query, showCounties);
+       }
 
-      function QueryCounties(serviceLayer, attrName) {
-        var queryTask = new QueryTask(serviceLayer);
-        var query = new Query();
-        query.returnGeometry = true;
-        query.outFields = [attrName];
-        query.where = attrName + "<> ''";
-        queryTask.execute(query, showCounties);
-      }
+       QueryCounties("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5", "NAME");
 
-      QueryCounties("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5", "NAME");
-      function QueryCities(serviceLayer, attrName) {
-        var queryTask = new QueryTask(serviceLayer);
-        var query = new Query();
-        query.returnGeometry = false;
-        query.outFields = [attrName];
-        query.where = attrName + "<> ''";
-        queryTask.execute(query, showCities);
-      }
+       function QueryCities(serviceLayer, attrName) {
+       var queryTask = new QueryTask(serviceLayer);
+       var query = new Query();
+       query.returnGeometry = false;
+       query.outFields = [attrName];
+       query.where = attrName + "<> ''";
+       queryTask.execute(query, showCities);
+       }
 
-      QueryCities("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/268", "NAME");
+       QueryCities("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/268", "NAME");*/
 
       $("#locate-county-btn").click(function () {
         var county = $("#select-county").val();
@@ -88,10 +84,10 @@ $(document).ready(function () {
         //set the search text to find parameters
         findParams.searchText = county;
         var findTask = new FindTask("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/");
-        findTask.execute(findParams, showResults);
+        findTask.execute(findParams, zoomToResults);
 
-        function showResults(results) {
-//This function works with an array of FindResult that the task returns
+        function zoomToResults(results) {
+          //This function works with an array of FindResult that the task returns
           map.graphics.clear();
           var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
             new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
@@ -101,8 +97,8 @@ $(document).ready(function () {
             var graphic = result.feature;
             graphic.setSymbol(symbol);
             map.graphics.add(graphic);
-            var center = graphic.geometry.getExtent();
-            map.setExtent(center.expand(2.0));
+            var geometry = graphic.geometry.getExtent();
+            map.setExtent(geometry.expand(2.0));
             return result.feature.attributes;
           });
 

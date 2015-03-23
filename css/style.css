@@ -510,6 +510,10 @@ footer ul li {
   overflow-y: auto;
   z-index: 50;
 }
+#accordion,#layers-list,#tool-accordion{
+  /*top:50px;*/
+}
+
 
 .panel-body {
   /*height: 880px;*/
@@ -639,6 +643,14 @@ and (max-device-width: 568px) {
 
 #photolog-btn a{
   color: #87cefa;
+}
+
+select{
+  width: 250px;
+  padding: 5px;
+  margin-top:5px;
+  border-radius: 5px;
+  font-weight: 300;
 }
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
