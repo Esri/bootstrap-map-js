@@ -124,9 +124,10 @@ button.btn.btn-md {
   left: 0;
   float: left;
   width: 300px;
-  height: 100%;
+  height: auto;
+  padding:0 2px 2px;
+  border-bottom-right-radius: 5px;
   background: white;
-  /*overflow: auto;*/
 }
 
 .scrollable-menu {
@@ -195,6 +196,16 @@ button.btn.btn-md {
   top: 108px;
   right: 2px;
   z-index: 50;
+}
+
+#EraserButton{
+  position: absolute;
+  color: white;
+  top: 300px;
+  right: 17px;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
 }
 
 .simpleGeocoder .esriGeocoderIcon {

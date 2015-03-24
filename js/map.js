@@ -3,7 +3,6 @@ $(document).ready(function () {
       "esri/map", "application/bootstrapmap", "dojo/data/ItemFileReadStore", "esri/tasks/FindTask", "esri/tasks/FindParameters", "esri/SpatialReference", "esri/graphic", "esri/graphicsUtils", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "TOC/dijit/TOC", "esri/toolbars/navigation", "dojo/on", "dojo/_base/array", "esri/dijit/Scalebar", "esri/layers/FeatureLayer", "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/LabelLayer", "esri/dijit/OverviewMap", "esri/dijit/HomeButton", "esri/dijit/LocateButton", "esri/dijit/Geocoder", "esri/dijit/Measurement", "esri/InfoTemplate", "esri/dijit/InfoWindow", "esri/dijit/Bookmarks", "esri/dijit/Print", "esri/dijit/Legend", "dijit/registry", "esri/dijit/Attribution", "dojo/parser", "dojo/dom", "dojo/domReady!"],
     function (Map, BootstrapMap, ItemFileReadStore, FindTask, FindParameters, SpatialReference, Graphic, graphicsUtils, SimpleFillSymbol, SimpleLineSymbol, Color, TOC, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton, LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, Bookmarks, Print, Legend, registry, Attribution, parser, dom) {
 
-
       var map = BootstrapMap.create("mapDiv", {
         basemap: "national-geographic",
         center: [-85.50111111111111, 37.35138888888889],
@@ -18,104 +17,46 @@ $(document).ready(function () {
         //showInfoWindowOnClick: true
       });
 
-      /*//function (ready, dom, Attribution, array, QueryTask, Query) {
-       function showCounties(results) {
-       var features = results.features;
-       var attrArray = [];
-       array.forEach(features, function (feature) {
-       attribute = feature.attributes.NAME;
-       attrArray.push(attribute);
-       });
-       var option = '';
-       attrArray.sort();
-       for (i = 0; i < attrArray.length; i++) {
-       option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
-       }
-       $("#select-county").append(option);
-       //$('.selectpicker').selectpicker('refresh');
-       }
+      function ZoomToQueryResult(btnId, getValue,layerIds,searchFields,service){
+        $(btnId).click(function () {
+          var text = $(getValue).val();
+          var findParams = new FindParameters();
+          findParams.returnGeometry = true;
+          findParams.layerIds = layerIds;
+          findParams.searchFields = [searchFields];
+          findParams.outSpatialReference = map.spatialReference;
 
-       function showCities(results) {
-       var features = results.features;
-       var attrArray = [];
-       array.forEach(features, function (feature) {
-       attribute = feature.attributes.NAME;
-       attrArray.push(attribute);
-       });
-       var option = '';
-       attrArray.sort();
-       for (i = 0; i < attrArray.length; i++) {
-       option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
-       }
-       $("#select-city").append(option);
-       //$('.selectpicker').selectpicker('refresh');
-       }
+          //set the search text to find parameters
+          findParams.searchText = text;
+          var findTask = new FindTask(service);
+          findTask.execute(findParams, zoomToResults);
 
-       function QueryCounties(serviceLayer, attrName) {
-       var queryTask = new QueryTask(serviceLayer);
-       var query = new Query();
-       query.returnGeometry = true;
-       query.outFields = [attrName];
-       query.where = attrName + "<> ''";
-       queryTask.execute(query, showCounties);
-       }
-
-       QueryCounties("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/5", "NAME");
-
-       function QueryCities(serviceLayer, attrName) {
-       var queryTask = new QueryTask(serviceLayer);
-       var query = new Query();
-       query.returnGeometry = false;
-       query.outFields = [attrName];
-       query.where = attrName + "<> ''";
-       queryTask.execute(query, showCities);
-       }
-
-       QueryCities("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/268", "NAME");*/
-
-      $("#locate-county-btn").click(function () {
-        var county = $("#select-county").val();
-        var findParams = new FindParameters();
-        findParams.returnGeometry = true;
-        findParams.layerIds = [5];
-        findParams.searchFields = ["NAME"];
-        findParams.outSpatialReference = map.spatialReference;
-
-        //set the search text to find parameters
-        findParams.searchText = county;
-        var findTask = new FindTask("http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer/");
-        findTask.execute(findParams, zoomToResults);
-
-        function zoomToResults(results) {
-          //This function works with an array of FindResult that the task returns
-          map.graphics.clear();
-          var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
-            new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
-              new Color([98, 194, 204]), 2), new Color([98, 194, 204, 0.5]));
-          var items;
-          items = array.map(results, function (result) {
-            var graphic = result.feature;
-            graphic.setSymbol(symbol);
-            map.graphics.add(graphic);
-            var geometry = graphic.geometry.getExtent();
-            map.setExtent(geometry.expand(2.0));
-            return result.feature.attributes;
-          });
-
-//Create data object to be used in store
-          var data = {
-            identifier: "COUNTY", //This field needs to have unique values
-            label: "COUNTY", //Name field for display. Not pertinent to agrid but may be used elsewhere.
-            items: items
-          };
-//Create data store and bind to grid.
-          /*var store = new ItemFileReadStore({data: data});
-           var grid = dom.byId('grid');
-           grid.setStore(store);*/
-//Zoom back to the initial map extent
-//          map.centerAndZoom(center, zoom);
-        }
-      });
+          function zoomToResults(results) {
+            //This function works with an array of FindResult that the task returns
+            map.graphics.clear();
+            var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
+              new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
+                new Color([98, 194, 204]), 2), new Color([98, 194, 204, 0.5]));
+            var items;
+            items = array.map(results, function (result) {
+              var graphic = result.feature;
+              graphic.setSymbol(symbol);
+              map.graphics.add(graphic);
+              var geometry = graphic.geometry.getExtent();
+              map.setExtent(geometry.expand(2.0));
+              return result.feature.attributes;
+            });
+          }
+        });
+      }
+      // City
+      ZoomToQueryResult("#locate-city-btn", "#select-city", [10], "NAME", "//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
+      // County
+      ZoomToQueryResult("#locate-county-btn", "#select-county", [2], "NAME", "//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
+      // KYTC district
+      ZoomToQueryResult("#locate-district-btn", "#select-district", [3], "DISTNBR", "//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
+      // USGS quadrangle
+      ZoomToQueryResult("#locate-usgs-btn", "#select-usgs", [4], "QUAD_NAME", "//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
 
       // Create a bookmark widget
       var bookmarks;
@@ -243,6 +184,7 @@ $(document).ready(function () {
           }
         });
       });
+
       /* Mutually exclusive checkbox for toggling basemaps */
       $("input[name=myCheckbox]").change(function () {
         // If this checkbox is checked, turn off other checkboxes
@@ -367,10 +309,10 @@ $(document).ready(function () {
       });
 
       // Add KYTC basemap on startup
-      var KytcBaseLayer;
+     /* var KytcBaseLayer;
       KytcBaseLayer = new ArcGISDynamicMapServiceLayer(
         "http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer",
-        {id: "kytc-basemap"});
+        {id: "kytc-basemap"});*/
       //map.addLayer(KytcBaseLayer);
       //map.infoWindow.resize(320, 285);
 
@@ -400,6 +342,7 @@ $(document).ready(function () {
         ToggleOpLayer();
       });
 
+      // Toggle operational layers TODO: Remove local, rural roads
       function ToggleOpLayer() {
         $(".add-layer-btn").each(function () {
           var opLayer, h, serviceTitle;

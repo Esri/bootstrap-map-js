@@ -203,7 +203,10 @@
   </div>
   <div id="CameraButton" class="icons">
     <span id="photolog-btn"><a href="http://test1.maps.kytc.ky.gov/bootstrap-map-js/photolog.html" target="_blank">
-      <i class="fa fa-camera-retro" data-toggle="tooltip" data-placement="left" title="PhotoLog"></i></a></span></div>
+      <i class="fa fa-camera-retro" data-toggle="tooltip" data-placement="left" title="PhotoLog"></i>
+    </a>
+    </span>
+  </div>
   <div id="HomeButton"></div>
   <div id="LocateButton"></div>
   <!--<button class="btn btn-sm" data-toggle="tooltip" data-placement="top" title="One frame backward"><a href="#"><i-->
@@ -260,15 +263,17 @@
       </div>
       <div id="collapseRoadName" class="panel-collapse collapse">
         <div class="panel-body">
-          <label>Select a coutny:<select id="CountyInput2">
-            <option value=""></option>
-          </select></label>
-          <label>Select a road prefix:<select id="RoadPrefixInput">
-            <option value=""></option>
-          </select></label>
-          <label>Select a route number:<select id="RoadNumberInput">
-            <option value=""></option>
-          </select></label>
+          <label>Select a county:
+            <select name="county2" id="select-county2">
+            </select>
+          </label>
+          <label>Select a road prefix:<select id="select-prefix">
+          </select>
+          </label>
+          <label>Select a route number:
+            <select id="RoadNumberInput">
+          </select>
+          </label>
           <hr/>
           <div class="input-group">
             <h5>Or</h5>
@@ -296,7 +301,7 @@
           </select>
           <hr/>
           <div class="btn-group">
-            <button type="button" class="btn btn-md btn-success">
+            <button type="button" id="locate-city-btn" class="btn btn-md btn-success">
               Locate
             </button>
           </div>
@@ -309,7 +314,7 @@
           <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">County</a>
         </h4>
       </div>
-      <div id="collapseThree" class="panel-collapse collapse in">
+      <div id="collapseThree" class="panel-collapse collapse">
         <div class="panel-body">
           <label>Select a county:
             <br>
@@ -321,6 +326,55 @@
         </div>
       </div>
     </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseKyDist">KYTC District</a>
+        </h4>
+      </div>
+      <div id="collapseKyDist" class="panel-collapse collapse">
+        <div class="panel-body">
+          <label>Select a district:
+            <br>
+            <select name="county" id="select-district">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+              <option>10</option>
+              <option>11</option>
+              <option>12</option>
+            </select>
+          </label>
+          <hr>
+          <button id="locate-district-btn" class="btn btn-success btn-md">Locate</button>
+        </div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseUsgsQuad">USGS Quadrangle</a>
+        </h4>
+      </div>
+      <div id="collapseUsgsQuad" class="panel-collapse collapse">
+        <div class="panel-body">
+          <label>Select a quadrangle:
+            <br>
+            <select name="usgs" id="select-usgs">
+            </select>
+          </label>
+          <hr>
+          <button id="locate-usgs-btn" class="btn btn-success btn-md" >Locate</button>
+        </div>
+      </div>
+    </div>
+
   </div>
   <div id="layers-list" class="panel-group kytc-left-panel" style="display:none;">
     <!-- Search by road name -->
@@ -383,7 +437,6 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseTransportation">Roads & Routes»
               </a>
-
               <div id="collapseTransportation" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
                   <div class="btn btn-md btn-default add-layer-btn" id="local-roads" data-toggle="tooltip"
@@ -566,10 +619,6 @@
       </div>
     </div>
   </div>
-
-
-
-
 </div>
 
 <script type="text/javascript">

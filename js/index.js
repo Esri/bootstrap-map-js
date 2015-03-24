@@ -1,6 +1,5 @@
 /* Controls for non-map-related buttons */
 
-
 $( document ).ready(function() {
   // Enable select picker
   $('.selectpicker').selectpicker();
@@ -31,9 +30,12 @@ $( document ).ready(function() {
     var btn = $(btnId);
 
     btn.on("click", function(){
+      $(".panel-group.kytc-left-panel").css("display","none");
       object.show(0,onPanelShow);
       object.css("z-index","1000");
-      object.siblings().css("z-index","50");
+      object.siblings().css({
+        "z-index":"50"
+      });
     });
 
     // Close(x) button closes all left panel
@@ -42,8 +44,8 @@ $( document ).ready(function() {
     });
   }
 
+//On panel show, move tool buttons
   function onPanelShow(){
-
     $(".map-tools-left").css("margin-left","300px");
     /*$(".content.map-content").css("padding-left","300px");
     $("#accordion, #layers-list, #tool-accordion").css({
@@ -51,21 +53,19 @@ $( document ).ready(function() {
       "top":"50px",
       "position":"fixed"
     });*/
-
   }
 
   // When panel is closed, no left button is active
   function onPanelHide(){
     $(".map-tools-left").css("margin-left","0");
-
     $(".map-tools-left.active").removeClass("active");
     $(".content.map-content").css("padding-left","0");
   }
 
 // Only one tool is active in a group
   $(".map-tools-left").click(function () {
-    $('.map-tools-left.active').removeClass('active');
+    $(".map-tools-left.active").removeClass("active");
     // add active class to clicked element
-    $(this).addClass('active');
+    $(this).addClass("active");
   });
 });
