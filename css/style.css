@@ -125,9 +125,11 @@ button.btn.btn-md {
   float: left;
   width: 300px;
   height: auto;
+  max-height: 100%;
   padding:0 2px 2px;
   border-bottom-right-radius: 5px;
   background: white;
+  overflow-y: auto;
 }
 
 .scrollable-menu {
@@ -530,8 +532,8 @@ footer ul li {
   /*height: 880px;*/
   height: auto;
   width: auto;
-  /*overflow-x: hidden;*/
-  /*overflow-y: auto;*/
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #legendDiv {
