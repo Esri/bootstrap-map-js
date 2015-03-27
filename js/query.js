@@ -48,27 +48,30 @@ $(document).ready(function () {
       }
 
       $("#select-county2").change(function() {
-        var c
+        var county = $("#select-county2").val();
         var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
         var query = new Query();
         query.returnGeometry = false;
-        query.outFields = "RT_PREFIX";
-        query.where = CO_NAME + "<> ''";
+        query.outFields = ["RT_PREFIX"];
+        query.where = "CO_NAME =" + "'" + county +"'";
+        console.log(query.where);
         queryTask.execute(query, populatePrefix);
 
         function populatePrefix(results){
           var features = results.features;
+          console.log(features);
           var attrArray = [];
           array.forEach(features, function (feature) {
-            attribute = feature.attributes.QUAD_NAME;
+            attribute = feature.attributes.RT_PREFIX;
             attrArray.push(attribute);
           });
           var option = '';
+          jQuery.unique(attrArray);
           attrArray.sort();
           for (i = 0; i < attrArray.length; i++) {
             option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
           }
-          $("#select-usgs").append(option);
+          $("#select-prefix").append(option);
         }
       });
 
