@@ -250,7 +250,7 @@
           <br>
           <input type="checkbox" id="find-exact"><label for="find-exact"> Find exact matches only</label>
           <br>
-          <button type="button" class="btn btn-default"><i class="fa fa-search"></i> Search</button>
+          <button type="button" id ="find-attribute-btn" class="btn btn-default"><i class="fa fa-search"></i> Search</button>
           <button type="button" class="btn btn-default" id="clear-btn"><i class="fa fa-history"></i> Clear</button>
         </div>
       </div>
@@ -264,16 +264,20 @@
       <div id="collapseRoadName" class="panel-collapse collapse">
         <div class="panel-body">
           <label>Select a county:
-            <select name="county2" id="select-county2"><option>select  a coutny</option>
+            <select name="county2" id="select-county2">
+              <option>select  a county</option>
             </select>
           </label>
 
-          <label>Select a road prefix:<select id="select-prefix">
-          </select>
+          <label>Select a road prefix:
+            <select id="select-prefix">
+              <option>select  a road prefix</option>
+            </select>
           </label>
           <label>Select a route number:
-            <select id="RoadNumberInput">
-          </select>
+            <select id="select-road">
+              <option>select  a road</option>
+            </select>
           </label>
           <hr/>
           <div class="input-group">
@@ -282,7 +286,7 @@
           </div>
           <hr/>
           <div class="btn-group">
-            <button type="button" id="" class="btn btn-md btn-success">
+            <button type="button" id="locate-road-btn" class="btn btn-md btn-success">
               Locate
             </button>
           </div>

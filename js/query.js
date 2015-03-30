@@ -47,19 +47,26 @@ $(document).ready(function () {
         $("#select-usgs").append(option);
       }
 
+      var county, RtPrefix;
+
       $("#select-county2").change(function() {
-        var county = $("#select-county2").val();
+        county = $("#select-county2").val();
         var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
         var query = new Query();
         query.returnGeometry = false;
         query.outFields = ["RT_PREFIX"];
         query.where = "CO_NAME =" + "'" + county +"'";
-        console.log(query.where);
         queryTask.execute(query, populatePrefix);
 
         function populatePrefix(results){
+          /*//var select = $("#select-prefix");
+           var select = $("#select-prefix")
+           var select = $("#select-prefix")
+          var length = $("#select-prefix").options.length;
+          for (i = 0; i < length; i++) {
+            select.options[i] = null;
+          }*/
           var features = results.features;
-          console.log(features);
           var attrArray = [];
           array.forEach(features, function (feature) {
             attribute = feature.attributes.RT_PREFIX;
@@ -71,7 +78,43 @@ $(document).ready(function () {
           for (i = 0; i < attrArray.length; i++) {
             option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
           }
-          $("#select-prefix").append(option);
+
+          $('#select-prefix')
+            .find('option')
+            .remove()
+            .end()
+            .append(option);
+        }
+
+        $("#select-prefix").change(function(){
+          RtPrefix = $("#select-prefix").val();
+          var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
+          var query = new Query();
+          query.returnGeometry = false;
+          query.outFields = ["SHIELD_LBL"];
+          query.where = "CO_NAME =" + "'" + county +"' AND RT_PREFIX='" + RtPrefix + "'";
+          //console.log(query.where);
+          queryTask.execute(query, populateRouteNo);
+        });
+
+        function populateRouteNo(results){
+          var features = results.features;
+          var attrArray = [];
+          array.forEach(features, function (feature) {
+            attribute = feature.attributes.SHIELD_LBL;
+            attrArray.push(attribute);
+          });
+          var option = '';
+          jQuery.unique(attrArray);
+          attrArray.sort();
+          for (i = 0; i < attrArray.length; i++) {
+            option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
+          }
+          $("#select-road")
+            .find('option')
+            .remove()
+            .end()
+            .append(option);
         }
       });
 
