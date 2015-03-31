@@ -3,6 +3,70 @@ $(document).ready(function () {
       "dojo/dom", "dojo/_base/array", "esri/tasks/QueryTask", "esri/tasks/query", "dojo/domReady!"],
     function (dom, array, QueryTask, Query) {
 
+
+      $("#select-county2").change(function() {
+        var county;
+        county = $("#select-county2").val();
+        var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
+        var query = new Query();
+        query.returnGeometry = false;
+        query.outFields = ["RT_PREFIX"];
+        query.where = "CO_NAME =" + "'" + county +"'";
+        queryTask.execute(query, populatePrefix);
+
+        function populatePrefix(results){
+          var features = results.features;
+          var attrArray = [];
+          array.forEach(features, function (feature) {
+            attribute = feature.attributes.RT_PREFIX;
+            attrArray.push(attribute);
+          });
+          var option = '';
+          jQuery.unique(attrArray);
+          attrArray.sort();
+          for (i = 0; i < attrArray.length; i++) {
+            option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
+          }
+          $('#select-prefix')
+            .find('option[value!="placeholder"]')
+            .remove()
+            .end()
+            .append(option);
+        }
+      });
+
+      $("#select-prefix").on("change", function(){
+        var RtPrefix, county;
+        RtPrefix = $("#select-prefix").val();
+        county = $("#select-county2").val();
+        var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
+        var query = new Query();
+        query.returnGeometry = false;
+        query.outFields = ["SHIELD_LBL"];
+        query.where = "CO_NAME =" + "'" + county +"' AND RT_PREFIX='" + RtPrefix + "'";
+        queryTask.execute(query, populateRouteNo);
+
+        function populateRouteNo(results){
+          var features = results.features;
+          var attrArray = [];
+          array.forEach(features, function (feature) {
+            attribute = feature.attributes.SHIELD_LBL;
+            attrArray.push(attribute);
+          });
+          var option = '';
+          jQuery.unique(attrArray);
+          attrArray.sort();
+          for (i = 0; i < attrArray.length; i++) {
+            option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
+          }
+          $("#select-route")
+            .find('option[value!="placeholder"]')
+            .remove()
+            .end()
+            .append(option);
+        }
+      });
+
       function populateCounty(results) {
         var features = results.features;
         var attrArray = [];
@@ -18,6 +82,7 @@ $(document).ready(function () {
         $("#select-county").append(option);
         $("#select-county2").append(option);
       }
+
       function populateCity(results) {
         var features = results.features;
         var attrArray = [];
@@ -32,6 +97,7 @@ $(document).ready(function () {
         }
         $("#select-city").append(option);
       }
+
       function populateUsgs(results){
         var features = results.features;
         var attrArray = [];
@@ -47,77 +113,7 @@ $(document).ready(function () {
         $("#select-usgs").append(option);
       }
 
-      var county, RtPrefix;
-
-      $("#select-county2").change(function() {
-        county = $("#select-county2").val();
-        var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
-        var query = new Query();
-        query.returnGeometry = false;
-        query.outFields = ["RT_PREFIX"];
-        query.where = "CO_NAME =" + "'" + county +"'";
-        queryTask.execute(query, populatePrefix);
-
-        function populatePrefix(results){
-          /*//var select = $("#select-prefix");
-           var select = $("#select-prefix")
-           var select = $("#select-prefix")
-          var length = $("#select-prefix").options.length;
-          for (i = 0; i < length; i++) {
-            select.options[i] = null;
-          }*/
-          var features = results.features;
-          var attrArray = [];
-          array.forEach(features, function (feature) {
-            attribute = feature.attributes.RT_PREFIX;
-            attrArray.push(attribute);
-          });
-          var option = '';
-          jQuery.unique(attrArray);
-          attrArray.sort();
-          for (i = 0; i < attrArray.length; i++) {
-            option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
-          }
-
-          $('#select-prefix')
-            .find('option')
-            .remove()
-            .end()
-            .append(option);
-        }
-
-        $("#select-prefix").change(function(){
-          RtPrefix = $("#select-prefix").val();
-          var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
-          var query = new Query();
-          query.returnGeometry = false;
-          query.outFields = ["SHIELD_LBL"];
-          query.where = "CO_NAME =" + "'" + county +"' AND RT_PREFIX='" + RtPrefix + "'";
-          //console.log(query.where);
-          queryTask.execute(query, populateRouteNo);
-        });
-
-        function populateRouteNo(results){
-          var features = results.features;
-          var attrArray = [];
-          array.forEach(features, function (feature) {
-            attribute = feature.attributes.SHIELD_LBL;
-            attrArray.push(attribute);
-          });
-          var option = '';
-          jQuery.unique(attrArray);
-          attrArray.sort();
-          for (i = 0; i < attrArray.length; i++) {
-            option += '<option value="' + attrArray[i] + '">' + attrArray[i] + '</option>';
-          }
-          $("#select-road")
-            .find('option')
-            .remove()
-            .end()
-            .append(option);
-        }
-      });
-
+      // Function for simple find and zooms
       function QueryAttribute(serviceLayer, attrName, populateDropdown) {
         var queryTask = new QueryTask(serviceLayer);
         var query = new Query();

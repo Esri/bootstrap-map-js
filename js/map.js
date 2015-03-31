@@ -1,7 +1,7 @@
 $(document).ready(function () {
   require([
-      "esri/map", "application/bootstrapmap", "dojo/data/ItemFileReadStore", "esri/tasks/FindTask", "esri/tasks/FindParameters","esri/tasks/query", "esri/tasks/QueryTask", "esri/SpatialReference", "esri/graphic", "esri/graphicsUtils", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "TOC/dijit/TOC", "esri/toolbars/navigation", "dojo/on", "dojo/_base/array", "esri/dijit/Scalebar", "esri/layers/FeatureLayer", "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/LabelLayer", "esri/dijit/OverviewMap", "esri/dijit/HomeButton", "esri/dijit/LocateButton", "esri/dijit/Geocoder", "esri/dijit/Measurement", "esri/InfoTemplate", "esri/dijit/InfoWindow", "esri/dijit/Bookmarks", "esri/dijit/Print", "esri/dijit/Legend", "dijit/registry", "esri/dijit/Attribution", "dojo/parser", "dojo/dom", "dojo/domReady!"],
-    function (Map, BootstrapMap, ItemFileReadStore, FindTask, FindParameters, Query, QueryTask, SpatialReference, Graphic, graphicsUtils, SimpleFillSymbol, SimpleLineSymbol, Color, TOC, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton, LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, Bookmarks, Print, Legend, registry, Attribution, parser, dom) {
+      "esri/map", "application/bootstrapmap", "dojox/grid/DataGrid", "dojo/data/ItemFileReadStore", "esri/tasks/FindTask", "esri/tasks/FindParameters", "esri/tasks/query", "esri/tasks/QueryTask", "esri/SpatialReference", "esri/graphic", "esri/graphicsUtils", "esri/symbols/SimpleFillSymbol", "esri/symbols/SimpleLineSymbol", "esri/Color", "TOC/dijit/TOC", "esri/toolbars/navigation", "dojo/on", "dojo/_base/array", "esri/dijit/Scalebar", "esri/layers/FeatureLayer", "esri/layers/ArcGISTiledMapServiceLayer", "esri/layers/ArcGISImageServiceLayer", "esri/layers/ArcGISDynamicMapServiceLayer", "esri/layers/LabelLayer", "esri/dijit/OverviewMap", "esri/dijit/HomeButton", "esri/dijit/LocateButton", "esri/dijit/Geocoder", "esri/dijit/Measurement", "esri/InfoTemplate", "esri/dijit/InfoWindow", "esri/dijit/Bookmarks", "esri/dijit/Print", "esri/dijit/Legend", "dijit/registry", "esri/dijit/Attribution", "dojo/parser", "dojo/dom", "dojo/domReady!"],
+    function (Map, BootstrapMap, DataGrid, ItemFileReadStore, FindTask, FindParameters, Query, QueryTask, SpatialReference, Graphic, graphicsUtils, SimpleFillSymbol, SimpleLineSymbol, Color, TOC, Navigation, on, array, Scalebar, FeatureLayer, ArcGISTiledMapServiceLayer, ArcGISImageServiceLayer, ArcGISDynamicMapServiceLayer, LabelLayer, OverviewMap, HomeButton, LocateButton, Geocoder, Measurement, InfoTemplate, InfoWindow, Bookmarks, Print, Legend, registry, Attribution, parser, dom) {
 
       var map = BootstrapMap.create("mapDiv", {
         basemap: "national-geographic",
@@ -17,77 +17,105 @@ $(document).ready(function () {
         //showInfoWindowOnClick: true
       });
 
-      function ZoomToQueryResult(btnId, getValue,layerIds,searchFields,service){
-        $(btnId).click(function () {
-          var text = $(getValue).val();
-          var findParams = new FindParameters();
-          findParams.returnGeometry = true;
-          findParams.layerIds = layerIds;
-          findParams.searchFields = [searchFields];
-          findParams.outSpatialReference = map.spatialReference;
-
-          //set the search text to find parameters
-          findParams.searchText = text;
-          var findTask = new FindTask(service);
-          findTask.execute(findParams, zoomToResults);
-
-/*
-          function zoomToResults(results) {
-            //This function works with an array of FindResult that the task returns
-            map.graphics.clear();
-            var symbol = new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
-              new SimpleLineSymbol(SimpleLineSymbol.STYLE_SOLID,
-                new Color([98, 194, 204]), 2), new Color([98, 194, 204, 0.5]));
-            var items;
-            items = array.map(results, function (result) {
-              var graphic = result.feature;
-              graphic.setSymbol(symbol);
-              map.graphics.add(graphic);
-              var geometry = graphic.geometry.getExtent();
-              map.setExtent(geometry.expand(2.0));
-              return result.feature.attributes;
-            });
-          }
-*/
-        });
-      }
-
-      $()
-
-      $("#locate-road-btn").click(function(){
-        var County2, RtPrefix, RoadName;
-
-        County2 = $("#select-county2").val();
-        RoadName = $("#select-road").val();
-        RtPrefix = $("#select-prefix").val();
-
+      $("#locate-road-btn").on("click", function () {
         var findParams = new FindParameters();
-        var findTask = new FindTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
+        var enterRoute = $("#enter-route").val();
 
-        findParams.returnGeometry = true;
-        findParams.layerIds = [1];
-        findParams.searchFields = ["CO_NAME", "RT_PREFIX", "SHIELD_LBL"];
-        /*findParams.layerDefinitions[1] = "CO_NAME =" + "'" + County2 +"' AND RT_PREFIX='" + RtPrefix + "' AND SHIELD_LBL = " + "'" + RoadName + "'";*/
-        findParams.searchText = "";
-console.log("CO_NAME =" + "'" + County2 +"'");
-        findParams.layerDefinitions[1] = "CO_NAME =" + "'" + County2 +"'";
-        //findParams.layerDefinitions[1] = "RT_PREFIX =" + "'" + RtPrefix + "'";
-        //findParams.layerDefinitions[1] = "SHIELD_LBL =" + "'" + RoadName + "'" ;
-        console.log(findParams.layerDefinitions[1]);
-        findParams.outSpatialReference = map.spatialReference;
-        //set the search text to find parameters
-        //findParams.searchText = text;
-        findTask.execute(findParams, zoomToPolylineResults());
+        // If text box is not empty, do search for the val TODO: Better way to do this
+        if (enterRoute.length > 0) {
+          var text = enterRoute;
+          findParams.returnGeometry = true;
+          findParams.layerIds = [1];// This is the AllRds layer
+          findParams.searchFields = ["RD_NAME"]; // Road name field
+          findParams.outSpatialReference = map.spatialReference;
+          findParams.searchText = text;
+          var findTask = new FindTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
+          findTask.execute(findParams, showResults);
+        }
+        // Search from dropdown selections
+        else {
+          var County2, RtPrefix, RoadName;
+          County2 = $("#select-county2").val();
+          RoadName = $("#select-road").val();
+          RtPrefix = $("#select-prefix").val();
 
-        /*var queryTask = new QueryTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1");
-        var query = new Query();
-        query.outSpatialReference = map.spatialReference;
-        query.returnGeometry = true;
-        //query.outFields = ["SHIELD_LBL"];
-        query.where = "CO_NAME =" + "'" + County2 +"' AND RT_PREFIX='" + RtPrefix + "' AND SHIELD_LBL = " + "'" + RoadName + "'";
-        console.log(query.where);
-        queryTask.execute(query, zoomToPolylineResults);*/
+          findParams = new FindParameters();
+          findTask = new FindTask("//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
+
+          findParams.returnGeometry = true;
+          findParams.layerIds = [1];
+          findParams.searchFields = ["CO_NAME", "RT_PREFIX", "SHIELD_LBL"];
+          /*findParams.layerDefinitions[1] = "CO_NAME =" + "'" + County2 +"' AND RT_PREFIX='" + RtPrefix + "' AND SHIELD_LBL = " + "'" + RoadName + "'";*/
+          findParams.searchText = "";
+          findParams.layerDefinitions[1] = "CO_NAME =" + "'" + County2 + "'";
+          //findParams.layerDefinitions[1] = "RT_PREFIX =" + "'" + RtPrefix + "'";
+          //findParams.layerDefinitions[1] = "SHIELD_LBL =" + "'" + RoadName + "'" ;
+          console.log(findParams.layerDefinitions[1]);
+          findParams.outSpatialReference = map.spatialReference;
+          //set the search text to find parameters
+          //findParams.searchText = text;
+          findTask.execute(findParams, showResults());
+        }
       });
+
+      function showResults(results) {
+        //symbology for graphics
+        var markerSymbol = new esri.symbol.SimpleMarkerSymbol(esri.symbol.SimpleMarkerSymbol.STYLE_SQUARE, 10, new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_SOLID, new dojo.Color([255, 0, 0]), 1), new dojo.Color([0, 255, 0, 0.25]));
+        var lineSymbol = new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_DASH, new dojo.Color([255, 0, 0]), 1);
+        var polygonSymbol = new esri.symbol.SimpleFillSymbol(esri.symbol.SimpleFillSymbol.STYLE_NONE, new esri.symbol.SimpleLineSymbol(esri.symbol.SimpleLineSymbol.STYLE_DASHDOT, new dojo.Color([255, 0, 0]), 2), new dojo.Color([255, 255, 0, 0.25]));
+
+        map.graphics.clear();
+        var dataForGrid = [];
+
+        //Build an array of attribute information and add each found graphic to the map
+        array.forEach(results, function (result) {
+          var graphic = result.feature;
+          dataForGrid.push([result.layerName, result.foundFieldName, result.value]);
+          switch (graphic.geometry.type) {
+            case "point":
+              graphic.setSymbol(markerSymbol);
+              break;
+            case "polyline":
+              graphic.setSymbol(lineSymbol);
+              break;
+            case "polygon":
+              graphic.setSymbol(polygonSymbol);
+              break;
+          }
+          map.graphics.add(graphic);
+        });
+        var items = array.map(results, function (result) {
+          var graphic = result.feature;
+          //graphic.setSymbol(symbol);
+          map.graphics.add(graphic);
+          return result.feature.attributes;
+        });
+
+         //Create data object to be used in store
+         var data = {
+         identifier: "OBJECTID", //This field needs to have unique values
+         label: "RD_NAME", //Name field for display. Not pertinent to a grid but may be used elsewhere.
+         items: items
+         };
+         //Create data store and bind to grid.
+         var store;
+         store = new ItemFileReadStore({data: data});
+        var layout = [[
+          {'name': 'Object ID', 'field': 'OBJECTID', 'width': '75px'},
+          {'name': 'Road Name', 'field': 'RD_NAME', 'width': '80px'},
+          {'name': 'RT Unique', 'field': 'RT_UNIQUE', 'width': '100px'}
+        ]];
+         var grid = new DataGrid({
+         id: "grid",
+         store: store,
+         structure: layout,
+         rowSelector: '20px'
+         });
+        console.log(grid);
+         grid.setStore(store);
+         grid.placeAt("result-grid");
+         grid.startup();
+      }
 
       function zoomToPolylineResults(results) {
         console.log(results);
@@ -100,7 +128,6 @@ console.log("CO_NAME =" + "'" + County2 +"'");
         var items;
         items = array.map(results, function (result) {
           var graphic = result.feature;
-          console.log(graphic);
           graphic.setSymbol(symbol);
           map.graphics.add(graphic);
           var geometry = graphic.geometry.getExtent();
@@ -128,6 +155,21 @@ console.log("CO_NAME =" + "'" + County2 +"'");
 
       // Road
       /*ZoomToQueryResult("#locate-road-btn", "#select-road", [1], "SHIELD_LBL", "//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer/1")*/
+
+      function ZoomToQueryResult(btnId, getValue, layerIds, searchFields, service) {
+        $(btnId).click(function () {
+          var text = $(getValue).val();
+          var findParams = new FindParameters();
+          findParams.returnGeometry = true;
+          findParams.layerIds = layerIds;
+          findParams.searchFields = [searchFields];
+          findParams.outSpatialReference = map.spatialReference;
+          //set the search text to find parameters
+          findParams.searchText = text;
+          var findTask = new FindTask(service);
+          findTask.execute(findParams, zoomToResults);
+        });
+      }
 
       // City
       ZoomToQueryResult("#locate-city-btn", "#select-city", [10], "NAME", "//maps.kytc.ky.gov/arcgis/rest/services/MeasuredRoute/MapServer");
@@ -389,10 +431,10 @@ console.log("CO_NAME =" + "'" + County2 +"'");
       });
 
       // Add KYTC basemap on startup
-     /* var KytcBaseLayer;
-      KytcBaseLayer = new ArcGISDynamicMapServiceLayer(
-        "http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer",
-        {id: "kytc-basemap"});*/
+      /* var KytcBaseLayer;
+       KytcBaseLayer = new ArcGISDynamicMapServiceLayer(
+       "http://maps.kytc.ky.gov/arcgis/rest/services/BaseMap/KYTCBaseMap/MapServer",
+       {id: "kytc-basemap"});*/
       //map.addLayer(KytcBaseLayer);
       //map.infoWindow.resize(320, 285);
 
@@ -562,8 +604,10 @@ console.log("CO_NAME =" + "'" + County2 +"'");
           }
         });
       }
-    });//require
-}); // doc ready
+    });
+//require
+})
+; // doc ready
 
 /*// Camera button brings up photo log divs
  $("#CameraButton").click(function () {

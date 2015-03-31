@@ -24,6 +24,7 @@
         href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.3/css/bootstrap-select.min.css">
 
   <link rel="stylesheet" href="http://js.arcgis.com/3.12/dijit/themes/claro/claro.css">
+  <link rel="stylesheet" href="http://js.arcgis.com/3.13/dojox/grid/resources/Grid.css">
   <link rel="stylesheet" type="text/css" href="http://js.arcgis.com/3.12/esri/css/esri.css">
 
   <link rel="stylesheet" type="text/css" href="src/css/bootstrapmap.css">
@@ -222,14 +223,15 @@
   <button id="find-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
           title="Find">
     <a href="#"><i class="fa fa-search-plus"></i></a></button>
-  <button id="layers-icon" text="layers" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip" data-placement="right"
+  <button id="layers-icon" text="layers" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip"
+          data-placement="right"
           title="Layers">
     <a href="#"><i class="fa fa-list-ul"></i></a></button>
   <button id="kytc-tools-icon" class="btn btn-md map-tools-top map-tools-left" data-toggle="tooltip"
           data-placement="right" title="Tools">
     <a href="#"><i class="fa fa-wrench"></i></a></button>
 
-  <div id="accordion" class="panel-group kytc-left-panel" style="display:none;">
+  <div id="accordion" class="panel-group kytc-left-panel" style="display:block;">
     <!-- Search by road name -->
     <div class="panel panel-default">
       <div class="panel-heading">
@@ -250,46 +252,52 @@
           <br>
           <input type="checkbox" id="find-exact"><label for="find-exact"> Find exact matches only</label>
           <br>
-          <button type="button" id ="find-attribute-btn" class="btn btn-default"><i class="fa fa-search"></i> Search</button>
-          <button type="button" class="btn btn-default" id="clear-btn"><i class="fa fa-history"></i> Clear</button>
+          <button type="button" id="find-attribute-btn" class="btn btn-default"><i class="fa fa-search"></i> Search
+          </button>
+          <button type="button" class="btn btn-default clear" id="clear-attr-btn"><i class="fa fa-history"></i> Clear</button>
         </div>
       </div>
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
         <h4 class="panel-title">
-          <a data-toggle="collapse" data-parent="#accordion" href="#collapseRoadName">Road Name</a>
+          <a data-toggle="collapse" data-parent="#accordion" href="#collapseRoadName" aria-disabled="true">Road Name</a>
         </h4>
       </div>
-      <div id="collapseRoadName" class="panel-collapse collapse">
+      <div id="collapseRoadName" class="panel-collapse collapse in">
         <div class="panel-body">
           <label>Select a county:
             <select name="county2" id="select-county2">
-              <option>select  a county</option>
+              <option value="placeholder" disabled selected>select a county</option>
             </select>
           </label>
 
           <label>Select a road prefix:
             <select id="select-prefix">
-              <option>select  a road prefix</option>
+              <option value="placeholder" disabled selected>select a road prefix</option>
             </select>
           </label>
           <label>Select a route number:
-            <select id="select-road">
-              <option>select  a road</option>
+            <select id="select-route">
+              <option value="placeholder" disabled selected>select a route number</option>
             </select>
           </label>
           <hr/>
           <div class="input-group">
-            <h5>Or</h5>
-            <input type="text" class="form-control" placeholder="Enter route name">
+            <label>Or
+              <input type="text" id="enter-route" class="form-control" placeholder="Enter route name">
+            </label>
           </div>
           <hr/>
-          <div class="btn-group">
             <button type="button" id="locate-road-btn" class="btn btn-md btn-success">
               Locate
             </button>
-          </div>
+            <button type="button" class="btn btn-default clear" id="clear-road-btn">
+              <i class="fa fa-history">
+              </i>Clear
+            </button>
+          <hr>
+          <div id="result-grid"></div>
         </div>
       </div>
     </div>
@@ -375,7 +383,7 @@
             </select>
           </label>
           <hr>
-          <button id="locate-usgs-btn" class="btn btn-success btn-md" >Locate</button>
+          <button id="locate-usgs-btn" class="btn btn-success btn-md">Locate</button>
         </div>
       </div>
     </div>
@@ -442,6 +450,7 @@
             <div class="panel">
               <a data-toggle="collapse" href="#collapseTransportation">Roads & Routes»
               </a>
+
               <div id="collapseTransportation" class="panel-collapse collapse">
                 <div class="btn-group-vertical" role="group" aria-label="...">
                   <div class="btn btn-md btn-default add-layer-btn" id="local-roads" data-toggle="tooltip"
