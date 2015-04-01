@@ -669,15 +669,14 @@ select{
 #result-grid{
   overflow-x: auto;
   overflow-y: auto;
-  top: 0;
+  /* top: 0; */
   margin-top: 25px;
-  bottom: 0;
-  /*min-height: 0;*/
-  max-height: 100px;
-  width: 285px;
-  position: absolute;
-  font-size: 8pt;
-}
+  /* bottom: 0; */
+  /* min-height: 0; */
+  height: 300px;
+  width: 260px;
+  /* position: absolute; */
+  font-size: 8pt;}
 /*.esriPopup.light .actionsPane .action{
   padding-left: 10px;
   color: #6DBAFD;
