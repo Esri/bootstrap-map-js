@@ -79,7 +79,8 @@
         </div>
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="getstarted.html">Get Started</a></li><li class="dropdown" id="basemapList">
+            <li class="active"><a href="getstarted.html">Get Started</a></li>
+            <li class="dropdown" id="basemapList">
               <a href="maps.html" class="dropdown-toggle">Maps <b class="caret"></b></a>
               <ul class="dropdown-menu" id="myDropdown">
                 <li><a href="#">Streets</a></li>
@@ -265,13 +266,13 @@
     
     <!-- Bootstrap-map-js -->
     <script type="text/javascript">
-        var package_path = window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+        var package_path = "//esri.github.com/bootstrap-map-js/src/js");
         var dojoConfig = {
             //The location.pathname.replace() logic below may look confusing but all its doing is
             // enabling us to load the api from a CDN and load local modules from the correct location.
             packages: [{
                 name: "application",
-                location: package_path + '../../../src/js'
+                location: package_path
             }]
         };
     </script>

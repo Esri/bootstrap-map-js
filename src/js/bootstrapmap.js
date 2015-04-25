@@ -119,6 +119,8 @@ define([
                         this._bindEvents();
                         this._mapDiv.__map = this._map;
                         this._smartResizer = myselfAsAResizer;
+                        this._smartResizer._setMapDiv(true);
+                        this._map._smartResizer = this._smartResizer;
                     };
                     this._mapDeferred.then(lang.hitch(this, getDeferred));
                     return deferred;
