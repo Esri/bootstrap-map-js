@@ -284,6 +284,8 @@
           mapDeferred.then(function(response) {
             map = response.map;
 
+            map.infoWindow.titleInBody = false;
+
             // Add titles
             dom.byId("mapTitle").innerHTML = response.itemInfo.item.title;
             //dom.byId("mapSubTitle").innerHTML = response.itemInfo.item.snippet;
