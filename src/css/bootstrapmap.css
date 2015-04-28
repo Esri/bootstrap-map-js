@@ -6,33 +6,13 @@
   height: 100%;
   min-height: 100px;
   max-height: 100%;
- 	text-align: left;
+  text-align: left;
   overflow: hidden;
-}
-
-.map > img {
-	 text-align: left;
 }
 
 /*** Restyle Esri Zoomin-out ***/
 .esriSimpleSlider {
-  border: 1px solid #cccccc;
-  top: 15px;
-  left: 15px;
-}
-
-.esriSimpleSliderBL {
-  top: auto;
-  right: auto;
-  bottom: 50px;
-  left: 15px;
-}
-
-.esriSimpleSliderBR {
-  top: auto;
-  right: 15px;
-  bottom: 50px;
-  left: auto;
+  border: 1px solid #cccccc;  
 }
 
 .esriSimpleSliderTL {
@@ -49,6 +29,19 @@
   left: auto;
 }
 
+.esriSimpleSliderBL {
+  top: auto;
+  right: auto;
+  bottom: 15px;
+  left: 15px;
+}
+
+.esriSimpleSliderBR {
+  top: auto;
+  right: 15px;
+  bottom: 15px;
+  left: auto;
+}
 
 .esriSimpleSliderVertical .esriSimpleSliderIncrementButton,
 .esriSimpleSliderVertical .esriSimpleSliderDecrementButton{
@@ -153,7 +146,7 @@
 }
 
 .esriViewPopup .mainSection .attrTable td.attrName {
-  color: #333333;
+  color: #888888;
 }
 
 .esriViewPopup .mainSection .attrTable td {
