@@ -17,22 +17,22 @@
     <title>Bootstrap Map JS - Get Started</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
     <link href="../css/style.css" rel="stylesheet">
 
     <!-- Bootstrap-map-js -->
-    <link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13/esri/css/esri.css">   
-    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">   
+    <link rel="stylesheet" type="text/css" href="https://js.arcgis.com/3.13/esri/css/esri.css">
+    <link rel="stylesheet" type="text/css" href="../../src/css/bootstrapmap.css">
 
     <style type="text/css">
 
       #mapDiv {
-        min-height: 300px; 
-        max-height: 1000px; 
+        min-height: 300px;
+        max-height: 1000px;
       }
-      
+
       pre {
         overflow: auto;
         word-wrap: normal;
@@ -64,7 +64,7 @@
   </head>
 
   <body>
-    
+
     <a class="hidden-xs" href="https://github.com/Esri/bootstrap-map-js"><img style="position: absolute; top: 50; right: 0; border: 0; width:100px" src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png" alt="Fork me on GitHub"></a>
 
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -95,7 +95,7 @@
             <li><a href="grid.html">Grid</a></li>
             <li><a href="webmap.html">Web Map</a></li>
             <li><a href="media.html">@Media</a></li>
-            <li><a href="windows.html">Windows</a></li>             
+            <li><a href="windows.html">Windows</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
@@ -137,7 +137,7 @@
                 <li>\templates\...</li>
               </ul>
             <br>
-              <a href="http://github.com/Esri/bootstrap-map-js"><button type="button" class="btn btn-md btn-success">Fork on GitHub</button></a>
+              <a href="https://github.com/Esri/bootstrap-map-js"><button type="button" class="btn btn-md btn-success">Fork on GitHub</button></a>
             </div>
             <div class="tab-pane" id="Step2">
               <h3>Step 2: Create a page</h3>
@@ -194,15 +194,15 @@
     &lt;title>Bootstrap 101 Template&lt;/title>
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     &lt;!-- Bootstrap -->
-    &lt;link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    &lt;link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <b>
     &lt;!-- Step 1. Add CSS for the mapping components -->
-    &lt;link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13/esri/css/esri.css">   
-    &lt;link rel="stylesheet" type="text/css" href="http://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">   
+    &lt;link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.13/esri/css/esri.css">
+    &lt;link rel="stylesheet" type="text/css" href="https://esri.github.io/bootstrap-map-js/src/css/bootstrapmap.css">
     &lt;style type="text/css">
       #mapDiv {
-        min-height: 100px; 
-        max-height: 1000px; 
+        min-height: 100px;
+        max-height: 1000px;
       }
     &lt;/style>
 </b>
@@ -213,13 +213,13 @@
     &lt;![endif]-->
   &lt;/head>
   &lt;body>
-<b>    
+<b>
 
     &lt;!-- Step 2. Add HTML to define the layout of the page and the map -->
     &lt;div class="container">
       <strong>&lt;div id="mapDiv">&lt;/div></strong>
     &lt;/div>
-    
+
     &lt;!-- Step 3. Add JS to load the responsive map -->
     &lt;script type="text/javascript">
         var package_path = "//esri.github.com/bootstrap-map-js/src/js";
@@ -232,7 +232,7 @@
     &lt;/script>
     &lt;script src="//js.arcgis.com/3.13compact">&lt;/script>
     &lt;script>
-        require(["esri/map", "application/bootstrapmap", "dojo/domReady!"], 
+        require(["esri/map", "application/bootstrapmap", "dojo/domReady!"],
           function(Map, BootstrapMap) {
             // Get a reference to the ArcGIS Map class
             var map = BootstrapMap.create("mapDiv",{
@@ -244,7 +244,7 @@
     &lt;/script>
 </b>
     &lt;!-- jQuery (for Bootstrap's JavaScript plugins) -->
-    &lt;script src="http://code.jquery.com/jquery-1.11.1.min.js">&lt;/script>
+    &lt;script src="https://code.jquery.com/jquery-1.11.1.min.js">&lt;/script>
     &lt;!-- Include all  plugins or individual files as needed -->
     &lt;script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">&lt;/script>
   &lt;/body>
@@ -263,10 +263,10 @@
         </div><!--/.col-lg-12-->
       </div><!--/.row-->
     </div><!-- /.container -->
-    
+
     <!-- Bootstrap-map-js -->
     <script type="text/javascript">
-        var package_path = "//esri.github.com/bootstrap-map-js/src/js";
+        var package_path = "https://esri.github.com/bootstrap-map-js/src/js";
         var dojoConfig = {
             //The location.pathname.replace() logic below may look confusing but all its doing is
             // enabling us to load the api from a CDN and load local modules from the correct location.
@@ -276,7 +276,7 @@
             }]
         };
     </script>
-    <script src="//js.arcgis.com/3.13compact"></script>
+    <script src="https://js.arcgis.com/3.13compact"></script>
     <script>
     require(["application/bootstrapmap", "dojo/domReady!"],
       function (BootstrapMap) {
@@ -307,12 +307,11 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
     <!-- add syntax highlighting to code snippts -->
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
 
   </body>
 </html>
-
